@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="astracu" name="inema-course"/>
+<meta content="astracu" name="ARCKHÉ-course"/>
 <title>Home | Computer Use with GPT-6 Astra</title>
 <meta content="Computer Use with GPT-6 Astra: Five workflows for AI to operate your computer where no API exists. A course with 2 tracks and 7 modules featuring GPT-6 Astra's five computer use workflows, translated prompts, and proof of completion for each." name="description"/>
 <!-- ANTI-FOUC: bloqueante, antes de tudo -->
@@ -12,22 +12,22 @@
 (function () {
   try {
     var html = document.documentElement;
-    var DEF = { theme: 'inema-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
+    var DEF = { theme: 'ARCKHÉ-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
     function clone(o) { var r = {}; for (var x in o) r[x] = o[x]; return r; }
     var p = clone(DEF);
     try {
-      var raw = localStorage.getItem('inema.prefs');
+      var raw = localStorage.getItem('ARCKHÉ.prefs');
       if (raw) { var parsed = JSON.parse(raw); if (parsed && typeof parsed === 'object') { for (var k in DEF) if (parsed[k] != null) p[k] = parsed[k]; } }
-      else { var legacy = localStorage.getItem('theme'); if (legacy === 'light') p.theme = 'claro'; else if (legacy === 'dark') p.theme = 'inema-dark'; }
+      else { var legacy = localStorage.getItem('theme'); if (legacy === 'light') p.theme = 'claro'; else if (legacy === 'dark') p.theme = 'ARCKHÉ-dark'; }
     } catch (e) { p = clone(DEF); }
-    var THEMES = { 'inema-dark': { dark: true, attr: null, cs: 'dark' }, 'claro': { dark: false, attr: null, cs: 'light' }, 'sepia': { dark: false, attr: 'sepia', cs: 'light' }, 'foco': { dark: null, attr: 'foco', cs: null }, 'contraste': { dark: true, attr: 'contraste', cs: 'dark' } };
-    var t = THEMES[p.theme] || THEMES['inema-dark'];
+    var THEMES = { 'ARCKHÉ-dark': { dark: true, attr: null, cs: 'dark' }, 'claro': { dark: false, attr: null, cs: 'light' }, 'sepia': { dark: false, attr: 'sepia', cs: 'light' }, 'foco': { dark: null, attr: 'foco', cs: null }, 'contraste': { dark: true, attr: 'contraste', cs: 'dark' } };
+    var t = THEMES[p.theme] || THEMES['ARCKHÉ-dark'];
     if (t.dark === true) html.classList.add('dark'); else if (t.dark === false) html.classList.remove('dark');
     if (t.attr) html.setAttribute('data-theme', t.attr); else html.removeAttribute('data-theme');
     html.style.colorScheme = (t.cs ? t.cs : (html.classList.contains('dark') ? 'dark' : 'light'));
     html.setAttribute('data-font', p.font || 'inter'); html.setAttribute('data-accent', p.accent || 'emerald');
     var s = html.style; var scale = (+p.fontScale || 100);
-    s.setProperty('--inema-font-scale', (scale / 100).toString()); s.setProperty('font-size', scale + '%');
+    s.setProperty('--ARCKHÉ-font-scale', (scale / 100).toString()); s.setProperty('font-size', scale + '%');
     s.setProperty('--measure', (+p.lineWidth || 68) + 'ch'); s.setProperty('--lh-body', (+p.leading || 1.7).toString());
     var fam = p.font === 'system' ? 'system-ui, -apple-system, "Segoe UI", Roboto, sans-serif' : (p.font === 'leitura' ? '"Atkinson Hyperlegible", "Inter", system-ui, sans-serif' : '"Inter", system-ui, sans-serif');
     s.setProperty('--font-body', fam);
@@ -44,8 +44,8 @@
   </script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="../assets/learn.css" rel="stylesheet"/>
-<!-- Manifesto do curso (obrigatório em toda página) -->
-<script data-inema-manifest="" type="application/json">
+<!-- Manifesto do curso (obrigatÃ³rio em toda pÃ¡gina) -->
+<script data-ARCKHÉ-manifest="" type="application/json">
 {
  "course": "astracu",
  "tracks": [
@@ -55,7 +55,7 @@
    "modules": [
     {
      "id": "1-1",
-     "title": "O que é computer use e por que agora",
+     "title": "O que Ã© computer use e por que agora",
      "topics": 6,
      "href": "curso/trilha1/modulo-1-1.html"
     },
@@ -91,7 +91,7 @@
     },
     {
      "id": "2-4",
-     "title": "A entrega da edição",
+     "title": "A entrega da ediÃ§Ã£o",
      "topics": 6,
      "href": "curso/trilha2/modulo-2-4.html"
     },
@@ -209,36 +209,36 @@
     .qz-opt[data-state="no"] { border-color: #ef4444; background: rgba(239,68,68,.12); }
     .qz-fb { display:none; } .qz[data-answered] .qz-fb { display:block; }
 
-    /* TOC do módulo é um bloco inline, não uma barra lateral sticky */
-    [data-inema-toc] { position: static !important; top: auto !important; max-height: none !important; }
-    /* Painel de aparência (classes internas) */
-    .inema-appearance-sec { margin-bottom: .75rem; }
-    .inema-appearance-label { font-size: .7rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #9ca3af; margin-bottom: .35rem; }
-    .inema-appearance-row { display: flex; flex-wrap: wrap; gap: .35rem; }
-    .inema-chip { font-size: .8rem; padding: .3rem .65rem; border-radius: .5rem; border: 1px solid #374151; background: rgba(31,41,55,.6); color: #e5e7eb; cursor: pointer; }
-    .inema-chip:hover { border-color: #FACC15; }
-    .inema-chip[aria-pressed="true"], .inema-chip.is-active { background: rgba(250,204,21,.15); border-color: #FACC15; color: #FACC15; }
-    html:not(.dark) .inema-chip { background: #f3f4f6; color: #111827; border-color: #d1d5db; }
-    html:not(.dark) .inema-chip[aria-pressed="true"], html:not(.dark) .inema-chip.is-active { background: rgba(161,98,7,.1); border-color: #a16207; color: #a16207; }
+    /* TOC do mÃ³dulo Ã© um bloco inline, nÃ£o uma barra lateral sticky */
+    [data-ARCKHÉ-toc] { position: static !important; top: auto !important; max-height: none !important; }
+    /* Painel de aparÃªncia (classes internas) */
+    .ARCKHÉ-appearance-sec { margin-bottom: .75rem; }
+    .ARCKHÉ-appearance-label { font-size: .7rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #9ca3af; margin-bottom: .35rem; }
+    .ARCKHÉ-appearance-row { display: flex; flex-wrap: wrap; gap: .35rem; }
+    .ARCKHÉ-chip { font-size: .8rem; padding: .3rem .65rem; border-radius: .5rem; border: 1px solid #374151; background: rgba(31,41,55,.6); color: #e5e7eb; cursor: pointer; }
+    .ARCKHÉ-chip:hover { border-color: #FACC15; }
+    .ARCKHÉ-chip[aria-pressed="true"], .ARCKHÉ-chip.is-active { background: rgba(250,204,21,.15); border-color: #FACC15; color: #FACC15; }
+    html:not(.dark) .ARCKHÉ-chip { background: #f3f4f6; color: #111827; border-color: #d1d5db; }
+    html:not(.dark) .ARCKHÉ-chip[aria-pressed="true"], html:not(.dark) .ARCKHÉ-chip.is-active { background: rgba(161,98,7,.1); border-color: #a16207; color: #a16207; }
     /* Code box */
     .codebox pre { white-space: pre-wrap; word-break: break-word; }
     
   </style>
-<link href="https://inematds.github.io/astra-computer-use/" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/astra-computer-use/en/" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/astra-computer-use/es/" hreflang="es" rel="alternate"/></head>
-<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="./" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">EN</a><a href="../es/" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">ES</a></div>
+<link href="https://linnoff88-dev.github.io/ hreflang="pt-BR" rel="alternate"/><link href="https://linnoff88-dev.github.io/ hreflang="en" rel="alternate"/><link href="https://linnoff88-dev.github.io/ hreflang="es" rel="alternate"/></head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="ARCKHÉ-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="./" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">EN</a><a href="../es/" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">ES</a></div>
 <!-- NAVIGATION -->
 <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex justify-between items-center h-14">
 <div class="flex items-center space-x-3">
 <a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../index.html">
-<span class="text-2xl">🖱️</span>
+<span class="text-2xl">ðŸ–±ï¸</span>
 <span class="font-bold text-lg hidden md:inline">Computer Use</span>
 </a>
 <span class="text-neutral-600">|</span>
-<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://inema.club" target="_blank">INEMA.CLUB</a>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://ARCKHÉ AI" target="_blank">ARCKHÉ AI</a>
 <span class="text-neutral-600 hidden sm:inline">-</span>
-<a class="text-amber-700 dark:text-slate-300 hover:opacity-80 text-sm font-medium hidden sm:inline" href="https://inema.pro" target="_blank">PRO</a>
+<a class="text-amber-700 dark:text-slate-300 hover:opacity-80 text-sm font-medium hidden sm:inline" href="https://ARCKHÉ.pro" target="_blank">PRO</a>
 </div>
 <div class="flex items-center space-x-1 sm:space-x-2">
 <a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../curso/trilha1/index.html">
@@ -249,11 +249,11 @@
 <span class="sm:hidden">T2</span>
 <span class="hidden sm:inline">Five workflows</span>
 </a>
-<button class="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-semibold text-primary bg-primary/10 hover:bg-primary/20 transition-colors" data-inema-journey-open="" type="button">
-<span>🧭</span><span>My journey</span>
-<span class="text-xs px-1.5 py-0.5 rounded-full bg-primary/20" data-inema-journey-badge=""></span>
+<button class="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-semibold text-primary bg-primary/10 hover:bg-primary/20 transition-colors" data-ARCKHÉ-journey-open="" type="button">
+<span>ðŸ§­</span><span>My journey</span>
+<span class="text-xs px-1.5 py-0.5 rounded-full bg-primary/20" data-ARCKHÉ-journey-badge=""></span>
 </button>
-<button aria-expanded="false" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" data-inema-appearance-toggle="[data-inema-appearance]" title="Appearance and reading" type="button">
+<button aria-expanded="false" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" data-ARCKHÉ-appearance-toggle="[data-ARCKHÉ-appearance]" title="Appearance and reading" type="button">
 <span aria-hidden="true">Aa</span>
 </button>
 <button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" id="theme-toggle" title="Light/dark theme">
@@ -264,40 +264,40 @@
 </div>
 </div>
 </nav>
-<div aria-label="Appearance and reading" class="inema-appearance-pop" data-inema-appearance="" role="region">
-<div class="inema-appearance-sec">
-<p class="inema-appearance-label">Theme</p>
-<div class="inema-appearance-row">
-<button class="inema-chip" data-inema-set-theme="inema-dark" type="button">Dark</button>
-<button class="inema-chip" data-inema-set-theme="claro" type="button">Light</button>
-<button class="inema-chip" data-inema-set-theme="sepia" type="button">Sepia</button>
-<button class="inema-chip" data-inema-set-theme="foco" type="button">Focus</button>
-<button class="inema-chip" data-inema-set-theme="contraste" type="button">Contrast</button>
+<div aria-label="Appearance and reading" class="ARCKHÉ-appearance-pop" data-ARCKHÉ-appearance="" role="region">
+<div class="ARCKHÉ-appearance-sec">
+<p class="ARCKHÉ-appearance-label">Theme</p>
+<div class="ARCKHÉ-appearance-row">
+<button class="ARCKHÉ-chip" data-ARCKHÉ-set-theme="ARCKHÉ-dark" type="button">Dark</button>
+<button class="ARCKHÉ-chip" data-ARCKHÉ-set-theme="claro" type="button">Light</button>
+<button class="ARCKHÉ-chip" data-ARCKHÉ-set-theme="sepia" type="button">Sepia</button>
+<button class="ARCKHÉ-chip" data-ARCKHÉ-set-theme="foco" type="button">Focus</button>
+<button class="ARCKHÉ-chip" data-ARCKHÉ-set-theme="contraste" type="button">Contrast</button>
 </div>
 </div>
-<div class="inema-appearance-sec">
-<p class="inema-appearance-label">Text size</p>
-<div class="inema-appearance-row">
-<button class="inema-chip" data-inema-set-fontscale="90" type="button">A-</button>
-<button class="inema-chip" data-inema-set-fontscale="100" type="button">A</button>
-<button class="inema-chip" data-inema-set-fontscale="115" type="button">A+</button>
-<button class="inema-chip" data-inema-set-fontscale="130" type="button">A++</button>
+<div class="ARCKHÉ-appearance-sec">
+<p class="ARCKHÉ-appearance-label">Text size</p>
+<div class="ARCKHÉ-appearance-row">
+<button class="ARCKHÉ-chip" data-ARCKHÉ-set-fontscale="90" type="button">A-</button>
+<button class="ARCKHÉ-chip" data-ARCKHÉ-set-fontscale="100" type="button">A</button>
+<button class="ARCKHÉ-chip" data-ARCKHÉ-set-fontscale="115" type="button">A+</button>
+<button class="ARCKHÉ-chip" data-ARCKHÉ-set-fontscale="130" type="button">A++</button>
 </div>
 </div>
-<div class="inema-appearance-sec">
-<p class="inema-appearance-label">Font</p>
-<div class="inema-appearance-row">
-<button class="inema-chip" data-inema-set-font="inter" type="button">Inter</button>
-<button class="inema-chip" data-inema-set-font="system" type="button">System</button>
-<button class="inema-chip" data-inema-set-font="leitura" type="button">Reading</button>
+<div class="ARCKHÉ-appearance-sec">
+<p class="ARCKHÉ-appearance-label">Font</p>
+<div class="ARCKHÉ-appearance-row">
+<button class="ARCKHÉ-chip" data-ARCKHÉ-set-font="inter" type="button">Inter</button>
+<button class="ARCKHÉ-chip" data-ARCKHÉ-set-font="system" type="button">System</button>
+<button class="ARCKHÉ-chip" data-ARCKHÉ-set-font="leitura" type="button">Reading</button>
 </div>
 </div>
-<div class="inema-appearance-sec">
-<p class="inema-appearance-label">Line spacing</p>
-<div class="inema-appearance-row">
-<button class="inema-chip" data-inema-set-leading="1.5" type="button">Compact</button>
-<button class="inema-chip" data-inema-set-leading="1.7" type="button">Normal</button>
-<button class="inema-chip" data-inema-set-leading="1.9" type="button">Wide</button>
+<div class="ARCKHÉ-appearance-sec">
+<p class="ARCKHÉ-appearance-label">Line spacing</p>
+<div class="ARCKHÉ-appearance-row">
+<button class="ARCKHÉ-chip" data-ARCKHÉ-set-leading="1.5" type="button">Compact</button>
+<button class="ARCKHÉ-chip" data-ARCKHÉ-set-leading="1.7" type="button">Normal</button>
+<button class="ARCKHÉ-chip" data-ARCKHÉ-set-leading="1.9" type="button">Wide</button>
 </div>
 </div>
 </div>
@@ -305,20 +305,20 @@
 <header class="relative overflow-hidden bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 border-b border-dark-600">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 grid lg:grid-cols-2 gap-12 items-center">
 <div>
-<span class="inline-block px-4 py-1.5 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-6 tracking-wider">HANDS-ON COURSE · FREE ACCESS · ~5.2h</span>
-<h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-5 leading-tight">🖱️ Computer Use with GPT-6 Astra</h1>
+<span class="inline-block px-4 py-1.5 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-6 tracking-wider">HANDS-ON COURSE Â· FREE ACCESS Â· ~5.2h</span>
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-5 leading-tight">ðŸ–±ï¸ Computer Use with GPT-6 Astra</h1>
 <p class="text-2xl text-emerald-400 font-semibold mb-4">Five workflows for AI to operate your computer where no API exists</p>
 <p class="text-lg text-neutral-300 max-w-xl mb-8 leading-relaxed">
           Every piece of software without an API, connector, or MCP still has a screen. GPT-6 Astra got good enough at <strong class="text-neutral-100">look at this screen, move the mouse, and type</strong> to make this routine: test apps, edit video through delivery, configure your phone from your computer.
           Two paths: <strong class="text-emerald-400">fundamentals and the prompt contract</strong>, then <strong class="text-blue-400">the five workflows</strong> with a ready-to-use prompt and proof of completion.
         </p>
 <div class="flex flex-col sm:flex-row gap-3 mb-8">
-<a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-emerald-600 text-white rounded-xl font-bold text-lg hover:bg-emerald-500 transition-colors shadow-lg shadow-emerald-900/30" href="../curso/trilha1/index.html">Start now →</a>
-<button class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-dark-800 border border-emerald-500/30 text-emerald-400 rounded-xl font-semibold hover:bg-emerald-500/10 transition-colors" data-inema-journey-open="" type="button">🧭 Continue where I left off</button>
+<a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-emerald-600 text-white rounded-xl font-bold text-lg hover:bg-emerald-500 transition-colors shadow-lg shadow-emerald-900/30" href="../curso/trilha1/index.html">Start now â†’</a>
+<button class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-dark-800 border border-emerald-500/30 text-emerald-400 rounded-xl font-semibold hover:bg-emerald-500/10 transition-colors" data-ARCKHÉ-journey-open="" type="button">ðŸ§­ Continue where I left off</button>
 </div>
-<div aria-label="Course progress" aria-valuemax="100" aria-valuemin="0" class="inema-meter max-w-md" data-inema-meter="curso" role="progressbar">
-<div class="flex justify-between text-sm text-neutral-400 mb-1"><span data-inema-meter-frac="">0 of 42 topics</span><span data-inema-meter-pct="">0%</span></div>
-<div class="inema-bar h-2 bg-dark-700 rounded-full overflow-hidden"><div class="inema-bar__fill h-full bg-emerald-500 rounded-full transition-all" data-inema-meter-fill="" style="width:0%"></div></div>
+<div aria-label="Course progress" aria-valuemax="100" aria-valuemin="0" class="ARCKHÉ-meter max-w-md" data-ARCKHÉ-meter="curso" role="progressbar">
+<div class="flex justify-between text-sm text-neutral-400 mb-1"><span data-ARCKHÉ-meter-frac="">0 of 42 topics</span><span data-ARCKHÉ-meter-pct="">0%</span></div>
+<div class="ARCKHÉ-bar h-2 bg-dark-700 rounded-full overflow-hidden"><div class="ARCKHÉ-bar__fill h-full bg-emerald-500 rounded-full transition-all" data-ARCKHÉ-meter-fill="" style="width:0%"></div></div>
 </div>
 </div>
 <div class="rounded-2xl border border-emerald-500/30 bg-dark-900/40 p-3 sm:p-4"><svg aria-label="A computer use agent works across three surfaces (built-in browser, computer apps, mirrored phone) and returns a result with proof of completion" class="w-full h-auto" role="img" viewbox="0 0 800 300"><defs>
@@ -348,7 +348,7 @@
 </div>
 </header>
 <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-<!-- OS NÚMEROS -->
+<!-- OS NÃšMEROS -->
 <section class="py-16 border-b border-dark-600">
 <div class="text-center max-w-3xl mx-auto mb-10">
 <span class="text-emerald-400 text-sm font-semibold tracking-wider uppercase">Why now</span>
@@ -358,17 +358,17 @@
 <div class="grid sm:grid-cols-3 gap-6">
 <div class="bg-dark-800 rounded-2xl border border-dark-600 p-7 text-center"><div class="text-4xl font-extrabold text-emerald-400 mb-2">92,7%</div><p class="text-neutral-300 text-sm">ScreenSpot Pro: find the right control on the screen. The previous model scored 76.9%.</p></div>
 <div class="bg-dark-800 rounded-2xl border border-dark-600 p-7 text-center"><div class="text-4xl font-extrabold text-blue-400 mb-2">72,6%</div><p class="text-neutral-300 text-sm">OSWorld 2.0: completing real tasks on a computer. The previous version scored 65.7%.</p></div>
-<div class="bg-dark-800 rounded-2xl border border-dark-600 p-7 text-center"><div class="text-4xl font-extrabold text-primary mb-2">77s → 23s</div><p class="text-neutral-300 text-sm">A flight search: pure computer use versus the tool it generated. Two measurements, not a law.</p></div>
+<div class="bg-dark-800 rounded-2xl border border-dark-600 p-7 text-center"><div class="text-4xl font-extrabold text-primary mb-2">77s â†’ 23s</div><p class="text-neutral-300 text-sm">A flight search: pure computer use versus the tool it generated. Two measurements, not a law.</p></div>
 </div>
 </section>
 <!-- A PROMESSA -->
 <section class="py-16 border-b border-dark-600">
 <div class="text-center max-w-3xl mx-auto mb-10">
 <span class="text-emerald-400 text-sm font-semibold tracking-wider uppercase">The promise</span>
-<h2 class="text-3xl sm:text-4xl font-bold mt-3 mb-4">What you’ll know how to do</h2>
+<h2 class="text-3xl sm:text-4xl font-bold mt-3 mb-4">What youâ€™ll know how to do</h2>
 </div>
 <div class="grid sm:grid-cols-2 gap-5">
-<div class="flex items-start gap-4 bg-dark-800 rounded-xl border border-dark-600 p-6"><span class="text-2xl mt-0.5">📐</span><div><h3 class="font-semibold text-neutral-100 mb-1">Write the four-part contract</h3><p class="text-neutral-400 text-sm">Exact app, result, scope, and proof of completion. The template all five prompts follow.</p></div></div><div class="flex items-start gap-4 bg-dark-800 rounded-xl border border-dark-600 p-6"><span class="text-2xl mt-0.5">🔧</span><div><h3 class="font-semibold text-neutral-100 mb-1">Turn a repeated search into a tool</h3><p class="text-neutral-400 text-sm">Map a site once without an API using computer use, then come away with a command line that runs with a cheaper model.</p></div></div><div class="flex items-start gap-4 bg-dark-800 rounded-xl border border-dark-600 p-6"><span class="text-2xl mt-0.5">🧪</span><div><h3 class="font-semibold text-neutral-100 mb-1">Test your MCP or skill as a new user</h3><p class="text-neutral-400 text-sm">The agent installs and opens the app, interacts with it, inspects the tool calls, and returns the workflow with evidence.</p></div></div><div class="flex items-start gap-4 bg-dark-800 rounded-xl border border-dark-600 p-6"><span class="text-2xl mt-0.5">🔁</span><div><h3 class="font-semibold text-neutral-100 mb-1">Have one agent test another</h3><p class="text-neutral-400 text-sm">Reproduce your app’s failure through its real interface, connect it to the code, and retest it in the same test.</p></div></div><div class="flex items-start gap-4 bg-dark-800 rounded-xl border border-dark-600 p-6"><span class="text-2xl mt-0.5">🎬</span><div><h3 class="font-semibold text-neutral-100 mb-1">Take video editing all the way to delivery</h3><p class="text-neutral-400 text-sm">Wait for the render, upload it to the editor, apply conservative cleanup, and check the exported file.</p></div></div><div class="flex items-start gap-4 bg-dark-800 rounded-xl border border-dark-600 p-6"><span class="text-2xl mt-0.5">📱</span><div><h3 class="font-semibold text-neutral-100 mb-1">Operate your phone from your computer</h3><p class="text-neutral-400 text-sm">Apply a setting in the mobile app through the mirroring window and prove it persisted.</p></div></div>
+<div class="flex items-start gap-4 bg-dark-800 rounded-xl border border-dark-600 p-6"><span class="text-2xl mt-0.5">ðŸ“</span><div><h3 class="font-semibold text-neutral-100 mb-1">Write the four-part contract</h3><p class="text-neutral-400 text-sm">Exact app, result, scope, and proof of completion. The template all five prompts follow.</p></div></div><div class="flex items-start gap-4 bg-dark-800 rounded-xl border border-dark-600 p-6"><span class="text-2xl mt-0.5">ðŸ”§</span><div><h3 class="font-semibold text-neutral-100 mb-1">Turn a repeated search into a tool</h3><p class="text-neutral-400 text-sm">Map a site once without an API using computer use, then come away with a command line that runs with a cheaper model.</p></div></div><div class="flex items-start gap-4 bg-dark-800 rounded-xl border border-dark-600 p-6"><span class="text-2xl mt-0.5">ðŸ§ª</span><div><h3 class="font-semibold text-neutral-100 mb-1">Test your MCP or skill as a new user</h3><p class="text-neutral-400 text-sm">The agent installs and opens the app, interacts with it, inspects the tool calls, and returns the workflow with evidence.</p></div></div><div class="flex items-start gap-4 bg-dark-800 rounded-xl border border-dark-600 p-6"><span class="text-2xl mt-0.5">ðŸ”</span><div><h3 class="font-semibold text-neutral-100 mb-1">Have one agent test another</h3><p class="text-neutral-400 text-sm">Reproduce your appâ€™s failure through its real interface, connect it to the code, and retest it in the same test.</p></div></div><div class="flex items-start gap-4 bg-dark-800 rounded-xl border border-dark-600 p-6"><span class="text-2xl mt-0.5">ðŸŽ¬</span><div><h3 class="font-semibold text-neutral-100 mb-1">Take video editing all the way to delivery</h3><p class="text-neutral-400 text-sm">Wait for the render, upload it to the editor, apply conservative cleanup, and check the exported file.</p></div></div><div class="flex items-start gap-4 bg-dark-800 rounded-xl border border-dark-600 p-6"><span class="text-2xl mt-0.5">ðŸ“±</span><div><h3 class="font-semibold text-neutral-100 mb-1">Operate your phone from your computer</h3><p class="text-neutral-400 text-sm">Apply a setting in the mobile app through the mirroring window and prove it persisted.</p></div></div>
 </div>
 </section>
 <!-- TRILHAS -->
@@ -376,56 +376,56 @@
 <div class="text-center max-w-3xl mx-auto mb-12">
 <span class="text-emerald-400 text-sm font-semibold tracking-wider uppercase">The journey</span>
 <h2 class="text-3xl sm:text-4xl font-bold mt-3 mb-4">Two tracks: the contract, then the five workflows</h2>
-<p class="text-lg text-neutral-400">Each module has six topics, diagrams, at least one copyable prompt with “how to verify,” and a quick three-question quiz.</p>
+<p class="text-lg text-neutral-400">Each module has six topics, diagrams, at least one copyable prompt with â€œhow to verify,â€ and a quick three-question quiz.</p>
 </div>
 <a class="group block bg-dark-800 rounded-2xl border border-dark-600 hover:border-emerald-500/30 transition-all overflow-hidden mb-8" href="../curso/trilha1/index.html">
 <div class="bg-gradient-to-r from-emerald-900/30 to-dark-800 p-8">
 <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
-<span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full">PATH 1 · START HERE</span>
-<span class="text-sm text-neutral-500">2 modules · 12 topics · ~1.4h</span>
+<span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full">PATH 1 Â· START HERE</span>
+<span class="text-sm text-neutral-500">2 modules Â· 12 topics Â· ~1.4h</span>
 </div>
-<h3 class="text-2xl font-bold mb-3 group-hover:text-emerald-400 transition-colors">🧭 Fundamentals and contract</h3>
+<h3 class="text-2xl font-bold mb-3 group-hover:text-emerald-400 transition-colors">ðŸ§­ Fundamentals and contract</h3>
 <p class="text-neutral-400 mb-6 max-w-3xl">What computer use is, why Astra changed the game, where it fits (browser, desktop, phone), and the four-part prompt contract that gives any workflow proof of completion.</p>
 <div class="flex flex-wrap gap-2 mb-6">
 <span class="text-xs px-2.5 py-1 rounded-md bg-dark-900/60 border border-dark-600 text-neutral-300">1.1 What computer use is and why now</span><span class="text-xs px-2.5 py-1 rounded-md bg-dark-900/60 border border-dark-600 text-neutral-300">1.2 The four-part prompt contract</span>
 </div>
-<div aria-label="Track 1 progress" aria-valuemax="100" aria-valuemin="0" class="inema-meter" data-inema-meter="trilha:1" role="progressbar">
-<div class="flex justify-between text-xs text-neutral-500 mb-1"><span data-inema-meter-frac="">0 of 12</span><span data-inema-meter-pct="">0%</span></div>
-<div class="inema-bar h-1.5 bg-dark-700 rounded-full overflow-hidden"><div class="inema-bar__fill h-full bg-emerald-500 rounded-full transition-all" data-inema-meter-fill="" style="width:0%"></div></div>
+<div aria-label="Track 1 progress" aria-valuemax="100" aria-valuemin="0" class="ARCKHÉ-meter" data-ARCKHÉ-meter="trilha:1" role="progressbar">
+<div class="flex justify-between text-xs text-neutral-500 mb-1"><span data-ARCKHÉ-meter-frac="">0 of 12</span><span data-ARCKHÉ-meter-pct="">0%</span></div>
+<div class="ARCKHÉ-bar h-1.5 bg-dark-700 rounded-full overflow-hidden"><div class="ARCKHÉ-bar__fill h-full bg-emerald-500 rounded-full transition-all" data-ARCKHÉ-meter-fill="" style="width:0%"></div></div>
 </div>
-<span class="inline-flex items-center gap-1 text-emerald-400 font-semibold mt-5 group-hover:gap-2 transition-all">Enter the track →</span>
+<span class="inline-flex items-center gap-1 text-emerald-400 font-semibold mt-5 group-hover:gap-2 transition-all">Enter the track â†’</span>
 </div>
 </a>
 <a class="group block bg-dark-800 rounded-2xl border border-dark-600 hover:border-blue-500/30 transition-all overflow-hidden mb-8" href="../curso/trilha2/index.html">
 <div class="bg-gradient-to-r from-blue-900/30 to-dark-800 p-8">
 <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
 <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full">PATH 2</span>
-<span class="text-sm text-neutral-500">5 modules · 30 topics · ~3.8h</span>
+<span class="text-sm text-neutral-500">5 modules Â· 30 topics Â· ~3.8h</span>
 </div>
-<h3 class="text-2xl font-bold mb-3 group-hover:text-blue-400 transition-colors">🛠️ The five workflows</h3>
+<h3 class="text-2xl font-bold mb-3 group-hover:text-blue-400 transition-colors">ðŸ› ï¸ The five workflows</h3>
 <p class="text-neutral-400 mb-6 max-w-3xl">Search that becomes a tool, testing MCP inside the app, one agent testing another, video editing through delivery, and the computer controlling the phone. Each comes with a ready-to-use prompt and proof of completion.</p>
 <div class="flex flex-wrap gap-2 mb-6">
 <span class="text-xs px-2.5 py-1 rounded-md bg-dark-900/60 border border-dark-600 text-neutral-300">2.1 Search becomes a tool</span><span class="text-xs px-2.5 py-1 rounded-md bg-dark-900/60 border border-dark-600 text-neutral-300">2.2 Test tools inside the app</span><span class="text-xs px-2.5 py-1 rounded-md bg-dark-900/60 border border-dark-600 text-neutral-300">2.3 One agent tests another</span><span class="text-xs px-2.5 py-1 rounded-md bg-dark-900/60 border border-dark-600 text-neutral-300">2.4 Delivering the edit</span><span class="text-xs px-2.5 py-1 rounded-md bg-dark-900/60 border border-dark-600 text-neutral-300">2.5 The computer controls the phone</span>
 </div>
-<div aria-label="Track 2 progress" aria-valuemax="100" aria-valuemin="0" class="inema-meter" data-inema-meter="trilha:2" role="progressbar">
-<div class="flex justify-between text-xs text-neutral-500 mb-1"><span data-inema-meter-frac="">0 of 30</span><span data-inema-meter-pct="">0%</span></div>
-<div class="inema-bar h-1.5 bg-dark-700 rounded-full overflow-hidden"><div class="inema-bar__fill h-full bg-blue-500 rounded-full transition-all" data-inema-meter-fill="" style="width:0%"></div></div>
+<div aria-label="Track 2 progress" aria-valuemax="100" aria-valuemin="0" class="ARCKHÉ-meter" data-ARCKHÉ-meter="trilha:2" role="progressbar">
+<div class="flex justify-between text-xs text-neutral-500 mb-1"><span data-ARCKHÉ-meter-frac="">0 of 30</span><span data-ARCKHÉ-meter-pct="">0%</span></div>
+<div class="ARCKHÉ-bar h-1.5 bg-dark-700 rounded-full overflow-hidden"><div class="ARCKHÉ-bar__fill h-full bg-blue-500 rounded-full transition-all" data-ARCKHÉ-meter-fill="" style="width:0%"></div></div>
 </div>
-<span class="inline-flex items-center gap-1 text-blue-400 font-semibold mt-5 group-hover:gap-2 transition-all">Enter the track →</span>
+<span class="inline-flex items-center gap-1 text-blue-400 font-semibold mt-5 group-hover:gap-2 transition-all">Enter the track â†’</span>
 </div>
 </a>
 </section>
 <!-- PARA QUEM -->
 <section class="py-16 border-b border-dark-600">
 <div class="text-center max-w-3xl mx-auto mb-10">
-<span class="text-emerald-400 text-sm font-semibold tracking-wider uppercase">Who it’s for</span>
+<span class="text-emerald-400 text-sm font-semibold tracking-wider uppercase">Who itâ€™s for</span>
 <h2 class="text-3xl sm:text-4xl font-bold mt-3 mb-4">People who already use Codex or Claude Code and run into software without an API</h2>
 </div>
 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 text-center"><div class="text-3xl mb-3">⌨️</div><h3 class="font-semibold text-neutral-100 mb-1">Codex / Claude Code user</h3><p class="text-neutral-400 text-sm">who wants to use the built-in browser and desktop control with intention, not by trial and error.</p></div><div class="bg-dark-800 rounded-xl border border-dark-600 p-6 text-center"><div class="text-3xl mb-3">🧩</div><h3 class="font-semibold text-neutral-100 mb-1">People who publish MCPs and skills</h3><p class="text-neutral-400 text-sm">and need to simulate someone else’s first use before launch.</p></div><div class="bg-dark-800 rounded-xl border border-dark-600 p-6 text-center"><div class="text-3xl mb-3">🎬</div><h3 class="font-semibold text-neutral-100 mb-1">Content creator</h3><p class="text-neutral-400 text-sm">who renders, edits, and delivers video every week and wants to reduce the manual work.</p></div><div class="bg-dark-800 rounded-xl border border-dark-600 p-6 text-center"><div class="text-3xl mb-3">🧑‍💻</div><h3 class="font-semibold text-neutral-100 mb-1">People who build apps with agents</h3><p class="text-neutral-400 text-sm">and want an external agent to audit your app’s own computer use.</p></div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 text-center"><div class="text-3xl mb-3">âŒ¨ï¸</div><h3 class="font-semibold text-neutral-100 mb-1">Codex / Claude Code user</h3><p class="text-neutral-400 text-sm">who wants to use the built-in browser and desktop control with intention, not by trial and error.</p></div><div class="bg-dark-800 rounded-xl border border-dark-600 p-6 text-center"><div class="text-3xl mb-3">ðŸ§©</div><h3 class="font-semibold text-neutral-100 mb-1">People who publish MCPs and skills</h3><p class="text-neutral-400 text-sm">and need to simulate someone elseâ€™s first use before launch.</p></div><div class="bg-dark-800 rounded-xl border border-dark-600 p-6 text-center"><div class="text-3xl mb-3">ðŸŽ¬</div><h3 class="font-semibold text-neutral-100 mb-1">Content creator</h3><p class="text-neutral-400 text-sm">who renders, edits, and delivers video every week and wants to reduce the manual work.</p></div><div class="bg-dark-800 rounded-xl border border-dark-600 p-6 text-center"><div class="text-3xl mb-3">ðŸ§‘â€ðŸ’»</div><h3 class="font-semibold text-neutral-100 mb-1">People who build apps with agents</h3><p class="text-neutral-400 text-sm">and want an external agent to audit your appâ€™s own computer use.</p></div>
 </div>
 </section>
-<!-- EXPERIÊNCIA -->
+<!-- EXPERIÃŠNCIA -->
 <section class="py-16 border-b border-dark-600">
 <div class="text-center max-w-3xl mx-auto mb-10">
 <span class="text-emerald-400 text-sm font-semibold tracking-wider uppercase">Your experience</span>
@@ -433,16 +433,16 @@
 <p class="text-lg text-neutral-400">Everything runs in your browser, with no login. The course remembers where you left off.</p>
 </div>
 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-<div class="bg-dark-800 rounded-xl border border-dark-600 p-6"><div class="text-2xl mb-2">✅</div><h3 class="font-semibold text-emerald-400 mb-1">Automatic progress</h3><p class="text-neutral-400 text-sm">Mark topics as read and track your progress by module, track, and course.</p></div><div class="bg-dark-800 rounded-xl border border-dark-600 p-6"><div class="text-2xl mb-2">✍️</div><h3 class="font-semibold text-emerald-400 mb-1">Notes and highlights</h3><p class="text-neutral-400 text-sm">Select any passage to highlight or annotate it. It’s saved in your browser.</p></div><div class="bg-dark-800 rounded-xl border border-dark-600 p-6"><div class="text-2xl mb-2">🧭</div><h3 class="font-semibold text-emerald-400 mb-1">My journey</h3><p class="text-neutral-400 text-sm">Pick up where you left off and see everything you've studied in one dashboard.</p></div><div class="bg-dark-800 rounded-xl border border-dark-600 p-6"><div class="text-2xl mb-2">🌓</div><h3 class="font-semibold text-emerald-400 mb-1">Themes and reading</h3><p class="text-neutral-400 text-sm">Dark, light, sepia, focus, high contrast. Font size and line spacing.</p></div><div class="bg-dark-800 rounded-xl border border-dark-600 p-6"><div class="text-2xl mb-2">🧪</div><h3 class="font-semibold text-emerald-400 mb-1">Quiz by module</h3><p class="text-neutral-400 text-sm">Three questions with answers and explanations to check your understanding.</p></div><div class="bg-dark-800 rounded-xl border border-dark-600 p-6"><div class="text-2xl mb-2">📋</div><h3 class="font-semibold text-emerald-400 mb-1">Prompts with proof</h3><p class="text-neutral-400 text-sm">Each workflow includes the translated prompt, the placeholders to replace, and what to check at the end.</p></div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6"><div class="text-2xl mb-2">âœ…</div><h3 class="font-semibold text-emerald-400 mb-1">Automatic progress</h3><p class="text-neutral-400 text-sm">Mark topics as read and track your progress by module, track, and course.</p></div><div class="bg-dark-800 rounded-xl border border-dark-600 p-6"><div class="text-2xl mb-2">âœï¸</div><h3 class="font-semibold text-emerald-400 mb-1">Notes and highlights</h3><p class="text-neutral-400 text-sm">Select any passage to highlight or annotate it. Itâ€™s saved in your browser.</p></div><div class="bg-dark-800 rounded-xl border border-dark-600 p-6"><div class="text-2xl mb-2">ðŸ§­</div><h3 class="font-semibold text-emerald-400 mb-1">My journey</h3><p class="text-neutral-400 text-sm">Pick up where you left off and see everything you've studied in one dashboard.</p></div><div class="bg-dark-800 rounded-xl border border-dark-600 p-6"><div class="text-2xl mb-2">ðŸŒ“</div><h3 class="font-semibold text-emerald-400 mb-1">Themes and reading</h3><p class="text-neutral-400 text-sm">Dark, light, sepia, focus, high contrast. Font size and line spacing.</p></div><div class="bg-dark-800 rounded-xl border border-dark-600 p-6"><div class="text-2xl mb-2">ðŸ§ª</div><h3 class="font-semibold text-emerald-400 mb-1">Quiz by module</h3><p class="text-neutral-400 text-sm">Three questions with answers and explanations to check your understanding.</p></div><div class="bg-dark-800 rounded-xl border border-dark-600 p-6"><div class="text-2xl mb-2">ðŸ“‹</div><h3 class="font-semibold text-emerald-400 mb-1">Prompts with proof</h3><p class="text-neutral-400 text-sm">Each workflow includes the translated prompt, the placeholders to replace, and what to check at the end.</p></div>
 </div>
 </section>
 <!-- FONTES -->
 <section class="py-16 border-b border-dark-600">
 <div class="max-w-3xl mx-auto">
 <span class="text-emerald-400 text-sm font-semibold tracking-wider uppercase">Sources and limitations</span>
-<h2 class="text-3xl font-bold mt-3 mb-6">Where this course’s claims come from</h2>
+<h2 class="text-3xl font-bold mt-3 mb-6">Where this courseâ€™s claims come from</h2>
 <div class="space-y-4 text-neutral-300">
-<div class="bg-dark-800 rounded-xl border border-dark-600 p-5"><p class="font-semibold text-neutral-100 mb-1">The video</p><p class="text-sm"><a class="text-sky-400 hover:text-sky-300" href="https://www.youtube.com/watch?v=tU-fO6cADvQ" target="_blank">“Computer use by GPT-6 Astra is absurdly good”</a>, with all five cases demonstrated live. The time measurements (77s → 23s, 50s → 25s) come from it.</p></div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-5"><p class="font-semibold text-neutral-100 mb-1">The video</p><p class="text-sm"><a class="text-sky-400 hover:text-sky-300" href="https://www.youtube.com/watch?v=tU-fO6cADvQ" target="_blank">â€œComputer use by GPT-6 Astra is absurdly goodâ€</a>, with all five cases demonstrated live. The time measurements (77s â†’ 23s, 50s â†’ 25s) come from it.</p></div>
 <div class="bg-dark-800 rounded-xl border border-dark-600 p-5"><p class="font-semibold text-neutral-100 mb-1">The field guide and prompt kit</p><p class="text-sm">Computer Use Field Guide (Prompt Advisers, 05/09/2026): nine prompts in a text file, the four-part contract, proof of completion, and the <a class="text-sky-400 hover:text-sky-300" href="https://github.com/promptadvisers/google-flights-cli" target="_blank">google-flights-cli</a> (MIT license). The prompts in this course are adapted translations of those files.</p></div>
 <div class="bg-dark-800 rounded-xl border border-dark-600 p-5"><p class="font-semibold text-neutral-100 mb-1">Benchmarks</p><p class="text-sm"><a class="text-sky-400 hover:text-sky-300" href="https://openai.com/index/gpt-6-astra/" target="_blank">GPT-6 Astra launch page</a> (OpenAI, 05/09/2026): ScreenSpot Pro and OSWorld 2.0. Documentation for <a class="text-sky-400 hover:text-sky-300" href="https://developers.openai.com/codex/" target="_blank">Codex</a> for the built-in browser and computer use tools.</p></div>
 <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-5"><p class="font-semibold text-red-400 mb-1">Limitations</p><p class="text-sm">Benchmarks don't measure your app. The model name doesn't enable the tool on your account. New google-flights-cli fares are available only inside Codex desktop. Interfaces change, so the prompts ask you to inspect before acting.</p></div>
@@ -455,8 +455,8 @@
 <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to give an agent a mouse and keyboard, with proof at the end?</h2>
 <p class="text-lg text-neutral-300 max-w-2xl mx-auto mb-8">Start with Track 1. In about 5.2 hours, you'll have the four-part contract and all five workflows ready to adapt to your software without an API.</p>
 <div class="flex flex-col sm:flex-row gap-3 justify-center">
-<a class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-emerald-600 text-white rounded-xl font-bold text-lg hover:bg-emerald-500 transition-colors shadow-lg shadow-emerald-900/30" href="../curso/trilha1/index.html">Start with Track 1 →</a>
-<button class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-dark-800 border border-emerald-500/30 text-emerald-400 rounded-xl font-semibold hover:bg-emerald-500/10 transition-colors" data-inema-journey-open="" type="button">🧭 My journey</button>
+<a class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-emerald-600 text-white rounded-xl font-bold text-lg hover:bg-emerald-500 transition-colors shadow-lg shadow-emerald-900/30" href="../curso/trilha1/index.html">Start with Track 1 â†’</a>
+<button class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-dark-800 border border-emerald-500/30 text-emerald-400 rounded-xl font-semibold hover:bg-emerald-500/10 transition-colors" data-ARCKHÉ-journey-open="" type="button">ðŸ§­ My journey</button>
 </div>
 </div>
 </section>
@@ -464,16 +464,16 @@
 <!-- FOOTER -->
 <footer class="border-t border-dark-600 mt-16 py-8">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm space-y-2">
-<p>Computer Use with GPT-6 Astra · 2026 ·
-        <a class="text-sky-400 hover:text-sky-300" href="https://inema.club" target="_blank">INEMA.CLUB</a> -
-        <a class="text-amber-700 dark:text-slate-300" href="https://inema.pro" target="_blank">PRO</a></p>
-<p class="text-xs">Sources: <a class="text-sky-400 hover:text-sky-300" href="https://www.youtube.com/watch?v=tU-fO6cADvQ" target="_blank">video “GPT-6 Astra’s computer use is absurdly good”</a> · Computer Use Field Guide and prompt kit (Prompt Advisers, 05/09/2026) · <a class="text-sky-400 hover:text-sky-300" href="https://github.com/promptadvisers/google-flights-cli" target="_blank">google-flights-cli</a> (MIT). Translated and adapted prompts.</p>
+<p>Computer Use with GPT-6 Astra Â· 2026 Â·
+        <a class="text-sky-400 hover:text-sky-300" href="https://ARCKHÉ AI" target="_blank">ARCKHÉ AI</a> -
+        <a class="text-amber-700 dark:text-slate-300" href="https://ARCKHÉ.pro" target="_blank">PRO</a></p>
+<p class="text-xs">Sources: <a class="text-sky-400 hover:text-sky-300" href="https://www.youtube.com/watch?v=tU-fO6cADvQ" target="_blank">video â€œGPT-6 Astraâ€™s computer use is absurdly goodâ€</a> Â· Computer Use Field Guide and prompt kit (Prompt Advisers, 05/09/2026) Â· <a class="text-sky-400 hover:text-sky-300" href="https://github.com/promptadvisers/google-flights-cli" target="_blank">google-flights-cli</a> (MIT). Translated and adapted prompts.</p>
 </div>
-<!-- inema-backlink:v1 -->
-<p style="display:block;width:100%;text-align:center;font-size:.85rem;margin:.75rem 0 0;opacity:.85"><a href="https://www.inema.club/cursos/258-computer-use-com-o-gpt-6-astra-cinco-fluxos-para-a-ia-operar-o-seu-computador-onde-nao-existe-api/" style="color:inherit;text-decoration:underline">Full course page on INEMA.CLUB</a> · <a href="https://www.inema.club/aprender-inteligencia-artificial/" style="color:inherit;text-decoration:underline">Guide: how to learn artificial intelligence</a></p>
-<!-- /inema-backlink:v1 -->
+<!-- ARCKHÉ-backlink:v1 -->
+<p style="display:block;width:100%;text-align:center;font-size:.85rem;margin:.75rem 0 0;opacity:.85"><a href="https://www.ARCKHÉ AI/cursos/258-computer-use-com-o-gpt-6-astra-cinco-fluxos-para-a-ia-operar-o-seu-computador-onde-nao-existe-api/" style="color:inherit;text-decoration:underline">Full course page on ARCKHÉ AI</a> Â· <a href="https://www.ARCKHÉ AI/aprender-inteligencia-artificial/" style="color:inherit;text-decoration:underline">Guide: how to learn artificial intelligence</a></p>
+<!-- /ARCKHÉ-backlink:v1 -->
 </footer>
-<!-- SCRIPTS núcleo v1 -->
+<!-- SCRIPTS nÃºcleo v1 -->
 <script>
     function toggleTopic(button) {
       const topicItem = button.closest('.topic-item');
@@ -498,31 +498,31 @@
       html.classList.toggle('dark');
       const dark = html.classList.contains('dark');
       localStorage.setItem('theme', dark ? 'dark' : 'light');
-      if (window.INEMA && INEMA.setPref) { try { INEMA.setPref('theme', dark ? 'inema-dark' : 'claro'); } catch (e) {} }
+      if (window.ARCKHÉ && ARCKHÉ.setPref) { try { ARCKHÉ.setPref('theme', dark ? 'ARCKHÉ-dark' : 'claro'); } catch (e) {} }
     });
     function openModal(modalId) { const m = document.getElementById(modalId); if (m) { m.classList.remove('hidden'); document.body.style.overflow = 'hidden'; } }
     function closeModal() { document.querySelectorAll('.modal').forEach(m => m.classList.add('hidden')); document.body.style.overflow = 'auto'; }
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
-    // Quiz inline (3 perguntas por módulo)
+    // Quiz inline (3 perguntas por mÃ³dulo)
     document.addEventListener('click', (e) => {
       const opt = e.target.closest('.qz-opt'); if (!opt) return;
       const qz = opt.closest('.qz'); if (!qz || qz.hasAttribute('data-answered')) return;
       const ok = opt.getAttribute('data-ok') === '1';
       qz.querySelectorAll('.qz-opt').forEach(o => { o.setAttribute('data-state', o.getAttribute('data-ok') === '1' ? 'ok' : (o === opt ? 'no' : '')); o.disabled = true; });
       qz.setAttribute('data-answered', ok ? 'ok' : 'no');
-      const fb = qz.querySelector('.qz-fb'); if (fb) fb.textContent = (ok ? '✓ Certo. ' : '✗ Não é essa. ') + (fb.getAttribute('data-text') || '');
+      const fb = qz.querySelector('.qz-fb'); if (fb) fb.textContent = (ok ? 'âœ“ Certo. ' : 'âœ— NÃ£o Ã© essa. ') + (fb.getAttribute('data-text') || '');
     });
-    // Copiar código
+    // Copiar cÃ³digo
     document.addEventListener('click', (e) => {
       const b = e.target.closest('[data-copy]'); if (!b) return;
       const pre = b.closest('.codebox').querySelector('pre');
-      navigator.clipboard && navigator.clipboard.writeText(pre.innerText).then(() => { const t = b.textContent; b.textContent = 'Copiado ✓'; setTimeout(() => b.textContent = t, 1600); });
+      navigator.clipboard && navigator.clipboard.writeText(pre.innerText).then(() => { const t = b.textContent; b.textContent = 'Copiado âœ“'; setTimeout(() => b.textContent = t, 1600); });
     });
   </script>
 <script src="../assets/learn.js"></script>
 <script>
-    if (window.INEMA && typeof window.INEMA.init === 'function') { window.INEMA.init(); }
+    if (window.ARCKHÉ && typeof window.ARCKHÉ.init === 'function') { window.ARCKHÉ.init(); }
   </script>
 </body>
 </html>

@@ -3,31 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="inema-course" content="astracu">
+  <meta name="ARCKHÉ-course" content="astracu">
   <title>O contrato de prompt em quatro partes | Computer Use com o GPT-6 Astra</title>
-  <meta name="description" content="Os cinco prompts do kit parecem longos, mas têm a mesma espinha: nomear o app, descrever o resultado, delimitar o que pode mudar e dizer como provar que terminou. Este módulo ensina a espinha e entrega o modelo reutilizável para qualquer trabalho seu.">
+  <meta name="description" content="Os cinco prompts do kit parecem longos, mas tÃªm a mesma espinha: nomear o app, descrever o resultado, delimitar o que pode mudar e dizer como provar que terminou. Este mÃ³dulo ensina a espinha e entrega o modelo reutilizÃ¡vel para qualquer trabalho seu.">
 
   <!-- ANTI-FOUC: bloqueante, antes de tudo -->
   <script>
 (function () {
   try {
     var html = document.documentElement;
-    var DEF = { theme: 'inema-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
+    var DEF = { theme: 'ARCKHÉ-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
     function clone(o) { var r = {}; for (var x in o) r[x] = o[x]; return r; }
     var p = clone(DEF);
     try {
-      var raw = localStorage.getItem('inema.prefs');
+      var raw = localStorage.getItem('ARCKHÉ.prefs');
       if (raw) { var parsed = JSON.parse(raw); if (parsed && typeof parsed === 'object') { for (var k in DEF) if (parsed[k] != null) p[k] = parsed[k]; } }
-      else { var legacy = localStorage.getItem('theme'); if (legacy === 'light') p.theme = 'claro'; else if (legacy === 'dark') p.theme = 'inema-dark'; }
+      else { var legacy = localStorage.getItem('theme'); if (legacy === 'light') p.theme = 'claro'; else if (legacy === 'dark') p.theme = 'ARCKHÉ-dark'; }
     } catch (e) { p = clone(DEF); }
-    var THEMES = { 'inema-dark': { dark: true, attr: null, cs: 'dark' }, 'claro': { dark: false, attr: null, cs: 'light' }, 'sepia': { dark: false, attr: 'sepia', cs: 'light' }, 'foco': { dark: null, attr: 'foco', cs: null }, 'contraste': { dark: true, attr: 'contraste', cs: 'dark' } };
-    var t = THEMES[p.theme] || THEMES['inema-dark'];
+    var THEMES = { 'ARCKHÉ-dark': { dark: true, attr: null, cs: 'dark' }, 'claro': { dark: false, attr: null, cs: 'light' }, 'sepia': { dark: false, attr: 'sepia', cs: 'light' }, 'foco': { dark: null, attr: 'foco', cs: null }, 'contraste': { dark: true, attr: 'contraste', cs: 'dark' } };
+    var t = THEMES[p.theme] || THEMES['ARCKHÉ-dark'];
     if (t.dark === true) html.classList.add('dark'); else if (t.dark === false) html.classList.remove('dark');
     if (t.attr) html.setAttribute('data-theme', t.attr); else html.removeAttribute('data-theme');
     html.style.colorScheme = (t.cs ? t.cs : (html.classList.contains('dark') ? 'dark' : 'light'));
     html.setAttribute('data-font', p.font || 'inter'); html.setAttribute('data-accent', p.accent || 'emerald');
     var s = html.style; var scale = (+p.fontScale || 100);
-    s.setProperty('--inema-font-scale', (scale / 100).toString()); s.setProperty('font-size', scale + '%');
+    s.setProperty('--ARCKHÉ-font-scale', (scale / 100).toString()); s.setProperty('font-size', scale + '%');
     s.setProperty('--measure', (+p.lineWidth || 68) + 'ch'); s.setProperty('--lh-body', (+p.leading || 1.7).toString());
     var fam = p.font === 'system' ? 'system-ui, -apple-system, "Segoe UI", Roboto, sans-serif' : (p.font === 'leitura' ? '"Atkinson Hyperlegible", "Inter", system-ui, sans-serif' : '"Inter", system-ui, sans-serif');
     s.setProperty('--font-body', fam);
@@ -46,8 +46,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/learn.css">
 
-  <!-- Manifesto do curso (obrigatório em toda página) -->
-  <script type="application/json" data-inema-manifest>
+  <!-- Manifesto do curso (obrigatÃ³rio em toda pÃ¡gina) -->
+  <script type="application/json" data-ARCKHÉ-manifest>
 {
  "course": "astracu",
  "tracks": [
@@ -57,7 +57,7 @@
    "modules": [
     {
      "id": "1-1",
-     "title": "O que é computer use e por que agora",
+     "title": "O que Ã© computer use e por que agora",
      "topics": 6,
      "href": "curso/trilha1/modulo-1-1.html"
     },
@@ -93,7 +93,7 @@
     },
     {
      "id": "2-4",
-     "title": "A entrega da edição",
+     "title": "A entrega da ediÃ§Ã£o",
      "topics": 6,
      "href": "curso/trilha2/modulo-2-4.html"
     },
@@ -212,17 +212,17 @@
     .qz-opt[data-state="no"] { border-color: #ef4444; background: rgba(239,68,68,.12); }
     .qz-fb { display:none; } .qz[data-answered] .qz-fb { display:block; }
 
-    /* TOC do módulo é um bloco inline, não uma barra lateral sticky */
-    [data-inema-toc] { position: static !important; top: auto !important; max-height: none !important; }
-    /* Painel de aparência (classes internas) */
-    .inema-appearance-sec { margin-bottom: .75rem; }
-    .inema-appearance-label { font-size: .7rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #9ca3af; margin-bottom: .35rem; }
-    .inema-appearance-row { display: flex; flex-wrap: wrap; gap: .35rem; }
-    .inema-chip { font-size: .8rem; padding: .3rem .65rem; border-radius: .5rem; border: 1px solid #374151; background: rgba(31,41,55,.6); color: #e5e7eb; cursor: pointer; }
-    .inema-chip:hover { border-color: #FACC15; }
-    .inema-chip[aria-pressed="true"], .inema-chip.is-active { background: rgba(250,204,21,.15); border-color: #FACC15; color: #FACC15; }
-    html:not(.dark) .inema-chip { background: #f3f4f6; color: #111827; border-color: #d1d5db; }
-    html:not(.dark) .inema-chip[aria-pressed="true"], html:not(.dark) .inema-chip.is-active { background: rgba(161,98,7,.1); border-color: #a16207; color: #a16207; }
+    /* TOC do mÃ³dulo Ã© um bloco inline, nÃ£o uma barra lateral sticky */
+    [data-ARCKHÉ-toc] { position: static !important; top: auto !important; max-height: none !important; }
+    /* Painel de aparÃªncia (classes internas) */
+    .ARCKHÉ-appearance-sec { margin-bottom: .75rem; }
+    .ARCKHÉ-appearance-label { font-size: .7rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #9ca3af; margin-bottom: .35rem; }
+    .ARCKHÉ-appearance-row { display: flex; flex-wrap: wrap; gap: .35rem; }
+    .ARCKHÉ-chip { font-size: .8rem; padding: .3rem .65rem; border-radius: .5rem; border: 1px solid #374151; background: rgba(31,41,55,.6); color: #e5e7eb; cursor: pointer; }
+    .ARCKHÉ-chip:hover { border-color: #FACC15; }
+    .ARCKHÉ-chip[aria-pressed="true"], .ARCKHÉ-chip.is-active { background: rgba(250,204,21,.15); border-color: #FACC15; color: #FACC15; }
+    html:not(.dark) .ARCKHÉ-chip { background: #f3f4f6; color: #111827; border-color: #d1d5db; }
+    html:not(.dark) .ARCKHÉ-chip[aria-pressed="true"], html:not(.dark) .ARCKHÉ-chip.is-active { background: rgba(161,98,7,.1); border-color: #a16207; color: #a16207; }
     /* Code box */
     .codebox pre { white-space: pre-wrap; word-break: break-word; }
     
@@ -236,13 +236,13 @@
       <div class="flex justify-between items-center h-14">
         <div class="flex items-center space-x-3">
           <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">🖱️</span>
+            <span class="text-2xl">ðŸ–±ï¸</span>
             <span class="font-bold text-lg hidden md:inline">Computer Use</span>
           </a>
           <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
+          <a href="https://ARCKHÉ AI" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">ARCKHÉ AI</a>
           <span class="text-neutral-600 hidden sm:inline">-</span>
-          <a href="https://inema.pro" target="_blank" class="text-amber-700 dark:text-slate-300 hover:opacity-80 text-sm font-medium hidden sm:inline">PRO</a>
+          <a href="https://ARCKHÉ.pro" target="_blank" class="text-amber-700 dark:text-slate-300 hover:opacity-80 text-sm font-medium hidden sm:inline">PRO</a>
         </div>
         <div class="flex items-center space-x-1 sm:space-x-2">
           <a href="../../curso/trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10">
@@ -253,11 +253,11 @@
             <span class="sm:hidden">T2</span>
             <span class="hidden sm:inline">Cinco fluxos</span>
           </a>
-          <button type="button" data-inema-journey-open class="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-semibold text-primary bg-primary/10 hover:bg-primary/20 transition-colors">
-            <span>🧭</span><span>Minha jornada</span>
-            <span data-inema-journey-badge class="text-xs px-1.5 py-0.5 rounded-full bg-primary/20"></span>
+          <button type="button" data-ARCKHÉ-journey-open class="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-semibold text-primary bg-primary/10 hover:bg-primary/20 transition-colors">
+            <span>ðŸ§­</span><span>Minha jornada</span>
+            <span data-ARCKHÉ-journey-badge class="text-xs px-1.5 py-0.5 rounded-full bg-primary/20"></span>
           </button>
-          <button type="button" data-inema-appearance-toggle="[data-inema-appearance]" aria-expanded="false" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" title="Aparência e leitura">
+          <button type="button" data-ARCKHÉ-appearance-toggle="[data-ARCKHÉ-appearance]" aria-expanded="false" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" title="AparÃªncia e leitura">
             <span aria-hidden="true">Aa</span>
           </button>
           <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" title="Tema claro/escuro">
@@ -269,40 +269,40 @@
     </div>
   </nav>
   
-  <div data-inema-appearance class="inema-appearance-pop" role="region" aria-label="Aparência e leitura">
-    <div class="inema-appearance-sec">
-      <p class="inema-appearance-label">Tema</p>
-      <div class="inema-appearance-row">
-        <button type="button" data-inema-set-theme="inema-dark" class="inema-chip">Escuro</button>
-        <button type="button" data-inema-set-theme="claro" class="inema-chip">Claro</button>
-        <button type="button" data-inema-set-theme="sepia" class="inema-chip">Sépia</button>
-        <button type="button" data-inema-set-theme="foco" class="inema-chip">Foco</button>
-        <button type="button" data-inema-set-theme="contraste" class="inema-chip">Contraste</button>
+  <div data-ARCKHÉ-appearance class="ARCKHÉ-appearance-pop" role="region" aria-label="AparÃªncia e leitura">
+    <div class="ARCKHÉ-appearance-sec">
+      <p class="ARCKHÉ-appearance-label">Tema</p>
+      <div class="ARCKHÉ-appearance-row">
+        <button type="button" data-ARCKHÉ-set-theme="ARCKHÉ-dark" class="ARCKHÉ-chip">Escuro</button>
+        <button type="button" data-ARCKHÉ-set-theme="claro" class="ARCKHÉ-chip">Claro</button>
+        <button type="button" data-ARCKHÉ-set-theme="sepia" class="ARCKHÉ-chip">SÃ©pia</button>
+        <button type="button" data-ARCKHÉ-set-theme="foco" class="ARCKHÉ-chip">Foco</button>
+        <button type="button" data-ARCKHÉ-set-theme="contraste" class="ARCKHÉ-chip">Contraste</button>
       </div>
     </div>
-    <div class="inema-appearance-sec">
-      <p class="inema-appearance-label">Tamanho do texto</p>
-      <div class="inema-appearance-row">
-        <button type="button" data-inema-set-fontscale="90" class="inema-chip">A-</button>
-        <button type="button" data-inema-set-fontscale="100" class="inema-chip">A</button>
-        <button type="button" data-inema-set-fontscale="115" class="inema-chip">A+</button>
-        <button type="button" data-inema-set-fontscale="130" class="inema-chip">A++</button>
+    <div class="ARCKHÉ-appearance-sec">
+      <p class="ARCKHÉ-appearance-label">Tamanho do texto</p>
+      <div class="ARCKHÉ-appearance-row">
+        <button type="button" data-ARCKHÉ-set-fontscale="90" class="ARCKHÉ-chip">A-</button>
+        <button type="button" data-ARCKHÉ-set-fontscale="100" class="ARCKHÉ-chip">A</button>
+        <button type="button" data-ARCKHÉ-set-fontscale="115" class="ARCKHÉ-chip">A+</button>
+        <button type="button" data-ARCKHÉ-set-fontscale="130" class="ARCKHÉ-chip">A++</button>
       </div>
     </div>
-    <div class="inema-appearance-sec">
-      <p class="inema-appearance-label">Fonte</p>
-      <div class="inema-appearance-row">
-        <button type="button" data-inema-set-font="inter" class="inema-chip">Inter</button>
-        <button type="button" data-inema-set-font="system" class="inema-chip">Sistema</button>
-        <button type="button" data-inema-set-font="leitura" class="inema-chip">Leitura</button>
+    <div class="ARCKHÉ-appearance-sec">
+      <p class="ARCKHÉ-appearance-label">Fonte</p>
+      <div class="ARCKHÉ-appearance-row">
+        <button type="button" data-ARCKHÉ-set-font="inter" class="ARCKHÉ-chip">Inter</button>
+        <button type="button" data-ARCKHÉ-set-font="system" class="ARCKHÉ-chip">Sistema</button>
+        <button type="button" data-ARCKHÉ-set-font="leitura" class="ARCKHÉ-chip">Leitura</button>
       </div>
     </div>
-    <div class="inema-appearance-sec">
-      <p class="inema-appearance-label">Entrelinha</p>
-      <div class="inema-appearance-row">
-        <button type="button" data-inema-set-leading="1.5" class="inema-chip">Compacta</button>
-        <button type="button" data-inema-set-leading="1.7" class="inema-chip">Normal</button>
-        <button type="button" data-inema-set-leading="1.9" class="inema-chip">Ampla</button>
+    <div class="ARCKHÉ-appearance-sec">
+      <p class="ARCKHÉ-appearance-label">Entrelinha</p>
+      <div class="ARCKHÉ-appearance-row">
+        <button type="button" data-ARCKHÉ-set-leading="1.5" class="ARCKHÉ-chip">Compacta</button>
+        <button type="button" data-ARCKHÉ-set-leading="1.7" class="ARCKHÉ-chip">Normal</button>
+        <button type="button" data-ARCKHÉ-set-leading="1.9" class="ARCKHÉ-chip">Ampla</button>
       </div>
     </div>
   </div>
@@ -310,54 +310,54 @@
   <!-- BREADCRUMB -->
   <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
     <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-emerald-400">Início</a><span>/</span>
+      <a href="../../index.html" class="hover:text-emerald-400">InÃ­cio</a><span>/</span>
       <a href="index.html" class="hover:text-emerald-400">Trilha 1</a><span>/</span>
-      <span class="text-emerald-400">Módulo 1.2</span>
+      <span class="text-emerald-400">MÃ³dulo 1.2</span>
     </div>
   </nav>
 
   <!-- HEADER -->
   <header class="bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">MÓDULO 1.2</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">📐 O contrato de prompt em quatro partes</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">Os cinco prompts do kit parecem longos, mas têm a mesma espinha: nomear o app, descrever o resultado, delimitar o que pode mudar e dizer como provar que terminou. Este módulo ensina a espinha e entrega o modelo reutilizável para qualquer trabalho seu.</p>
+      <span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">MÃ“DULO 1.2</span>
+      <h1 class="text-3xl sm:text-4xl font-bold mb-4">ðŸ“ O contrato de prompt em quatro partes</h1>
+      <p class="text-lg text-neutral-400 max-w-3xl">Os cinco prompts do kit parecem longos, mas tÃªm a mesma espinha: nomear o app, descrever o resultado, delimitar o que pode mudar e dizer como provar que terminou. Este mÃ³dulo ensina a espinha e entrega o modelo reutilizÃ¡vel para qualquer trabalho seu.</p>
       
       <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">45</div><div class="text-xs text-neutral-400">Minutos</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">Básico</div><div class="text-xs text-neutral-400">Nível</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">Prática</div><div class="text-xs text-neutral-400">Tipo</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">6</div><div class="text-xs text-neutral-400">TÃ³picos</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">45</div><div class="text-xs text-neutral-400">Minutos</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">BÃ¡sico</div><div class="text-xs text-neutral-400">NÃ­vel</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">PrÃ¡tica</div><div class="text-xs text-neutral-400">Tipo</div></div>
       </div>
-      <div data-inema-meter="modulo:1-2" class="inema-meter max-w-md mt-6" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do módulo">
-        <div class="flex justify-between text-sm text-neutral-400 mb-1"><span data-inema-meter-frac>0 de 6</span><span data-inema-meter-pct>0%</span></div>
-        <div class="inema-bar h-2 bg-dark-700 rounded-full overflow-hidden"><div class="inema-bar__fill h-full bg-emerald-500 rounded-full transition-all" data-inema-meter-fill style="width:0%"></div></div>
+      <div data-ARCKHÉ-meter="modulo:1-2" class="ARCKHÉ-meter max-w-md mt-6" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mÃ³dulo">
+        <div class="flex justify-between text-sm text-neutral-400 mb-1"><span data-ARCKHÉ-meter-frac>0 de 6</span><span data-ARCKHÉ-meter-pct>0%</span></div>
+        <div class="ARCKHÉ-bar h-2 bg-dark-700 rounded-full overflow-hidden"><div class="ARCKHÉ-bar__fill h-full bg-emerald-500 rounded-full transition-all" data-ARCKHÉ-meter-fill style="width:0%"></div></div>
       </div>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 inema-prose" data-inema-module="1-2" data-inema-track="1">
-    <nav aria-label="Tópicos deste módulo" class="mb-12 bg-dark-800 rounded-xl border border-dark-600 p-5" data-inema-toc>
-      <p class="text-xs font-semibold uppercase tracking-wider text-neutral-500 mb-3">Neste módulo</p>
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 ARCKHÉ-prose" data-ARCKHÉ-module="1-2" data-ARCKHÉ-track="1">
+    <nav aria-label="TÃ³picos deste mÃ³dulo" class="mb-12 bg-dark-800 rounded-xl border border-dark-600 p-5" data-ARCKHÉ-toc>
+      <p class="text-xs font-semibold uppercase tracking-wider text-neutral-500 mb-3">Neste mÃ³dulo</p>
       <ol class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
-        <li><a href="#topico-1" class="flex items-start gap-2 text-neutral-300 hover:text-emerald-400"><span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">1</span><span>APP · RESULTADO · ESCOPO · PROVA</span></a></li><li><a href="#topico-2" class="flex items-start gap-2 text-neutral-300 hover:text-emerald-400"><span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">2</span><span>Marcadores: o que você troca e o que preserva</span></a></li><li><a href="#topico-3" class="flex items-start gap-2 text-neutral-300 hover:text-emerald-400"><span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">3</span><span>Prova de conclusão não é screenshot</span></a></li><li><a href="#topico-4" class="flex items-start gap-2 text-neutral-300 hover:text-emerald-400"><span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">4</span><span>O bloqueio exato com evidência</span></a></li><li><a href="#topico-5" class="flex items-start gap-2 text-neutral-300 hover:text-emerald-400"><span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">5</span><span>O modelo reutilizável para qualquer trabalho</span></a></li><li><a href="#topico-6" class="flex items-start gap-2 text-neutral-300 hover:text-emerald-400"><span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">6</span><span>"Make it yours": adaptar cada fluxo ao seu caso</span></a></li>
+        <li><a href="#topico-1" class="flex items-start gap-2 text-neutral-300 hover:text-emerald-400"><span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">1</span><span>APP Â· RESULTADO Â· ESCOPO Â· PROVA</span></a></li><li><a href="#topico-2" class="flex items-start gap-2 text-neutral-300 hover:text-emerald-400"><span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">2</span><span>Marcadores: o que vocÃª troca e o que preserva</span></a></li><li><a href="#topico-3" class="flex items-start gap-2 text-neutral-300 hover:text-emerald-400"><span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">3</span><span>Prova de conclusÃ£o nÃ£o Ã© screenshot</span></a></li><li><a href="#topico-4" class="flex items-start gap-2 text-neutral-300 hover:text-emerald-400"><span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">4</span><span>O bloqueio exato com evidÃªncia</span></a></li><li><a href="#topico-5" class="flex items-start gap-2 text-neutral-300 hover:text-emerald-400"><span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">5</span><span>O modelo reutilizÃ¡vel para qualquer trabalho</span></a></li><li><a href="#topico-6" class="flex items-start gap-2 text-neutral-300 hover:text-emerald-400"><span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">6</span><span>"Make it yours": adaptar cada fluxo ao seu caso</span></a></li>
       </ol>
     </nav>
 
-    <!-- TÓPICO 1 -->
-    <section id="topico-1" data-inema-topic="modulo-1-2#topico-1" class="mb-16">
+    <!-- TÃ“PICO 1 -->
+    <section id="topico-1" data-ARCKHÉ-topic="modulo-1-2#topico-1" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">🧱 APP · RESULTADO · ESCOPO · PROVA</h2>
+        <h2 class="text-2xl font-bold">ðŸ§± APP Â· RESULTADO Â· ESCOPO Â· PROVA</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m1-2-p1">O guia de campo resume o que faz um prompt de computer use funcionar em quatro linhas. <strong class="text-emerald-400">APP</strong>: nomeie o app, workspace ou navegador exato. <strong class="text-emerald-400">RESULTADO</strong>: descreva a coisa útil que você quer no fim. <strong class="text-emerald-400">ESCOPO</strong>: diga quais arquivos ou configurações podem mudar. <strong class="text-emerald-400">PROVA</strong>: diga como o agente deve verificar que terminou.</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m1-2-p1">O guia de campo resume o que faz um prompt de computer use funcionar em quatro linhas. <strong class="text-emerald-400">APP</strong>: nomeie o app, workspace ou navegador exato. <strong class="text-emerald-400">RESULTADO</strong>: descreva a coisa Ãºtil que vocÃª quer no fim. <strong class="text-emerald-400">ESCOPO</strong>: diga quais arquivos ou configuraÃ§Ãµes podem mudar. <strong class="text-emerald-400">PROVA</strong>: diga como o agente deve verificar que terminou.</p>
 
       <aside class="bg-dark-800/60 rounded-xl border border-dashed border-emerald-500/30 p-5 mb-6">
-        <p class="text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-3">Novo aqui? Termos deste tópico</p>
+        <p class="text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-3">Novo aqui? Termos deste tÃ³pico</p>
         <dl class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-sm">
-          <div><dt class="font-semibold text-neutral-100">Marcador (placeholder)</dt><dd class="text-neutral-400" data-inema-block="m1-2-p2">Um trecho entre sinais de menor e maior, como <code>&lt;SOURCE_VIDEO_PATH&gt;</code>, que você substitui pelo seu valor antes de rodar. Nunca fica no prompt final.</dd></div><div><dt class="font-semibold text-neutral-100">Escopo</dt><dd class="text-neutral-400" data-inema-block="m1-2-p3">A lista do que o agente tem permissão de alterar. Tudo fora dela é intocável, mesmo que pareça útil.</dd></div><div><dt class="font-semibold text-neutral-100">Prova de conclusão</dt><dd class="text-neutral-400" data-inema-block="m1-2-p4">A evidência concreta de que a tarefa terminou: um arquivo que abre, um valor que persiste, uma comparação com a fonte. Não é a frase "concluído".</dd></div><div><dt class="font-semibold text-neutral-100">Bloqueio (blocker)</dt><dd class="text-neutral-400" data-inema-block="m1-2-p5">A resposta correta quando algo impede a tarefa: a tela exata onde parou, o que falta e a ação necessária de quem opera.</dd></div>
+          <div><dt class="font-semibold text-neutral-100">Marcador (placeholder)</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m1-2-p2">Um trecho entre sinais de menor e maior, como <code>&lt;SOURCE_VIDEO_PATH&gt;</code>, que vocÃª substitui pelo seu valor antes de rodar. Nunca fica no prompt final.</dd></div><div><dt class="font-semibold text-neutral-100">Escopo</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m1-2-p3">A lista do que o agente tem permissÃ£o de alterar. Tudo fora dela Ã© intocÃ¡vel, mesmo que pareÃ§a Ãºtil.</dd></div><div><dt class="font-semibold text-neutral-100">Prova de conclusÃ£o</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m1-2-p4">A evidÃªncia concreta de que a tarefa terminou: um arquivo que abre, um valor que persiste, uma comparaÃ§Ã£o com a fonte. NÃ£o Ã© a frase "concluÃ­do".</dd></div><div><dt class="font-semibold text-neutral-100">Bloqueio (blocker)</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m1-2-p5">A resposta correta quando algo impede a tarefa: a tela exata onde parou, o que falta e a aÃ§Ã£o necessÃ¡ria de quem opera.</dd></div>
         </dl>
       </aside>
 
       <figure class="rounded-2xl border border-emerald-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-        <svg viewBox="0 0 800 340" class="w-full h-auto" role="img" aria-label="As quatro camadas do contrato, de cima para baixo: app, resultado, escopo e prova. A prova é a base que sustenta as outras"><defs>
+        <svg viewBox="0 0 800 340" class="w-full h-auto" role="img" aria-label="As quatro camadas do contrato, de cima para baixo: app, resultado, escopo e prova. A prova Ã© a base que sustenta as outras"><defs>
     <linearGradient id="s6-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#34d399"/><stop offset="1" stop-color="#10b981"/></linearGradient>
     <filter id="s6-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     <pattern id="s6-grid" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="1.3" fill="#10b981" opacity="0.14"/></pattern>
@@ -365,134 +365,134 @@
         <text x="400" y="63" text-anchor="middle" fill="#a7f3d0" font-family="Inter,sans-serif" font-size="14" font-weight="700">APP</text>
         <text x="400" y="81" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="10" font-weight="400">nome exato do app, workspace ou navegador</text></g><g ><rect x="140" y="110" width="520" height="52" rx="12" fill="#0e1b26" stroke="#38bdf8" stroke-width="1.6" opacity="0.95"/>
         <text x="400" y="133" text-anchor="middle" fill="#9ad6ff" font-family="Inter,sans-serif" font-size="14" font-weight="700">RESULTADO</text>
-        <text x="400" y="151" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="10" font-weight="400">a coisa útil que existe no fim</text></g><g ><rect x="180" y="180" width="440" height="52" rx="12" fill="#0e1b26" stroke="#10b981" stroke-width="1.6" opacity="0.95"/>
+        <text x="400" y="151" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="10" font-weight="400">a coisa Ãºtil que existe no fim</text></g><g ><rect x="180" y="180" width="440" height="52" rx="12" fill="#0e1b26" stroke="#10b981" stroke-width="1.6" opacity="0.95"/>
         <text x="400" y="203" text-anchor="middle" fill="#a7f3d0" font-family="Inter,sans-serif" font-size="14" font-weight="700">ESCOPO</text>
-        <text x="400" y="221" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="10" font-weight="400">o que pode mudar; o resto é intocável</text></g><g filter="url(#s6-glow)"><rect x="220" y="250" width="360" height="52" rx="12" fill="#064e3b" stroke="url(#s6-g)" stroke-width="2.5" opacity="0.95"/>
+        <text x="400" y="221" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="10" font-weight="400">o que pode mudar; o resto Ã© intocÃ¡vel</text></g><g filter="url(#s6-glow)"><rect x="220" y="250" width="360" height="52" rx="12" fill="#064e3b" stroke="url(#s6-g)" stroke-width="2.5" opacity="0.95"/>
         <text x="400" y="273" text-anchor="middle" fill="#34d399" font-family="Inter,sans-serif" font-size="14" font-weight="700">PROVA</text>
         <text x="400" y="291" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="10" font-weight="400">como verificar que terminou</text></g>
       <text x="60" y="170" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="10" transform="rotate(-90 60 170)">de fora para dentro</text></svg>
-        <figcaption class="text-xs text-neutral-400 mt-3 px-1"><strong class="text-emerald-400">O que olhar:</strong> Leia de baixo para cima quando revisar um prompt seu: se a prova não existe, o resultado é uma promessa; se o escopo não existe, o app inteiro está em risco.</figcaption>
+        <figcaption class="text-xs text-neutral-400 mt-3 px-1"><strong class="text-emerald-400">O que olhar:</strong> Leia de baixo para cima quando revisar um prompt seu: se a prova nÃ£o existe, o resultado Ã© uma promessa; se o escopo nÃ£o existe, o app inteiro estÃ¡ em risco.</figcaption>
       </figure>
 
       <div class="overflow-x-auto rounded-xl border border-dark-600 mb-6">
         <table class="w-full text-sm text-left">
           
-          <thead class="bg-dark-800 text-emerald-400"><tr><th class="px-4 py-3 font-semibold">Parte</th><th class="px-4 py-3 font-semibold">Como aparece no prompt 04 (edição de vídeo)</th><th class="px-4 py-3 font-semibold">O que acontece se faltar</th></tr></thead>
-          <tbody class="divide-y divide-dark-600"><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">APP</td><td class="px-4 py-3 text-neutral-300">Descript, instalado e autenticado; Drive opcional</td><td class="px-4 py-3 text-neutral-300">O agente escolhe outro editor ou abre o navegador</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">RESULTADO</td><td class="px-4 py-3 text-neutral-300">Arquivo exportado no novo nome, na resolução da fonte</td><td class="px-4 py-3 text-neutral-300">Ele "limpa" e não exporta, ou exporta em 720p</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">ESCOPO</td><td class="px-4 py-3 text-neutral-300">Preservar o original; criar projeto novo; não enviar a ninguém</td><td class="px-4 py-3 text-neutral-300">O original é sobrescrito</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">PROVA</td><td class="px-4 py-3 text-neutral-300">O exportado decodifica, tem imagem e som, duração comparada sem tratar "mais curto" como "melhor"</td><td class="px-4 py-3 text-neutral-300">Você recebe "pronto" e descobre o problema ao abrir o arquivo</td></tr></tbody>
+          <thead class="bg-dark-800 text-emerald-400"><tr><th class="px-4 py-3 font-semibold">Parte</th><th class="px-4 py-3 font-semibold">Como aparece no prompt 04 (ediÃ§Ã£o de vÃ­deo)</th><th class="px-4 py-3 font-semibold">O que acontece se faltar</th></tr></thead>
+          <tbody class="divide-y divide-dark-600"><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">APP</td><td class="px-4 py-3 text-neutral-300">Descript, instalado e autenticado; Drive opcional</td><td class="px-4 py-3 text-neutral-300">O agente escolhe outro editor ou abre o navegador</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">RESULTADO</td><td class="px-4 py-3 text-neutral-300">Arquivo exportado no novo nome, na resoluÃ§Ã£o da fonte</td><td class="px-4 py-3 text-neutral-300">Ele "limpa" e nÃ£o exporta, ou exporta em 720p</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">ESCOPO</td><td class="px-4 py-3 text-neutral-300">Preservar o original; criar projeto novo; nÃ£o enviar a ninguÃ©m</td><td class="px-4 py-3 text-neutral-300">O original Ã© sobrescrito</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">PROVA</td><td class="px-4 py-3 text-neutral-300">O exportado decodifica, tem imagem e som, duraÃ§Ã£o comparada sem tratar "mais curto" como "melhor"</td><td class="px-4 py-3 text-neutral-300">VocÃª recebe "pronto" e descobre o problema ao abrir o arquivo</td></tr></tbody>
         </table>
       </div>
       
-      <button type="button" data-inema-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="inema-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="inema-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="inema-label-todo">Marcar como lido</span>
-        <span class="inema-label-done">Lido</span>
+      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
+        <span class="ARCKHÉ-label-done">Lido</span>
       </button>
     </section>
 
-    <!-- TÓPICO 2 -->
-    <section id="topico-2" data-inema-topic="modulo-1-2#topico-2" class="mb-16">
+    <!-- TÃ“PICO 2 -->
+    <section id="topico-2" data-ARCKHÉ-topic="modulo-1-2#topico-2" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">🔤 Marcadores: o que você troca e o que preserva</h2>
+        <h2 class="text-2xl font-bold">ðŸ”¤ Marcadores: o que vocÃª troca e o que preserva</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m1-2-p6">Os prompts do kit vêm em arquivos de texto separados justamente para copiar sem perder nada. A regra é mecânica: tudo que está entre <code>&lt;</code> e <code>&gt;</code> é seu para preencher; o resto é o contrato e fica como está até você entender por que cada frase existe.</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m1-2-p6">Os prompts do kit vÃªm em arquivos de texto separados justamente para copiar sem perder nada. A regra Ã© mecÃ¢nica: tudo que estÃ¡ entre <code>&lt;</code> e <code>&gt;</code> Ã© seu para preencher; o resto Ã© o contrato e fica como estÃ¡ atÃ© vocÃª entender por que cada frase existe.</p>
 
       <div class="overflow-x-auto rounded-xl border border-dark-600 mb-6">
         <table class="w-full text-sm text-left">
           
           <thead class="bg-dark-800 text-emerald-400"><tr><th class="px-4 py-3 font-semibold">Tipo de marcador</th><th class="px-4 py-3 font-semibold">Exemplos nos prompts</th><th class="px-4 py-3 font-semibold">Como preencher</th></tr></thead>
-          <tbody class="divide-y divide-dark-600"><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Entrada</td><td class="px-4 py-3 text-neutral-300"><code>&lt;ORIGIN_AIRPORT&gt;</code>, <code>&lt;SOURCE_VIDEO_PATH&gt;</code>, <code>&lt;REPO_PATH&gt;</code></td><td class="px-4 py-3 text-neutral-300">Caminho ou valor exato. Datas com ano completo. Nada relativo como "amanhã".</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Destino</td><td class="px-4 py-3 text-neutral-300"><code>&lt;OUTPUT_FOLDER&gt;</code>, <code>&lt;FOLDER_URL_OR_NONE&gt;</code></td><td class="px-4 py-3 text-neutral-300">Pasta nova e vazia por execução. "NONE" é resposta válida e evita upload indesejado.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Conta e app</td><td class="px-4 py-3 text-neutral-300"><code>&lt;APP_AND_WORKSPACE&gt;</code>, <code>&lt;ACCOUNT_HANDLE&gt;</code></td><td class="px-4 py-3 text-neutral-300">Nome exato do app e o identificador visível da conta. O agente confirma na tela antes de agir.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Critério</td><td class="px-4 py-3 text-neutral-300"><code>&lt;EXPECTED_RESULT&gt;</code>, <code>&lt;OBSERVABLE_PASS_CONDITIONS&gt;</code></td><td class="px-4 py-3 text-neutral-300">Condição que dá para ver: "a resposta cita o título e o link da aula", não "funciona bem".</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Orçamento</td><td class="px-4 py-3 text-neutral-300"><code>&lt;SEARCH_BUDGET&gt;</code>, <code>&lt;TIME_OR_ATTEMPT_LIMIT&gt;</code>, "três tentativas de reparo"</td><td class="px-4 py-3 text-neutral-300">Número. É o freio do agente autônomo: sem ele, uma falha vira uma noite de tentativas.</td></tr></tbody>
+          <tbody class="divide-y divide-dark-600"><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Entrada</td><td class="px-4 py-3 text-neutral-300"><code>&lt;ORIGIN_AIRPORT&gt;</code>, <code>&lt;SOURCE_VIDEO_PATH&gt;</code>, <code>&lt;REPO_PATH&gt;</code></td><td class="px-4 py-3 text-neutral-300">Caminho ou valor exato. Datas com ano completo. Nada relativo como "amanhÃ£".</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Destino</td><td class="px-4 py-3 text-neutral-300"><code>&lt;OUTPUT_FOLDER&gt;</code>, <code>&lt;FOLDER_URL_OR_NONE&gt;</code></td><td class="px-4 py-3 text-neutral-300">Pasta nova e vazia por execuÃ§Ã£o. "NONE" Ã© resposta vÃ¡lida e evita upload indesejado.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Conta e app</td><td class="px-4 py-3 text-neutral-300"><code>&lt;APP_AND_WORKSPACE&gt;</code>, <code>&lt;ACCOUNT_HANDLE&gt;</code></td><td class="px-4 py-3 text-neutral-300">Nome exato do app e o identificador visÃ­vel da conta. O agente confirma na tela antes de agir.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">CritÃ©rio</td><td class="px-4 py-3 text-neutral-300"><code>&lt;EXPECTED_RESULT&gt;</code>, <code>&lt;OBSERVABLE_PASS_CONDITIONS&gt;</code></td><td class="px-4 py-3 text-neutral-300">CondiÃ§Ã£o que dÃ¡ para ver: "a resposta cita o tÃ­tulo e o link da aula", nÃ£o "funciona bem".</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">OrÃ§amento</td><td class="px-4 py-3 text-neutral-300"><code>&lt;SEARCH_BUDGET&gt;</code>, <code>&lt;TIME_OR_ATTEMPT_LIMIT&gt;</code>, "trÃªs tentativas de reparo"</td><td class="px-4 py-3 text-neutral-300">NÃºmero. Ã‰ o freio do agente autÃ´nomo: sem ele, uma falha vira uma noite de tentativas.</td></tr></tbody>
         </table>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
           <h4 class="font-bold text-emerald-400 mb-4">&#10003; Preserve sem mexer</h4>
-          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-emerald-400">&#10003;</span><span>"Search only; do not book" e equivalentes: são os limites de dano.</span></li><li class="flex items-start space-x-2"><span class="text-emerald-400">&#10003;</span><span>"Stop at any login or secret entry that needs me."</span></li><li class="flex items-start space-x-2"><span class="text-emerald-400">&#10003;</span><span>"Do not invent timing breakdowns" e "missing data must not become zero".</span></li><li class="flex items-start space-x-2"><span class="text-emerald-400">&#10003;</span><span>As instruções de comparar com a tela ou com a fonte antes de reportar.</span></li></ul>
+          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-emerald-400">&#10003;</span><span>"Search only; do not book" e equivalentes: sÃ£o os limites de dano.</span></li><li class="flex items-start space-x-2"><span class="text-emerald-400">&#10003;</span><span>"Stop at any login or secret entry that needs me."</span></li><li class="flex items-start space-x-2"><span class="text-emerald-400">&#10003;</span><span>"Do not invent timing breakdowns" e "missing data must not become zero".</span></li><li class="flex items-start space-x-2"><span class="text-emerald-400">&#10003;</span><span>As instruÃ§Ãµes de comparar com a tela ou com a fonte antes de reportar.</span></li></ul>
         </div>
         <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
           <h4 class="font-bold text-red-400 mb-4">&#10007; Erros de preenchimento comuns</h4>
-          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Deixar <code>&lt;YYYY-MM-DD&gt;</code> no prompt: o agente escolhe uma data.</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Usar uma pasta de saída já cheia: capturas antigas se misturam às novas.</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Escrever o critério como adjetivo ("rápido", "bom").</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Apagar a linha de orçamento porque "quero que ele termine".</span></li></ul>
+          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Deixar <code>&lt;YYYY-MM-DD&gt;</code> no prompt: o agente escolhe uma data.</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Usar uma pasta de saÃ­da jÃ¡ cheia: capturas antigas se misturam Ã s novas.</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Escrever o critÃ©rio como adjetivo ("rÃ¡pido", "bom").</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Apagar a linha de orÃ§amento porque "quero que ele termine".</span></li></ul>
         </div>
       </div>
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Regra prática</h3>
-        <p class="text-neutral-300" data-inema-block="m1-2-p7">Antes de colar, procure o sinal de menor no seu prompt final. Se ainda houver algum, você não terminou de preencher. Depois, leia as frases que começam com "Do not" e confirme que todas continuam lá.</p>
+        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">ðŸ’¡</span> Regra prÃ¡tica</h3>
+        <p class="text-neutral-300" data-ARCKHÉ-block="m1-2-p7">Antes de colar, procure o sinal de menor no seu prompt final. Se ainda houver algum, vocÃª nÃ£o terminou de preencher. Depois, leia as frases que comeÃ§am com "Do not" e confirme que todas continuam lÃ¡.</p>
       </div>
       
-      <button type="button" data-inema-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="inema-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="inema-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="inema-label-todo">Marcar como lido</span>
-        <span class="inema-label-done">Lido</span>
+      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
+        <span class="ARCKHÉ-label-done">Lido</span>
       </button>
     </section>
 
-    <!-- TÓPICO 3 -->
-    <section id="topico-3" data-inema-topic="modulo-1-2#topico-3" class="mb-16">
+    <!-- TÃ“PICO 3 -->
+    <section id="topico-3" data-ARCKHÉ-topic="modulo-1-2#topico-3" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">✅ Prova de conclusão não é screenshot</h2>
+        <h2 class="text-2xl font-bold">âœ… Prova de conclusÃ£o nÃ£o Ã© screenshot</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m1-2-p8">O guia é explícito num ponto que a maioria dos tutoriais ignora: "uma captura de tela ou um nome de arquivo sozinho não prova conclusão". Cada fluxo define a própria prova, mas todas cabem em três famílias: <strong class="text-emerald-400">o artefato funciona</strong>, <strong class="text-emerald-400">o estado persiste</strong> e <strong class="text-emerald-400">a afirmação bate com a fonte</strong>.</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m1-2-p8">O guia Ã© explÃ­cito num ponto que a maioria dos tutoriais ignora: "uma captura de tela ou um nome de arquivo sozinho nÃ£o prova conclusÃ£o". Cada fluxo define a prÃ³pria prova, mas todas cabem em trÃªs famÃ­lias: <strong class="text-emerald-400">o artefato funciona</strong>, <strong class="text-emerald-400">o estado persiste</strong> e <strong class="text-emerald-400">a afirmaÃ§Ã£o bate com a fonte</strong>.</p>
 
       <figure class="rounded-2xl border border-emerald-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-        <svg viewBox="0 0 800 266" class="w-full h-auto" role="img" aria-label="Sinais fracos contra provas fortes: à esquerda o que só parece conclusão, à direita o que de fato prova"><defs>
+        <svg viewBox="0 0 800 266" class="w-full h-auto" role="img" aria-label="Sinais fracos contra provas fortes: Ã  esquerda o que sÃ³ parece conclusÃ£o, Ã  direita o que de fato prova"><defs>
     <linearGradient id="s7-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#34d399"/><stop offset="1" stop-color="#10b981"/></linearGradient>
     <filter id="s7-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     <pattern id="s7-grid" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="1.3" fill="#10b981" opacity="0.14"/></pattern>
   </defs><rect width="800" height="266" fill="url(#s7-grid)"/>
       <rect x="40" y="30" width="330" height="206" rx="16" fill="#064e3b" stroke="#10b981" stroke-width="2" opacity="0.95"/>
       <text x="205" y="62" text-anchor="middle" fill="#34d399" font-family="Inter,sans-serif" font-size="15" font-weight="800">SINAL FRACO</text>
-      <g class="wf-a"><circle cx="66" cy="96" r="4" fill="#34d399"/><text x="80" y="100" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Captura de tela do "sucesso"</text></g><g class="wf-a"><circle cx="66" cy="130" r="4" fill="#34d399"/><text x="80" y="134" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Nome do arquivo na pasta</text></g><g class="wf-a"><circle cx="66" cy="164" r="4" fill="#34d399"/><text x="80" y="168" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">A frase "concluído"</text></g><g class="wf-a"><circle cx="66" cy="198" r="4" fill="#34d399"/><text x="80" y="202" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Duração menor que a original</text></g><rect x="430" y="30" width="330" height="206" rx="16" fill="#0e1b26" stroke="#38bdf8" stroke-width="2" opacity="0.95"/>
+      <g class="wf-a"><circle cx="66" cy="96" r="4" fill="#34d399"/><text x="80" y="100" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Captura de tela do "sucesso"</text></g><g class="wf-a"><circle cx="66" cy="130" r="4" fill="#34d399"/><text x="80" y="134" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Nome do arquivo na pasta</text></g><g class="wf-a"><circle cx="66" cy="164" r="4" fill="#34d399"/><text x="80" y="168" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">A frase "concluÃ­do"</text></g><g class="wf-a"><circle cx="66" cy="198" r="4" fill="#34d399"/><text x="80" y="202" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">DuraÃ§Ã£o menor que a original</text></g><rect x="430" y="30" width="330" height="206" rx="16" fill="#0e1b26" stroke="#38bdf8" stroke-width="2" opacity="0.95"/>
       <text x="595" y="62" text-anchor="middle" fill="#38bdf8" font-family="Inter,sans-serif" font-size="15" font-weight="800">PROVA</text>
-      <g class="wf-a"><circle cx="456" cy="96" r="4" fill="#38bdf8"/><text x="470" y="100" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Arquivo decodifica, tem imagem e som</text></g><g class="wf-a"><circle cx="456" cy="130" r="4" fill="#38bdf8"/><text x="470" y="134" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Valor persiste ao reabrir a tela</text></g><g class="wf-a"><circle cx="456" cy="164" r="4" fill="#38bdf8"/><text x="470" y="168" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Um dado exportado bate com a página</text></g><g class="wf-a"><circle cx="456" cy="198" r="4" fill="#38bdf8"/><text x="470" y="202" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Afirmação conferida na fonte pública</text></g>
+      <g class="wf-a"><circle cx="456" cy="96" r="4" fill="#38bdf8"/><text x="470" y="100" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Arquivo decodifica, tem imagem e som</text></g><g class="wf-a"><circle cx="456" cy="130" r="4" fill="#38bdf8"/><text x="470" y="134" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Valor persiste ao reabrir a tela</text></g><g class="wf-a"><circle cx="456" cy="164" r="4" fill="#38bdf8"/><text x="470" y="168" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Um dado exportado bate com a pÃ¡gina</text></g><g class="wf-a"><circle cx="456" cy="198" r="4" fill="#38bdf8"/><text x="470" y="202" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">AfirmaÃ§Ã£o conferida na fonte pÃºblica</text></g>
       <line x1="385" y1="121" x2="415" y2="121" stroke="#9ca3af" stroke-width="1.5"/><line x1="385" y1="129" x2="415" y2="129" stroke="#9ca3af" stroke-width="1.5"/>
       <text x="400" y="256" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="11">exija a direita</text></svg>
-        <figcaption class="text-xs text-neutral-400 mt-3 px-1"><strong class="text-emerald-400">O que olhar:</strong> Cada item da esquerda tem um par na direita. Quando o agente entrega o da esquerda, peça o da direita antes de aceitar.</figcaption>
+        <figcaption class="text-xs text-neutral-400 mt-3 px-1"><strong class="text-emerald-400">O que olhar:</strong> Cada item da esquerda tem um par na direita. Quando o agente entrega o da esquerda, peÃ§a o da direita antes de aceitar.</figcaption>
       </figure>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
         
         <div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
-          <div class="text-2xl mb-2">📦</div>
+          <div class="text-2xl mb-2">ðŸ“¦</div>
           <h4 class="font-semibold text-emerald-400 mb-2">O artefato funciona</h4>
-          <p class="text-neutral-300 text-sm" data-inema-block="m1-2-p9">Fluxo 04: o vídeo exportado precisa decodificar, conter imagem e som e estar na resolução da fonte. Fluxo 01: o JSON exportado tem os campos preenchidos, e o que falta está marcado "unknown", nunca zero.</p>
+          <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m1-2-p9">Fluxo 04: o vÃ­deo exportado precisa decodificar, conter imagem e som e estar na resoluÃ§Ã£o da fonte. Fluxo 01: o JSON exportado tem os campos preenchidos, e o que falta estÃ¡ marcado "unknown", nunca zero.</p>
         </div>
         <div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
-          <div class="text-2xl mb-2">🔁</div>
+          <div class="text-2xl mb-2">ðŸ”</div>
           <h4 class="font-semibold text-emerald-400 mb-2">O estado persiste</h4>
-          <p class="text-neutral-300 text-sm" data-inema-block="m1-2-p10">Fluxo 05: sair da tela de configurações, reabrir e ver o mesmo valor. Fluxo 03: fechar e reabrir a conversa do app e confirmar que o contexto sobreviveu.</p>
+          <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m1-2-p10">Fluxo 05: sair da tela de configuraÃ§Ãµes, reabrir e ver o mesmo valor. Fluxo 03: fechar e reabrir a conversa do app e confirmar que o contexto sobreviveu.</p>
         </div>
         <div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
-          <div class="text-2xl mb-2">🔎</div>
+          <div class="text-2xl mb-2">ðŸ”Ž</div>
           <h4 class="font-semibold text-emerald-400 mb-2">Bate com a fonte</h4>
-          <p class="text-neutral-300 text-sm" data-inema-block="m1-2-p11">Fluxo 02: uma resposta material do MCP conferida contra a fonte de onde veio. Fluxo 01: ao menos uma tarifa exportada comparada com o que está visível na página.</p>
+          <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m1-2-p11">Fluxo 02: uma resposta material do MCP conferida contra a fonte de onde veio. Fluxo 01: ao menos uma tarifa exportada comparada com o que estÃ¡ visÃ­vel na pÃ¡gina.</p>
         </div>
       </div>
 
       <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span> A frase que parece prova e não é</h3>
-        <p class="text-neutral-300" data-inema-block="m1-2-p12">"Comparei a duração: a edição ficou 3 minutos mais curta." O prompt 04 manda reportar a duração antes e depois "sem tratar uma edição mais curta como prova de qualidade". Cortar demais também encurta. A prova é ouvir os cortes e confirmar que o conteúdo único sobreviveu.</p>
+        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">âš ï¸</span> A frase que parece prova e nÃ£o Ã©</h3>
+        <p class="text-neutral-300" data-ARCKHÉ-block="m1-2-p12">"Comparei a duraÃ§Ã£o: a ediÃ§Ã£o ficou 3 minutos mais curta." O prompt 04 manda reportar a duraÃ§Ã£o antes e depois "sem tratar uma ediÃ§Ã£o mais curta como prova de qualidade". Cortar demais tambÃ©m encurta. A prova Ã© ouvir os cortes e confirmar que o conteÃºdo Ãºnico sobreviveu.</p>
       </div>
       
-      <button type="button" data-inema-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="inema-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="inema-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="inema-label-todo">Marcar como lido</span>
-        <span class="inema-label-done">Lido</span>
+      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
+        <span class="ARCKHÉ-label-done">Lido</span>
       </button>
     </section>
 
-    <!-- TÓPICO 4 -->
-    <section id="topico-4" data-inema-topic="modulo-1-2#topico-4" class="mb-16">
+    <!-- TÃ“PICO 4 -->
+    <section id="topico-4" data-ARCKHÉ-topic="modulo-1-2#topico-4" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">🧱 O bloqueio exato com evidência</h2>
+        <h2 class="text-2xl font-bold">ðŸ§± O bloqueio exato com evidÃªncia</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m1-2-p13">Os cinco prompts repetem a mesma instrução com palavras diferentes: "stop with the exact blocker", "stop at that screen and tell me the exact action needed", "return the evidence and next diagnostic step". O bloqueio não é falha do fluxo. É uma das saídas previstas.</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m1-2-p13">Os cinco prompts repetem a mesma instruÃ§Ã£o com palavras diferentes: "stop with the exact blocker", "stop at that screen and tell me the exact action needed", "return the evidence and next diagnostic step". O bloqueio nÃ£o Ã© falha do fluxo. Ã‰ uma das saÃ­das previstas.</p>
 
       <div class="space-y-5 mb-6">
         <h3 class="text-lg font-semibold text-emerald-400 mb-2">Anatomia de um bloqueio bem reportado</h3>
@@ -502,7 +502,7 @@
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Onde parou</h4>
             
-            <p class="text-neutral-300 text-sm" data-inema-block="m1-2-p14">A tela, janela ou etapa exata. "Na tela de login do Descript" e não "não consegui abrir".</p>
+            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m1-2-p14">A tela, janela ou etapa exata. "Na tela de login do Descript" e nÃ£o "nÃ£o consegui abrir".</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
@@ -510,31 +510,31 @@
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">O que falta</h4>
             
-            <p class="text-neutral-300 text-sm" data-inema-block="m1-2-p15">A condição ausente: credencial, controle que não existe nesta versão do app, ferramenta não habilitada na sessão, arquivo que não decodifica.</p>
+            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m1-2-p15">A condiÃ§Ã£o ausente: credencial, controle que nÃ£o existe nesta versÃ£o do app, ferramenta nÃ£o habilitada na sessÃ£o, arquivo que nÃ£o decodifica.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center"><span class="text-emerald-400 font-bold">3</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
-            <h4 class="font-semibold text-white mb-2">Evidência</h4>
+            <h4 class="font-semibold text-white mb-2">EvidÃªncia</h4>
             
-            <p class="text-neutral-300 text-sm" data-inema-block="m1-2-p16">A captura daquela tela ou a mensagem de erro literal. Aqui a captura serve: ela documenta o bloqueio, não prova conclusão.</p>
+            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m1-2-p16">A captura daquela tela ou a mensagem de erro literal. Aqui a captura serve: ela documenta o bloqueio, nÃ£o prova conclusÃ£o.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center"><span class="text-emerald-400 font-bold">4</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
-            <h4 class="font-semibold text-white mb-2">A ação de quem opera</h4>
+            <h4 class="font-semibold text-white mb-2">A aÃ§Ã£o de quem opera</h4>
             
-            <p class="text-neutral-300 text-sm" data-inema-block="m1-2-p17">O que você precisa fazer para destravar: fazer login, abrir o espelhamento, habilitar a ferramenta, fornecer o caminho certo.</p>
+            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m1-2-p17">O que vocÃª precisa fazer para destravar: fazer login, abrir o espelhamento, habilitar a ferramenta, fornecer o caminho certo.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center"><span class="text-emerald-400 font-bold">5</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
-            <h4 class="font-semibold text-white mb-2">O que já está feito e o que não foi tocado</h4>
+            <h4 class="font-semibold text-white mb-2">O que jÃ¡ estÃ¡ feito e o que nÃ£o foi tocado</h4>
             
-            <p class="text-neutral-300 text-sm" data-inema-block="m1-2-p18">Separar concluído, já-correto e bloqueado, como o prompt 05 exige. Nada fica ambíguo.</p>
+            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m1-2-p18">Separar concluÃ­do, jÃ¡-correto e bloqueado, como o prompt 05 exige. Nada fica ambÃ­guo.</p>
           </div>
         </div>
       </div>
@@ -542,38 +542,38 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
           <h4 class="font-bold text-emerald-400 mb-4">&#10003; Bloqueio bem reportado</h4>
-          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-emerald-400">&#10003;</span><span>"O controle Upload at highest quality não existe nesta versão do app. Captura anexa. Os outros dois ajustes foram aplicados e verificados."</span></li><li class="flex items-start space-x-2"><span class="text-emerald-400">&#10003;</span><span>"O arquivo não decodifica (erro do ffprobe colado). Original preservado. Nada foi exportado."</span></li><li class="flex items-start space-x-2"><span class="text-emerald-400">&#10003;</span><span>"A sessão não tem o navegador interno habilitado. Plano gerado, busca não executada."</span></li></ul>
+          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-emerald-400">&#10003;</span><span>"O controle Upload at highest quality nÃ£o existe nesta versÃ£o do app. Captura anexa. Os outros dois ajustes foram aplicados e verificados."</span></li><li class="flex items-start space-x-2"><span class="text-emerald-400">&#10003;</span><span>"O arquivo nÃ£o decodifica (erro do ffprobe colado). Original preservado. Nada foi exportado."</span></li><li class="flex items-start space-x-2"><span class="text-emerald-400">&#10003;</span><span>"A sessÃ£o nÃ£o tem o navegador interno habilitado. Plano gerado, busca nÃ£o executada."</span></li></ul>
         </div>
         <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
           <h4 class="font-bold text-red-400 mb-4">&#10007; Falso progresso</h4>
-          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>"Não achei o controle, mas provavelmente já está ativado."</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>"Exportei, deve estar na pasta."</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>"Fiz a busca de memória: o voo mais barato costuma ser da Air Canada."</span></li></ul>
+          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>"NÃ£o achei o controle, mas provavelmente jÃ¡ estÃ¡ ativado."</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>"Exportei, deve estar na pasta."</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>"Fiz a busca de memÃ³ria: o voo mais barato costuma ser da Air Canada."</span></li></ul>
         </div>
       </div>
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Peça isso por escrito</h3>
-        <p class="text-neutral-300" data-inema-block="m1-2-p19">Inclua no seu prompt a frase "se algo bloquear, pare naquela tela e me diga a ação exata necessária; separe concluído, já-correto e bloqueado". É a linha que transforma uma sessão perdida numa lista de pendências.</p>
+        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">ðŸ’¡</span> PeÃ§a isso por escrito</h3>
+        <p class="text-neutral-300" data-ARCKHÉ-block="m1-2-p19">Inclua no seu prompt a frase "se algo bloquear, pare naquela tela e me diga a aÃ§Ã£o exata necessÃ¡ria; separe concluÃ­do, jÃ¡-correto e bloqueado". Ã‰ a linha que transforma uma sessÃ£o perdida numa lista de pendÃªncias.</p>
       </div>
       
-      <button type="button" data-inema-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="inema-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="inema-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="inema-label-todo">Marcar como lido</span>
-        <span class="inema-label-done">Lido</span>
+      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
+        <span class="ARCKHÉ-label-done">Lido</span>
       </button>
     </section>
 
-    <!-- TÓPICO 5 -->
-    <section id="topico-5" data-inema-topic="modulo-1-2#topico-5" class="mb-16">
+    <!-- TÃ“PICO 5 -->
+    <section id="topico-5" data-ARCKHÉ-topic="modulo-1-2#topico-5" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">🔁 O modelo reutilizável para qualquer trabalho</h2>
+        <h2 class="text-2xl font-bold">ðŸ” O modelo reutilizÃ¡vel para qualquer trabalho</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m1-2-p20">O kit fecha com um prompt curto para qualquer tarefa que não seja um dos cinco fluxos. Ele é o contrato de quatro partes em forma de formulário. Abaixo, traduzido e com os marcadores preservados.</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m1-2-p20">O kit fecha com um prompt curto para qualquer tarefa que nÃ£o seja um dos cinco fluxos. Ele Ã© o contrato de quatro partes em forma de formulÃ¡rio. Abaixo, traduzido e com os marcadores preservados.</p>
 
       <div class="codebox bg-dark-800 rounded-xl border border-emerald-500/30 overflow-hidden mb-6">
         <div class="px-5 py-3 border-b border-dark-600 flex items-start justify-between gap-3 flex-wrap">
-          <div><p class="text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-1">Copie e rode</p><p class="text-sm text-neutral-300">Rodar uma tarefa de computer use qualquer com app, escopo, sucesso e orçamento explícitos (Codex com a ferramenta de computer use habilitada)</p></div>
+          <div><p class="text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-1">Copie e rode</p><p class="text-sm text-neutral-300">Rodar uma tarefa de computer use qualquer com app, escopo, sucesso e orÃ§amento explÃ­citos (Codex com a ferramenta de computer use habilitada)</p></div>
           <button type="button" data-copy class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30 transition-colors">Copiar</button>
         </div>
         <pre class="p-5 text-sm text-neutral-100 bg-dark-900/60 font-mono leading-relaxed"><code class="language-text">Use &lt;APP_OU_NAVEGADOR_EXATO&gt; para concluir &lt;RESULTADO_OBSERVAVEL&gt;.
@@ -581,17 +581,17 @@
 Entradas: &lt;ARQUIVOS, ENDERECOS, CONTA_OU_WORKSPACE&gt;
 Escopo: &lt;O_QUE_PODE_MUDAR&gt;
 Sucesso: &lt;VERIFICACOES_VISIVEIS_DE_ACEITE&gt;
-Entregáveis: &lt;ARQUIVOS_E_RELATORIO&gt;
-Orçamento: &lt;LIMITE_DE_TEMPO_OU_TENTATIVAS&gt;
+EntregÃ¡veis: &lt;ARQUIVOS_E_RELATORIO&gt;
+OrÃ§amento: &lt;LIMITE_DE_TEMPO_OU_TENTATIVAS&gt;
 
-Inspecione o estado atual e a documentação ativa da ferramenta antes de agir. Use as capacidades do próprio app quando for isso que estamos testando. Mantenha o material de origem e o trabalho não relacionado intactos. Tome decisões razoáveis dentro do escopo pedido; pergunte só o que faltar e mudar materialmente o resultado.
+Inspecione o estado atual e a documentaÃ§Ã£o ativa da ferramenta antes de agir. Use as capacidades do prÃ³prio app quando for isso que estamos testando. Mantenha o material de origem e o trabalho nÃ£o relacionado intactos. Tome decisÃµes razoÃ¡veis dentro do escopo pedido; pergunte sÃ³ o que faltar e mudar materialmente o resultado.
 
-Depois do trabalho, verifique o resultado na interface ou no artefato exportado. Se falhar, reproduza o problema e devolva a evidência. Reporte o que foi concluído, o que ficou sem verificar e o próximo passo exato.</code></pre>
-        <div class="px-5 py-3 border-t border-dark-600 text-sm text-neutral-400"><strong class="text-neutral-300">Como verificar:</strong> O relatório final tem três seções distintas (concluído, sem verificar, próximo passo). O artefato entregue abre e corresponde ao "Sucesso" que você escreveu. Nada fora do "Escopo" foi alterado.</div>
+Depois do trabalho, verifique o resultado na interface ou no artefato exportado. Se falhar, reproduza o problema e devolva a evidÃªncia. Reporte o que foi concluÃ­do, o que ficou sem verificar e o prÃ³ximo passo exato.</code></pre>
+        <div class="px-5 py-3 border-t border-dark-600 text-sm text-neutral-400"><strong class="text-neutral-300">Como verificar:</strong> O relatÃ³rio final tem trÃªs seÃ§Ãµes distintas (concluÃ­do, sem verificar, prÃ³ximo passo). O artefato entregue abre e corresponde ao "Sucesso" que vocÃª escreveu. Nada fora do "Escopo" foi alterado.</div>
       </div>
 
       <figure class="rounded-2xl border border-emerald-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-        <svg viewBox="0 0 800 200" class="w-full h-auto" role="img" aria-label="O ciclo que o modelo reutilizável impõe: inspecionar, agir dentro do escopo, verificar no artefato, e reportar ou reproduzir a falha"><defs>
+        <svg viewBox="0 0 800 200" class="w-full h-auto" role="img" aria-label="O ciclo que o modelo reutilizÃ¡vel impÃµe: inspecionar, agir dentro do escopo, verificar no artefato, e reportar ou reproduzir a falha"><defs>
     <linearGradient id="s8-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#34d399"/><stop offset="1" stop-color="#10b981"/></linearGradient>
     <filter id="s8-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     <pattern id="s8-grid" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="1.3" fill="#10b981" opacity="0.14"/></pattern>
@@ -602,7 +602,7 @@ Depois do trabalho, verifique o resultado na interface ou no artefato exportado.
         <path class="wf-flow" d="M166.8 102 L186.8 102" stroke="#38bdf8" stroke-width="2" fill="none"/><polygon points="182.8,97 182.8,107 188.8,102" fill="#38bdf8"/><g class="wf-a"><rect x="188.8" y="60" width="124.8" height="84" rx="12" fill="#0e1b26" stroke="#38bdf8" stroke-width="1.8"/>
         <circle cx="206.8" cy="78" r="10" fill="#38bdf8"/><text x="206.8" y="82" text-anchor="middle" fill="#0b1220" font-family="Inter,sans-serif" font-size="11" font-weight="700">2</text>
         <text x="251.20000000000002" y="104" text-anchor="middle" fill="#9ad6ff" font-family="Inter,sans-serif" font-size="10.5" font-weight="700">Agir</text>
-        <text x="251.20000000000002" y="122" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="9.5" font-weight="400">só dentro do escopo</text></g>
+        <text x="251.20000000000002" y="122" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="9.5" font-weight="400">sÃ³ dentro do escopo</text></g>
         <path class="wf-flow" d="M315.6 102 L335.6 102" stroke="#38bdf8" stroke-width="2" fill="none"/><polygon points="331.6,97 331.6,107 337.6,102" fill="#38bdf8"/><g class="wf-a"><rect x="337.6" y="60" width="124.8" height="84" rx="12" fill="#064e3b" stroke="#10b981" stroke-width="1.8"/>
         <circle cx="355.6" cy="78" r="10" fill="#10b981"/><text x="355.6" y="82" text-anchor="middle" fill="#0b1220" font-family="Inter,sans-serif" font-size="11" font-weight="700">3</text>
         <text x="400" y="104" text-anchor="middle" fill="#a7f3d0" font-family="Inter,sans-serif" font-size="10.5" font-weight="700">Verificar</text>
@@ -610,48 +610,48 @@ Depois do trabalho, verifique o resultado na interface ou no artefato exportado.
         <path class="wf-flow" d="M464.40000000000003 102 L484.40000000000003 102" stroke="#38bdf8" stroke-width="2" fill="none"/><polygon points="480.40000000000003,97 480.40000000000003,107 486.40000000000003,102" fill="#38bdf8"/><g class="wf-a"><rect x="486.40000000000003" y="60" width="124.8" height="84" rx="12" fill="#0e1b26" stroke="#38bdf8" stroke-width="1.8"/>
         <circle cx="504.40000000000003" cy="78" r="10" fill="#38bdf8"/><text x="504.40000000000003" y="82" text-anchor="middle" fill="#0b1220" font-family="Inter,sans-serif" font-size="11" font-weight="700">4</text>
         <text x="548.8000000000001" y="104" text-anchor="middle" fill="#9ad6ff" font-family="Inter,sans-serif" font-size="10.5" font-weight="700">Reproduzir</text>
-        <text x="548.8000000000001" y="122" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="9.5" font-weight="400">se falhou, com evidência</text></g>
+        <text x="548.8000000000001" y="122" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="9.5" font-weight="400">se falhou, com evidÃªncia</text></g>
         <path class="wf-flow" d="M613.2 102 L633.2 102" stroke="#38bdf8" stroke-width="2" fill="none"/><polygon points="629.2,97 629.2,107 635.2,102" fill="#38bdf8"/><g class="wf-a"><rect x="635.2" y="60" width="124.8" height="84" rx="12" fill="#064e3b" stroke="#10b981" stroke-width="1.8"/>
         <circle cx="653.2" cy="78" r="10" fill="#10b981"/><text x="653.2" y="82" text-anchor="middle" fill="#0b1220" font-family="Inter,sans-serif" font-size="11" font-weight="700">5</text>
         <text x="697.6" y="104" text-anchor="middle" fill="#a7f3d0" font-family="Inter,sans-serif" font-size="10.5" font-weight="700">Reportar</text>
-        <text x="697.6" y="122" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="9.5" font-weight="400">feito · sem verificar · próximo passo</text></g>
+        <text x="697.6" y="122" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="9.5" font-weight="400">feito Â· sem verificar Â· prÃ³ximo passo</text></g>
         
-      <text x="400" y="178" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="11" font-style="italic">O ciclo que o modelo reutilizável impõe: inspecionar, agir dentro do escopo, verificar no artefato, e reportar ou reproduzir a falha</text></svg>
-        <figcaption class="text-xs text-neutral-400 mt-3 px-1"><strong class="text-emerald-400">O que olhar:</strong> A caixa "inspecionar" vem antes de qualquer clique. É o que evita o agente agir com base num menu que lembrava de outra versão do app.</figcaption>
+      <text x="400" y="178" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="11" font-style="italic">O ciclo que o modelo reutilizÃ¡vel impÃµe: inspecionar, agir dentro do escopo, verificar no artefato, e reportar ou reproduzir a falha</text></svg>
+        <figcaption class="text-xs text-neutral-400 mt-3 px-1"><strong class="text-emerald-400">O que olhar:</strong> A caixa "inspecionar" vem antes de qualquer clique. Ã‰ o que evita o agente agir com base num menu que lembrava de outra versÃ£o do app.</figcaption>
       </figure>
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Exemplo preenchido</h3>
-        <p class="text-neutral-300" data-inema-block="m1-2-p21">App: o navegador interno do Codex. Resultado: a lista de todos os cursos publicados em inema.club com título e link, exportada em CSV. Entradas: a URL da home. Escopo: nada muda no site, só leitura. Sucesso: o CSV tem ao menos 200 linhas e 3 títulos escolhidos por mim aparecem nele. Entregáveis: o CSV e uma captura da última página visitada. Orçamento: 15 minutos.</p>
+        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">ðŸ’¡</span> Exemplo preenchido</h3>
+        <p class="text-neutral-300" data-ARCKHÉ-block="m1-2-p21">App: o navegador interno do Codex. Resultado: a lista de todos os cursos publicados em ARCKHÉ AI com tÃ­tulo e link, exportada em CSV. Entradas: a URL da home. Escopo: nada muda no site, sÃ³ leitura. Sucesso: o CSV tem ao menos 200 linhas e 3 tÃ­tulos escolhidos por mim aparecem nele. EntregÃ¡veis: o CSV e uma captura da Ãºltima pÃ¡gina visitada. OrÃ§amento: 15 minutos.</p>
       </div>
       
-      <button type="button" data-inema-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="inema-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="inema-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="inema-label-todo">Marcar como lido</span>
-        <span class="inema-label-done">Lido</span>
+      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
+        <span class="ARCKHÉ-label-done">Lido</span>
       </button>
     </section>
 
-    <!-- TÓPICO 6 -->
-    <section id="topico-6" data-inema-topic="modulo-1-2#topico-6" class="mb-16">
+    <!-- TÃ“PICO 6 -->
+    <section id="topico-6" data-ARCKHÉ-topic="modulo-1-2#topico-6" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">🔧 "Make it yours": adaptar cada fluxo ao seu caso</h2>
+        <h2 class="text-2xl font-bold">ðŸ”§ "Make it yours": adaptar cada fluxo ao seu caso</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m1-2-p22">Cada página do guia termina com um parágrafo "make it yours". Juntos, eles formam a regra de adaptação: <strong class="text-emerald-400">troque o app e a condição de sucesso, preserve as checagens de evidência</strong>.</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m1-2-p22">Cada pÃ¡gina do guia termina com um parÃ¡grafo "make it yours". Juntos, eles formam a regra de adaptaÃ§Ã£o: <strong class="text-emerald-400">troque o app e a condiÃ§Ã£o de sucesso, preserve as checagens de evidÃªncia</strong>.</p>
 
       <div class="overflow-x-auto rounded-xl border border-dark-600 mb-6">
         <table class="w-full text-sm text-left">
           
-          <thead class="bg-dark-800 text-emerald-400"><tr><th class="px-4 py-3 font-semibold">Fluxo</th><th class="px-4 py-3 font-semibold">Troque</th><th class="px-4 py-3 font-semibold">Preserve</th><th class="px-4 py-3 font-semibold">Variação sugerida pelo guia</th></tr></thead>
-          <tbody class="divide-y divide-dark-600"><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">01 Busca vira ferramenta</td><td class="px-4 py-3 text-neutral-300">O site e as entradas da busca</td><td class="px-4 py-3 text-neutral-300">Inspecionar a interface uma vez, salvar uma rota suportada, verificar cada resultado</td><td class="px-4 py-3 text-neutral-300">Qualquer busca repetida: imóveis, peças, vagas</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">02 Testar dentro do app</td><td class="px-4 py-3 text-neutral-300">O app hospedeiro e a condição de sucesso</td><td class="px-4 py-3 text-neutral-300">Inspecionar a chamada da ferramenta, follow-ups, caso sem resultado, conferência com a fonte</td><td class="px-4 py-3 text-neutral-300">MCP, recurso por API, skill ou plugin</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">03 Um agente testa outro</td><td class="px-4 py-3 text-neutral-300">A tarefa de navegador por uma jornada de usuário concreta</td><td class="px-4 py-3 text-neutral-300">O app faz as próprias ações; falha registrada; reparo passa no mesmo teste</td><td class="px-4 py-3 text-neutral-300">App sem agente: criar rascunho, salvar, reabrir</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">04 Entrega da edição</td><td class="px-4 py-3 text-neutral-300">O vídeo e o destino</td><td class="px-4 py-3 text-neutral-300">Estabilidade do arquivo, decodificação, original intacto</td><td class="px-4 py-3 text-neutral-300">Render não terminado: pedir acompanhamento agendado</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">05 Celular pelo computador</td><td class="px-4 py-3 text-neutral-300">O app móvel, a conta e a configuração alvo</td><td class="px-4 py-3 text-neutral-300">Antes/depois e verificação de persistência</td><td class="px-4 py-3 text-neutral-300">Qualquer app que só existe no celular</td></tr></tbody>
+          <thead class="bg-dark-800 text-emerald-400"><tr><th class="px-4 py-3 font-semibold">Fluxo</th><th class="px-4 py-3 font-semibold">Troque</th><th class="px-4 py-3 font-semibold">Preserve</th><th class="px-4 py-3 font-semibold">VariaÃ§Ã£o sugerida pelo guia</th></tr></thead>
+          <tbody class="divide-y divide-dark-600"><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">01 Busca vira ferramenta</td><td class="px-4 py-3 text-neutral-300">O site e as entradas da busca</td><td class="px-4 py-3 text-neutral-300">Inspecionar a interface uma vez, salvar uma rota suportada, verificar cada resultado</td><td class="px-4 py-3 text-neutral-300">Qualquer busca repetida: imÃ³veis, peÃ§as, vagas</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">02 Testar dentro do app</td><td class="px-4 py-3 text-neutral-300">O app hospedeiro e a condiÃ§Ã£o de sucesso</td><td class="px-4 py-3 text-neutral-300">Inspecionar a chamada da ferramenta, follow-ups, caso sem resultado, conferÃªncia com a fonte</td><td class="px-4 py-3 text-neutral-300">MCP, recurso por API, skill ou plugin</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">03 Um agente testa outro</td><td class="px-4 py-3 text-neutral-300">A tarefa de navegador por uma jornada de usuÃ¡rio concreta</td><td class="px-4 py-3 text-neutral-300">O app faz as prÃ³prias aÃ§Ãµes; falha registrada; reparo passa no mesmo teste</td><td class="px-4 py-3 text-neutral-300">App sem agente: criar rascunho, salvar, reabrir</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">04 Entrega da ediÃ§Ã£o</td><td class="px-4 py-3 text-neutral-300">O vÃ­deo e o destino</td><td class="px-4 py-3 text-neutral-300">Estabilidade do arquivo, decodificaÃ§Ã£o, original intacto</td><td class="px-4 py-3 text-neutral-300">Render nÃ£o terminado: pedir acompanhamento agendado</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">05 Celular pelo computador</td><td class="px-4 py-3 text-neutral-300">O app mÃ³vel, a conta e a configuraÃ§Ã£o alvo</td><td class="px-4 py-3 text-neutral-300">Antes/depois e verificaÃ§Ã£o de persistÃªncia</td><td class="px-4 py-3 text-neutral-300">Qualquer app que sÃ³ existe no celular</td></tr></tbody>
         </table>
       </div>
 
       <div class="codebox bg-dark-800 rounded-xl border border-emerald-500/30 overflow-hidden mb-6">
         <div class="px-5 py-3 border-b border-dark-600 flex items-start justify-between gap-3 flex-wrap">
-          <div><p class="text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-1">Copie e rode</p><p class="text-sm text-neutral-300">Adaptar o fluxo 02 para testar uma skill sua no Claude Code, mantendo as checagens de evidência (Codex com computer use e o Claude Code instalado)</p></div>
+          <div><p class="text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-1">Copie e rode</p><p class="text-sm text-neutral-300">Adaptar o fluxo 02 para testar uma skill sua no Claude Code, mantendo as checagens de evidÃªncia (Codex com computer use e o Claude Code instalado)</p></div>
           <button type="button" data-copy class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30 transition-colors">Copiar</button>
         </div>
         <pre class="p-5 text-sm text-neutral-100 bg-dark-900/60 font-mono leading-relaxed"><code class="language-text">Use computer use para testar minha skill existente dentro do app real.
@@ -660,69 +660,69 @@ App hospedeiro e workspace: Claude Code, na pasta &lt;CAMINHO_DO_PROJETO&gt;
 Ferramenta / skill: /&lt;NOME_DA_SKILL&gt;
 Tema seguro de teste: &lt;TEMA_SEM_DADOS_PRIVADOS&gt;
 Resultado esperado: &lt;O_QUE_A_SKILL_DEVE_PRODUZIR, VISIVEL&gt;
-Código-fonte opcional: &lt;CAMINHO_DA_SKILL_OU_NONE&gt;
+CÃ³digo-fonte opcional: &lt;CAMINHO_DA_SKILL_OU_NONE&gt;
 
-Confirme que está no app e na pasta certos. Verifique se a skill aparece. Não reinstale nem reescreva o que já existe.
-Rode um pedido realista e só de leitura. Inspecione as chamadas de ferramenta, não só a resposta final. Faça dois follow-ups naturais que dependam da primeira resposta. Inclua um caso sem resultado para ver se ela admite incerteza.
-Confira uma afirmação material contra a fonte. Registre entradas, saída, erros e tempo decorrido; separe tempo do modelo e tempo da ferramenta só quando a evidência permitir.
-Devolva: checagens que passaram, falhas reproduzidas, evidência e a correção de maior valor. Se houver código, aponte o local provável sem alterar nada. Não envie mensagens a ninguém.</code></pre>
-        <div class="px-5 py-3 border-t border-dark-600 text-sm text-neutral-400"><strong class="text-neutral-300">Como verificar:</strong> O relatório mostra a chamada da skill (não só o texto final), os dois follow-ups mantêm o contexto, o caso sem resultado não inventa resposta e a correção sugerida aponta um arquivo e uma linha.</div>
+Confirme que estÃ¡ no app e na pasta certos. Verifique se a skill aparece. NÃ£o reinstale nem reescreva o que jÃ¡ existe.
+Rode um pedido realista e sÃ³ de leitura. Inspecione as chamadas de ferramenta, nÃ£o sÃ³ a resposta final. FaÃ§a dois follow-ups naturais que dependam da primeira resposta. Inclua um caso sem resultado para ver se ela admite incerteza.
+Confira uma afirmaÃ§Ã£o material contra a fonte. Registre entradas, saÃ­da, erros e tempo decorrido; separe tempo do modelo e tempo da ferramenta sÃ³ quando a evidÃªncia permitir.
+Devolva: checagens que passaram, falhas reproduzidas, evidÃªncia e a correÃ§Ã£o de maior valor. Se houver cÃ³digo, aponte o local provÃ¡vel sem alterar nada. NÃ£o envie mensagens a ninguÃ©m.</code></pre>
+        <div class="px-5 py-3 border-t border-dark-600 text-sm text-neutral-400"><strong class="text-neutral-300">Como verificar:</strong> O relatÃ³rio mostra a chamada da skill (nÃ£o sÃ³ o texto final), os dois follow-ups mantÃªm o contexto, o caso sem resultado nÃ£o inventa resposta e a correÃ§Ã£o sugerida aponta um arquivo e uma linha.</div>
       </div>
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Teste de estrutura</h3>
-        <p class="text-neutral-300" data-inema-block="m1-2-p23">Se ao adaptar um prompt você apagou uma frase que começa com "verify", "confirm", "compare" ou "do not", pare. Essas são as checagens de evidência. O guia manda preservá-las em todas as variações.</p>
+        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">ðŸ’¡</span> Teste de estrutura</h3>
+        <p class="text-neutral-300" data-ARCKHÉ-block="m1-2-p23">Se ao adaptar um prompt vocÃª apagou uma frase que comeÃ§a com "verify", "confirm", "compare" ou "do not", pare. Essas sÃ£o as checagens de evidÃªncia. O guia manda preservÃ¡-las em todas as variaÃ§Ãµes.</p>
       </div>
       
-      <button type="button" data-inema-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="inema-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="inema-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="inema-label-todo">Marcar como lido</span>
-        <span class="inema-label-done">Lido</span>
+      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
+        <span class="ARCKHÉ-label-done">Lido</span>
       </button>
     </section>
 
     <!-- QUIZ -->
     
       <div class="bg-dark-800 rounded-2xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-1 flex items-center"><span class="mr-2">🧪</span> Teste rápido do módulo</h3>
-        <p class="text-sm text-neutral-400 mb-5">Três perguntas. Clique numa opção para ver a resposta.</p>
+        <h3 class="text-lg font-semibold text-emerald-400 mb-1 flex items-center"><span class="mr-2">ðŸ§ª</span> Teste rÃ¡pido do mÃ³dulo</h3>
+        <p class="text-sm text-neutral-400 mb-5">TrÃªs perguntas. Clique numa opÃ§Ã£o para ver a resposta.</p>
         <div class="space-y-5">
         
           <div class="qz" data-q="1">
-            <p class="font-semibold text-neutral-100 mb-3">1. Qual das quatro partes do contrato está faltando em "Abra o Descript e limpe o meu vídeo da pasta Vídeos"?</p>
+            <p class="font-semibold text-neutral-100 mb-3">1. Qual das quatro partes do contrato estÃ¡ faltando em "Abra o Descript e limpe o meu vÃ­deo da pasta VÃ­deos"?</p>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
               <button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-emerald-500/40 transition-colors" data-ok="0">APP</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-emerald-500/40 transition-colors" data-ok="0">RESULTADO</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-emerald-500/40 transition-colors" data-ok="1">ESCOPO e PROVA</button>
             </div>
-            <p class="qz-fb mt-3 text-sm text-neutral-300" data-text="O app está nomeado e o resultado está implícito. Não há escopo (o original pode mudar? exporta em que nome?) nem prova (como saber que a limpeza não cortou conteúdo único?)."></p>
+            <p class="qz-fb mt-3 text-sm text-neutral-300" data-text="O app estÃ¡ nomeado e o resultado estÃ¡ implÃ­cito. NÃ£o hÃ¡ escopo (o original pode mudar? exporta em que nome?) nem prova (como saber que a limpeza nÃ£o cortou conteÃºdo Ãºnico?)."></p>
           </div>
           <div class="qz" data-q="2">
-            <p class="font-semibold text-neutral-100 mb-3">2. O agente reportou: "exportei o vídeo, ele ficou 3 minutos mais curto, sucesso". O que está errado?</p>
+            <p class="font-semibold text-neutral-100 mb-3">2. O agente reportou: "exportei o vÃ­deo, ele ficou 3 minutos mais curto, sucesso". O que estÃ¡ errado?</p>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              <button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-emerald-500/40 transition-colors" data-ok="0">Nada, mais curto é o objetivo da limpeza.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-emerald-500/40 transition-colors" data-ok="1">Duração menor não prova qualidade; a prova é o arquivo decodificar e o conteúdo único ter sobrevivido nos cortes.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-emerald-500/40 transition-colors" data-ok="0">Ele deveria ter enviado a captura de tela do Descript.</button>
+              <button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-emerald-500/40 transition-colors" data-ok="0">Nada, mais curto Ã© o objetivo da limpeza.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-emerald-500/40 transition-colors" data-ok="1">DuraÃ§Ã£o menor nÃ£o prova qualidade; a prova Ã© o arquivo decodificar e o conteÃºdo Ãºnico ter sobrevivido nos cortes.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-emerald-500/40 transition-colors" data-ok="0">Ele deveria ter enviado a captura de tela do Descript.</button>
             </div>
-            <p class="qz-fb mt-3 text-sm text-neutral-300" data-text="O prompt 04 é explícito: reporte duração antes e depois sem tratar edição mais curta como prova de qualidade. Captura de tela também não prova."></p>
+            <p class="qz-fb mt-3 text-sm text-neutral-300" data-text="O prompt 04 Ã© explÃ­cito: reporte duraÃ§Ã£o antes e depois sem tratar ediÃ§Ã£o mais curta como prova de qualidade. Captura de tela tambÃ©m nÃ£o prova."></p>
           </div>
           <div class="qz" data-q="3">
-            <p class="font-semibold text-neutral-100 mb-3">3. Ao adaptar o fluxo 02 para testar um plugin, o que você preserva obrigatoriamente?</p>
+            <p class="font-semibold text-neutral-100 mb-3">3. Ao adaptar o fluxo 02 para testar um plugin, o que vocÃª preserva obrigatoriamente?</p>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              <button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-emerald-500/40 transition-colors" data-ok="0">O nome "Claude Desktop" como app hospedeiro.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-emerald-500/40 transition-colors" data-ok="1">As checagens de evidência: inspecionar a chamada da ferramenta, follow-ups, caso sem resultado, conferência com a fonte.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-emerald-500/40 transition-colors" data-ok="0">O tema de teste original.</button>
+              <button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-emerald-500/40 transition-colors" data-ok="0">O nome "Claude Desktop" como app hospedeiro.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-emerald-500/40 transition-colors" data-ok="1">As checagens de evidÃªncia: inspecionar a chamada da ferramenta, follow-ups, caso sem resultado, conferÃªncia com a fonte.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-emerald-500/40 transition-colors" data-ok="0">O tema de teste original.</button>
             </div>
-            <p class="qz-fb mt-3 text-sm text-neutral-300" data-text="A regra de adaptação é trocar app e condição de sucesso e preservar as checagens de evidência. Elas são a estrutura; o resto é exemplo."></p>
+            <p class="qz-fb mt-3 text-sm text-neutral-300" data-text="A regra de adaptaÃ§Ã£o Ã© trocar app e condiÃ§Ã£o de sucesso e preservar as checagens de evidÃªncia. Elas sÃ£o a estrutura; o resto Ã© exemplo."></p>
           </div>
         </div>
       </div>
 
-    <!-- RESUMO DO MÓDULO -->
+    <!-- RESUMO DO MÃ“DULO -->
     <section class="mb-12">
       <div class="bg-gradient-to-br from-emerald-900/40 via-dark-800 to-dark-800 rounded-xl border border-emerald-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">📋</span> Resumo do módulo</h2>
+        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">ðŸ“‹</span> Resumo do mÃ³dulo</h2>
         <div class="space-y-4 mb-8">
-          <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">&#10003;</span><div><strong class="text-white">Quatro partes</strong><span class="text-neutral-400"> - APP exato, RESULTADO útil, ESCOPO do que pode mudar, PROVA de conclusão. Revise de baixo para cima.</span></div></div><div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">&#10003;</span><div><strong class="text-white">Marcadores</strong><span class="text-neutral-400"> - tudo entre < e > é seu; as frases com "do not", "verify" e "compare" ficam.</span></div></div><div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">&#10003;</span><div><strong class="text-white">Prova de conclusão</strong><span class="text-neutral-400"> - o artefato funciona, o estado persiste, a afirmação bate com a fonte. Screenshot e nome de arquivo não provam.</span></div></div><div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">&#10003;</span><div><strong class="text-white">Bloqueio exato</strong><span class="text-neutral-400"> - tela onde parou, o que falta, evidência, ação de quem opera, itens separados por status.</span></div></div><div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">&#10003;</span><div><strong class="text-white">Modelo reutilizável</strong><span class="text-neutral-400"> - inspecionar, agir no escopo, verificar no artefato, reportar concluído / sem verificar / próximo passo.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">&#10003;</span><div><strong class="text-white">Quatro partes</strong><span class="text-neutral-400"> - APP exato, RESULTADO Ãºtil, ESCOPO do que pode mudar, PROVA de conclusÃ£o. Revise de baixo para cima.</span></div></div><div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">&#10003;</span><div><strong class="text-white">Marcadores</strong><span class="text-neutral-400"> - tudo entre < e > Ã© seu; as frases com "do not", "verify" e "compare" ficam.</span></div></div><div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">&#10003;</span><div><strong class="text-white">Prova de conclusÃ£o</strong><span class="text-neutral-400"> - o artefato funciona, o estado persiste, a afirmaÃ§Ã£o bate com a fonte. Screenshot e nome de arquivo nÃ£o provam.</span></div></div><div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">&#10003;</span><div><strong class="text-white">Bloqueio exato</strong><span class="text-neutral-400"> - tela onde parou, o que falta, evidÃªncia, aÃ§Ã£o de quem opera, itens separados por status.</span></div></div><div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">&#10003;</span><div><strong class="text-white">Modelo reutilizÃ¡vel</strong><span class="text-neutral-400"> - inspecionar, agir no escopo, verificar no artefato, reportar concluÃ­do / sem verificar / prÃ³ximo passo.</span></div></div>
         </div>
         
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="modulo-1-1.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">&#8592; Módulo 1.1</a>
+          <a href="modulo-1-1.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">&#8592; MÃ³dulo 1.1</a>
           <a href="../trilha2/index.html" class="flex-1 text-center px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-500 transition-colors">Trilha 2 &#8594;</a>
         </div>
       </div>
@@ -732,14 +732,14 @@ Devolva: checagens que passaram, falhas reproduzidas, evidência e a correção 
   <!-- FOOTER -->
   <footer class="border-t border-dark-600 mt-16 py-8">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm space-y-2">
-      <p>Computer Use com o GPT-6 Astra · Trilha 1 — Fundamentos e contrato · 2026 ·
-        <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a> -
-        <a href="https://inema.pro" target="_blank" class="text-amber-700 dark:text-slate-300">PRO</a></p>
-      <p class="text-xs">Fontes: <a href="https://www.youtube.com/watch?v=tU-fO6cADvQ" target="_blank" class="text-sky-400 hover:text-sky-300">vídeo "O uso do computador pelo GPT-6 Astra é absurdamente bom"</a> · Computer Use Field Guide e kit de prompts (Prompt Advisers, 05/09/2026) · <a href="https://github.com/promptadvisers/google-flights-cli" target="_blank" class="text-sky-400 hover:text-sky-300">google-flights-cli</a> (MIT). Prompts traduzidos e adaptados.</p>
+      <p>Computer Use com o GPT-6 Astra Â· Trilha 1 â€” Fundamentos e contrato Â· 2026 Â·
+        <a href="https://ARCKHÉ AI" target="_blank" class="text-sky-400 hover:text-sky-300">ARCKHÉ AI</a> -
+        <a href="https://ARCKHÉ.pro" target="_blank" class="text-amber-700 dark:text-slate-300">PRO</a></p>
+      <p class="text-xs">Fontes: <a href="https://www.youtube.com/watch?v=tU-fO6cADvQ" target="_blank" class="text-sky-400 hover:text-sky-300">vÃ­deo "O uso do computador pelo GPT-6 Astra Ã© absurdamente bom"</a> Â· Computer Use Field Guide e kit de prompts (Prompt Advisers, 05/09/2026) Â· <a href="https://github.com/promptadvisers/google-flights-cli" target="_blank" class="text-sky-400 hover:text-sky-300">google-flights-cli</a> (MIT). Prompts traduzidos e adaptados.</p>
     </div>
   </footer>
 
-  <!-- SCRIPTS núcleo v1 -->
+  <!-- SCRIPTS nÃºcleo v1 -->
   <script>
     function toggleTopic(button) {
       const topicItem = button.closest('.topic-item');
@@ -764,32 +764,32 @@ Devolva: checagens que passaram, falhas reproduzidas, evidência e a correção 
       html.classList.toggle('dark');
       const dark = html.classList.contains('dark');
       localStorage.setItem('theme', dark ? 'dark' : 'light');
-      if (window.INEMA && INEMA.setPref) { try { INEMA.setPref('theme', dark ? 'inema-dark' : 'claro'); } catch (e) {} }
+      if (window.ARCKHÉ && ARCKHÉ.setPref) { try { ARCKHÉ.setPref('theme', dark ? 'ARCKHÉ-dark' : 'claro'); } catch (e) {} }
     });
     function openModal(modalId) { const m = document.getElementById(modalId); if (m) { m.classList.remove('hidden'); document.body.style.overflow = 'hidden'; } }
     function closeModal() { document.querySelectorAll('.modal').forEach(m => m.classList.add('hidden')); document.body.style.overflow = 'auto'; }
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
-    // Quiz inline (3 perguntas por módulo)
+    // Quiz inline (3 perguntas por mÃ³dulo)
     document.addEventListener('click', (e) => {
       const opt = e.target.closest('.qz-opt'); if (!opt) return;
       const qz = opt.closest('.qz'); if (!qz || qz.hasAttribute('data-answered')) return;
       const ok = opt.getAttribute('data-ok') === '1';
       qz.querySelectorAll('.qz-opt').forEach(o => { o.setAttribute('data-state', o.getAttribute('data-ok') === '1' ? 'ok' : (o === opt ? 'no' : '')); o.disabled = true; });
       qz.setAttribute('data-answered', ok ? 'ok' : 'no');
-      const fb = qz.querySelector('.qz-fb'); if (fb) fb.textContent = (ok ? '✓ Certo. ' : '✗ Não é essa. ') + (fb.getAttribute('data-text') || '');
+      const fb = qz.querySelector('.qz-fb'); if (fb) fb.textContent = (ok ? 'âœ“ Certo. ' : 'âœ— NÃ£o Ã© essa. ') + (fb.getAttribute('data-text') || '');
     });
-    // Copiar código
+    // Copiar cÃ³digo
     document.addEventListener('click', (e) => {
       const b = e.target.closest('[data-copy]'); if (!b) return;
       const pre = b.closest('.codebox').querySelector('pre');
-      navigator.clipboard && navigator.clipboard.writeText(pre.innerText).then(() => { const t = b.textContent; b.textContent = 'Copiado ✓'; setTimeout(() => b.textContent = t, 1600); });
+      navigator.clipboard && navigator.clipboard.writeText(pre.innerText).then(() => { const t = b.textContent; b.textContent = 'Copiado âœ“'; setTimeout(() => b.textContent = t, 1600); });
     });
   </script>
 
   <script src="../../assets/learn.js"></script>
   <script>
-    if (window.INEMA && typeof window.INEMA.init === 'function') { window.INEMA.init(); }
+    if (window.ARCKHÉ && typeof window.ARCKHÉ.init === 'function') { window.ARCKHÉ.init(); }
   </script>
 </body>
 </html>
