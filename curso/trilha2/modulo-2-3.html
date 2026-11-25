@@ -3,31 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="ARCKHÉ-course" content="astracu">
+  <meta name="ARCKHê-course" content="astracu">
   <title>Um agente testa outro | Computer Use com o GPT-6 Astra</title>
-  <meta name="description" content="VocÃª construiu um app com agentes e o recurso mais fraco Ã© o computer use dele, porque Ã© o mais difÃ­cil de ensinar a um agente do zero. A soluÃ§Ã£o do vÃ­deo: usar o computer use do Codex para assistir o seu app usar o dele, registrar a falha exata, ligar ao cÃ³digo e retestar no mesmo teste.">
+  <meta name="description" content="VocêÂª construiu um app com agentes e o recurso mais fraco êÂ© o computer use dele, porque êÂ© o mais difêÂ­cil de ensinar a um agente do zero. A soluêÂ§êÂ£o do vêÂ­deo: usar o computer use do Codex para assistir o seu app usar o dele, registrar a falha exata, ligar ao cêÂ³digo e retestar no mesmo teste.">
 
   <!-- ANTI-FOUC: bloqueante, antes de tudo -->
   <script>
 (function () {
   try {
     var html = document.documentElement;
-    var DEF = { theme: 'ARCKHÉ-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
+    var DEF = { theme: 'ARCKHê-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
     function clone(o) { var r = {}; for (var x in o) r[x] = o[x]; return r; }
     var p = clone(DEF);
     try {
-      var raw = localStorage.getItem('ARCKHÉ.prefs');
+      var raw = localStorage.getItem('ARCKHê.prefs');
       if (raw) { var parsed = JSON.parse(raw); if (parsed && typeof parsed === 'object') { for (var k in DEF) if (parsed[k] != null) p[k] = parsed[k]; } }
-      else { var legacy = localStorage.getItem('theme'); if (legacy === 'light') p.theme = 'claro'; else if (legacy === 'dark') p.theme = 'ARCKHÉ-dark'; }
+      else { var legacy = localStorage.getItem('theme'); if (legacy === 'light') p.theme = 'claro'; else if (legacy === 'dark') p.theme = 'ARCKHê-dark'; }
     } catch (e) { p = clone(DEF); }
-    var THEMES = { 'ARCKHÉ-dark': { dark: true, attr: null, cs: 'dark' }, 'claro': { dark: false, attr: null, cs: 'light' }, 'sepia': { dark: false, attr: 'sepia', cs: 'light' }, 'foco': { dark: null, attr: 'foco', cs: null }, 'contraste': { dark: true, attr: 'contraste', cs: 'dark' } };
-    var t = THEMES[p.theme] || THEMES['ARCKHÉ-dark'];
+    var THEMES = { 'ARCKHê-dark': { dark: true, attr: null, cs: 'dark' }, 'claro': { dark: false, attr: null, cs: 'light' }, 'sepia': { dark: false, attr: 'sepia', cs: 'light' }, 'foco': { dark: null, attr: 'foco', cs: null }, 'contraste': { dark: true, attr: 'contraste', cs: 'dark' } };
+    var t = THEMES[p.theme] || THEMES['ARCKHê-dark'];
     if (t.dark === true) html.classList.add('dark'); else if (t.dark === false) html.classList.remove('dark');
     if (t.attr) html.setAttribute('data-theme', t.attr); else html.removeAttribute('data-theme');
     html.style.colorScheme = (t.cs ? t.cs : (html.classList.contains('dark') ? 'dark' : 'light'));
     html.setAttribute('data-font', p.font || 'inter'); html.setAttribute('data-accent', p.accent || 'emerald');
     var s = html.style; var scale = (+p.fontScale || 100);
-    s.setProperty('--ARCKHÉ-font-scale', (scale / 100).toString()); s.setProperty('font-size', scale + '%');
+    s.setProperty('--ARCKHê-font-scale', (scale / 100).toString()); s.setProperty('font-size', scale + '%');
     s.setProperty('--measure', (+p.lineWidth || 68) + 'ch'); s.setProperty('--lh-body', (+p.leading || 1.7).toString());
     var fam = p.font === 'system' ? 'system-ui, -apple-system, "Segoe UI", Roboto, sans-serif' : (p.font === 'leitura' ? '"Atkinson Hyperlegible", "Inter", system-ui, sans-serif' : '"Inter", system-ui, sans-serif');
     s.setProperty('--font-body', fam);
@@ -46,8 +46,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/learn.css">
 
-  <!-- Manifesto do curso (obrigatÃ³rio em toda pÃ¡gina) -->
-  <script type="application/json" data-ARCKHÉ-manifest>
+  <!-- Manifesto do curso (obrigatêÂ³rio em toda pêÂ¡gina) -->
+  <script type="application/json" data-ARCKHê-manifest>
 {
  "course": "astracu",
  "tracks": [
@@ -57,7 +57,7 @@
    "modules": [
     {
      "id": "1-1",
-     "title": "O que Ã© computer use e por que agora",
+     "title": "O que êÂ© computer use e por que agora",
      "topics": 6,
      "href": "curso/trilha1/modulo-1-1.html"
     },
@@ -93,7 +93,7 @@
     },
     {
      "id": "2-4",
-     "title": "A entrega da ediÃ§Ã£o",
+     "title": "A entrega da ediêÂ§êÂ£o",
      "topics": 6,
      "href": "curso/trilha2/modulo-2-4.html"
     },
@@ -212,17 +212,17 @@
     .qz-opt[data-state="no"] { border-color: #ef4444; background: rgba(239,68,68,.12); }
     .qz-fb { display:none; } .qz[data-answered] .qz-fb { display:block; }
 
-    /* TOC do mÃ³dulo Ã© um bloco inline, nÃ£o uma barra lateral sticky */
-    [data-ARCKHÉ-toc] { position: static !important; top: auto !important; max-height: none !important; }
-    /* Painel de aparÃªncia (classes internas) */
-    .ARCKHÉ-appearance-sec { margin-bottom: .75rem; }
-    .ARCKHÉ-appearance-label { font-size: .7rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #9ca3af; margin-bottom: .35rem; }
-    .ARCKHÉ-appearance-row { display: flex; flex-wrap: wrap; gap: .35rem; }
-    .ARCKHÉ-chip { font-size: .8rem; padding: .3rem .65rem; border-radius: .5rem; border: 1px solid #374151; background: rgba(31,41,55,.6); color: #e5e7eb; cursor: pointer; }
-    .ARCKHÉ-chip:hover { border-color: #FACC15; }
-    .ARCKHÉ-chip[aria-pressed="true"], .ARCKHÉ-chip.is-active { background: rgba(250,204,21,.15); border-color: #FACC15; color: #FACC15; }
-    html:not(.dark) .ARCKHÉ-chip { background: #f3f4f6; color: #111827; border-color: #d1d5db; }
-    html:not(.dark) .ARCKHÉ-chip[aria-pressed="true"], html:not(.dark) .ARCKHÉ-chip.is-active { background: rgba(161,98,7,.1); border-color: #a16207; color: #a16207; }
+    /* TOC do mêÂ³dulo êÂ© um bloco inline, nêÂ£o uma barra lateral sticky */
+    [data-ARCKHê-toc] { position: static !important; top: auto !important; max-height: none !important; }
+    /* Painel de aparêÂªncia (classes internas) */
+    .ARCKHê-appearance-sec { margin-bottom: .75rem; }
+    .ARCKHê-appearance-label { font-size: .7rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #9ca3af; margin-bottom: .35rem; }
+    .ARCKHê-appearance-row { display: flex; flex-wrap: wrap; gap: .35rem; }
+    .ARCKHê-chip { font-size: .8rem; padding: .3rem .65rem; border-radius: .5rem; border: 1px solid #374151; background: rgba(31,41,55,.6); color: #e5e7eb; cursor: pointer; }
+    .ARCKHê-chip:hover { border-color: #FACC15; }
+    .ARCKHê-chip[aria-pressed="true"], .ARCKHê-chip.is-active { background: rgba(250,204,21,.15); border-color: #FACC15; color: #FACC15; }
+    html:not(.dark) .ARCKHê-chip { background: #f3f4f6; color: #111827; border-color: #d1d5db; }
+    html:not(.dark) .ARCKHê-chip[aria-pressed="true"], html:not(.dark) .ARCKHê-chip.is-active { background: rgba(161,98,7,.1); border-color: #a16207; color: #a16207; }
     /* Code box */
     .codebox pre { white-space: pre-wrap; word-break: break-word; }
     
@@ -236,13 +236,13 @@
       <div class="flex justify-between items-center h-14">
         <div class="flex items-center space-x-3">
           <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">ðŸ–±ï¸</span>
+            <span class="text-2xl">ê°Å¸âÂ±ê¯Â¸Â</span>
             <span class="font-bold text-lg hidden md:inline">Computer Use</span>
           </a>
           <span class="text-neutral-600">|</span>
-          <a href="https://ARCKHÉ AI" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">ARCKHÉ AI</a>
+          <a href="https://ARCKHê AI" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">ARCKHê AI</a>
           <span class="text-neutral-600 hidden sm:inline">-</span>
-          <a href="https://ARCKHÉ.pro" target="_blank" class="text-amber-700 dark:text-slate-300 hover:opacity-80 text-sm font-medium hidden sm:inline">PRO</a>
+          <a href="https://ARCKHê.pro" target="_blank" class="text-amber-700 dark:text-slate-300 hover:opacity-80 text-sm font-medium hidden sm:inline">PRO</a>
         </div>
         <div class="flex items-center space-x-1 sm:space-x-2">
           <a href="../../curso/trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors">
@@ -253,11 +253,11 @@
             <span class="sm:hidden">T2</span>
             <span class="hidden sm:inline">Cinco fluxos</span>
           </a>
-          <button type="button" data-ARCKHÉ-journey-open class="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-semibold text-primary bg-primary/10 hover:bg-primary/20 transition-colors">
-            <span>ðŸ§­</span><span>Minha jornada</span>
-            <span data-ARCKHÉ-journey-badge class="text-xs px-1.5 py-0.5 rounded-full bg-primary/20"></span>
+          <button type="button" data-ARCKHê-journey-open class="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-semibold text-primary bg-primary/10 hover:bg-primary/20 transition-colors">
+            <span>ê°Å¸Â§Â­</span><span>Minha jornada</span>
+            <span data-ARCKHê-journey-badge class="text-xs px-1.5 py-0.5 rounded-full bg-primary/20"></span>
           </button>
-          <button type="button" data-ARCKHÉ-appearance-toggle="[data-ARCKHÉ-appearance]" aria-expanded="false" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" title="AparÃªncia e leitura">
+          <button type="button" data-ARCKHê-appearance-toggle="[data-ARCKHê-appearance]" aria-expanded="false" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" title="AparêÂªncia e leitura">
             <span aria-hidden="true">Aa</span>
           </button>
           <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" title="Tema claro/escuro">
@@ -269,40 +269,40 @@
     </div>
   </nav>
   
-  <div data-ARCKHÉ-appearance class="ARCKHÉ-appearance-pop" role="region" aria-label="AparÃªncia e leitura">
-    <div class="ARCKHÉ-appearance-sec">
-      <p class="ARCKHÉ-appearance-label">Tema</p>
-      <div class="ARCKHÉ-appearance-row">
-        <button type="button" data-ARCKHÉ-set-theme="ARCKHÉ-dark" class="ARCKHÉ-chip">Escuro</button>
-        <button type="button" data-ARCKHÉ-set-theme="claro" class="ARCKHÉ-chip">Claro</button>
-        <button type="button" data-ARCKHÉ-set-theme="sepia" class="ARCKHÉ-chip">SÃ©pia</button>
-        <button type="button" data-ARCKHÉ-set-theme="foco" class="ARCKHÉ-chip">Foco</button>
-        <button type="button" data-ARCKHÉ-set-theme="contraste" class="ARCKHÉ-chip">Contraste</button>
+  <div data-ARCKHê-appearance class="ARCKHê-appearance-pop" role="region" aria-label="AparêÂªncia e leitura">
+    <div class="ARCKHê-appearance-sec">
+      <p class="ARCKHê-appearance-label">Tema</p>
+      <div class="ARCKHê-appearance-row">
+        <button type="button" data-ARCKHê-set-theme="ARCKHê-dark" class="ARCKHê-chip">Escuro</button>
+        <button type="button" data-ARCKHê-set-theme="claro" class="ARCKHê-chip">Claro</button>
+        <button type="button" data-ARCKHê-set-theme="sepia" class="ARCKHê-chip">SêÂ©pia</button>
+        <button type="button" data-ARCKHê-set-theme="foco" class="ARCKHê-chip">Foco</button>
+        <button type="button" data-ARCKHê-set-theme="contraste" class="ARCKHê-chip">Contraste</button>
       </div>
     </div>
-    <div class="ARCKHÉ-appearance-sec">
-      <p class="ARCKHÉ-appearance-label">Tamanho do texto</p>
-      <div class="ARCKHÉ-appearance-row">
-        <button type="button" data-ARCKHÉ-set-fontscale="90" class="ARCKHÉ-chip">A-</button>
-        <button type="button" data-ARCKHÉ-set-fontscale="100" class="ARCKHÉ-chip">A</button>
-        <button type="button" data-ARCKHÉ-set-fontscale="115" class="ARCKHÉ-chip">A+</button>
-        <button type="button" data-ARCKHÉ-set-fontscale="130" class="ARCKHÉ-chip">A++</button>
+    <div class="ARCKHê-appearance-sec">
+      <p class="ARCKHê-appearance-label">Tamanho do texto</p>
+      <div class="ARCKHê-appearance-row">
+        <button type="button" data-ARCKHê-set-fontscale="90" class="ARCKHê-chip">A-</button>
+        <button type="button" data-ARCKHê-set-fontscale="100" class="ARCKHê-chip">A</button>
+        <button type="button" data-ARCKHê-set-fontscale="115" class="ARCKHê-chip">A+</button>
+        <button type="button" data-ARCKHê-set-fontscale="130" class="ARCKHê-chip">A++</button>
       </div>
     </div>
-    <div class="ARCKHÉ-appearance-sec">
-      <p class="ARCKHÉ-appearance-label">Fonte</p>
-      <div class="ARCKHÉ-appearance-row">
-        <button type="button" data-ARCKHÉ-set-font="inter" class="ARCKHÉ-chip">Inter</button>
-        <button type="button" data-ARCKHÉ-set-font="system" class="ARCKHÉ-chip">Sistema</button>
-        <button type="button" data-ARCKHÉ-set-font="leitura" class="ARCKHÉ-chip">Leitura</button>
+    <div class="ARCKHê-appearance-sec">
+      <p class="ARCKHê-appearance-label">Fonte</p>
+      <div class="ARCKHê-appearance-row">
+        <button type="button" data-ARCKHê-set-font="inter" class="ARCKHê-chip">Inter</button>
+        <button type="button" data-ARCKHê-set-font="system" class="ARCKHê-chip">Sistema</button>
+        <button type="button" data-ARCKHê-set-font="leitura" class="ARCKHê-chip">Leitura</button>
       </div>
     </div>
-    <div class="ARCKHÉ-appearance-sec">
-      <p class="ARCKHÉ-appearance-label">Entrelinha</p>
-      <div class="ARCKHÉ-appearance-row">
-        <button type="button" data-ARCKHÉ-set-leading="1.5" class="ARCKHÉ-chip">Compacta</button>
-        <button type="button" data-ARCKHÉ-set-leading="1.7" class="ARCKHÉ-chip">Normal</button>
-        <button type="button" data-ARCKHÉ-set-leading="1.9" class="ARCKHÉ-chip">Ampla</button>
+    <div class="ARCKHê-appearance-sec">
+      <p class="ARCKHê-appearance-label">Entrelinha</p>
+      <div class="ARCKHê-appearance-row">
+        <button type="button" data-ARCKHê-set-leading="1.5" class="ARCKHê-chip">Compacta</button>
+        <button type="button" data-ARCKHê-set-leading="1.7" class="ARCKHê-chip">Normal</button>
+        <button type="button" data-ARCKHê-set-leading="1.9" class="ARCKHê-chip">Ampla</button>
       </div>
     </div>
   </div>
@@ -310,181 +310,181 @@
   <!-- BREADCRUMB -->
   <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
     <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-blue-400">InÃ­cio</a><span>/</span>
+      <a href="../../index.html" class="hover:text-blue-400">InêÂ­cio</a><span>/</span>
       <a href="index.html" class="hover:text-blue-400">Trilha 2</a><span>/</span>
-      <span class="text-blue-400">MÃ³dulo 2.3</span>
+      <span class="text-blue-400">MêÂ³dulo 2.3</span>
     </div>
   </nav>
 
   <!-- HEADER -->
   <header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MÃ“DULO 2.3</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">ðŸ” Um agente testa outro</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">VocÃª construiu um app com agentes e o recurso mais fraco Ã© o computer use dele, porque Ã© o mais difÃ­cil de ensinar a um agente do zero. A soluÃ§Ã£o do vÃ­deo: usar o computer use do Codex para assistir o seu app usar o dele, registrar a falha exata, ligar ao cÃ³digo e retestar no mesmo teste.</p>
+      <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MêâDULO 2.3</span>
+      <h1 class="text-3xl sm:text-4xl font-bold mb-4">ê°Å¸âÂ Um agente testa outro</h1>
+      <p class="text-lg text-neutral-400 max-w-3xl">VocêÂª construiu um app com agentes e o recurso mais fraco êÂ© o computer use dele, porque êÂ© o mais difêÂ­cil de ensinar a um agente do zero. A soluêÂ§êÂ£o do vêÂ­deo: usar o computer use do Codex para assistir o seu app usar o dele, registrar a falha exata, ligar ao cêÂ³digo e retestar no mesmo teste.</p>
       
       <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">6</div><div class="text-xs text-neutral-400">TÃ³picos</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">45</div><div class="text-xs text-neutral-400">Minutos</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">AvanÃ§ado</div><div class="text-xs text-neutral-400">NÃ­vel</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">PrÃ¡tica</div><div class="text-xs text-neutral-400">Tipo</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">6</div><div class="text-xs text-neutral-400">TêÂ³picos</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">45</div><div class="text-xs text-neutral-400">Minutos</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">AvanêÂ§ado</div><div class="text-xs text-neutral-400">NêÂ­vel</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">PrêÂ¡tica</div><div class="text-xs text-neutral-400">Tipo</div></div>
       </div>
-      <div data-ARCKHÉ-meter="modulo:2-3" class="ARCKHÉ-meter max-w-md mt-6" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mÃ³dulo">
-        <div class="flex justify-between text-sm text-neutral-400 mb-1"><span data-ARCKHÉ-meter-frac>0 de 6</span><span data-ARCKHÉ-meter-pct>0%</span></div>
-        <div class="ARCKHÉ-bar h-2 bg-dark-700 rounded-full overflow-hidden"><div class="ARCKHÉ-bar__fill h-full bg-blue-500 rounded-full transition-all" data-ARCKHÉ-meter-fill style="width:0%"></div></div>
+      <div data-ARCKHê-meter="modulo:2-3" class="ARCKHê-meter max-w-md mt-6" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mêÂ³dulo">
+        <div class="flex justify-between text-sm text-neutral-400 mb-1"><span data-ARCKHê-meter-frac>0 de 6</span><span data-ARCKHê-meter-pct>0%</span></div>
+        <div class="ARCKHê-bar h-2 bg-dark-700 rounded-full overflow-hidden"><div class="ARCKHê-bar__fill h-full bg-blue-500 rounded-full transition-all" data-ARCKHê-meter-fill style="width:0%"></div></div>
       </div>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 ARCKHÉ-prose" data-ARCKHÉ-module="2-3" data-ARCKHÉ-track="2">
-    <nav aria-label="TÃ³picos deste mÃ³dulo" class="mb-12 bg-dark-800 rounded-xl border border-dark-600 p-5" data-ARCKHÉ-toc>
-      <p class="text-xs font-semibold uppercase tracking-wider text-neutral-500 mb-3">Neste mÃ³dulo</p>
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 ARCKHê-prose" data-ARCKHê-module="2-3" data-ARCKHê-track="2">
+    <nav aria-label="TêÂ³picos deste mêÂ³dulo" class="mb-12 bg-dark-800 rounded-xl border border-dark-600 p-5" data-ARCKHê-toc>
+      <p class="text-xs font-semibold uppercase tracking-wider text-neutral-500 mb-3">Neste mêÂ³dulo</p>
       <ol class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
-        <li><a href="#topico-1" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">1</span><span>Computer use assistindo computer use</span></a></li><li><a href="#topico-2" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">2</span><span>O prompt 03, traduzido</span></a></li><li><a href="#topico-3" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">3</span><span>NÃ£o substitua o trabalho do app</span></a></li><li><a href="#topico-4" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">4</span><span>PersistÃªncia: fechar e reabrir</span></a></li><li><a href="#topico-5" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">5</span><span>O ciclo de reparo com teto de trÃªs tentativas</span></a></li><li><a href="#topico-6" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">6</span><span>Rodar de madrugada, e o que fazer quando o app nÃ£o tem agente</span></a></li>
+        <li><a href="#topico-1" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">1</span><span>Computer use assistindo computer use</span></a></li><li><a href="#topico-2" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">2</span><span>O prompt 03, traduzido</span></a></li><li><a href="#topico-3" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">3</span><span>NêÂ£o substitua o trabalho do app</span></a></li><li><a href="#topico-4" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">4</span><span>PersistêÂªncia: fechar e reabrir</span></a></li><li><a href="#topico-5" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">5</span><span>O ciclo de reparo com teto de trêÂªs tentativas</span></a></li><li><a href="#topico-6" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">6</span><span>Rodar de madrugada, e o que fazer quando o app nêÂ£o tem agente</span></a></li>
       </ol>
     </nav>
 
-    <!-- TÃ“PICO 1 -->
-    <section id="topico-1" data-ARCKHÉ-topic="modulo-2-3#topico-1" class="mb-16">
+    <!-- TêâPICO 1 -->
+    <section id="topico-1" data-ARCKHê-topic="modulo-2-3#topico-1" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">ðŸªž Computer use assistindo computer use</h2>
+        <h2 class="text-2xl font-bold">ê°Å¸ÂªÅ¾ Computer use assistindo computer use</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m2-3-p1">O autor mostra um app que ele mesmo construiu, com vÃ¡rios agentes conectados a assinaturas e provedores de modelo, cada agente podendo ter o prÃ³prio computador. "De todos os recursos, o computer use Ã© o mais fraco, porque Ã© o mais difÃ­cil de ensinar a um agente completamente cru." A saÃ­da: mandar o Codex abrir o app, pedir uma tarefa de navegador ao agente interno e <strong class="text-blue-400">assistir</strong>.</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHê-block="m2-3-p1">O autor mostra um app que ele mesmo construiu, com vêÂ¡rios agentes conectados a assinaturas e provedores de modelo, cada agente podendo ter o prêÂ³prio computador. "De todos os recursos, o computer use êÂ© o mais fraco, porque êÂ© o mais difêÂ­cil de ensinar a um agente completamente cru." A saêÂ­da: mandar o Codex abrir o app, pedir uma tarefa de navegador ao agente interno e <strong class="text-blue-400">assistir</strong>.</p>
 
       <aside class="bg-dark-800/60 rounded-xl border border-dashed border-blue-500/30 p-5 mb-6">
-        <p class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-3">Novo aqui? Termos deste tÃ³pico</p>
+        <p class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-3">Novo aqui? Termos deste têÂ³pico</p>
         <dl class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-sm">
-          <div><dt class="font-semibold text-neutral-100">App-alvo</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m2-3-p2">O seu app, com o prÃ³prio agente dentro. Ã‰ quem estÃ¡ sendo testado.</dd></div><div><dt class="font-semibold text-neutral-100">Checkout do cÃ³digo</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m2-3-p3">Uma cÃ³pia local do cÃ³digo-fonte do app, na versÃ£o exata que estÃ¡ rodando. Sem ela, o agente externo nÃ£o consegue ligar a falha a uma linha.</dd></div><div><dt class="font-semibold text-neutral-100">Ambiente isolado</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m2-3-p4">Uma cÃ³pia de desenvolvimento onde o agente pode corrigir e relanÃ§ar sem tocar no que estÃ¡ em produÃ§Ã£o.</dd></div><div><dt class="font-semibold text-neutral-100">Conversa limpa</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m2-3-p5">Uma conversa nova no app-alvo, sem histÃ³rico, para que o teste nÃ£o herde contexto de outra sessÃ£o.</dd></div>
+          <div><dt class="font-semibold text-neutral-100">App-alvo</dt><dd class="text-neutral-400" data-ARCKHê-block="m2-3-p2">O seu app, com o prêÂ³prio agente dentro. êâ° quem estêÂ¡ sendo testado.</dd></div><div><dt class="font-semibold text-neutral-100">Checkout do cêÂ³digo</dt><dd class="text-neutral-400" data-ARCKHê-block="m2-3-p3">Uma cêÂ³pia local do cêÂ³digo-fonte do app, na versêÂ£o exata que estêÂ¡ rodando. Sem ela, o agente externo nêÂ£o consegue ligar a falha a uma linha.</dd></div><div><dt class="font-semibold text-neutral-100">Ambiente isolado</dt><dd class="text-neutral-400" data-ARCKHê-block="m2-3-p4">Uma cêÂ³pia de desenvolvimento onde o agente pode corrigir e relanêÂ§ar sem tocar no que estêÂ¡ em produêÂ§êÂ£o.</dd></div><div><dt class="font-semibold text-neutral-100">Conversa limpa</dt><dd class="text-neutral-400" data-ARCKHê-block="m2-3-p5">Uma conversa nova no app-alvo, sem histêÂ³rico, para que o teste nêÂ£o herde contexto de outra sessêÂ£o.</dd></div>
         </dl>
       </aside>
 
       <figure class="rounded-2xl border border-blue-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-        <svg viewBox="0 0 800 266" class="w-full h-auto" role="img" aria-label="Dois agentes, dois papÃ©is: o Codex observa e registra; o app-alvo executa a tarefa com o prÃ³prio computer use. O observador nunca faz o trabalho do observado"><defs>
+        <svg viewBox="0 0 800 266" class="w-full h-auto" role="img" aria-label="Dois agentes, dois papêÂ©is: o Codex observa e registra; o app-alvo executa a tarefa com o prêÂ³prio computer use. O observador nunca faz o trabalho do observado"><defs>
     <linearGradient id="s16-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#60a5fa"/><stop offset="1" stop-color="#3b82f6"/></linearGradient>
     <filter id="s16-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     <pattern id="s16-grid" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="1.3" fill="#3b82f6" opacity="0.14"/></pattern>
   </defs><rect width="800" height="266" fill="url(#s16-grid)"/>
       <rect x="40" y="30" width="330" height="206" rx="16" fill="#1e3a8a" stroke="#3b82f6" stroke-width="2" opacity="0.95"/>
       <text x="205" y="62" text-anchor="middle" fill="#60a5fa" font-family="Inter,sans-serif" font-size="15" font-weight="800">CODEX (observador)</text>
-      <g class="wf-a"><circle cx="66" cy="96" r="4" fill="#60a5fa"/><text x="80" y="100" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Abre o app-alvo</text></g><g class="wf-a"><circle cx="66" cy="130" r="4" fill="#60a5fa"/><text x="80" y="134" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Envia a tarefa ao agente interno</text></g><g class="wf-a"><circle cx="66" cy="164" r="4" fill="#60a5fa"/><text x="80" y="168" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Assiste aÃ§Ãµes e saÃ­da de ferramentas</text></g><g class="wf-a"><circle cx="66" cy="198" r="4" fill="#60a5fa"/><text x="80" y="202" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Registra o ponto de falha</text></g><rect x="430" y="30" width="330" height="206" rx="16" fill="#0e1b26" stroke="#38bdf8" stroke-width="2" opacity="0.95"/>
+      <g class="wf-a"><circle cx="66" cy="96" r="4" fill="#60a5fa"/><text x="80" y="100" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Abre o app-alvo</text></g><g class="wf-a"><circle cx="66" cy="130" r="4" fill="#60a5fa"/><text x="80" y="134" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Envia a tarefa ao agente interno</text></g><g class="wf-a"><circle cx="66" cy="164" r="4" fill="#60a5fa"/><text x="80" y="168" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Assiste aêÂ§êÂµes e saêÂ­da de ferramentas</text></g><g class="wf-a"><circle cx="66" cy="198" r="4" fill="#60a5fa"/><text x="80" y="202" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Registra o ponto de falha</text></g><rect x="430" y="30" width="330" height="206" rx="16" fill="#0e1b26" stroke="#38bdf8" stroke-width="2" opacity="0.95"/>
       <text x="595" y="62" text-anchor="middle" fill="#38bdf8" font-family="Inter,sans-serif" font-size="15" font-weight="800">APP-ALVO (executor)</text>
-      <g class="wf-a"><circle cx="456" cy="96" r="4" fill="#38bdf8"/><text x="470" y="100" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Recebe a tarefa</text></g><g class="wf-a"><circle cx="456" cy="130" r="4" fill="#38bdf8"/><text x="470" y="134" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Usa o prÃ³prio computer use</text></g><g class="wf-a"><circle cx="456" cy="164" r="4" fill="#38bdf8"/><text x="470" y="168" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Navega, clica, responde</text></g><g class="wf-a"><circle cx="456" cy="198" r="4" fill="#38bdf8"/><text x="470" y="202" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Falha ou conclui</text></g>
+      <g class="wf-a"><circle cx="456" cy="96" r="4" fill="#38bdf8"/><text x="470" y="100" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Recebe a tarefa</text></g><g class="wf-a"><circle cx="456" cy="130" r="4" fill="#38bdf8"/><text x="470" y="134" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Usa o prêÂ³prio computer use</text></g><g class="wf-a"><circle cx="456" cy="164" r="4" fill="#38bdf8"/><text x="470" y="168" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Navega, clica, responde</text></g><g class="wf-a"><circle cx="456" cy="198" r="4" fill="#38bdf8"/><text x="470" y="202" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Falha ou conclui</text></g>
       <line x1="385" y1="121" x2="415" y2="121" stroke="#9ca3af" stroke-width="1.5"/><line x1="385" y1="129" x2="415" y2="129" stroke="#9ca3af" stroke-width="1.5"/>
-      <text x="400" y="256" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="11">observa, nÃ£o substitui</text></svg>
-        <figcaption class="text-xs text-neutral-400 mt-3 px-1"><strong class="text-blue-400">O que olhar:</strong> Se a seta do observador atravessar para a direita e ele mesmo navegar, o teste deixou de medir o app. O prompt proÃ­be isso por escrito.</figcaption>
+      <text x="400" y="256" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="11">observa, nêÂ£o substitui</text></svg>
+        <figcaption class="text-xs text-neutral-400 mt-3 px-1"><strong class="text-blue-400">O que olhar:</strong> Se a seta do observador atravessar para a direita e ele mesmo navegar, o teste deixou de medir o app. O prompt proêÂ­be isso por escrito.</figcaption>
       </figure>
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">ðŸ’¡</span> Onde isso se aplica alÃ©m do vÃ­deo</h3>
-        <p class="text-neutral-300" data-ARCKHÉ-block="m2-3-p6">Qualquer app com um agente dentro: um assistente de atendimento, um bot de pesquisa, um painel com "pergunte Ã  IA". O fluxo Ã© o mesmo: tarefa pequena e sÃ³ de leitura, observaÃ§Ã£o externa, ponto de falha, cÃ³digo, reteste.</p>
+        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">ê°Å¸âÂ¡</span> Onde isso se aplica alêÂ©m do vêÂ­deo</h3>
+        <p class="text-neutral-300" data-ARCKHê-block="m2-3-p6">Qualquer app com um agente dentro: um assistente de atendimento, um bot de pesquisa, um painel com "pergunte êÂ  IA". O fluxo êÂ© o mesmo: tarefa pequena e sêÂ³ de leitura, observaêÂ§êÂ£o externa, ponto de falha, cêÂ³digo, reteste.</p>
       </div>
       
-      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
-        <span class="ARCKHÉ-label-done">Lido</span>
+      <button type="button" data-ARCKHê-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHê-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHê-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHê-label-todo">Marcar como lido</span>
+        <span class="ARCKHê-label-done">Lido</span>
       </button>
     </section>
 
-    <!-- TÃ“PICO 2 -->
-    <section id="topico-2" data-ARCKHÉ-topic="modulo-2-3#topico-2" class="mb-16">
+    <!-- TêâPICO 2 -->
+    <section id="topico-2" data-ARCKHê-topic="modulo-2-3#topico-2" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">ðŸ“ O prompt 03, traduzido</h2>
+        <h2 class="text-2xl font-bold">ê°Å¸âÂ O prompt 03, traduzido</h2>
       </div>
       
       <div class="codebox bg-dark-800 rounded-xl border border-blue-500/30 overflow-hidden mb-6">
         <div class="px-5 py-3 border-b border-dark-600 flex items-start justify-between gap-3 flex-wrap">
-          <div><p class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-1">Copie e rode</p><p class="text-sm text-neutral-300">Testar o agente do seu app pela interface, ligar a falha ao cÃ³digo e retestar (Codex com computer use; app e checkout do cÃ³digo na mesma versÃ£o; ambiente isolado)</p></div>
+          <div><p class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-1">Copie e rode</p><p class="text-sm text-neutral-300">Testar o agente do seu app pela interface, ligar a falha ao cêÂ³digo e retestar (Codex com computer use; app e checkout do cêÂ³digo na mesma versêÂ£o; ambiente isolado)</p></div>
           <button type="button" data-copy class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors">Copiar</button>
         </div>
-        <pre class="p-5 text-sm text-neutral-100 bg-dark-900/60 font-mono leading-relaxed"><code class="language-text">Teste meu app pela interface real dele, incluindo o prÃ³prio recurso de computer use.
+        <pre class="p-5 text-sm text-neutral-100 bg-dark-900/60 font-mono leading-relaxed"><code class="language-text">Teste meu app pela interface real dele, incluindo o prêÂ³prio recurso de computer use.
 
 App: &lt;NOME_OU_CAMINHO_DO_APP&gt;
-RepositÃ³rio correspondente: &lt;CAMINHO_DO_REPO&gt;
+RepositêÂ³rio correspondente: &lt;CAMINHO_DO_REPO&gt;
 Tarefa de navegador: &lt;TAREFA_PEQUENA_SO_DE_LEITURA&gt;
 Fonte para conferir: &lt;URL_PUBLICA&gt;
-CritÃ©rios de sucesso: &lt;CONDICOES_OBSERVAVEIS_DE_APROVACAO&gt;
+CritêÂ©rios de sucesso: &lt;CONDICOES_OBSERVAVEIS_DE_APROVACAO&gt;
 
-Abra uma conversa de teste limpa no app correto. PeÃ§a ao agente do app que execute a tarefa de navegador usando a capacidade de computer use dele. Observe as aÃ§Ãµes e a saÃ­da das ferramentas. NÃ£o substitua a navegaÃ§Ã£o do app pela sua e depois marque o app como aprovado.
+Abra uma conversa de teste limpa no app correto. PeêÂ§a ao agente do app que execute a tarefa de navegador usando a capacidade de computer use dele. Observe as aêÂ§êÂµes e a saêÂ­da das ferramentas. NêÂ£o substitua a navegaêÂ§êÂ£o do app pela sua e depois marque o app como aprovado.
 
-Confira um fato devolvido contra a fonte pÃºblica. Feche e reabra a conversa para testar persistÃªncia. Capture o ponto exato de falha se a tarefa travar, perder contexto, usar a janela errada ou devolver uma afirmaÃ§Ã£o sem suporte.
+Confira um fato devolvido contra a fonte pêÂºblica. Feche e reabra a conversa para testar persistêÂªncia. Capture o ponto exato de falha se a tarefa travar, perder contexto, usar a janela errada ou devolver uma afirmaêÂ§êÂ£o sem suporte.
 
-Se falhar, reproduza a falha e verifique que o checkout fornecido compila este app. Na cÃ³pia local de desenvolvimento, corrija a menor causa, rode os testes relevantes, recompile ou relance conforme necessÃ¡rio e repita o teste de interface idÃªntico. Preserve trabalho nÃ£o relacionado. Limite esta execuÃ§Ã£o a trÃªs tentativas de reparo; se ainda falhar, devolva a evidÃªncia e o prÃ³ximo passo de diagnÃ³stico.
+Se falhar, reproduza a falha e verifique que o checkout fornecido compila este app. Na cêÂ³pia local de desenvolvimento, corrija a menor causa, rode os testes relevantes, recompile ou relance conforme necessêÂ¡rio e repita o teste de interface idêÂªntico. Preserve trabalho nêÂ£o relacionado. Limite esta execuêÂ§êÂ£o a trêÂªs tentativas de reparo; se ainda falhar, devolva a evidêÂªncia e o prêÂ³ximo passo de diagnêÂ³stico.
 
-Devolva comportamento antes/depois, arquivos alterados, resultados de teste, qualquer falha restante e um pedido reproduzÃ­vel. NÃ£o faÃ§a deploy pÃºblico, nÃ£o acesse conversas privadas, nÃ£o faÃ§a compras nem envie mensagens externas.</code></pre>
-        <div class="px-5 py-3 border-t border-dark-600 text-sm text-neutral-400"><strong class="text-neutral-300">Como verificar:</strong> O app testado executou as prÃ³prias aÃ§Ãµes (o relatÃ³rio descreve as aÃ§Ãµes dele, nÃ£o as do Codex). Se houve falha, ela estÃ¡ registrada com o ponto exato. Qualquer reparo passou no mesmo teste de interface, e a conversa sobreviveu ao fechar e reabrir.</div>
+Devolva comportamento antes/depois, arquivos alterados, resultados de teste, qualquer falha restante e um pedido reproduzêÂ­vel. NêÂ£o faêÂ§a deploy pêÂºblico, nêÂ£o acesse conversas privadas, nêÂ£o faêÂ§a compras nem envie mensagens externas.</code></pre>
+        <div class="px-5 py-3 border-t border-dark-600 text-sm text-neutral-400"><strong class="text-neutral-300">Como verificar:</strong> O app testado executou as prêÂ³prias aêÂ§êÂµes (o relatêÂ³rio descreve as aêÂ§êÂµes dele, nêÂ£o as do Codex). Se houve falha, ela estêÂ¡ registrada com o ponto exato. Qualquer reparo passou no mesmo teste de interface, e a conversa sobreviveu ao fechar e reabrir.</div>
       </div>
 
       <div class="overflow-x-auto rounded-xl border border-dark-600 mb-6">
         <table class="w-full text-sm text-left">
           
-          <thead class="bg-dark-800 text-blue-400"><tr><th class="px-4 py-3 font-semibold">Marcador</th><th class="px-4 py-3 font-semibold">No vÃ­deo</th><th class="px-4 py-3 font-semibold">No seu caso</th></tr></thead>
-          <tbody class="divide-y divide-dark-600"><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">TAREFA_PEQUENA_SO_DE_LEITURA</td><td class="px-4 py-3 text-neutral-300">Uma busca no Google Flights usando "suas habilidades de computador"</td><td class="px-4 py-3 text-neutral-300">Algo que termina em minutos e nÃ£o muda nada: consultar, comparar, ler.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">URL_PUBLICA</td><td class="px-4 py-3 text-neutral-300">A pÃ¡gina do Google Flights com o resultado</td><td class="px-4 py-3 text-neutral-300">Um lugar pÃºblico onde um fato da resposta pode ser conferido.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">CONDICOES_OBSERVAVEIS</td><td class="px-4 py-3 text-neutral-300">"O agente do app navega, devolve um voo com preÃ§o, e a conversa reaberta mantÃ©m o resultado"</td><td class="px-4 py-3 text-neutral-300">TrÃªs a cinco condiÃ§Ãµes visÃ­veis. Nada de "funciona bem".</td></tr></tbody>
+          <thead class="bg-dark-800 text-blue-400"><tr><th class="px-4 py-3 font-semibold">Marcador</th><th class="px-4 py-3 font-semibold">No vêÂ­deo</th><th class="px-4 py-3 font-semibold">No seu caso</th></tr></thead>
+          <tbody class="divide-y divide-dark-600"><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">TAREFA_PEQUENA_SO_DE_LEITURA</td><td class="px-4 py-3 text-neutral-300">Uma busca no Google Flights usando "suas habilidades de computador"</td><td class="px-4 py-3 text-neutral-300">Algo que termina em minutos e nêÂ£o muda nada: consultar, comparar, ler.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">URL_PUBLICA</td><td class="px-4 py-3 text-neutral-300">A pêÂ¡gina do Google Flights com o resultado</td><td class="px-4 py-3 text-neutral-300">Um lugar pêÂºblico onde um fato da resposta pode ser conferido.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">CONDICOES_OBSERVAVEIS</td><td class="px-4 py-3 text-neutral-300">"O agente do app navega, devolve um voo com preêÂ§o, e a conversa reaberta mantêÂ©m o resultado"</td><td class="px-4 py-3 text-neutral-300">TrêÂªs a cinco condiêÂ§êÂµes visêÂ­veis. Nada de "funciona bem".</td></tr></tbody>
         </table>
       </div>
 
       <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">âš ï¸</span> VersÃ£o do app e do cÃ³digo tÃªm que bater</h3>
-        <p class="text-neutral-300" data-ARCKHÉ-block="m2-3-p7">O prompt pede "verifique que o checkout fornecido compila este app". Se o cÃ³digo Ã© de uma versÃ£o e o app instalado Ã© de outra, o reparo corrige uma linha que o app em teste nÃ£o tem, e o reteste passa ou falha por motivo errado.</p>
+        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">ê¢Å¡Â ê¯Â¸Â</span> VersêÂ£o do app e do cêÂ³digo têÂªm que bater</h3>
+        <p class="text-neutral-300" data-ARCKHê-block="m2-3-p7">O prompt pede "verifique que o checkout fornecido compila este app". Se o cêÂ³digo êÂ© de uma versêÂ£o e o app instalado êÂ© de outra, o reparo corrige uma linha que o app em teste nêÂ£o tem, e o reteste passa ou falha por motivo errado.</p>
       </div>
       
-      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
-        <span class="ARCKHÉ-label-done">Lido</span>
+      <button type="button" data-ARCKHê-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHê-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHê-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHê-label-todo">Marcar como lido</span>
+        <span class="ARCKHê-label-done">Lido</span>
       </button>
     </section>
 
-    <!-- TÃ“PICO 3 -->
-    <section id="topico-3" data-ARCKHÉ-topic="modulo-2-3#topico-3" class="mb-16">
+    <!-- TêâPICO 3 -->
+    <section id="topico-3" data-ARCKHê-topic="modulo-2-3#topico-3" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">ðŸš« NÃ£o substitua o trabalho do app</h2>
+        <h2 class="text-2xl font-bold">ê°Å¸Å¡Â« NêÂ£o substitua o trabalho do app</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m2-3-p8">"Do not substitute your own browsing for the app's work and then mark the app as passing." O Codex tem o prÃ³prio computer use e Ã© melhor nele do que o app em teste. Ã‰ exatamente por isso que a tentaÃ§Ã£o existe. O prompt fecha essa porta.</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHê-block="m2-3-p8">"Do not substitute your own browsing for the app's work and then mark the app as passing." O Codex tem o prêÂ³prio computer use e êÂ© melhor nele do que o app em teste. êâ° exatamente por isso que a tentaêÂ§êÂ£o existe. O prompt fecha essa porta.</p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
           <h4 class="font-bold text-blue-400 mb-4">&#10003; Comportamento correto do observador</h4>
-          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>Envia a tarefa ao agente do app e espera.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>Descreve cada aÃ§Ã£o que o app fez ("abriu nova aba", "digitou a rota", "parou no seletor de datas").</span></li><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>Quando o app trava, registra o ponto e para: nÃ£o completa.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>Usa o painel do prÃ³prio app (o vÃ­deo cita um componente para "espiar" as aÃ§Ãµes) como fonte das observaÃ§Ãµes.</span></li></ul>
+          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>Envia a tarefa ao agente do app e espera.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>Descreve cada aêÂ§êÂ£o que o app fez ("abriu nova aba", "digitou a rota", "parou no seletor de datas").</span></li><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>Quando o app trava, registra o ponto e para: nêÂ£o completa.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>Usa o painel do prêÂ³prio app (o vêÂ­deo cita um componente para "espiar" as aêÂ§êÂµes) como fonte das observaêÂ§êÂµes.</span></li></ul>
         </div>
         <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-          <h4 class="font-bold text-red-400 mb-4">&#10007; EncenaÃ§Ã£o que reprova o teste</h4>
-          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>O observador abre o navegador dele, faz a busca e cola o resultado na conversa do app.</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>RelatÃ³rio com "a busca foi concluÃ­da" sem dizer quem concluiu.</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>"O app teve dificuldade, entÃ£o eu terminei para verificar o resto do fluxo."</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Marcar aprovado com base no resultado final, ignorando que o app nÃ£o chegou lÃ¡.</span></li></ul>
+          <h4 class="font-bold text-red-400 mb-4">&#10007; EncenaêÂ§êÂ£o que reprova o teste</h4>
+          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>O observador abre o navegador dele, faz a busca e cola o resultado na conversa do app.</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>RelatêÂ³rio com "a busca foi concluêÂ­da" sem dizer quem concluiu.</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>"O app teve dificuldade, entêÂ£o eu terminei para verificar o resto do fluxo."</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Marcar aprovado com base no resultado final, ignorando que o app nêÂ£o chegou lêÂ¡.</span></li></ul>
         </div>
       </div>
 
       <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">ðŸ§</span> Como saber, lendo o relatÃ³rio</h3>
+        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">ê°Å¸Â§Â</span> Como saber, lendo o relatêÂ³rio</h3>
         
-        <ul class="space-y-2 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>Toda aÃ§Ã£o tem sujeito: "o agente do app clicou", nunca "cliquei".</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>As falhas tÃªm ponto exato, nÃ£o desfecho: "travou ao tentar selecionar a data de volta", nÃ£o "nÃ£o deu certo".</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>Se o observador fez algo, foi <strong>antes</strong> (abrir o app, criar a conversa) ou <strong>depois</strong> (conferir o fato na fonte), nunca no meio da tarefa.</span></li></ul>
+        <ul class="space-y-2 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>Toda aêÂ§êÂ£o tem sujeito: "o agente do app clicou", nunca "cliquei".</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>As falhas têÂªm ponto exato, nêÂ£o desfecho: "travou ao tentar selecionar a data de volta", nêÂ£o "nêÂ£o deu certo".</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>Se o observador fez algo, foi <strong>antes</strong> (abrir o app, criar a conversa) ou <strong>depois</strong> (conferir o fato na fonte), nunca no meio da tarefa.</span></li></ul>
       </div>
       
-      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
-        <span class="ARCKHÉ-label-done">Lido</span>
+      <button type="button" data-ARCKHê-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHê-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHê-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHê-label-todo">Marcar como lido</span>
+        <span class="ARCKHê-label-done">Lido</span>
       </button>
     </section>
 
-    <!-- TÃ“PICO 4 -->
-    <section id="topico-4" data-ARCKHÉ-topic="modulo-2-3#topico-4" class="mb-16">
+    <!-- TêâPICO 4 -->
+    <section id="topico-4" data-ARCKHê-topic="modulo-2-3#topico-4" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">ðŸ’¾ PersistÃªncia: fechar e reabrir</h2>
+        <h2 class="text-2xl font-bold">ê°Å¸âÂ¾ PersistêÂªncia: fechar e reabrir</h2>
       </div>
       
       <div class="space-y-5 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-2">A sequÃªncia de persistÃªncia</h3>
+        <h3 class="text-lg font-semibold text-blue-400 mb-2">A sequêÂªncia de persistêÂªncia</h3>
         
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">1</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Terminar (ou travar) a tarefa</h4>
             
-            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m2-3-p9">Registrar o estado final da conversa: o que o app respondeu, o que ficou na tela.</p>
+            <p class="text-neutral-300 text-sm" data-ARCKHê-block="m2-3-p9">Registrar o estado final da conversa: o que o app respondeu, o que ficou na tela.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
@@ -492,7 +492,7 @@ Devolva comportamento antes/depois, arquivos alterados, resultados de teste, qua
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Fechar a conversa</h4>
             
-            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m2-3-p10">Fechar de verdade, nÃ£o minimizar. Se o app tem "sessÃµes", sair da sessÃ£o.</p>
+            <p class="text-neutral-300 text-sm" data-ARCKHê-block="m2-3-p10">Fechar de verdade, nêÂ£o minimizar. Se o app tem "sessêÂµes", sair da sessêÂ£o.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
@@ -500,7 +500,7 @@ Devolva comportamento antes/depois, arquivos alterados, resultados de teste, qua
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Reabrir a mesma conversa</h4>
             
-            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m2-3-p11">Pelo histÃ³rico do app. NÃ£o criar uma nova.</p>
+            <p class="text-neutral-300 text-sm" data-ARCKHê-block="m2-3-p11">Pelo histêÂ³rico do app. NêÂ£o criar uma nova.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
@@ -508,38 +508,38 @@ Devolva comportamento antes/depois, arquivos alterados, resultados de teste, qua
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Comparar</h4>
             
-            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m2-3-p12">O resultado estÃ¡ lÃ¡? O agente lembra do que fez? Uma pergunta de follow-up funciona?</p>
+            <p class="text-neutral-300 text-sm" data-ARCKHê-block="m2-3-p12">O resultado estêÂ¡ lêÂ¡? O agente lembra do que fez? Uma pergunta de follow-up funciona?</p>
           </div>
         </div>
       </div>
 
       <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">ðŸ“Š</span> Por que o app do vÃ­deo falhou</h3>
-        <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>O agente interno usava um <strong>modelo mais antigo</strong>, com janela de contexto menor.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>O app nÃ£o tinha um recurso de <strong>compactaÃ§Ã£o</strong> da conversa: quando o histÃ³rico de aÃ§Ãµes de computer use cresceu, estourou.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>O Codex viu a falha "muito rapidamente" e o autor conclui: com um objetivo declarado, ele "veria a falha, ajustaria o cÃ³digo, relanÃ§aria e repetiria o ciclo atÃ© melhorar".</span></li></ul>
+        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">ê°Å¸âÅ </span> Por que o app do vêÂ­deo falhou</h3>
+        <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>O agente interno usava um <strong>modelo mais antigo</strong>, com janela de contexto menor.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>O app nêÂ£o tinha um recurso de <strong>compactaêÂ§êÂ£o</strong> da conversa: quando o histêÂ³rico de aêÂ§êÂµes de computer use cresceu, estourou.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>O Codex viu a falha "muito rapidamente" e o autor conclui: com um objetivo declarado, ele "veria a falha, ajustaria o cêÂ³digo, relanêÂ§aria e repetiria o ciclo atêÂ© melhorar".</span></li></ul>
       </div>
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">ðŸ’¡</span> Duas causas comuns de falha de persistÃªncia</h3>
-        <p class="text-neutral-300" data-ARCKHÉ-block="m2-3-p13">HistÃ³rico de computer use Ã© pesado (cada passo carrega uma imagem). Apps que nÃ£o resumem ou descartam capturas antigas estouram o contexto. E apps que guardam o estado sÃ³ em memÃ³ria perdem tudo ao fechar. As duas aparecem neste teste e nÃ£o aparecem em nenhum log.</p>
+        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">ê°Å¸âÂ¡</span> Duas causas comuns de falha de persistêÂªncia</h3>
+        <p class="text-neutral-300" data-ARCKHê-block="m2-3-p13">HistêÂ³rico de computer use êÂ© pesado (cada passo carrega uma imagem). Apps que nêÂ£o resumem ou descartam capturas antigas estouram o contexto. E apps que guardam o estado sêÂ³ em memêÂ³ria perdem tudo ao fechar. As duas aparecem neste teste e nêÂ£o aparecem em nenhum log.</p>
       </div>
       
-      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
-        <span class="ARCKHÉ-label-done">Lido</span>
+      <button type="button" data-ARCKHê-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHê-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHê-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHê-label-todo">Marcar como lido</span>
+        <span class="ARCKHê-label-done">Lido</span>
       </button>
     </section>
 
-    <!-- TÃ“PICO 5 -->
-    <section id="topico-5" data-ARCKHÉ-topic="modulo-2-3#topico-5" class="mb-16">
+    <!-- TêâPICO 5 -->
+    <section id="topico-5" data-ARCKHê-topic="modulo-2-3#topico-5" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">ðŸ”§ O ciclo de reparo com teto de trÃªs tentativas</h2>
+        <h2 class="text-2xl font-bold">ê°Å¸âÂ§ O ciclo de reparo com teto de trêÂªs tentativas</h2>
       </div>
       
       <figure class="rounded-2xl border border-blue-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-        <svg viewBox="0 0 800 200" class="w-full h-auto" role="img" aria-label="O ciclo de reparo: reproduzir a falha, corrigir a menor causa na cÃ³pia local, rodar testes, relanÃ§ar o app e repetir exatamente o mesmo teste de interface; no mÃ¡ximo trÃªs voltas"><defs>
+        <svg viewBox="0 0 800 200" class="w-full h-auto" role="img" aria-label="O ciclo de reparo: reproduzir a falha, corrigir a menor causa na cêÂ³pia local, rodar testes, relanêÂ§ar o app e repetir exatamente o mesmo teste de interface; no mêÂ¡ximo trêÂªs voltas"><defs>
     <linearGradient id="s17-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#60a5fa"/><stop offset="1" stop-color="#3b82f6"/></linearGradient>
     <filter id="s17-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     <pattern id="s17-grid" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="1.3" fill="#3b82f6" opacity="0.14"/></pattern>
@@ -550,138 +550,138 @@ Devolva comportamento antes/depois, arquivos alterados, resultados de teste, qua
         <path class="wf-flow" d="M166.8 102 L186.8 102" stroke="#38bdf8" stroke-width="2" fill="none"/><polygon points="182.8,97 182.8,107 188.8,102" fill="#38bdf8"/><g class="wf-a"><rect x="188.8" y="60" width="124.8" height="84" rx="12" fill="#0e1b26" stroke="#38bdf8" stroke-width="1.8"/>
         <circle cx="206.8" cy="78" r="10" fill="#38bdf8"/><text x="206.8" y="82" text-anchor="middle" fill="#0b1220" font-family="Inter,sans-serif" font-size="11" font-weight="700">2</text>
         <text x="251.20000000000002" y="104" text-anchor="middle" fill="#9ad6ff" font-family="Inter,sans-serif" font-size="10.5" font-weight="700">Menor causa</text>
-        <text x="251.20000000000002" y="122" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="9.5" font-weight="400">na cÃ³pia local</text></g>
+        <text x="251.20000000000002" y="122" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="9.5" font-weight="400">na cêÂ³pia local</text></g>
         <path class="wf-flow" d="M315.6 102 L335.6 102" stroke="#38bdf8" stroke-width="2" fill="none"/><polygon points="331.6,97 331.6,107 337.6,102" fill="#38bdf8"/><g class="wf-a"><rect x="337.6" y="60" width="124.8" height="84" rx="12" fill="#1e3a8a" stroke="#3b82f6" stroke-width="1.8"/>
         <circle cx="355.6" cy="78" r="10" fill="#3b82f6"/><text x="355.6" y="82" text-anchor="middle" fill="#0b1220" font-family="Inter,sans-serif" font-size="11" font-weight="700">3</text>
         <text x="400" y="104" text-anchor="middle" fill="#bfdbfe" font-family="Inter,sans-serif" font-size="10.5" font-weight="700">Testes</text>
         <text x="400" y="122" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="9.5" font-weight="400">os relevantes</text></g>
         <path class="wf-flow" d="M464.40000000000003 102 L484.40000000000003 102" stroke="#38bdf8" stroke-width="2" fill="none"/><polygon points="480.40000000000003,97 480.40000000000003,107 486.40000000000003,102" fill="#38bdf8"/><g class="wf-a"><rect x="486.40000000000003" y="60" width="124.8" height="84" rx="12" fill="#0e1b26" stroke="#38bdf8" stroke-width="1.8"/>
         <circle cx="504.40000000000003" cy="78" r="10" fill="#38bdf8"/><text x="504.40000000000003" y="82" text-anchor="middle" fill="#0b1220" font-family="Inter,sans-serif" font-size="11" font-weight="700">4</text>
-        <text x="548.8000000000001" y="104" text-anchor="middle" fill="#9ad6ff" font-family="Inter,sans-serif" font-size="10.5" font-weight="700">RelanÃ§ar</text>
+        <text x="548.8000000000001" y="104" text-anchor="middle" fill="#9ad6ff" font-family="Inter,sans-serif" font-size="10.5" font-weight="700">RelanêÂ§ar</text>
         <text x="548.8000000000001" y="122" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="9.5" font-weight="400">recompilar se preciso</text></g>
         <path class="wf-flow" d="M613.2 102 L633.2 102" stroke="#38bdf8" stroke-width="2" fill="none"/><polygon points="629.2,97 629.2,107 635.2,102" fill="#38bdf8"/><g class="wf-a"><rect x="635.2" y="60" width="124.8" height="84" rx="12" fill="#1e3a8a" stroke="#3b82f6" stroke-width="1.8"/>
         <circle cx="653.2" cy="78" r="10" fill="#3b82f6"/><text x="653.2" y="82" text-anchor="middle" fill="#0b1220" font-family="Inter,sans-serif" font-size="11" font-weight="700">5</text>
         <text x="697.6" y="104" text-anchor="middle" fill="#bfdbfe" font-family="Inter,sans-serif" font-size="10.5" font-weight="700">Mesmo teste</text>
-        <text x="697.6" y="122" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="9.5" font-weight="400">idÃªntico, pela interface</text></g>
+        <text x="697.6" y="122" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="9.5" font-weight="400">idêÂªntico, pela interface</text></g>
         
-      <text x="400" y="178" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="11" font-style="italic">O ciclo de reparo: reproduzir a falha, corrigir a menor causa na cÃ³pia local, rodar testes, relanÃ§ar o app e repetir exatamente o mesmo teste de interface; no mÃ¡ximo trÃªs voltas</text></svg>
-        <figcaption class="text-xs text-neutral-400 mt-3 px-1"><strong class="text-blue-400">O que olhar:</strong> A Ãºltima caixa Ã© a mesma tarefa da primeira rodada, palavra por palavra. Mudar o teste para o reparo passar Ã© a forma mais comum de enganar a si mesmo.</figcaption>
+      <text x="400" y="178" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="11" font-style="italic">O ciclo de reparo: reproduzir a falha, corrigir a menor causa na cêÂ³pia local, rodar testes, relanêÂ§ar o app e repetir exatamente o mesmo teste de interface; no mêÂ¡ximo trêÂªs voltas</text></svg>
+        <figcaption class="text-xs text-neutral-400 mt-3 px-1"><strong class="text-blue-400">O que olhar:</strong> A êÂºltima caixa êÂ© a mesma tarefa da primeira rodada, palavra por palavra. Mudar o teste para o reparo passar êÂ© a forma mais comum de enganar a si mesmo.</figcaption>
       </figure>
 
       <div class="overflow-x-auto rounded-xl border border-dark-600 mb-6">
         <table class="w-full text-sm text-left">
           
-          <thead class="bg-dark-800 text-blue-400"><tr><th class="px-4 py-3 font-semibold">SeÃ§Ã£o do relatÃ³rio</th><th class="px-4 py-3 font-semibold">O que precisa ter</th></tr></thead>
-          <tbody class="divide-y divide-dark-600"><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Antes / depois</td><td class="px-4 py-3 text-neutral-300">O comportamento observado na interface nas duas rodadas, com o ponto exato de falha da primeira.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Arquivos alterados</td><td class="px-4 py-3 text-neutral-300">Lista curta. Se for longa, a "menor causa" nÃ£o foi respeitada.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Resultados de teste</td><td class="px-4 py-3 text-neutral-300">Os testes relevantes que rodaram, e o resultado. NÃ£o "todos os testes", que pode levar horas.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Falha restante</td><td class="px-4 py-3 text-neutral-300">Se apÃ³s trÃªs tentativas ainda falha: a evidÃªncia e o prÃ³ximo passo de diagnÃ³stico, nÃ£o uma quarta tentativa.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Pedido reproduzÃ­vel</td><td class="px-4 py-3 text-neutral-300">O prompt exato para repetir o teste amanhÃ£, com o app relanÃ§ado.</td></tr></tbody>
+          <thead class="bg-dark-800 text-blue-400"><tr><th class="px-4 py-3 font-semibold">SeêÂ§êÂ£o do relatêÂ³rio</th><th class="px-4 py-3 font-semibold">O que precisa ter</th></tr></thead>
+          <tbody class="divide-y divide-dark-600"><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Antes / depois</td><td class="px-4 py-3 text-neutral-300">O comportamento observado na interface nas duas rodadas, com o ponto exato de falha da primeira.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Arquivos alterados</td><td class="px-4 py-3 text-neutral-300">Lista curta. Se for longa, a "menor causa" nêÂ£o foi respeitada.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Resultados de teste</td><td class="px-4 py-3 text-neutral-300">Os testes relevantes que rodaram, e o resultado. NêÂ£o "todos os testes", que pode levar horas.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Falha restante</td><td class="px-4 py-3 text-neutral-300">Se apêÂ³s trêÂªs tentativas ainda falha: a evidêÂªncia e o prêÂ³ximo passo de diagnêÂ³stico, nêÂ£o uma quarta tentativa.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Pedido reproduzêÂ­vel</td><td class="px-4 py-3 text-neutral-300">O prompt exato para repetir o teste amanhêÂ£, com o app relanêÂ§ado.</td></tr></tbody>
         </table>
       </div>
 
       <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">âš ï¸</span> Os quatro "nÃ£o" do reparo</h3>
-        <p class="text-neutral-300" data-ARCKHÉ-block="m2-3-p14">NÃ£o faÃ§a deploy pÃºblico. NÃ£o acesse conversas privadas do app. NÃ£o faÃ§a compras. NÃ£o envie mensagens externas. O ambiente Ã© isolado por isso: o reparo acontece na cÃ³pia de desenvolvimento e o resto do mundo nÃ£o fica sabendo atÃ© vocÃª decidir.</p>
+        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">ê¢Å¡Â ê¯Â¸Â</span> Os quatro "nêÂ£o" do reparo</h3>
+        <p class="text-neutral-300" data-ARCKHê-block="m2-3-p14">NêÂ£o faêÂ§a deploy pêÂºblico. NêÂ£o acesse conversas privadas do app. NêÂ£o faêÂ§a compras. NêÂ£o envie mensagens externas. O ambiente êÂ© isolado por isso: o reparo acontece na cêÂ³pia de desenvolvimento e o resto do mundo nêÂ£o fica sabendo atêÂ© vocêÂª decidir.</p>
       </div>
       
-      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
-        <span class="ARCKHÉ-label-done">Lido</span>
+      <button type="button" data-ARCKHê-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHê-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHê-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHê-label-todo">Marcar como lido</span>
+        <span class="ARCKHê-label-done">Lido</span>
       </button>
     </section>
 
-    <!-- TÃ“PICO 6 -->
-    <section id="topico-6" data-ARCKHÉ-topic="modulo-2-3#topico-6" class="mb-16">
+    <!-- TêâPICO 6 -->
+    <section id="topico-6" data-ARCKHê-topic="modulo-2-3#topico-6" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">ðŸŒ™ Rodar de madrugada, e o que fazer quando o app nÃ£o tem agente</h2>
+        <h2 class="text-2xl font-bold">ê°Å¸Åâ¢ Rodar de madrugada, e o que fazer quando o app nêÂ£o tem agente</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m2-3-p15">"Na verdade eu iria querer que isso rodasse por horas, talvez com algo como um comando de objetivo, e acordar com uma sÃ©rie de bugs identificados e corrigidos." O prompt do kit Ã© o que torna isso seguro: objetivo observÃ¡vel, teto de trÃªs tentativas por falha, sem deploy, e relatÃ³rio com pedido reproduzÃ­vel.</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHê-block="m2-3-p15">"Na verdade eu iria querer que isso rodasse por horas, talvez com algo como um comando de objetivo, e acordar com uma sêÂ©rie de bugs identificados e corrigidos." O prompt do kit êÂ© o que torna isso seguro: objetivo observêÂ¡vel, teto de trêÂªs tentativas por falha, sem deploy, e relatêÂ³rio com pedido reproduzêÂ­vel.</p>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
         
         <div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
-          <div class="text-2xl mb-2">ðŸŽ¯</div>
-          <h4 class="font-semibold text-blue-400 mb-2">Objetivo, nÃ£o tarefa</h4>
-          <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m2-3-p16">"Fazer o computer use do app completar a busca de voo e persistir ao reabrir" Ã© um objetivo. O agente decide quais falhas atacar, dentro do teto.</p>
+          <div class="text-2xl mb-2">ê°Å¸Å½Â¯</div>
+          <h4 class="font-semibold text-blue-400 mb-2">Objetivo, nêÂ£o tarefa</h4>
+          <p class="text-neutral-300 text-sm" data-ARCKHê-block="m2-3-p16">"Fazer o computer use do app completar a busca de voo e persistir ao reabrir" êÂ© um objetivo. O agente decide quais falhas atacar, dentro do teto.</p>
         </div>
         <div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
-          <div class="text-2xl mb-2">ðŸ§±</div>
+          <div class="text-2xl mb-2">ê°Å¸Â§Â±</div>
           <h4 class="font-semibold text-blue-400 mb-2">Teto por falha</h4>
-          <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m2-3-p17">TrÃªs tentativas por falha, nÃ£o trÃªs no total. Uma falha resistente vira "evidÃªncia e prÃ³ximo passo" e o agente segue para a prÃ³xima.</p>
+          <p class="text-neutral-300 text-sm" data-ARCKHê-block="m2-3-p17">TrêÂªs tentativas por falha, nêÂ£o trêÂªs no total. Uma falha resistente vira "evidêÂªncia e prêÂ³ximo passo" e o agente segue para a prêÂ³xima.</p>
         </div>
         <div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
-          <div class="text-2xl mb-2">ðŸ“‹</div>
-          <h4 class="font-semibold text-blue-400 mb-2">O que vocÃª lÃª de manhÃ£</h4>
-          <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m2-3-p18">Uma lista: falha, ponto exato, causa, arquivos, teste que passou, ou "nÃ£o resolvido, prÃ³ximo passo". Nada de "melhorei o app".</p>
+          <div class="text-2xl mb-2">ê°Å¸ââ¹</div>
+          <h4 class="font-semibold text-blue-400 mb-2">O que vocêÂª lêÂª de manhêÂ£</h4>
+          <p class="text-neutral-300 text-sm" data-ARCKHê-block="m2-3-p18">Uma lista: falha, ponto exato, causa, arquivos, teste que passou, ou "nêÂ£o resolvido, prêÂ³ximo passo". Nada de "melhorei o app".</p>
         </div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-          <h4 class="font-bold text-blue-400 mb-4">&#10003; App sem agente: a jornada de usuÃ¡rio</h4>
-          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>Criar um rascunho de projeto.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>Salvar.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>Fechar o app.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>Reabrir e confirmar que o rascunho estÃ¡ lÃ¡, com o mesmo conteÃºdo.</span></li></ul>
+          <h4 class="font-bold text-blue-400 mb-4">&#10003; App sem agente: a jornada de usuêÂ¡rio</h4>
+          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>Criar um rascunho de projeto.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>Salvar.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>Fechar o app.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>Reabrir e confirmar que o rascunho estêÂ¡ lêÂ¡, com o mesmo conteêÂºdo.</span></li></ul>
         </div>
         <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-          <h4 class="font-bold text-red-400 mb-4">&#10007; O que nÃ£o serve como jornada</h4>
-          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>"Navegar pelo app e ver se estÃ¡ tudo bem."</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>"Testar todas as telas."</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Uma jornada que muda dados de produÃ§Ã£o.</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Uma jornada sem estado para persistir (nada para reabrir e conferir).</span></li></ul>
+          <h4 class="font-bold text-red-400 mb-4">&#10007; O que nêÂ£o serve como jornada</h4>
+          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>"Navegar pelo app e ver se estêÂ¡ tudo bem."</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>"Testar todas as telas."</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Uma jornada que muda dados de produêÂ§êÂ£o.</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Uma jornada sem estado para persistir (nada para reabrir e conferir).</span></li></ul>
         </div>
       </div>
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">ðŸ’¡</span> Regra do "make it yours" do guia</h3>
-        <p class="text-neutral-300" data-ARCKHÉ-block="m2-3-p19">Para um app sem agente, troque a tarefa de navegador por uma jornada concreta com comeÃ§o, meio e algo para reabrir. O resto do prompt (observar, ponto de falha, reparo com teto, mesmo teste) fica igual.</p>
+        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">ê°Å¸âÂ¡</span> Regra do "make it yours" do guia</h3>
+        <p class="text-neutral-300" data-ARCKHê-block="m2-3-p19">Para um app sem agente, troque a tarefa de navegador por uma jornada concreta com comeêÂ§o, meio e algo para reabrir. O resto do prompt (observar, ponto de falha, reparo com teto, mesmo teste) fica igual.</p>
       </div>
       
-      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
-        <span class="ARCKHÉ-label-done">Lido</span>
+      <button type="button" data-ARCKHê-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHê-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHê-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHê-label-todo">Marcar como lido</span>
+        <span class="ARCKHê-label-done">Lido</span>
       </button>
     </section>
 
     <!-- QUIZ -->
     
       <div class="bg-dark-800 rounded-2xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-1 flex items-center"><span class="mr-2">ðŸ§ª</span> Teste rÃ¡pido do mÃ³dulo</h3>
-        <p class="text-sm text-neutral-400 mb-5">TrÃªs perguntas. Clique numa opÃ§Ã£o para ver a resposta.</p>
+        <h3 class="text-lg font-semibold text-blue-400 mb-1 flex items-center"><span class="mr-2">ê°Å¸Â§Âª</span> Teste rêÂ¡pido do mêÂ³dulo</h3>
+        <p class="text-sm text-neutral-400 mb-5">TrêÂªs perguntas. Clique numa opêÂ§êÂ£o para ver a resposta.</p>
         <div class="space-y-5">
         
           <div class="qz" data-q="1">
-            <p class="font-semibold text-neutral-100 mb-3">1. O agente do seu app travou na seleÃ§Ã£o de datas. O Codex abriu o prÃ³prio navegador, terminou a busca e marcou o app como aprovado. O que estÃ¡ errado?</p>
+            <p class="font-semibold text-neutral-100 mb-3">1. O agente do seu app travou na seleêÂ§êÂ£o de datas. O Codex abriu o prêÂ³prio navegador, terminou a busca e marcou o app como aprovado. O que estêÂ¡ errado?</p>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              <button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">Nada: a busca foi concluÃ­da.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="1">O observador substituiu o trabalho do app; o teste deixou de medir o app e a aprovaÃ§Ã£o Ã© falsa.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">Ele deveria ter usado o Chrome em vez do navegador interno.</button>
+              <button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">Nada: a busca foi concluêÂ­da.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="1">O observador substituiu o trabalho do app; o teste deixou de medir o app e a aprovaêÂ§êÂ£o êÂ© falsa.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">Ele deveria ter usado o Chrome em vez do navegador interno.</button>
             </div>
-            <p class="qz-fb mt-3 text-sm text-neutral-300" data-text="A regra central do fluxo: nÃ£o substituir a navegaÃ§Ã£o do app pela sua e depois marcar como aprovado. O ponto de falha devia ter sido registrado."></p>
+            <p class="qz-fb mt-3 text-sm text-neutral-300" data-text="A regra central do fluxo: nêÂ£o substituir a navegaêÂ§êÂ£o do app pela sua e depois marcar como aprovado. O ponto de falha devia ter sido registrado."></p>
           </div>
           <div class="qz" data-q="2">
-            <p class="font-semibold text-neutral-100 mb-3">2. ApÃ³s trÃªs tentativas de reparo, o app ainda falha. O que o agente faz?</p>
+            <p class="font-semibold text-neutral-100 mb-3">2. ApêÂ³s trêÂªs tentativas de reparo, o app ainda falha. O que o agente faz?</p>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              <button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">Tenta uma quarta vez com uma abordagem diferente.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="1">Devolve a evidÃªncia e o prÃ³ximo passo de diagnÃ³stico, e para.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">Faz deploy da melhor versÃ£o atÃ© aqui.</button>
+              <button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">Tenta uma quarta vez com uma abordagem diferente.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="1">Devolve a evidêÂªncia e o prêÂ³ximo passo de diagnêÂ³stico, e para.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">Faz deploy da melhor versêÂ£o atêÂ© aqui.</button>
             </div>
-            <p class="qz-fb mt-3 text-sm text-neutral-300" data-text="O teto existe para isso. Quarta tentativa viola o orÃ§amento; deploy Ã© proibido pelo prompt."></p>
+            <p class="qz-fb mt-3 text-sm text-neutral-300" data-text="O teto existe para isso. Quarta tentativa viola o orêÂ§amento; deploy êÂ© proibido pelo prompt."></p>
           </div>
           <div class="qz" data-q="3">
             <p class="font-semibold text-neutral-100 mb-3">3. O reparo passou num teste ligeiramente diferente do original (tarefa mais curta). Vale?</p>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              <button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">Sim, o importante Ã© passar.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="1">NÃ£o: o reteste tem que ser o teste de interface idÃªntico; mudar o teste para o reparo passar invalida a prova.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">Vale se os testes unitÃ¡rios passaram.</button>
+              <button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">Sim, o importante êÂ© passar.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="1">NêÂ£o: o reteste tem que ser o teste de interface idêÂªntico; mudar o teste para o reparo passar invalida a prova.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">Vale se os testes unitêÂ¡rios passaram.</button>
             </div>
-            <p class="qz-fb mt-3 text-sm text-neutral-300" data-text="O prompt pede repetir &quot;o teste de interface idÃªntico&quot;. SÃ³ assim o antes/depois compara a mesma coisa."></p>
+            <p class="qz-fb mt-3 text-sm text-neutral-300" data-text="O prompt pede repetir &quot;o teste de interface idêÂªntico&quot;. SêÂ³ assim o antes/depois compara a mesma coisa."></p>
           </div>
         </div>
       </div>
 
-    <!-- RESUMO DO MÃ“DULO -->
+    <!-- RESUMO DO MêâDULO -->
     <section class="mb-12">
       <div class="bg-gradient-to-br from-blue-900/40 via-dark-800 to-dark-800 rounded-xl border border-blue-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">ðŸ“‹</span> Resumo do mÃ³dulo</h2>
+        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">ê°Å¸ââ¹</span> Resumo do mêÂ³dulo</h2>
         <div class="space-y-4 mb-8">
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">Dois papÃ©is</strong><span class="text-neutral-400"> - o Codex observa e registra; o app-alvo executa com o prÃ³prio computer use. O observador nunca substitui.</span></div></div><div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">Cinco entradas</strong><span class="text-neutral-400"> - app, checkout na mesma versÃ£o, tarefa pequena sÃ³ de leitura, fonte pÃºblica, critÃ©rios observÃ¡veis.</span></div></div><div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">PersistÃªncia</strong><span class="text-neutral-400"> - fechar e reabrir a conversa; as duas causas comuns de falha sÃ£o contexto estourado por capturas e estado sÃ³ em memÃ³ria.</span></div></div><div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">Ciclo de reparo</strong><span class="text-neutral-400"> - reproduzir, menor causa, testes relevantes, relanÃ§ar, mesmo teste; trÃªs tentativas por falha; sem deploy, compra ou mensagem.</span></div></div><div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">Madrugada e apps sem agente</strong><span class="text-neutral-400"> - objetivo declarado com teto; para app sem agente, uma jornada concreta com algo para reabrir.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">Dois papêÂ©is</strong><span class="text-neutral-400"> - o Codex observa e registra; o app-alvo executa com o prêÂ³prio computer use. O observador nunca substitui.</span></div></div><div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">Cinco entradas</strong><span class="text-neutral-400"> - app, checkout na mesma versêÂ£o, tarefa pequena sêÂ³ de leitura, fonte pêÂºblica, critêÂ©rios observêÂ¡veis.</span></div></div><div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">PersistêÂªncia</strong><span class="text-neutral-400"> - fechar e reabrir a conversa; as duas causas comuns de falha sêÂ£o contexto estourado por capturas e estado sêÂ³ em memêÂ³ria.</span></div></div><div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">Ciclo de reparo</strong><span class="text-neutral-400"> - reproduzir, menor causa, testes relevantes, relanêÂ§ar, mesmo teste; trêÂªs tentativas por falha; sem deploy, compra ou mensagem.</span></div></div><div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">Madrugada e apps sem agente</strong><span class="text-neutral-400"> - objetivo declarado com teto; para app sem agente, uma jornada concreta com algo para reabrir.</span></div></div>
         </div>
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-blue-400 mb-2">PrÃ³ximo mÃ³dulo:</h3><p class="text-neutral-300">2.4 - A entrega da ediÃ§Ã£o</p></div>
+        <div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-blue-400 mb-2">PrêÂ³ximo mêÂ³dulo:</h3><p class="text-neutral-300">2.4 - A entrega da ediêÂ§êÂ£o</p></div>
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="modulo-2-2.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">&#8592; MÃ³dulo 2.2</a>
-          <a href="modulo-2-4.html" class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors">PrÃ³ximo mÃ³dulo &#8594;</a>
+          <a href="modulo-2-2.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">&#8592; MêÂ³dulo 2.2</a>
+          <a href="modulo-2-4.html" class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors">PrêÂ³ximo mêÂ³dulo &#8594;</a>
         </div>
       </div>
     </section>
@@ -690,14 +690,14 @@ Devolva comportamento antes/depois, arquivos alterados, resultados de teste, qua
   <!-- FOOTER -->
   <footer class="border-t border-dark-600 mt-16 py-8">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm space-y-2">
-      <p>Computer Use com o GPT-6 Astra Â· Trilha 2 â€” Os cinco fluxos Â· 2026 Â·
-        <a href="https://ARCKHÉ AI" target="_blank" class="text-sky-400 hover:text-sky-300">ARCKHÉ AI</a> -
-        <a href="https://ARCKHÉ.pro" target="_blank" class="text-amber-700 dark:text-slate-300">PRO</a></p>
-      <p class="text-xs">Fontes: <a href="https://www.youtube.com/watch?v=tU-fO6cADvQ" target="_blank" class="text-sky-400 hover:text-sky-300">vÃ­deo "O uso do computador pelo GPT-6 Astra Ã© absurdamente bom"</a> Â· Computer Use Field Guide e kit de prompts (Prompt Advisers, 05/09/2026) Â· <a href="https://github.com/promptadvisers/google-flights-cli" target="_blank" class="text-sky-400 hover:text-sky-300">google-flights-cli</a> (MIT). Prompts traduzidos e adaptados.</p>
+      <p>Computer Use com o GPT-6 Astra êÂ· Trilha 2 ê¢â¬â Os cinco fluxos êÂ· 2026 êÂ·
+        <a href="https://ARCKHê AI" target="_blank" class="text-sky-400 hover:text-sky-300">ARCKHê AI</a> -
+        <a href="https://ARCKHê.pro" target="_blank" class="text-amber-700 dark:text-slate-300">PRO</a></p>
+      <p class="text-xs">Fontes: <a href="https://www.youtube.com/watch?v=tU-fO6cADvQ" target="_blank" class="text-sky-400 hover:text-sky-300">vêÂ­deo "O uso do computador pelo GPT-6 Astra êÂ© absurdamente bom"</a> êÂ· Computer Use Field Guide e kit de prompts (Prompt Advisers, 05/09/2026) êÂ· <a href="https://github.com/promptadvisers/google-flights-cli" target="_blank" class="text-sky-400 hover:text-sky-300">google-flights-cli</a> (MIT). Prompts traduzidos e adaptados.</p>
     </div>
   </footer>
 
-  <!-- SCRIPTS nÃºcleo v1 -->
+  <!-- SCRIPTS nêÂºcleo v1 -->
   <script>
     function toggleTopic(button) {
       const topicItem = button.closest('.topic-item');
@@ -722,32 +722,32 @@ Devolva comportamento antes/depois, arquivos alterados, resultados de teste, qua
       html.classList.toggle('dark');
       const dark = html.classList.contains('dark');
       localStorage.setItem('theme', dark ? 'dark' : 'light');
-      if (window.ARCKHÉ && ARCKHÉ.setPref) { try { ARCKHÉ.setPref('theme', dark ? 'ARCKHÉ-dark' : 'claro'); } catch (e) {} }
+      if (window.ARCKHê && ARCKHê.setPref) { try { ARCKHê.setPref('theme', dark ? 'ARCKHê-dark' : 'claro'); } catch (e) {} }
     });
     function openModal(modalId) { const m = document.getElementById(modalId); if (m) { m.classList.remove('hidden'); document.body.style.overflow = 'hidden'; } }
     function closeModal() { document.querySelectorAll('.modal').forEach(m => m.classList.add('hidden')); document.body.style.overflow = 'auto'; }
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
-    // Quiz inline (3 perguntas por mÃ³dulo)
+    // Quiz inline (3 perguntas por mêÂ³dulo)
     document.addEventListener('click', (e) => {
       const opt = e.target.closest('.qz-opt'); if (!opt) return;
       const qz = opt.closest('.qz'); if (!qz || qz.hasAttribute('data-answered')) return;
       const ok = opt.getAttribute('data-ok') === '1';
       qz.querySelectorAll('.qz-opt').forEach(o => { o.setAttribute('data-state', o.getAttribute('data-ok') === '1' ? 'ok' : (o === opt ? 'no' : '')); o.disabled = true; });
       qz.setAttribute('data-answered', ok ? 'ok' : 'no');
-      const fb = qz.querySelector('.qz-fb'); if (fb) fb.textContent = (ok ? 'âœ“ Certo. ' : 'âœ— NÃ£o Ã© essa. ') + (fb.getAttribute('data-text') || '');
+      const fb = qz.querySelector('.qz-fb'); if (fb) fb.textContent = (ok ? 'ê¢Åâ Certo. ' : 'ê¢Åâ NêÂ£o êÂ© essa. ') + (fb.getAttribute('data-text') || '');
     });
-    // Copiar cÃ³digo
+    // Copiar cêÂ³digo
     document.addEventListener('click', (e) => {
       const b = e.target.closest('[data-copy]'); if (!b) return;
       const pre = b.closest('.codebox').querySelector('pre');
-      navigator.clipboard && navigator.clipboard.writeText(pre.innerText).then(() => { const t = b.textContent; b.textContent = 'Copiado âœ“'; setTimeout(() => b.textContent = t, 1600); });
+      navigator.clipboard && navigator.clipboard.writeText(pre.innerText).then(() => { const t = b.textContent; b.textContent = 'Copiado ê¢Åâ'; setTimeout(() => b.textContent = t, 1600); });
     });
   </script>
 
   <script src="../../assets/learn.js"></script>
   <script>
-    if (window.ARCKHÉ && typeof window.ARCKHÉ.init === 'function') { window.ARCKHÉ.init(); }
+    if (window.ARCKHê && typeof window.ARCKHê.init === 'function') { window.ARCKHê.init(); }
   </script>
 </body>
 </html>

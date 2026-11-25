@@ -3,31 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="ARCKHÉ-course" content="astracu">
-  <title>Trilha 2 â€” Os cinco fluxos | Computer Use com o GPT-6 Astra</title>
-  <meta name="description" content="Busca que vira ferramenta, teste de MCP dentro do app, um agente testando outro, ediÃ§Ã£o de vÃ­deo atÃ© a entrega e o celular operado pelo computador. Cada um com prompt pronto e prova de conclusÃ£o.">
+  <meta name="ARCKHê-course" content="astracu">
+  <title>Trilha 2 ê¢â¬â Os cinco fluxos | Computer Use com o GPT-6 Astra</title>
+  <meta name="description" content="Busca que vira ferramenta, teste de MCP dentro do app, um agente testando outro, ediêÂ§êÂ£o de vêÂ­deo atêÂ© a entrega e o celular operado pelo computador. Cada um com prompt pronto e prova de conclusêÂ£o.">
 
   <!-- ANTI-FOUC: bloqueante, antes de tudo -->
   <script>
 (function () {
   try {
     var html = document.documentElement;
-    var DEF = { theme: 'ARCKHÉ-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
+    var DEF = { theme: 'ARCKHê-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
     function clone(o) { var r = {}; for (var x in o) r[x] = o[x]; return r; }
     var p = clone(DEF);
     try {
-      var raw = localStorage.getItem('ARCKHÉ.prefs');
+      var raw = localStorage.getItem('ARCKHê.prefs');
       if (raw) { var parsed = JSON.parse(raw); if (parsed && typeof parsed === 'object') { for (var k in DEF) if (parsed[k] != null) p[k] = parsed[k]; } }
-      else { var legacy = localStorage.getItem('theme'); if (legacy === 'light') p.theme = 'claro'; else if (legacy === 'dark') p.theme = 'ARCKHÉ-dark'; }
+      else { var legacy = localStorage.getItem('theme'); if (legacy === 'light') p.theme = 'claro'; else if (legacy === 'dark') p.theme = 'ARCKHê-dark'; }
     } catch (e) { p = clone(DEF); }
-    var THEMES = { 'ARCKHÉ-dark': { dark: true, attr: null, cs: 'dark' }, 'claro': { dark: false, attr: null, cs: 'light' }, 'sepia': { dark: false, attr: 'sepia', cs: 'light' }, 'foco': { dark: null, attr: 'foco', cs: null }, 'contraste': { dark: true, attr: 'contraste', cs: 'dark' } };
-    var t = THEMES[p.theme] || THEMES['ARCKHÉ-dark'];
+    var THEMES = { 'ARCKHê-dark': { dark: true, attr: null, cs: 'dark' }, 'claro': { dark: false, attr: null, cs: 'light' }, 'sepia': { dark: false, attr: 'sepia', cs: 'light' }, 'foco': { dark: null, attr: 'foco', cs: null }, 'contraste': { dark: true, attr: 'contraste', cs: 'dark' } };
+    var t = THEMES[p.theme] || THEMES['ARCKHê-dark'];
     if (t.dark === true) html.classList.add('dark'); else if (t.dark === false) html.classList.remove('dark');
     if (t.attr) html.setAttribute('data-theme', t.attr); else html.removeAttribute('data-theme');
     html.style.colorScheme = (t.cs ? t.cs : (html.classList.contains('dark') ? 'dark' : 'light'));
     html.setAttribute('data-font', p.font || 'inter'); html.setAttribute('data-accent', p.accent || 'emerald');
     var s = html.style; var scale = (+p.fontScale || 100);
-    s.setProperty('--ARCKHÉ-font-scale', (scale / 100).toString()); s.setProperty('font-size', scale + '%');
+    s.setProperty('--ARCKHê-font-scale', (scale / 100).toString()); s.setProperty('font-size', scale + '%');
     s.setProperty('--measure', (+p.lineWidth || 68) + 'ch'); s.setProperty('--lh-body', (+p.leading || 1.7).toString());
     var fam = p.font === 'system' ? 'system-ui, -apple-system, "Segoe UI", Roboto, sans-serif' : (p.font === 'leitura' ? '"Atkinson Hyperlegible", "Inter", system-ui, sans-serif' : '"Inter", system-ui, sans-serif');
     s.setProperty('--font-body', fam);
@@ -46,8 +46,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/learn.css">
 
-  <!-- Manifesto do curso (obrigatÃ³rio em toda pÃ¡gina) -->
-  <script type="application/json" data-ARCKHÉ-manifest>
+  <!-- Manifesto do curso (obrigatêÂ³rio em toda pêÂ¡gina) -->
+  <script type="application/json" data-ARCKHê-manifest>
 {
  "course": "astracu",
  "tracks": [
@@ -57,7 +57,7 @@
    "modules": [
     {
      "id": "1-1",
-     "title": "O que Ã© computer use e por que agora",
+     "title": "O que êÂ© computer use e por que agora",
      "topics": 6,
      "href": "curso/trilha1/modulo-1-1.html"
     },
@@ -93,7 +93,7 @@
     },
     {
      "id": "2-4",
-     "title": "A entrega da ediÃ§Ã£o",
+     "title": "A entrega da ediêÂ§êÂ£o",
      "topics": 6,
      "href": "curso/trilha2/modulo-2-4.html"
     },
@@ -212,17 +212,17 @@
     .qz-opt[data-state="no"] { border-color: #ef4444; background: rgba(239,68,68,.12); }
     .qz-fb { display:none; } .qz[data-answered] .qz-fb { display:block; }
 
-    /* TOC do mÃ³dulo Ã© um bloco inline, nÃ£o uma barra lateral sticky */
-    [data-ARCKHÉ-toc] { position: static !important; top: auto !important; max-height: none !important; }
-    /* Painel de aparÃªncia (classes internas) */
-    .ARCKHÉ-appearance-sec { margin-bottom: .75rem; }
-    .ARCKHÉ-appearance-label { font-size: .7rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #9ca3af; margin-bottom: .35rem; }
-    .ARCKHÉ-appearance-row { display: flex; flex-wrap: wrap; gap: .35rem; }
-    .ARCKHÉ-chip { font-size: .8rem; padding: .3rem .65rem; border-radius: .5rem; border: 1px solid #374151; background: rgba(31,41,55,.6); color: #e5e7eb; cursor: pointer; }
-    .ARCKHÉ-chip:hover { border-color: #FACC15; }
-    .ARCKHÉ-chip[aria-pressed="true"], .ARCKHÉ-chip.is-active { background: rgba(250,204,21,.15); border-color: #FACC15; color: #FACC15; }
-    html:not(.dark) .ARCKHÉ-chip { background: #f3f4f6; color: #111827; border-color: #d1d5db; }
-    html:not(.dark) .ARCKHÉ-chip[aria-pressed="true"], html:not(.dark) .ARCKHÉ-chip.is-active { background: rgba(161,98,7,.1); border-color: #a16207; color: #a16207; }
+    /* TOC do mêÂ³dulo êÂ© um bloco inline, nêÂ£o uma barra lateral sticky */
+    [data-ARCKHê-toc] { position: static !important; top: auto !important; max-height: none !important; }
+    /* Painel de aparêÂªncia (classes internas) */
+    .ARCKHê-appearance-sec { margin-bottom: .75rem; }
+    .ARCKHê-appearance-label { font-size: .7rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #9ca3af; margin-bottom: .35rem; }
+    .ARCKHê-appearance-row { display: flex; flex-wrap: wrap; gap: .35rem; }
+    .ARCKHê-chip { font-size: .8rem; padding: .3rem .65rem; border-radius: .5rem; border: 1px solid #374151; background: rgba(31,41,55,.6); color: #e5e7eb; cursor: pointer; }
+    .ARCKHê-chip:hover { border-color: #FACC15; }
+    .ARCKHê-chip[aria-pressed="true"], .ARCKHê-chip.is-active { background: rgba(250,204,21,.15); border-color: #FACC15; color: #FACC15; }
+    html:not(.dark) .ARCKHê-chip { background: #f3f4f6; color: #111827; border-color: #d1d5db; }
+    html:not(.dark) .ARCKHê-chip[aria-pressed="true"], html:not(.dark) .ARCKHê-chip.is-active { background: rgba(161,98,7,.1); border-color: #a16207; color: #a16207; }
     /* Code box */
     .codebox pre { white-space: pre-wrap; word-break: break-word; }
     
@@ -236,13 +236,13 @@
       <div class="flex justify-between items-center h-14">
         <div class="flex items-center space-x-3">
           <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">ðŸ–±ï¸</span>
+            <span class="text-2xl">ê°Å¸âÂ±ê¯Â¸Â</span>
             <span class="font-bold text-lg hidden md:inline">Computer Use</span>
           </a>
           <span class="text-neutral-600">|</span>
-          <a href="https://ARCKHÉ AI" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">ARCKHÉ AI</a>
+          <a href="https://ARCKHê AI" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">ARCKHê AI</a>
           <span class="text-neutral-600 hidden sm:inline">-</span>
-          <a href="https://ARCKHÉ.pro" target="_blank" class="text-amber-700 dark:text-slate-300 hover:opacity-80 text-sm font-medium hidden sm:inline">PRO</a>
+          <a href="https://ARCKHê.pro" target="_blank" class="text-amber-700 dark:text-slate-300 hover:opacity-80 text-sm font-medium hidden sm:inline">PRO</a>
         </div>
         <div class="flex items-center space-x-1 sm:space-x-2">
           <a href="../../curso/trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors">
@@ -253,11 +253,11 @@
             <span class="sm:hidden">T2</span>
             <span class="hidden sm:inline">Cinco fluxos</span>
           </a>
-          <button type="button" data-ARCKHÉ-journey-open class="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-semibold text-primary bg-primary/10 hover:bg-primary/20 transition-colors">
-            <span>ðŸ§­</span><span>Minha jornada</span>
-            <span data-ARCKHÉ-journey-badge class="text-xs px-1.5 py-0.5 rounded-full bg-primary/20"></span>
+          <button type="button" data-ARCKHê-journey-open class="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-semibold text-primary bg-primary/10 hover:bg-primary/20 transition-colors">
+            <span>ê°Å¸Â§Â­</span><span>Minha jornada</span>
+            <span data-ARCKHê-journey-badge class="text-xs px-1.5 py-0.5 rounded-full bg-primary/20"></span>
           </button>
-          <button type="button" data-ARCKHÉ-appearance-toggle="[data-ARCKHÉ-appearance]" aria-expanded="false" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" title="AparÃªncia e leitura">
+          <button type="button" data-ARCKHê-appearance-toggle="[data-ARCKHê-appearance]" aria-expanded="false" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" title="AparêÂªncia e leitura">
             <span aria-hidden="true">Aa</span>
           </button>
           <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" title="Tema claro/escuro">
@@ -269,71 +269,71 @@
     </div>
   </nav>
   
-  <div data-ARCKHÉ-appearance class="ARCKHÉ-appearance-pop" role="region" aria-label="AparÃªncia e leitura">
-    <div class="ARCKHÉ-appearance-sec">
-      <p class="ARCKHÉ-appearance-label">Tema</p>
-      <div class="ARCKHÉ-appearance-row">
-        <button type="button" data-ARCKHÉ-set-theme="ARCKHÉ-dark" class="ARCKHÉ-chip">Escuro</button>
-        <button type="button" data-ARCKHÉ-set-theme="claro" class="ARCKHÉ-chip">Claro</button>
-        <button type="button" data-ARCKHÉ-set-theme="sepia" class="ARCKHÉ-chip">SÃ©pia</button>
-        <button type="button" data-ARCKHÉ-set-theme="foco" class="ARCKHÉ-chip">Foco</button>
-        <button type="button" data-ARCKHÉ-set-theme="contraste" class="ARCKHÉ-chip">Contraste</button>
+  <div data-ARCKHê-appearance class="ARCKHê-appearance-pop" role="region" aria-label="AparêÂªncia e leitura">
+    <div class="ARCKHê-appearance-sec">
+      <p class="ARCKHê-appearance-label">Tema</p>
+      <div class="ARCKHê-appearance-row">
+        <button type="button" data-ARCKHê-set-theme="ARCKHê-dark" class="ARCKHê-chip">Escuro</button>
+        <button type="button" data-ARCKHê-set-theme="claro" class="ARCKHê-chip">Claro</button>
+        <button type="button" data-ARCKHê-set-theme="sepia" class="ARCKHê-chip">SêÂ©pia</button>
+        <button type="button" data-ARCKHê-set-theme="foco" class="ARCKHê-chip">Foco</button>
+        <button type="button" data-ARCKHê-set-theme="contraste" class="ARCKHê-chip">Contraste</button>
       </div>
     </div>
-    <div class="ARCKHÉ-appearance-sec">
-      <p class="ARCKHÉ-appearance-label">Tamanho do texto</p>
-      <div class="ARCKHÉ-appearance-row">
-        <button type="button" data-ARCKHÉ-set-fontscale="90" class="ARCKHÉ-chip">A-</button>
-        <button type="button" data-ARCKHÉ-set-fontscale="100" class="ARCKHÉ-chip">A</button>
-        <button type="button" data-ARCKHÉ-set-fontscale="115" class="ARCKHÉ-chip">A+</button>
-        <button type="button" data-ARCKHÉ-set-fontscale="130" class="ARCKHÉ-chip">A++</button>
+    <div class="ARCKHê-appearance-sec">
+      <p class="ARCKHê-appearance-label">Tamanho do texto</p>
+      <div class="ARCKHê-appearance-row">
+        <button type="button" data-ARCKHê-set-fontscale="90" class="ARCKHê-chip">A-</button>
+        <button type="button" data-ARCKHê-set-fontscale="100" class="ARCKHê-chip">A</button>
+        <button type="button" data-ARCKHê-set-fontscale="115" class="ARCKHê-chip">A+</button>
+        <button type="button" data-ARCKHê-set-fontscale="130" class="ARCKHê-chip">A++</button>
       </div>
     </div>
-    <div class="ARCKHÉ-appearance-sec">
-      <p class="ARCKHÉ-appearance-label">Fonte</p>
-      <div class="ARCKHÉ-appearance-row">
-        <button type="button" data-ARCKHÉ-set-font="inter" class="ARCKHÉ-chip">Inter</button>
-        <button type="button" data-ARCKHÉ-set-font="system" class="ARCKHÉ-chip">Sistema</button>
-        <button type="button" data-ARCKHÉ-set-font="leitura" class="ARCKHÉ-chip">Leitura</button>
+    <div class="ARCKHê-appearance-sec">
+      <p class="ARCKHê-appearance-label">Fonte</p>
+      <div class="ARCKHê-appearance-row">
+        <button type="button" data-ARCKHê-set-font="inter" class="ARCKHê-chip">Inter</button>
+        <button type="button" data-ARCKHê-set-font="system" class="ARCKHê-chip">Sistema</button>
+        <button type="button" data-ARCKHê-set-font="leitura" class="ARCKHê-chip">Leitura</button>
       </div>
     </div>
-    <div class="ARCKHÉ-appearance-sec">
-      <p class="ARCKHÉ-appearance-label">Entrelinha</p>
-      <div class="ARCKHÉ-appearance-row">
-        <button type="button" data-ARCKHÉ-set-leading="1.5" class="ARCKHÉ-chip">Compacta</button>
-        <button type="button" data-ARCKHÉ-set-leading="1.7" class="ARCKHÉ-chip">Normal</button>
-        <button type="button" data-ARCKHÉ-set-leading="1.9" class="ARCKHÉ-chip">Ampla</button>
+    <div class="ARCKHê-appearance-sec">
+      <p class="ARCKHê-appearance-label">Entrelinha</p>
+      <div class="ARCKHê-appearance-row">
+        <button type="button" data-ARCKHê-set-leading="1.5" class="ARCKHê-chip">Compacta</button>
+        <button type="button" data-ARCKHê-set-leading="1.7" class="ARCKHê-chip">Normal</button>
+        <button type="button" data-ARCKHê-set-leading="1.9" class="ARCKHê-chip">Ampla</button>
       </div>
     </div>
   </div>
 
   <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400"><a href="../../index.html" class="hover:text-blue-400">InÃ­cio</a><span>/</span><span class="text-blue-400">Trilha 2</span></div>
+    <div class="flex items-center space-x-2 text-sm text-neutral-400"><a href="../../index.html" class="hover:text-blue-400">InêÂ­cio</a><span>/</span><span class="text-blue-400">Trilha 2</span></div>
   </nav>
 
-  <header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600" data-ARCKHÉ-track="2">
+  <header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600" data-ARCKHê-track="2">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
           <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4 uppercase tracking-wider">Trilha 2</span>
-          <h1 class="text-3xl sm:text-4xl font-bold mb-4 text-neutral-100">ðŸ› ï¸ Os cinco fluxos</h1>
-          <p class="text-neutral-300 text-lg mb-6">Busca que vira ferramenta, teste de MCP dentro do app, um agente testando outro, ediÃ§Ã£o de vÃ­deo atÃ© a entrega e o celular operado pelo computador. Cada um com prompt pronto e prova de conclusÃ£o.</p>
+          <h1 class="text-3xl sm:text-4xl font-bold mb-4 text-neutral-100">ê°Å¸âºÂ ê¯Â¸Â Os cinco fluxos</h1>
+          <p class="text-neutral-300 text-lg mb-6">Busca que vira ferramenta, teste de MCP dentro do app, um agente testando outro, ediêÂ§êÂ£o de vêÂ­deo atêÂ© a entrega e o celular operado pelo computador. Cada um com prompt pronto e prova de conclusêÂ£o.</p>
           <div class="grid grid-cols-3 gap-4 mb-6">
-            <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl font-bold text-blue-400">5</div><div class="text-xs text-neutral-500 mt-1">MÃ³dulos</div></div><div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl font-bold text-blue-400">30</div><div class="text-xs text-neutral-500 mt-1">TÃ³picos</div></div><div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl font-bold text-blue-400">~3.8h</div><div class="text-xs text-neutral-500 mt-1">DuraÃ§Ã£o</div></div>
+            <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl font-bold text-blue-400">5</div><div class="text-xs text-neutral-500 mt-1">MêÂ³dulos</div></div><div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl font-bold text-blue-400">30</div><div class="text-xs text-neutral-500 mt-1">TêÂ³picos</div></div><div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl font-bold text-blue-400">~3.8h</div><div class="text-xs text-neutral-500 mt-1">DuraêÂ§êÂ£o</div></div>
           </div>
-          <div data-ARCKHÉ-meter="trilha:2" class="ARCKHÉ-meter bg-dark-800 rounded-xl p-4 border border-dark-600" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso da trilha 2">
-            <div class="flex justify-between text-sm text-neutral-400 mb-2"><span>Seu progresso</span><span class="text-blue-400 font-semibold" data-ARCKHÉ-meter-pct>0%</span></div>
-            <div class="ARCKHÉ-bar h-2 bg-dark-700 rounded-full overflow-hidden mb-2"><div class="ARCKHÉ-bar__fill h-full bg-blue-500 rounded-full transition-all" data-ARCKHÉ-meter-fill style="width:0%"></div></div>
-            <div class="text-xs text-neutral-500"><span data-ARCKHÉ-meter-frac>0 de 30</span> tÃ³picos concluÃ­dos</div>
+          <div data-ARCKHê-meter="trilha:2" class="ARCKHê-meter bg-dark-800 rounded-xl p-4 border border-dark-600" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso da trilha 2">
+            <div class="flex justify-between text-sm text-neutral-400 mb-2"><span>Seu progresso</span><span class="text-blue-400 font-semibold" data-ARCKHê-meter-pct>0%</span></div>
+            <div class="ARCKHê-bar h-2 bg-dark-700 rounded-full overflow-hidden mb-2"><div class="ARCKHê-bar__fill h-full bg-blue-500 rounded-full transition-all" data-ARCKHê-meter-fill style="width:0%"></div></div>
+            <div class="text-xs text-neutral-500"><span data-ARCKHê-meter-frac>0 de 30</span> têÂ³picos concluêÂ­dos</div>
           </div>
         </div>
-        <div class="rounded-2xl border border-blue-500/30 bg-dark-900/40 p-4"><svg viewBox="0 0 800 390" class="w-full h-auto" role="img" aria-label="Diagrama dos 5 mÃ³dulos da trilha 2: Os cinco fluxos"><defs>
+        <div class="rounded-2xl border border-blue-500/30 bg-dark-900/40 p-4"><svg viewBox="0 0 800 390" class="w-full h-auto" role="img" aria-label="Diagrama dos 5 mêÂ³dulos da trilha 2: Os cinco fluxos"><defs>
     <linearGradient id="s22-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#60a5fa"/><stop offset="1" stop-color="#3b82f6"/></linearGradient>
     <filter id="s22-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     <pattern id="s22-grid" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="1.3" fill="#3b82f6" opacity="0.14"/></pattern>
   </defs><rect width="800" height="390" fill="url(#s22-grid)"/>
       <g filter="url(#s22-glow)"><circle cx="130" cy="195" r="88" fill="#1e3a8a" stroke="url(#s22-g)" stroke-width="2.5"/></g>
-      <text x="130" y="187" text-anchor="middle" fill="#60a5fa" font-family="Inter,sans-serif" font-size="15" font-weight="800">Trilha 2</text><text x="130" y="205" text-anchor="middle" fill="#60a5fa" font-family="Inter,sans-serif" font-size="15" font-weight="800">Cinco fluxos</text><text x="130" y="223" text-anchor="middle" fill="#60a5fa" font-family="Inter,sans-serif" font-size="15" font-weight="800">30 tÃ³picos</text><path d="M220 195 C 255 195, 255 55, 380 55" fill="none" stroke="#3b82f6" stroke-width="1.6" stroke-dasharray="5 5" opacity="0.6"/>
+      <text x="130" y="187" text-anchor="middle" fill="#60a5fa" font-family="Inter,sans-serif" font-size="15" font-weight="800">Trilha 2</text><text x="130" y="205" text-anchor="middle" fill="#60a5fa" font-family="Inter,sans-serif" font-size="15" font-weight="800">Cinco fluxos</text><text x="130" y="223" text-anchor="middle" fill="#60a5fa" font-family="Inter,sans-serif" font-size="15" font-weight="800">30 têÂ³picos</text><path d="M220 195 C 255 195, 255 55, 380 55" fill="none" stroke="#3b82f6" stroke-width="1.6" stroke-dasharray="5 5" opacity="0.6"/>
         <g class="wf-a"><rect x="380" y="31" width="400" height="48" rx="10" fill="#1e3a8a" stroke="#3b82f6" stroke-width="1.6"/>
         <text x="420" y="61" text-anchor="middle" fill="#60a5fa" font-family="Inter,sans-serif" font-size="18" font-weight="800">+6</text>
         <text x="454" y="52" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="11.5" font-weight="600">2.1 Busca vira ferramenta</text>
@@ -348,7 +348,7 @@
         <text x="454" y="208" fill="#9ca3af" font-family="Inter,sans-serif" font-size="9.5">Computer use auditando computer use</text></g><path d="M220 195 C 255 195, 255 265, 380 265" fill="none" stroke="#38bdf8" stroke-width="1.6" stroke-dasharray="5 5" opacity="0.6"/>
         <g class="wf-a"><rect x="380" y="241" width="400" height="48" rx="10" fill="#0e1b26" stroke="#38bdf8" stroke-width="1.6"/>
         <text x="420" y="271" text-anchor="middle" fill="#38bdf8" font-family="Inter,sans-serif" font-size="18" font-weight="800">+6</text>
-        <text x="454" y="262" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="11.5" font-weight="600">2.4 A entrega da ediÃ§Ã£o</text>
+        <text x="454" y="262" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="11.5" font-weight="600">2.4 A entrega da ediêÂ§êÂ£o</text>
         <text x="454" y="278" fill="#9ca3af" font-family="Inter,sans-serif" font-size="9.5">Do render ao link, sem esperar acordado</text></g><path d="M220 195 C 255 195, 255 335, 380 335" fill="none" stroke="#3b82f6" stroke-width="1.6" stroke-dasharray="5 5" opacity="0.6"/>
         <g class="wf-a"><rect x="380" y="311" width="400" height="48" rx="10" fill="#1e3a8a" stroke="#3b82f6" stroke-width="1.6"/>
         <text x="420" y="341" text-anchor="middle" fill="#60a5fa" font-family="Inter,sans-serif" font-size="18" font-weight="800">+6</text>
@@ -364,252 +364,252 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <a href="#modulo-2-1" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/30 p-5 transition-all">
           <div class="flex items-center justify-between mb-3"><span class="text-blue-400 font-bold text-sm">2.1</span><span class="text-neutral-500 text-xs">~50 min</span></div>
-          <h3 class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors mb-1">ðŸ”§ Busca vira ferramenta</h3>
+          <h3 class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors mb-1">ê°Å¸âÂ§ Busca vira ferramenta</h3>
           <p class="text-xs text-neutral-500">Mapear o site uma vez, rodar para sempre</p>
         </a>
         <a href="#modulo-2-2" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/30 p-5 transition-all">
           <div class="flex items-center justify-between mb-3"><span class="text-blue-400 font-bold text-sm">2.2</span><span class="text-neutral-500 text-xs">~45 min</span></div>
-          <h3 class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors mb-1">ðŸ§ª Testar ferramentas dentro do app</h3>
+          <h3 class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors mb-1">ê°Å¸Â§Âª Testar ferramentas dentro do app</h3>
           <p class="text-xs text-neutral-500">Seu MCP visto por quem nunca o usou</p>
         </a>
         <a href="#modulo-2-3" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/30 p-5 transition-all">
           <div class="flex items-center justify-between mb-3"><span class="text-blue-400 font-bold text-sm">2.3</span><span class="text-neutral-500 text-xs">~45 min</span></div>
-          <h3 class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors mb-1">ðŸ” Um agente testa outro</h3>
+          <h3 class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors mb-1">ê°Å¸âÂ Um agente testa outro</h3>
           <p class="text-xs text-neutral-500">Computer use auditando computer use</p>
         </a>
         <a href="#modulo-2-4" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/30 p-5 transition-all">
           <div class="flex items-center justify-between mb-3"><span class="text-blue-400 font-bold text-sm">2.4</span><span class="text-neutral-500 text-xs">~45 min</span></div>
-          <h3 class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors mb-1">ðŸŽ¬ A entrega da ediÃ§Ã£o</h3>
+          <h3 class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors mb-1">ê°Å¸Å½Â¬ A entrega da ediêÂ§êÂ£o</h3>
           <p class="text-xs text-neutral-500">Do render ao link, sem esperar acordado</p>
         </a>
         <a href="#modulo-2-5" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/30 p-5 transition-all">
           <div class="flex items-center justify-between mb-3"><span class="text-blue-400 font-bold text-sm">2.5</span><span class="text-neutral-500 text-xs">~40 min</span></div>
-          <h3 class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors mb-1">ðŸ“± O celular pelo computador</h3>
+          <h3 class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors mb-1">ê°Å¸âÂ± O celular pelo computador</h3>
           <p class="text-xs text-neutral-500">Espelhar, configurar, provar que persistiu</p>
         </a></div>
     </section>
 
-    <h2 class="text-2xl font-bold mb-6">ConteÃºdo detalhado</h2>
+    <h2 class="text-2xl font-bold mb-6">ConteêÂºdo detalhado</h2>
 
-    <div id="modulo-2-1" class="bg-dark-800 rounded-2xl border border-dark-600 mb-8 overflow-hidden scroll-mt-20" data-ARCKHÉ-module="2-1">
+    <div id="modulo-2-1" class="bg-dark-800 rounded-2xl border border-dark-600 mb-8 overflow-hidden scroll-mt-20" data-ARCKHê-module="2-1">
       <div class="p-6 border-b border-dark-600">
         <div class="flex items-start justify-between flex-wrap gap-3 mb-3">
-          <span class="text-blue-400 font-bold text-sm">MÃ³dulo 2.1</span>
+          <span class="text-blue-400 font-bold text-sm">MêÂ³dulo 2.1</span>
           <div class="flex items-center gap-4"><span class="text-neutral-500 text-sm">~50 min</span>
-            <span data-ARCKHÉ-meter="modulo:2-1" class="text-xs text-blue-400 font-semibold"><span data-ARCKHÉ-meter-frac>0 de 6</span></span></div>
+            <span data-ARCKHê-meter="modulo:2-1" class="text-xs text-blue-400 font-semibold"><span data-ARCKHê-meter-frac>0 de 6</span></span></div>
         </div>
-        <h2 class="text-2xl font-bold mb-2">ðŸ”§ Busca vira ferramenta</h2>
-        <p class="text-neutral-400">Google Flights nÃ£o tem API. Com computer use vocÃª faz a busca uma vez, o agente entende como chegou lÃ¡ e gera uma ferramenta de linha de comando que qualquer agente, com qualquer modelo, roda depois. Ã‰ o fluxo que mais rende porque transforma um custo repetido em custo Ãºnico.</p>
+        <h2 class="text-2xl font-bold mb-2">ê°Å¸âÂ§ Busca vira ferramenta</h2>
+        <p class="text-neutral-400">Google Flights nêÂ£o tem API. Com computer use vocêÂª faz a busca uma vez, o agente entende como chegou lêÂ¡ e gera uma ferramenta de linha de comando que qualquer agente, com qualquer modelo, roda depois. êâ° o fluxo que mais rende porque transforma um custo repetido em custo êÂºnico.</p>
       </div>
       <div class="p-6">
-        <p class="text-sm text-neutral-500 mb-4 font-semibold uppercase tracking-wider">TÃ³picos do mÃ³dulo</p>
+        <p class="text-sm text-neutral-500 mb-4 font-semibold uppercase tracking-wider">TêÂ³picos do mêÂ³dulo</p>
         <div class="space-y-3 divide-y divide-dark-600">
           
           <div class="topic-item pt-3 first:pt-0">
             <button onclick="toggleTopic(this)" class="w-full flex items-center justify-start gap-3 text-left group" aria-expanded="false" aria-controls="t2m2-1-exp1">
               <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
-              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ðŸŽ¯ O problema: um site que vocÃª consulta toda semana e nÃ£o tem API</span><p class="text-xs text-neutral-500 mt-0.5">Repetir computer use Ã© caro; mapear uma vez Ã© barato</p></div>
+              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ê°Å¸Å½Â¯ O problema: um site que vocêÂª consulta toda semana e nêÂ£o tem API</span><p class="text-xs text-neutral-500 mt-0.5">Repetir computer use êÂ© caro; mapear uma vez êÂ© barato</p></div>
             </button>
             <div class="topic-explanation mt-4 pl-9" id="t2m2-1-exp1">
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que Ã©</p><p class="text-sm text-neutral-300">O caso de uso: uma busca repetida num site fechado (voos, imÃ³veis, peÃ§as) que hoje exige uma pessoa ou uma sessÃ£o inteira de computer use a cada vez.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Cada execuÃ§Ã£o de computer use custa dezenas de segundos e capturas de tela. Se a busca se repete, o custo certo Ã© o de construir a ferramenta, nÃ£o o de repetir a navegaÃ§Ã£o.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Busca repetida, site fechado, ferramenta reutilizÃ¡vel, custo Ãºnico contra custo recorrente.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que êÂ©</p><p class="text-sm text-neutral-300">O caso de uso: uma busca repetida num site fechado (voos, imêÂ³veis, peêÂ§as) que hoje exige uma pessoa ou uma sessêÂ£o inteira de computer use a cada vez.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Cada execuêÂ§êÂ£o de computer use custa dezenas de segundos e capturas de tela. Se a busca se repete, o custo certo êÂ© o de construir a ferramenta, nêÂ£o o de repetir a navegaêÂ§êÂ£o.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Busca repetida, site fechado, ferramenta reutilizêÂ¡vel, custo êÂºnico contra custo recorrente.</p></div>
               </div>
             </div>
           </div>
           <div class="topic-item pt-3 ">
             <button onclick="toggleTopic(this)" class="w-full flex items-center justify-start gap-3 text-left group" aria-expanded="false" aria-controls="t2m2-1-exp2">
               <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ðŸ“ O prompt 01, traduzido</span><p class="text-xs text-neutral-500 mt-0.5">Construa uma CLI de busca de voos apoiada no navegador</p></div>
+              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ê°Å¸âÂ O prompt 01, traduzido</span><p class="text-xs text-neutral-500 mt-0.5">Construa uma CLI de busca de voos apoiada no navegador</p></div>
             </button>
             <div class="topic-explanation mt-4 pl-9" id="t2m2-1-exp2">
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que Ã©</p><p class="text-sm text-neutral-300">O prompt do kit para o primeiro fluxo: entradas explÃ­citas, inspeÃ§Ã£o da interface pelo navegador interno, separaÃ§Ã£o planejador/adaptador, exportaÃ§Ã£o em JSON e CSV, duas execuÃ§Ãµes de verificaÃ§Ã£o.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Ã‰ o prompt mais longo dos cinco e o mais instrutivo: cada frase corresponde a uma falha que aconteceu antes.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Navegador interno explÃ­cito, entradas nomeadas, exportaÃ§Ã£o, verificaÃ§Ã£o em duas datas, "search only".</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que êÂ©</p><p class="text-sm text-neutral-300">O prompt do kit para o primeiro fluxo: entradas explêÂ­citas, inspeêÂ§êÂ£o da interface pelo navegador interno, separaêÂ§êÂ£o planejador/adaptador, exportaêÂ§êÂ£o em JSON e CSV, duas execuêÂ§êÂµes de verificaêÂ§êÂ£o.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">êâ° o prompt mais longo dos cinco e o mais instrutivo: cada frase corresponde a uma falha que aconteceu antes.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Navegador interno explêÂ­cito, entradas nomeadas, exportaêÂ§êÂ£o, verificaêÂ§êÂ£o em duas datas, "search only".</p></div>
               </div>
             </div>
           </div>
           <div class="topic-item pt-3 ">
             <button onclick="toggleTopic(this)" class="w-full flex items-center justify-start gap-3 text-left group" aria-expanded="false" aria-controls="t2m2-1-exp3">
               <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ðŸ§© Planejador local e adaptador de navegador sÃ£o coisas separadas</span><p class="text-xs text-neutral-500 mt-0.5">O que roda sozinho e o que exige o Codex</p></div>
+              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ê°Å¸Â§Â© Planejador local e adaptador de navegador sêÂ£o coisas separadas</span><p class="text-xs text-neutral-500 mt-0.5">O que roda sozinho e o que exige o Codex</p></div>
             </button>
             <div class="topic-explanation mt-4 pl-9" id="t2m2-1-exp3">
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que Ã©</p><p class="text-sm text-neutral-300">A arquitetura que o prompt exige e que o google-flights-cli do kit implementa: planejamento, replay de capturas, exportaÃ§Ã£o e comparaÃ§Ã£o de histÃ³rico rodam no terminal; tarifa nova exige o navegador interno do Codex.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Quem nÃ£o entende essa fronteira acha que a CLI "nÃ£o funciona" quando ela devolve "requires_codex". Ela funcionou: gerou o plano. Falta o navegador.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">requires_codex, replay de captura, exportaÃ§Ã£o, comparaÃ§Ã£o de histÃ³rico, fronteira declarada.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que êÂ©</p><p class="text-sm text-neutral-300">A arquitetura que o prompt exige e que o google-flights-cli do kit implementa: planejamento, replay de capturas, exportaêÂ§êÂ£o e comparaêÂ§êÂ£o de histêÂ³rico rodam no terminal; tarifa nova exige o navegador interno do Codex.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Quem nêÂ£o entende essa fronteira acha que a CLI "nêÂ£o funciona" quando ela devolve "requires_codex". Ela funcionou: gerou o plano. Falta o navegador.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">requires_codex, replay de captura, exportaêÂ§êÂ£o, comparaêÂ§êÂ£o de histêÂ³rico, fronteira declarada.</p></div>
               </div>
             </div>
           </div>
           <div class="topic-item pt-3 ">
             <button onclick="toggleTopic(this)" class="w-full flex items-center justify-start gap-3 text-left group" aria-expanded="false" aria-controls="t2m2-1-exp4">
               <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
-              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">âœ… A prova: dois pares de datas, uma tarifa que confere</span><p class="text-xs text-neutral-500 mt-0.5">Como saber que a ferramenta funciona e nÃ£o sÃ³ parece</p></div>
+              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ê¢Åâ¦ A prova: dois pares de datas, uma tarifa que confere</span><p class="text-xs text-neutral-500 mt-0.5">Como saber que a ferramenta funciona e nêÂ£o sêÂ³ parece</p></div>
             </button>
             <div class="topic-explanation mt-4 pl-9" id="t2m2-1-exp4">
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que Ã©</p><p class="text-sm text-neutral-300">A prova de conclusÃ£o do fluxo 01: execuÃ§Ãµes separadas por pasta, comparaÃ§Ã£o de um resultado exportado com a pÃ¡gina, campos desconhecidos marcados como tal, e distinÃ§Ã£o entre preÃ§o exibido e itinerÃ¡rio selecionado.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Uma ferramenta de busca que exporta o nÃºmero errado Ã© pior do que nenhuma, porque parece certa.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Pasta nova por execuÃ§Ã£o, comparaÃ§Ã£o com a pÃ¡gina, unknown em vez de zero, from-price contra itinerÃ¡rio.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que êÂ©</p><p class="text-sm text-neutral-300">A prova de conclusêÂ£o do fluxo 01: execuêÂ§êÂµes separadas por pasta, comparaêÂ§êÂ£o de um resultado exportado com a pêÂ¡gina, campos desconhecidos marcados como tal, e distinêÂ§êÂ£o entre preêÂ§o exibido e itinerêÂ¡rio selecionado.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Uma ferramenta de busca que exporta o nêÂºmero errado êÂ© pior do que nenhuma, porque parece certa.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Pasta nova por execuêÂ§êÂ£o, comparaêÂ§êÂ£o com a pêÂ¡gina, unknown em vez de zero, from-price contra itinerêÂ¡rio.</p></div>
               </div>
             </div>
           </div>
           <div class="topic-item pt-3 ">
             <button onclick="toggleTopic(this)" class="w-full flex items-center justify-start gap-3 text-left group" aria-expanded="false" aria-controls="t2m2-1-exp5">
               <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
-              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ðŸ—ºï¸ Explorar rotas com orÃ§amento: multi-city e alternativas</span><p class="text-xs text-neutral-500 mt-0.5">O prompt 06 e o que ele se recusa a prometer</p></div>
+              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ê°Å¸âÂºê¯Â¸Â Explorar rotas com orêÂ§amento: multi-city e alternativas</span><p class="text-xs text-neutral-500 mt-0.5">O prompt 06 e o que ele se recusa a prometer</p></div>
             </button>
             <div class="topic-explanation mt-4 pl-9" id="t2m2-1-exp5">
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que Ã©</p><p class="text-sm text-neutral-300">A extensÃ£o do fluxo: janelas de datas, aeroportos alternativos, trajetos abertos (chegar por uma cidade e voltar por outra) e escalas planejadas, com um teto de buscas no navegador.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Ã‰ onde a ferramenta deixa de repetir a sua busca e passa a encontrar combinaÃ§Ãµes que vocÃª nÃ£o tentaria Ã  mÃ£o. E Ã© onde mais se inventa: preÃ§o global mais barato, assento de milhas disponÃ­vel.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Janela de datas, aeroporto alternativo, open-jaw, orÃ§amento de buscas, custos ocultos, bilhetes separados.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que êÂ©</p><p class="text-sm text-neutral-300">A extensêÂ£o do fluxo: janelas de datas, aeroportos alternativos, trajetos abertos (chegar por uma cidade e voltar por outra) e escalas planejadas, com um teto de buscas no navegador.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">êâ° onde a ferramenta deixa de repetir a sua busca e passa a encontrar combinaêÂ§êÂµes que vocêÂª nêÂ£o tentaria êÂ  mêÂ£o. E êÂ© onde mais se inventa: preêÂ§o global mais barato, assento de milhas disponêÂ­vel.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Janela de datas, aeroporto alternativo, open-jaw, orêÂ§amento de buscas, custos ocultos, bilhetes separados.</p></div>
               </div>
             </div>
           </div>
           <div class="topic-item pt-3 ">
             <button onclick="toggleTopic(this)" class="w-full flex items-center justify-start gap-3 text-left group" aria-expanded="false" aria-controls="t2m2-1-exp6">
               <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
-              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">â±ï¸ Medir se o reuso ajuda de verdade</span><p class="text-xs text-neutral-500 mt-0.5">O prompt 08 e os nÃºmeros do vÃ­deo</p></div>
+              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ê¢ÂÂ±ê¯Â¸Â Medir se o reuso ajuda de verdade</span><p class="text-xs text-neutral-500 mt-0.5">O prompt 08 e os nêÂºmeros do vêÂ­deo</p></div>
             </button>
             <div class="topic-explanation mt-4 pl-9" id="t2m2-1-exp6">
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que Ã©</p><p class="text-sm text-neutral-300">O teste comparativo do kit: a mesma busca nova em duas sessÃµes limpas, uma com a ferramenta gerada e outra com computer use puro, alternando a ordem, com o tempo definido antes.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Uma ferramenta que nÃ£o Ã© mais rÃ¡pida do que refazer a navegaÃ§Ã£o nÃ£o vale a manutenÃ§Ã£o. O vÃ­deo mediu: 70% e 50% menos tempo. Mas em duas buscas.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">SessÃµes limpas, mesma cobertura, ordem alternada, tempo definido antes, amostra pequena.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que êÂ©</p><p class="text-sm text-neutral-300">O teste comparativo do kit: a mesma busca nova em duas sessêÂµes limpas, uma com a ferramenta gerada e outra com computer use puro, alternando a ordem, com o tempo definido antes.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Uma ferramenta que nêÂ£o êÂ© mais rêÂ¡pida do que refazer a navegaêÂ§êÂ£o nêÂ£o vale a manutenêÂ§êÂ£o. O vêÂ­deo mediu: 70% e 50% menos tempo. Mas em duas buscas.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">SessêÂµes limpas, mesma cobertura, ordem alternada, tempo definido antes, amostra pequena.</p></div>
               </div>
             </div>
           </div>
         </div>
         <div class="mt-6 flex justify-start">
-          <a href="modulo-2-1.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 font-semibold rounded-xl border border-blue-500/30 transition-colors text-sm">Ver Completo â†’</a>
+          <a href="modulo-2-1.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 font-semibold rounded-xl border border-blue-500/30 transition-colors text-sm">Ver Completo ê¢â â</a>
         </div>
       </div>
     </div>
-    <div id="modulo-2-2" class="bg-dark-800 rounded-2xl border border-dark-600 mb-8 overflow-hidden scroll-mt-20" data-ARCKHÉ-module="2-2">
+    <div id="modulo-2-2" class="bg-dark-800 rounded-2xl border border-dark-600 mb-8 overflow-hidden scroll-mt-20" data-ARCKHê-module="2-2">
       <div class="p-6 border-b border-dark-600">
         <div class="flex items-start justify-between flex-wrap gap-3 mb-3">
-          <span class="text-blue-400 font-bold text-sm">MÃ³dulo 2.2</span>
+          <span class="text-blue-400 font-bold text-sm">MêÂ³dulo 2.2</span>
           <div class="flex items-center gap-4"><span class="text-neutral-500 text-sm">~45 min</span>
-            <span data-ARCKHÉ-meter="modulo:2-2" class="text-xs text-blue-400 font-semibold"><span data-ARCKHÉ-meter-frac>0 de 6</span></span></div>
+            <span data-ARCKHê-meter="modulo:2-2" class="text-xs text-blue-400 font-semibold"><span data-ARCKHê-meter-frac>0 de 6</span></span></div>
         </div>
-        <h2 class="text-2xl font-bold mb-2">ðŸ§ª Testar ferramentas dentro do app</h2>
-        <p class="text-neutral-400">Quem publica um MCP, uma skill ou um plugin sabe: o mais difÃ­cil Ã© simular o primeiro uso de outra pessoa. Este fluxo coloca o Codex para abrir o Claude Desktop, instalar a sua ferramenta, conversar com ela, abrir cada chamada e devolver a jornada inteira com evidÃªncia.</p>
+        <h2 class="text-2xl font-bold mb-2">ê°Å¸Â§Âª Testar ferramentas dentro do app</h2>
+        <p class="text-neutral-400">Quem publica um MCP, uma skill ou um plugin sabe: o mais difêÂ­cil êÂ© simular o primeiro uso de outra pessoa. Este fluxo coloca o Codex para abrir o Claude Desktop, instalar a sua ferramenta, conversar com ela, abrir cada chamada e devolver a jornada inteira com evidêÂªncia.</p>
       </div>
       <div class="p-6">
-        <p class="text-sm text-neutral-500 mb-4 font-semibold uppercase tracking-wider">TÃ³picos do mÃ³dulo</p>
+        <p class="text-sm text-neutral-500 mb-4 font-semibold uppercase tracking-wider">TêÂ³picos do mêÂ³dulo</p>
         <div class="space-y-3 divide-y divide-dark-600">
           
           <div class="topic-item pt-3 first:pt-0">
             <button onclick="toggleTopic(this)" class="w-full flex items-center justify-start gap-3 text-left group" aria-expanded="false" aria-controls="t2m2-2-exp1">
               <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
-              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ðŸ˜° A dor de quem publica: simular o primeiro uso</span><p class="text-xs text-neutral-500 mt-0.5">VocÃª conhece demais a sua ferramenta para testÃ¡-la</p></div>
+              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ê°Å¸ËÂ° A dor de quem publica: simular o primeiro uso</span><p class="text-xs text-neutral-500 mt-0.5">VocêÂª conhece demais a sua ferramenta para testêÂ¡-la</p></div>
             </button>
             <div class="topic-explanation mt-4 pl-9" id="t2m2-2-exp1">
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que Ã©</p><p class="text-sm text-neutral-300">O problema que o fluxo resolve: mapear a experiÃªncia real de alguÃ©m que pega o seu MCP ou skill, conecta ao Claude ou ao Codex e usa pela primeira vez.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">VocÃª pula os passos que jÃ¡ sabe. Um agente com instruÃ§Ãµes de usuÃ¡rio novo nÃ£o pula nenhum, e registra onde travou.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">MCP, app hospedeiro, jornada do usuÃ¡rio, chamada de ferramenta, primeiro uso.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que êÂ©</p><p class="text-sm text-neutral-300">O problema que o fluxo resolve: mapear a experiêÂªncia real de alguêÂ©m que pega o seu MCP ou skill, conecta ao Claude ou ao Codex e usa pela primeira vez.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">VocêÂª pula os passos que jêÂ¡ sabe. Um agente com instruêÂ§êÂµes de usuêÂ¡rio novo nêÂ£o pula nenhum, e registra onde travou.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">MCP, app hospedeiro, jornada do usuêÂ¡rio, chamada de ferramenta, primeiro uso.</p></div>
               </div>
             </div>
           </div>
           <div class="topic-item pt-3 ">
             <button onclick="toggleTopic(this)" class="w-full flex items-center justify-start gap-3 text-left group" aria-expanded="false" aria-controls="t2m2-2-exp2">
               <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ðŸ“ O prompt 02, traduzido</span><p class="text-xs text-neutral-500 mt-0.5">Use computer use para testar minha integraÃ§Ã£o no app real</p></div>
+              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ê°Å¸âÂ O prompt 02, traduzido</span><p class="text-xs text-neutral-500 mt-0.5">Use computer use para testar minha integraêÂ§êÂ£o no app real</p></div>
             </button>
             <div class="topic-explanation mt-4 pl-9" id="t2m2-2-exp2">
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que Ã©</p><p class="text-sm text-neutral-300">O prompt do kit: app hospedeiro, nome da ferramenta, fonte segura de teste, resultado esperado, pedido sÃ³ de leitura, inspeÃ§Ã£o da chamada, dois follow-ups, caso sem resultado, conferÃªncia com a fonte, relatÃ³rio curto.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Ã‰ o prompt que transforma "acho que funciona" em "passou em seis checagens, falhou em uma, a correÃ§Ã£o de maior valor Ã© esta".</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">SÃ³ leitura, preservar configuraÃ§Ã£o, parar em login, nÃ£o reconstruir o que existe, relatÃ³rio curto.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que êÂ©</p><p class="text-sm text-neutral-300">O prompt do kit: app hospedeiro, nome da ferramenta, fonte segura de teste, resultado esperado, pedido sêÂ³ de leitura, inspeêÂ§êÂ£o da chamada, dois follow-ups, caso sem resultado, conferêÂªncia com a fonte, relatêÂ³rio curto.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">êâ° o prompt que transforma "acho que funciona" em "passou em seis checagens, falhou em uma, a correêÂ§êÂ£o de maior valor êÂ© esta".</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">SêÂ³ leitura, preservar configuraêÂ§êÂ£o, parar em login, nêÂ£o reconstruir o que existe, relatêÂ³rio curto.</p></div>
               </div>
             </div>
           </div>
           <div class="topic-item pt-3 ">
             <button onclick="toggleTopic(this)" class="w-full flex items-center justify-start gap-3 text-left group" aria-expanded="false" aria-controls="t2m2-2-exp3">
               <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ðŸ” Inspecionar a chamada, nÃ£o a resposta</span><p class="text-xs text-neutral-500 mt-0.5">Abrir os painÃ©is que mostram o que a ferramenta recebeu e devolveu</p></div>
+              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ê°Å¸âÂ Inspecionar a chamada, nêÂ£o a resposta</span><p class="text-xs text-neutral-500 mt-0.5">Abrir os painêÂ©is que mostram o que a ferramenta recebeu e devolveu</p></div>
             </button>
             <div class="topic-explanation mt-4 pl-9" id="t2m2-2-exp3">
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que Ã©</p><p class="text-sm text-neutral-300">A instruÃ§Ã£o central do fluxo: o agente clica nos painÃ©is expansÃ­veis do app para ver quais parÃ¢metros entraram na ferramenta, quais registros voltaram e de onde, em vez de ler sÃ³ o texto final.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">A resposta final pode estar certa por acaso, ou bonita e errada. A chamada mostra se a ferramenta foi usada, como e com quÃª.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Painel de chamada, parÃ¢metros de entrada, registros devolvidos, fonte de cada item.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que êÂ©</p><p class="text-sm text-neutral-300">A instruêÂ§êÂ£o central do fluxo: o agente clica nos painêÂ©is expansêÂ­veis do app para ver quais parêÂ¢metros entraram na ferramenta, quais registros voltaram e de onde, em vez de ler sêÂ³ o texto final.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">A resposta final pode estar certa por acaso, ou bonita e errada. A chamada mostra se a ferramenta foi usada, como e com quêÂª.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Painel de chamada, parêÂ¢metros de entrada, registros devolvidos, fonte de cada item.</p></div>
               </div>
             </div>
           </div>
           <div class="topic-item pt-3 ">
             <button onclick="toggleTopic(this)" class="w-full flex items-center justify-start gap-3 text-left group" aria-expanded="false" aria-controls="t2m2-2-exp4">
               <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
-              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ðŸ” Follow-ups encadeados e o caso sem resultado</span><p class="text-xs text-neutral-500 mt-0.5">Os dois testes que separam demo de produto</p></div>
+              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ê°Å¸âÂ Follow-ups encadeados e o caso sem resultado</span><p class="text-xs text-neutral-500 mt-0.5">Os dois testes que separam demo de produto</p></div>
             </button>
             <div class="topic-explanation mt-4 pl-9" id="t2m2-2-exp4">
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que Ã©</p><p class="text-sm text-neutral-300">Dois follow-ups que dependem da primeira resposta (testam contexto) e uma pergunta cuja resposta a ferramenta nÃ£o tem (testa honestidade).</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Um MCP que responde bem a uma pergunta isolada e se perde na segunda, ou que inventa quando nÃ£o sabe, falha exatamente onde o usuÃ¡rio real vai estar.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">DependÃªncia da resposta anterior, contexto retido, incerteza declarada, lista vazia.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que êÂ©</p><p class="text-sm text-neutral-300">Dois follow-ups que dependem da primeira resposta (testam contexto) e uma pergunta cuja resposta a ferramenta nêÂ£o tem (testa honestidade).</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Um MCP que responde bem a uma pergunta isolada e se perde na segunda, ou que inventa quando nêÂ£o sabe, falha exatamente onde o usuêÂ¡rio real vai estar.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">DependêÂªncia da resposta anterior, contexto retido, incerteza declarada, lista vazia.</p></div>
               </div>
             </div>
           </div>
           <div class="topic-item pt-3 ">
             <button onclick="toggleTopic(this)" class="w-full flex items-center justify-start gap-3 text-left group" aria-expanded="false" aria-controls="t2m2-2-exp5">
               <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
-              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">â±ï¸ Conferir com a fonte e medir tempo sem inventar</span><p class="text-xs text-neutral-500 mt-0.5">O que registrar, e o que nÃ£o decompor</p></div>
+              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ê¢ÂÂ±ê¯Â¸Â Conferir com a fonte e medir tempo sem inventar</span><p class="text-xs text-neutral-500 mt-0.5">O que registrar, e o que nêÂ£o decompor</p></div>
             </button>
             <div class="topic-explanation mt-4 pl-9" id="t2m2-2-exp5">
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que Ã©</p><p class="text-sm text-neutral-300">Duas exigÃªncias do prompt: uma resposta material conferida contra a fonte de origem, e registro de tempo decorrido com separaÃ§Ã£o entre modelo, ferramenta e configuraÃ§Ã£o sÃ³ quando a evidÃªncia sustentar.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Tempo Ã© o que o usuÃ¡rio sente. Mas uma decomposiÃ§Ã£o de tempo inventada Ã© pior do que nenhuma, porque orienta a otimizaÃ§Ã£o errada.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Fonte de origem, tempo decorrido, tempo do modelo, tempo da ferramenta, atrito de configuraÃ§Ã£o.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que êÂ©</p><p class="text-sm text-neutral-300">Duas exigêÂªncias do prompt: uma resposta material conferida contra a fonte de origem, e registro de tempo decorrido com separaêÂ§êÂ£o entre modelo, ferramenta e configuraêÂ§êÂ£o sêÂ³ quando a evidêÂªncia sustentar.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Tempo êÂ© o que o usuêÂ¡rio sente. Mas uma decomposiêÂ§êÂ£o de tempo inventada êÂ© pior do que nenhuma, porque orienta a otimizaêÂ§êÂ£o errada.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Fonte de origem, tempo decorrido, tempo do modelo, tempo da ferramenta, atrito de configuraêÂ§êÂ£o.</p></div>
               </div>
             </div>
           </div>
           <div class="topic-item pt-3 ">
             <button onclick="toggleTopic(this)" class="w-full flex items-center justify-start gap-3 text-left group" aria-expanded="false" aria-controls="t2m2-2-exp6">
               <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
-              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ðŸ“„ O relatÃ³rio, a correÃ§Ã£o de maior valor, e a ponte entre apps</span><p class="text-xs text-neutral-500 mt-0.5">De feedback vago a um arquivo e uma linha</p></div>
+              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ê°Å¸ââ O relatêÂ³rio, a correêÂ§êÂ£o de maior valor, e a ponte entre apps</span><p class="text-xs text-neutral-500 mt-0.5">De feedback vago a um arquivo e uma linha</p></div>
             </button>
             <div class="topic-explanation mt-4 pl-9" id="t2m2-2-exp6">
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que Ã©</p><p class="text-sm text-neutral-300">O formato de saÃ­da: checagens que passaram, falhas reproduzidas, evidÃªncia e a Ãºnica correÃ§Ã£o de maior valor, com localizaÃ§Ã£o provÃ¡vel no cÃ³digo quando houver. E a extensÃ£o: usar o mesmo fluxo para testar uma skill em outro app que nÃ£o tem plugin.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">O vÃ­deo recebeu, alÃ©m do relatÃ³rio, a indicaÃ§Ã£o de duas funÃ§Ãµes cuja estrutura causava latÃªncia. Ã‰ o tipo de retorno que um usuÃ¡rio humano nunca escreve.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Passou, falhou, evidÃªncia, maior correÃ§Ã£o, localizaÃ§Ã£o sem alterar, ponte entre apps.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que êÂ©</p><p class="text-sm text-neutral-300">O formato de saêÂ­da: checagens que passaram, falhas reproduzidas, evidêÂªncia e a êÂºnica correêÂ§êÂ£o de maior valor, com localizaêÂ§êÂ£o provêÂ¡vel no cêÂ³digo quando houver. E a extensêÂ£o: usar o mesmo fluxo para testar uma skill em outro app que nêÂ£o tem plugin.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">O vêÂ­deo recebeu, alêÂ©m do relatêÂ³rio, a indicaêÂ§êÂ£o de duas funêÂ§êÂµes cuja estrutura causava latêÂªncia. êâ° o tipo de retorno que um usuêÂ¡rio humano nunca escreve.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Passou, falhou, evidêÂªncia, maior correêÂ§êÂ£o, localizaêÂ§êÂ£o sem alterar, ponte entre apps.</p></div>
               </div>
             </div>
           </div>
         </div>
         <div class="mt-6 flex justify-start">
-          <a href="modulo-2-2.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 font-semibold rounded-xl border border-blue-500/30 transition-colors text-sm">Ver Completo â†’</a>
+          <a href="modulo-2-2.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 font-semibold rounded-xl border border-blue-500/30 transition-colors text-sm">Ver Completo ê¢â â</a>
         </div>
       </div>
     </div>
-    <div id="modulo-2-3" class="bg-dark-800 rounded-2xl border border-dark-600 mb-8 overflow-hidden scroll-mt-20" data-ARCKHÉ-module="2-3">
+    <div id="modulo-2-3" class="bg-dark-800 rounded-2xl border border-dark-600 mb-8 overflow-hidden scroll-mt-20" data-ARCKHê-module="2-3">
       <div class="p-6 border-b border-dark-600">
         <div class="flex items-start justify-between flex-wrap gap-3 mb-3">
-          <span class="text-blue-400 font-bold text-sm">MÃ³dulo 2.3</span>
+          <span class="text-blue-400 font-bold text-sm">MêÂ³dulo 2.3</span>
           <div class="flex items-center gap-4"><span class="text-neutral-500 text-sm">~45 min</span>
-            <span data-ARCKHÉ-meter="modulo:2-3" class="text-xs text-blue-400 font-semibold"><span data-ARCKHÉ-meter-frac>0 de 6</span></span></div>
+            <span data-ARCKHê-meter="modulo:2-3" class="text-xs text-blue-400 font-semibold"><span data-ARCKHê-meter-frac>0 de 6</span></span></div>
         </div>
-        <h2 class="text-2xl font-bold mb-2">ðŸ” Um agente testa outro</h2>
-        <p class="text-neutral-400">VocÃª construiu um app com agentes e o recurso mais fraco Ã© o computer use dele, porque Ã© o mais difÃ­cil de ensinar a um agente do zero. A soluÃ§Ã£o do vÃ­deo: usar o computer use do Codex para assistir o seu app usar o dele, registrar a falha exata, ligar ao cÃ³digo e retestar no mesmo teste.</p>
+        <h2 class="text-2xl font-bold mb-2">ê°Å¸âÂ Um agente testa outro</h2>
+        <p class="text-neutral-400">VocêÂª construiu um app com agentes e o recurso mais fraco êÂ© o computer use dele, porque êÂ© o mais difêÂ­cil de ensinar a um agente do zero. A soluêÂ§êÂ£o do vêÂ­deo: usar o computer use do Codex para assistir o seu app usar o dele, registrar a falha exata, ligar ao cêÂ³digo e retestar no mesmo teste.</p>
       </div>
       <div class="p-6">
-        <p class="text-sm text-neutral-500 mb-4 font-semibold uppercase tracking-wider">TÃ³picos do mÃ³dulo</p>
+        <p class="text-sm text-neutral-500 mb-4 font-semibold uppercase tracking-wider">TêÂ³picos do mêÂ³dulo</p>
         <div class="space-y-3 divide-y divide-dark-600">
           
           <div class="topic-item pt-3 first:pt-0">
             <button onclick="toggleTopic(this)" class="w-full flex items-center justify-start gap-3 text-left group" aria-expanded="false" aria-controls="t2m2-3-exp1">
               <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
-              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ðŸªž Computer use assistindo computer use</span><p class="text-xs text-neutral-500 mt-0.5">O caso do app com agentes e um recurso fraco</p></div>
+              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ê°Å¸ÂªÅ¾ Computer use assistindo computer use</span><p class="text-xs text-neutral-500 mt-0.5">O caso do app com agentes e um recurso fraco</p></div>
             </button>
             <div class="topic-explanation mt-4 pl-9" id="t2m2-3-exp1">
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que Ã©</p><p class="text-sm text-neutral-300">O cenÃ¡rio do vÃ­deo: um app prÃ³prio (um clone de assistente com vÃ¡rios agentes) cujo recurso de computer use Ã© o menos confiÃ¡vel. O Codex abre o app, pede que ele navegue, e observa cada aÃ§Ã£o do agente interno.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Testar um agente pela interface real, com outro agente, Ã© o Ãºnico jeito de ver o que o usuÃ¡rio vÃª, incluindo o que o seu log nÃ£o mostra.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que êÂ©</p><p class="text-sm text-neutral-300">O cenêÂ¡rio do vêÂ­deo: um app prêÂ³prio (um clone de assistente com vêÂ¡rios agentes) cujo recurso de computer use êÂ© o menos confiêÂ¡vel. O Codex abre o app, pede que ele navegue, e observa cada aêÂ§êÂ£o do agente interno.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Testar um agente pela interface real, com outro agente, êÂ© o êÂºnico jeito de ver o que o usuêÂ¡rio vêÂª, incluindo o que o seu log nêÂ£o mostra.</p></div>
                 <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">App-alvo, agente interno, observador externo, ponto exato de falha.</p></div>
               </div>
             </div>
@@ -617,287 +617,287 @@
           <div class="topic-item pt-3 ">
             <button onclick="toggleTopic(this)" class="w-full flex items-center justify-start gap-3 text-left group" aria-expanded="false" aria-controls="t2m2-3-exp2">
               <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ðŸ“ O prompt 03, traduzido</span><p class="text-xs text-neutral-500 mt-0.5">Teste meu app pela interface real, incluindo o computer use dele</p></div>
+              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ê°Å¸âÂ O prompt 03, traduzido</span><p class="text-xs text-neutral-500 mt-0.5">Teste meu app pela interface real, incluindo o computer use dele</p></div>
             </button>
             <div class="topic-explanation mt-4 pl-9" id="t2m2-3-exp2">
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que Ã©</p><p class="text-sm text-neutral-300">O prompt do kit: app, repositÃ³rio correspondente, tarefa de navegador, fonte pÃºblica para conferir, critÃ©rios de sucesso; conversa limpa; observar sem substituir; conferir um fato; fechar e reabrir; reproduzir, corrigir a menor causa, retestar, com teto de trÃªs tentativas.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Cobre o ciclo inteiro, da observaÃ§Ã£o ao reparo, com os freios que evitam um agente reescrevendo o seu app de madrugada.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Conversa limpa, nÃ£o substituir, persistÃªncia, menor causa, trÃªs tentativas, sem deploy.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que êÂ©</p><p class="text-sm text-neutral-300">O prompt do kit: app, repositêÂ³rio correspondente, tarefa de navegador, fonte pêÂºblica para conferir, critêÂ©rios de sucesso; conversa limpa; observar sem substituir; conferir um fato; fechar e reabrir; reproduzir, corrigir a menor causa, retestar, com teto de trêÂªs tentativas.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Cobre o ciclo inteiro, da observaêÂ§êÂ£o ao reparo, com os freios que evitam um agente reescrevendo o seu app de madrugada.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Conversa limpa, nêÂ£o substituir, persistêÂªncia, menor causa, trêÂªs tentativas, sem deploy.</p></div>
               </div>
             </div>
           </div>
           <div class="topic-item pt-3 ">
             <button onclick="toggleTopic(this)" class="w-full flex items-center justify-start gap-3 text-left group" aria-expanded="false" aria-controls="t2m2-3-exp3">
               <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ðŸš« NÃ£o substitua o trabalho do app</span><p class="text-xs text-neutral-500 mt-0.5">A regra que separa teste de encenaÃ§Ã£o</p></div>
+              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ê°Å¸Å¡Â« NêÂ£o substitua o trabalho do app</span><p class="text-xs text-neutral-500 mt-0.5">A regra que separa teste de encenaêÂ§êÂ£o</p></div>
             </button>
             <div class="topic-explanation mt-4 pl-9" id="t2m2-3-exp3">
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que Ã©</p><p class="text-sm text-neutral-300">A proibiÃ§Ã£o central: o agente externo nÃ£o pode fazer a tarefa ele mesmo e marcar o app como aprovado. Ele observa o app fazer.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Um agente capaz, vendo o app travar, tende a "ajudar" e completar a tarefa. O relatÃ³rio sai verde e o bug continua lÃ¡.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Observar, nÃ£o executar, aprovaÃ§Ã£o falsa, evidÃªncia das aÃ§Ãµes do app.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que êÂ©</p><p class="text-sm text-neutral-300">A proibiêÂ§êÂ£o central: o agente externo nêÂ£o pode fazer a tarefa ele mesmo e marcar o app como aprovado. Ele observa o app fazer.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Um agente capaz, vendo o app travar, tende a "ajudar" e completar a tarefa. O relatêÂ³rio sai verde e o bug continua lêÂ¡.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Observar, nêÂ£o executar, aprovaêÂ§êÂ£o falsa, evidêÂªncia das aêÂ§êÂµes do app.</p></div>
               </div>
             </div>
           </div>
           <div class="topic-item pt-3 ">
             <button onclick="toggleTopic(this)" class="w-full flex items-center justify-start gap-3 text-left group" aria-expanded="false" aria-controls="t2m2-3-exp4">
               <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
-              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ðŸ’¾ PersistÃªncia: fechar e reabrir</span><p class="text-xs text-neutral-500 mt-0.5">O teste que os logs nÃ£o fazem</p></div>
+              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ê°Å¸âÂ¾ PersistêÂªncia: fechar e reabrir</span><p class="text-xs text-neutral-500 mt-0.5">O teste que os logs nêÂ£o fazem</p></div>
             </button>
             <div class="topic-explanation mt-4 pl-9" id="t2m2-3-exp4">
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que Ã©</p><p class="text-sm text-neutral-300">Depois da tarefa, o observador fecha a conversa do app e reabre, confirmando que o resultado e o contexto continuam lÃ¡.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Um agente pode acertar a tarefa e perder tudo ao reabrir. Para o usuÃ¡rio, isso Ã© o mesmo que ter falhado.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Reabrir, contexto retido, resultado persistido, janela de contexto, compactaÃ§Ã£o.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que êÂ©</p><p class="text-sm text-neutral-300">Depois da tarefa, o observador fecha a conversa do app e reabre, confirmando que o resultado e o contexto continuam lêÂ¡.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Um agente pode acertar a tarefa e perder tudo ao reabrir. Para o usuêÂ¡rio, isso êÂ© o mesmo que ter falhado.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Reabrir, contexto retido, resultado persistido, janela de contexto, compactaêÂ§êÂ£o.</p></div>
               </div>
             </div>
           </div>
           <div class="topic-item pt-3 ">
             <button onclick="toggleTopic(this)" class="w-full flex items-center justify-start gap-3 text-left group" aria-expanded="false" aria-controls="t2m2-3-exp5">
               <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
-              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ðŸ”§ O ciclo de reparo com teto de trÃªs tentativas</span><p class="text-xs text-neutral-500 mt-0.5">Reproduzir, menor causa, testes, relanÃ§ar, mesmo teste</p></div>
+              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ê°Å¸âÂ§ O ciclo de reparo com teto de trêÂªs tentativas</span><p class="text-xs text-neutral-500 mt-0.5">Reproduzir, menor causa, testes, relanêÂ§ar, mesmo teste</p></div>
             </button>
             <div class="topic-explanation mt-4 pl-9" id="t2m2-3-exp5">
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que Ã©</p><p class="text-sm text-neutral-300">O modo de reparo do prompt: reproduzir a falha, confirmar que o cÃ³digo compila o app, corrigir a menor causa na cÃ³pia de desenvolvimento, rodar testes, relanÃ§ar e repetir o teste de interface idÃªntico. No mÃ¡ximo trÃªs vezes.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Sem o teto, um agente autÃ´nomo pode passar horas reescrevendo. Sem "menor causa", ele refatora o app inteiro para corrigir um seletor.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Reproduzir, menor causa, testes relevantes, relanÃ§ar, teste idÃªntico, teto de trÃªs, evidÃªncia e prÃ³ximo passo.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que êÂ©</p><p class="text-sm text-neutral-300">O modo de reparo do prompt: reproduzir a falha, confirmar que o cêÂ³digo compila o app, corrigir a menor causa na cêÂ³pia de desenvolvimento, rodar testes, relanêÂ§ar e repetir o teste de interface idêÂªntico. No mêÂ¡ximo trêÂªs vezes.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Sem o teto, um agente autêÂ´nomo pode passar horas reescrevendo. Sem "menor causa", ele refatora o app inteiro para corrigir um seletor.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Reproduzir, menor causa, testes relevantes, relanêÂ§ar, teste idêÂªntico, teto de trêÂªs, evidêÂªncia e prêÂ³ximo passo.</p></div>
               </div>
             </div>
           </div>
           <div class="topic-item pt-3 ">
             <button onclick="toggleTopic(this)" class="w-full flex items-center justify-start gap-3 text-left group" aria-expanded="false" aria-controls="t2m2-3-exp6">
               <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
-              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ðŸŒ™ Rodar de madrugada, e o que fazer quando o app nÃ£o tem agente</span><p class="text-xs text-neutral-500 mt-0.5">Objetivo declarado, teto declarado, jornada concreta</p></div>
+              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ê°Å¸Åâ¢ Rodar de madrugada, e o que fazer quando o app nêÂ£o tem agente</span><p class="text-xs text-neutral-500 mt-0.5">Objetivo declarado, teto declarado, jornada concreta</p></div>
             </button>
             <div class="topic-explanation mt-4 pl-9" id="t2m2-3-exp6">
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que Ã©</p><p class="text-sm text-neutral-300">A extensÃ£o que o vÃ­deo sugere: rodar o ciclo por horas com um objetivo declarado e acordar com uma lista de bugs encontrados e corrigidos. E a adaptaÃ§Ã£o do guia para apps sem agente: substituir a tarefa de navegador por uma jornada de usuÃ¡rio.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">O valor real do fluxo estÃ¡ na repetiÃ§Ã£o sem vocÃª. Mas repetiÃ§Ã£o sem teto e sem prova Ã© dÃ­vida tÃ©cnica automÃ¡tica.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Objetivo declarado, teto de tentativas, jornada de usuÃ¡rio, criar-salvar-reabrir.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que êÂ©</p><p class="text-sm text-neutral-300">A extensêÂ£o que o vêÂ­deo sugere: rodar o ciclo por horas com um objetivo declarado e acordar com uma lista de bugs encontrados e corrigidos. E a adaptaêÂ§êÂ£o do guia para apps sem agente: substituir a tarefa de navegador por uma jornada de usuêÂ¡rio.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">O valor real do fluxo estêÂ¡ na repetiêÂ§êÂ£o sem vocêÂª. Mas repetiêÂ§êÂ£o sem teto e sem prova êÂ© dêÂ­vida têÂ©cnica automêÂ¡tica.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Objetivo declarado, teto de tentativas, jornada de usuêÂ¡rio, criar-salvar-reabrir.</p></div>
               </div>
             </div>
           </div>
         </div>
         <div class="mt-6 flex justify-start">
-          <a href="modulo-2-3.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 font-semibold rounded-xl border border-blue-500/30 transition-colors text-sm">Ver Completo â†’</a>
+          <a href="modulo-2-3.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 font-semibold rounded-xl border border-blue-500/30 transition-colors text-sm">Ver Completo ê¢â â</a>
         </div>
       </div>
     </div>
-    <div id="modulo-2-4" class="bg-dark-800 rounded-2xl border border-dark-600 mb-8 overflow-hidden scroll-mt-20" data-ARCKHÉ-module="2-4">
+    <div id="modulo-2-4" class="bg-dark-800 rounded-2xl border border-dark-600 mb-8 overflow-hidden scroll-mt-20" data-ARCKHê-module="2-4">
       <div class="p-6 border-b border-dark-600">
         <div class="flex items-start justify-between flex-wrap gap-3 mb-3">
-          <span class="text-blue-400 font-bold text-sm">MÃ³dulo 2.4</span>
+          <span class="text-blue-400 font-bold text-sm">MêÂ³dulo 2.4</span>
           <div class="flex items-center gap-4"><span class="text-neutral-500 text-sm">~45 min</span>
-            <span data-ARCKHÉ-meter="modulo:2-4" class="text-xs text-blue-400 font-semibold"><span data-ARCKHÉ-meter-frac>0 de 6</span></span></div>
+            <span data-ARCKHê-meter="modulo:2-4" class="text-xs text-blue-400 font-semibold"><span data-ARCKHê-meter-frac>0 de 6</span></span></div>
         </div>
-        <h2 class="text-2xl font-bold mb-2">ðŸŽ¬ A entrega da ediÃ§Ã£o</h2>
-        <p class="text-neutral-400">Renderizar em 4K leva de 40 minutos a 4 horas. Depois vem subir no editor, aplicar a limpeza, revisar cada corte, exportar, mandar para a equipe. O agente espera o render, faz a parte de interface que nenhuma linha de comando alcanÃ§a, e sÃ³ entrega quando o arquivo exportado abre, tem imagem e som e o conteÃºdo Ãºnico sobreviveu.</p>
+        <h2 class="text-2xl font-bold mb-2">ê°Å¸Å½Â¬ A entrega da ediêÂ§êÂ£o</h2>
+        <p class="text-neutral-400">Renderizar em 4K leva de 40 minutos a 4 horas. Depois vem subir no editor, aplicar a limpeza, revisar cada corte, exportar, mandar para a equipe. O agente espera o render, faz a parte de interface que nenhuma linha de comando alcanêÂ§a, e sêÂ³ entrega quando o arquivo exportado abre, tem imagem e som e o conteêÂºdo êÂºnico sobreviveu.</p>
       </div>
       <div class="p-6">
-        <p class="text-sm text-neutral-500 mb-4 font-semibold uppercase tracking-wider">TÃ³picos do mÃ³dulo</p>
+        <p class="text-sm text-neutral-500 mb-4 font-semibold uppercase tracking-wider">TêÂ³picos do mêÂ³dulo</p>
         <div class="space-y-3 divide-y divide-dark-600">
           
           <div class="topic-item pt-3 first:pt-0">
             <button onclick="toggleTopic(this)" class="w-full flex items-center justify-start gap-3 text-left group" aria-expanded="false" aria-controls="t2m2-4-exp1">
               <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
-              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">â³ O gargalo: render longo e um editor que sÃ³ existe na interface</span><p class="text-xs text-neutral-500 mt-0.5">Onde a linha de comando chega a 80% e para</p></div>
+              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ê¢ÂÂ³ O gargalo: render longo e um editor que sêÂ³ existe na interface</span><p class="text-xs text-neutral-500 mt-0.5">Onde a linha de comando chega a 80% e para</p></div>
             </button>
             <div class="topic-explanation mt-4 pl-9" id="t2m2-4-exp1">
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que Ã©</p><p class="text-sm text-neutral-300">O fluxo completo do vÃ­deo: clicar em renderizar, o agente verificar o progresso a cada 30 minutos, abrir o Descript, importar, enviar o prompt de limpeza, revisar os cortes, exportar, subir no Drive e mandar o link.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Ferramentas como o Descript tÃªm linha de comando prÃ³pria que cobre parte do trabalho. A parte que falta Ã© exatamente a que exige olhos: o chat do editor, os frames, a confirmaÃ§Ã£o visual do export.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Render, polling, importaÃ§Ã£o, transcriÃ§Ã£o, limpeza conservadora, export, verificaÃ§Ã£o de mÃ­dia.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que êÂ©</p><p class="text-sm text-neutral-300">O fluxo completo do vêÂ­deo: clicar em renderizar, o agente verificar o progresso a cada 30 minutos, abrir o Descript, importar, enviar o prompt de limpeza, revisar os cortes, exportar, subir no Drive e mandar o link.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Ferramentas como o Descript têÂªm linha de comando prêÂ³pria que cobre parte do trabalho. A parte que falta êÂ© exatamente a que exige olhos: o chat do editor, os frames, a confirmaêÂ§êÂ£o visual do export.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Render, polling, importaêÂ§êÂ£o, transcriêÂ§êÂ£o, limpeza conservadora, export, verificaêÂ§êÂ£o de mêÂ­dia.</p></div>
               </div>
             </div>
           </div>
           <div class="topic-item pt-3 ">
             <button onclick="toggleTopic(this)" class="w-full flex items-center justify-start gap-3 text-left group" aria-expanded="false" aria-controls="t2m2-4-exp2">
               <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ðŸ“ O prompt 04, traduzido</span><p class="text-xs text-neutral-500 mt-0.5">Rode meu fluxo de ediÃ§Ã£o pÃ³s-render</p></div>
+              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ê°Å¸âÂ O prompt 04, traduzido</span><p class="text-xs text-neutral-500 mt-0.5">Rode meu fluxo de ediêÂ§êÂ£o pêÂ³s-render</p></div>
             </button>
             <div class="topic-explanation mt-4 pl-9" id="t2m2-4-exp2">
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que Ã©</p><p class="text-sm text-neutral-300">O prompt do kit: vÃ­deo de origem, pasta e nome de saÃ­da, pasta opcional do Drive, arquivo do prompt de limpeza; verificar estabilidade e propriedades do original; projeto novo; limpeza; comparaÃ§Ã£o de transcriÃ§Ãµes; revisÃ£o dos cortes; export na resoluÃ§Ã£o da fonte; verificaÃ§Ã£o da mÃ­dia; upload opcional.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Ã‰ o prompt com mais verificaÃ§Ãµes de mÃ­dia do kit, porque vÃ­deo Ã© onde "pronto" mais engana: o arquivo existe, tem o nome certo, e estÃ¡ corrompido.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Original preservado, projeto novo, prompt completo enviado, comparaÃ§Ã£o de transcriÃ§Ãµes, export verificado, sem publicar.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que êÂ©</p><p class="text-sm text-neutral-300">O prompt do kit: vêÂ­deo de origem, pasta e nome de saêÂ­da, pasta opcional do Drive, arquivo do prompt de limpeza; verificar estabilidade e propriedades do original; projeto novo; limpeza; comparaêÂ§êÂ£o de transcriêÂ§êÂµes; revisêÂ£o dos cortes; export na resoluêÂ§êÂ£o da fonte; verificaêÂ§êÂ£o da mêÂ­dia; upload opcional.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">êâ° o prompt com mais verificaêÂ§êÂµes de mêÂ­dia do kit, porque vêÂ­deo êÂ© onde "pronto" mais engana: o arquivo existe, tem o nome certo, e estêÂ¡ corrompido.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Original preservado, projeto novo, prompt completo enviado, comparaêÂ§êÂ£o de transcriêÂ§êÂµes, export verificado, sem publicar.</p></div>
               </div>
             </div>
           </div>
           <div class="topic-item pt-3 ">
             <button onclick="toggleTopic(this)" class="w-full flex items-center justify-start gap-3 text-left group" aria-expanded="false" aria-controls="t2m2-4-exp3">
               <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ðŸ•’ Esperar o render: verificar a cada 30 minutos e testar estabilidade</span><p class="text-xs text-neutral-500 mt-0.5">Um arquivo que aparece na pasta ainda nÃ£o estÃ¡ pronto</p></div>
+              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ê°Å¸â¢â Esperar o render: verificar a cada 30 minutos e testar estabilidade</span><p class="text-xs text-neutral-500 mt-0.5">Um arquivo que aparece na pasta ainda nêÂ£o estêÂ¡ pronto</p></div>
             </button>
             <div class="topic-explanation mt-4 pl-9" id="t2m2-4-exp3">
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que Ã©</p><p class="text-sm text-neutral-300">O comportamento de espera: verificar periodicamente, e sÃ³ considerar o render terminado quando o arquivo para de crescer e decodifica.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Um render em andamento jÃ¡ tem nome e jÃ¡ estÃ¡ na pasta. Importar nesse momento produz um vÃ­deo cortado no meio.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Estabilidade do arquivo, tamanho constante, decodificaÃ§Ã£o, acompanhamento agendado.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que êÂ©</p><p class="text-sm text-neutral-300">O comportamento de espera: verificar periodicamente, e sêÂ³ considerar o render terminado quando o arquivo para de crescer e decodifica.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Um render em andamento jêÂ¡ tem nome e jêÂ¡ estêÂ¡ na pasta. Importar nesse momento produz um vêÂ­deo cortado no meio.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Estabilidade do arquivo, tamanho constante, decodificaêÂ§êÂ£o, acompanhamento agendado.</p></div>
               </div>
             </div>
           </div>
           <div class="topic-item pt-3 ">
             <button onclick="toggleTopic(this)" class="w-full flex items-center justify-start gap-3 text-left group" aria-expanded="false" aria-controls="t2m2-4-exp4">
               <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
-              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">âœ‚ï¸ A limpeza conservadora: as regras que protegem o conteÃºdo</span><p class="text-xs text-neutral-500 mt-0.5">Cortar retakes e vÃ­cios, nunca o que Ã© Ãºnico</p></div>
+              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ê¢Åâê¯Â¸Â A limpeza conservadora: as regras que protegem o conteêÂºdo</span><p class="text-xs text-neutral-500 mt-0.5">Cortar retakes e vêÂ­cios, nunca o que êÂ© êÂºnico</p></div>
             </button>
             <div class="topic-explanation mt-4 pl-9" id="t2m2-4-exp4">
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que Ã©</p><p class="text-sm text-neutral-300">O prompt de limpeza que acompanha o kit (prompt 07), resumido nas regras que importam: manter o Ãºltimo take, nunca cortar conteÃºdo Ãºnico, deixar respiro ao redor de cada corte, separar retake de frase nova, checar coerÃªncia, ajustar o ritmo por trecho.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Uma limpeza agressiva parece eficiente e destrÃ³i o vÃ­deo. O prompt Ã© longo justamente para forÃ§ar o editor a errar para o lado de deixar.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Ãšltimo take, conteÃºdo Ãºnico, respiro no corte, coerÃªncia, ritmo por trecho, na dÃºvida deixa.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que êÂ©</p><p class="text-sm text-neutral-300">O prompt de limpeza que acompanha o kit (prompt 07), resumido nas regras que importam: manter o êÂºltimo take, nunca cortar conteêÂºdo êÂºnico, deixar respiro ao redor de cada corte, separar retake de frase nova, checar coerêÂªncia, ajustar o ritmo por trecho.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Uma limpeza agressiva parece eficiente e destrêÂ³i o vêÂ­deo. O prompt êÂ© longo justamente para forêÂ§ar o editor a errar para o lado de deixar.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">êÅ¡ltimo take, conteêÂºdo êÂºnico, respiro no corte, coerêÂªncia, ritmo por trecho, na dêÂºvida deixa.</p></div>
               </div>
             </div>
           </div>
           <div class="topic-item pt-3 ">
             <button onclick="toggleTopic(this)" class="w-full flex items-center justify-start gap-3 text-left group" aria-expanded="false" aria-controls="t2m2-4-exp5">
               <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
-              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ðŸ”Ž Verificar o export de verdade</span><p class="text-xs text-neutral-500 mt-0.5">Decodifica, tem imagem e som, estÃ¡ na resoluÃ§Ã£o certa</p></div>
+              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ê°Å¸âÅ½ Verificar o export de verdade</span><p class="text-xs text-neutral-500 mt-0.5">Decodifica, tem imagem e som, estêÂ¡ na resoluêÂ§êÂ£o certa</p></div>
             </button>
             <div class="topic-explanation mt-4 pl-9" id="t2m2-4-exp5">
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que Ã©</p><p class="text-sm text-neutral-300">A prova de conclusÃ£o do fluxo: o original intacto, o prompt completo enviado, o conteÃºdo Ãºnico preservado, os cortes naturais, e o arquivo exportado verificado por nÃºmero, nÃ£o por aparÃªncia.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Export Ã© onde o "pronto" mais engana: arquivo com nome certo, tamanho plausÃ­vel, e sem Ã¡udio.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">DecodificaÃ§Ã£o, faixa de vÃ­deo e de Ã¡udio, resoluÃ§Ã£o da origem, duraÃ§Ã£o reportada sem julgamento.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que êÂ©</p><p class="text-sm text-neutral-300">A prova de conclusêÂ£o do fluxo: o original intacto, o prompt completo enviado, o conteêÂºdo êÂºnico preservado, os cortes naturais, e o arquivo exportado verificado por nêÂºmero, nêÂ£o por aparêÂªncia.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Export êÂ© onde o "pronto" mais engana: arquivo com nome certo, tamanho plausêÂ­vel, e sem êÂ¡udio.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">DecodificaêÂ§êÂ£o, faixa de vêÂ­deo e de êÂ¡udio, resoluêÂ§êÂ£o da origem, duraêÂ§êÂ£o reportada sem julgamento.</p></div>
               </div>
             </div>
           </div>
           <div class="topic-item pt-3 ">
             <button onclick="toggleTopic(this)" class="w-full flex items-center justify-start gap-3 text-left group" aria-expanded="false" aria-controls="t2m2-4-exp6">
               <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
-              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">â˜ï¸ Entrega: Drive, link e a mensagem que vocÃª envia</span><p class="text-xs text-neutral-500 mt-0.5">O agente prepara; quem publica Ã© vocÃª</p></div>
+              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ê¢ËÂê¯Â¸Â Entrega: Drive, link e a mensagem que vocêÂª envia</span><p class="text-xs text-neutral-500 mt-0.5">O agente prepara; quem publica êÂ© vocêÂª</p></div>
             </button>
             <div class="topic-explanation mt-4 pl-9" id="t2m2-4-exp6">
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que Ã©</p><p class="text-sm text-neutral-300">O fim do fluxo: upload opcional do export verificado, conferÃªncia de nome, tamanho e destino, e o link devolvido. No vÃ­deo, o agente vai atÃ© o WhatsApp mandar o link para a equipe; o prompt do kit para antes disso.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Enviar Ã© irreversÃ­vel. O kit deixa a decisÃ£o de publicar e de avisar pessoas fora do escopo do agente por padrÃ£o.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Upload verificado, nome e tamanho conferidos, link devolvido, nÃ£o publicar, nÃ£o enviar.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que êÂ©</p><p class="text-sm text-neutral-300">O fim do fluxo: upload opcional do export verificado, conferêÂªncia de nome, tamanho e destino, e o link devolvido. No vêÂ­deo, o agente vai atêÂ© o WhatsApp mandar o link para a equipe; o prompt do kit para antes disso.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Enviar êÂ© irreversêÂ­vel. O kit deixa a decisêÂ£o de publicar e de avisar pessoas fora do escopo do agente por padrêÂ£o.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Upload verificado, nome e tamanho conferidos, link devolvido, nêÂ£o publicar, nêÂ£o enviar.</p></div>
               </div>
             </div>
           </div>
         </div>
         <div class="mt-6 flex justify-start">
-          <a href="modulo-2-4.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 font-semibold rounded-xl border border-blue-500/30 transition-colors text-sm">Ver Completo â†’</a>
+          <a href="modulo-2-4.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 font-semibold rounded-xl border border-blue-500/30 transition-colors text-sm">Ver Completo ê¢â â</a>
         </div>
       </div>
     </div>
-    <div id="modulo-2-5" class="bg-dark-800 rounded-2xl border border-dark-600 mb-8 overflow-hidden scroll-mt-20" data-ARCKHÉ-module="2-5">
+    <div id="modulo-2-5" class="bg-dark-800 rounded-2xl border border-dark-600 mb-8 overflow-hidden scroll-mt-20" data-ARCKHê-module="2-5">
       <div class="p-6 border-b border-dark-600">
         <div class="flex items-start justify-between flex-wrap gap-3 mb-3">
-          <span class="text-blue-400 font-bold text-sm">MÃ³dulo 2.5</span>
+          <span class="text-blue-400 font-bold text-sm">MêÂ³dulo 2.5</span>
           <div class="flex items-center gap-4"><span class="text-neutral-500 text-sm">~40 min</span>
-            <span data-ARCKHÉ-meter="modulo:2-5" class="text-xs text-blue-400 font-semibold"><span data-ARCKHÉ-meter-frac>0 de 6</span></span></div>
+            <span data-ARCKHê-meter="modulo:2-5" class="text-xs text-blue-400 font-semibold"><span data-ARCKHê-meter-frac>0 de 6</span></span></div>
         </div>
-        <h2 class="text-2xl font-bold mb-2">ðŸ“± O celular pelo computador</h2>
-        <p class="text-neutral-400">HÃ¡ apps que sÃ³ existem no celular. Com o espelhamento do iPhone aberto no Mac, o agente assume a janela, entra no app, confirma a conta, aplica a configuraÃ§Ã£o pedida e prova que ela persistiu. O caso do vÃ­deo Ã© um Instagram recÃ©m-criado; o padrÃ£o vale para qualquer app mÃ³vel.</p>
+        <h2 class="text-2xl font-bold mb-2">ê°Å¸âÂ± O celular pelo computador</h2>
+        <p class="text-neutral-400">HêÂ¡ apps que sêÂ³ existem no celular. Com o espelhamento do iPhone aberto no Mac, o agente assume a janela, entra no app, confirma a conta, aplica a configuraêÂ§êÂ£o pedida e prova que ela persistiu. O caso do vêÂ­deo êÂ© um Instagram recêÂ©m-criado; o padrêÂ£o vale para qualquer app mêÂ³vel.</p>
       </div>
       <div class="p-6">
-        <p class="text-sm text-neutral-500 mb-4 font-semibold uppercase tracking-wider">TÃ³picos do mÃ³dulo</p>
+        <p class="text-sm text-neutral-500 mb-4 font-semibold uppercase tracking-wider">TêÂ³picos do mêÂ³dulo</p>
         <div class="space-y-3 divide-y divide-dark-600">
           
           <div class="topic-item pt-3 first:pt-0">
             <button onclick="toggleTopic(this)" class="w-full flex items-center justify-start gap-3 text-left group" aria-expanded="false" aria-controls="t2m2-5-exp1">
               <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
-              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ðŸªŸ O espelhamento como superfÃ­cie</span><p class="text-xs text-neutral-500 mt-0.5">Uma janela no computador que Ã© o seu celular</p></div>
+              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ê°Å¸ÂªÅ¸ O espelhamento como superfêÂ­cie</span><p class="text-xs text-neutral-500 mt-0.5">Uma janela no computador que êÂ© o seu celular</p></div>
             </button>
             <div class="topic-explanation mt-4 pl-9" id="t2m2-5-exp1">
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que Ã©</p><p class="text-sm text-neutral-300">O iPhone Mirroring do macOS mostra e controla o iPhone numa janela do Mac. Para o agente, Ã© uma janela como qualquer outra: ele vÃª, clica e digita nela.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Ã‰ a Ãºnica forma de computer use alcanÃ§ar apps sem versÃ£o de desktop. E Ã© a superfÃ­cie com mais coisa sua exposta, o que muda as regras.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">iPhone Mirroring, janela alvo, autenticaÃ§Ã£o sua, rÃ³tulos reais do app.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que êÂ©</p><p class="text-sm text-neutral-300">O iPhone Mirroring do macOS mostra e controla o iPhone numa janela do Mac. Para o agente, êÂ© uma janela como qualquer outra: ele vêÂª, clica e digita nela.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">êâ° a êÂºnica forma de computer use alcanêÂ§ar apps sem versêÂ£o de desktop. E êÂ© a superfêÂ­cie com mais coisa sua exposta, o que muda as regras.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">iPhone Mirroring, janela alvo, autenticaêÂ§êÂ£o sua, rêÂ³tulos reais do app.</p></div>
               </div>
             </div>
           </div>
           <div class="topic-item pt-3 ">
             <button onclick="toggleTopic(this)" class="w-full flex items-center justify-start gap-3 text-left group" aria-expanded="false" aria-controls="t2m2-5-exp2">
               <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ðŸ“ O prompt 05, traduzido</span><p class="text-xs text-neutral-500 mt-0.5">Use a janela de espelhamento que eu abri para configurar o app no meu celular</p></div>
+              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ê°Å¸âÂ O prompt 05, traduzido</span><p class="text-xs text-neutral-500 mt-0.5">Use a janela de espelhamento que eu abri para configurar o app no meu celular</p></div>
             </button>
             <div class="topic-explanation mt-4 pl-9" id="t2m2-5-exp2">
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que Ã©</p><p class="text-sm text-neutral-300">O prompt do kit: conta a confirmar, mudanÃ§a pedida (no exemplo, ativar upload na qualidade mais alta), outras mudanÃ§as aprovadas; inspecionar antes, usar rÃ³tulos reais, aplicar sÃ³ o pedido, verificar persistÃªncia, tabela antes/depois, sugestÃµes separadas, proibiÃ§Ãµes de privacidade e pagamento.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Ã‰ o prompt mais defensivo do kit, porque a superfÃ­cie Ã© a mais sensÃ­vel: Ã© a sua conta, no seu celular, com as suas fotos ao lado.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Confirmar conta, mudanÃ§a especÃ­fica, jÃ¡-correto, persistÃªncia, sugestÃµes separadas, nÃ£o tocar em privacidade ou pagamento.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que êÂ©</p><p class="text-sm text-neutral-300">O prompt do kit: conta a confirmar, mudanêÂ§a pedida (no exemplo, ativar upload na qualidade mais alta), outras mudanêÂ§as aprovadas; inspecionar antes, usar rêÂ³tulos reais, aplicar sêÂ³ o pedido, verificar persistêÂªncia, tabela antes/depois, sugestêÂµes separadas, proibiêÂ§êÂµes de privacidade e pagamento.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">êâ° o prompt mais defensivo do kit, porque a superfêÂ­cie êÂ© a mais sensêÂ­vel: êÂ© a sua conta, no seu celular, com as suas fotos ao lado.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Confirmar conta, mudanêÂ§a especêÂ­fica, jêÂ¡-correto, persistêÂªncia, sugestêÂµes separadas, nêÂ£o tocar em privacidade ou pagamento.</p></div>
               </div>
             </div>
           </div>
           <div class="topic-item pt-3 ">
             <button onclick="toggleTopic(this)" class="w-full flex items-center justify-start gap-3 text-left group" aria-expanded="false" aria-controls="t2m2-5-exp3">
               <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ðŸ‘¤ Confirmar a conta antes de qualquer toque</span><p class="text-xs text-neutral-500 mt-0.5">O passo que o agente do vÃ­deo fez sozinho</p></div>
+              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ê°Å¸âÂ¤ Confirmar a conta antes de qualquer toque</span><p class="text-xs text-neutral-500 mt-0.5">O passo que o agente do vêÂ­deo fez sozinho</p></div>
             </button>
             <div class="topic-explanation mt-4 pl-9" id="t2m2-5-exp3">
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que Ã©</p><p class="text-sm text-neutral-300">A primeira aÃ§Ã£o dentro do app: ir atÃ© onde a conta ativa aparece, ler o identificador, comparar com o que vocÃª escreveu, e sÃ³ entÃ£o prosseguir.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Apps de rede social permitem vÃ¡rias contas na mesma instalaÃ§Ã£o. Uma configuraÃ§Ã£o aplicada na conta errada Ã© invisÃ­vel atÃ© dar problema.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Identificador visÃ­vel, comparaÃ§Ã£o literal, parar se divergir.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que êÂ©</p><p class="text-sm text-neutral-300">A primeira aêÂ§êÂ£o dentro do app: ir atêÂ© onde a conta ativa aparece, ler o identificador, comparar com o que vocêÂª escreveu, e sêÂ³ entêÂ£o prosseguir.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Apps de rede social permitem vêÂ¡rias contas na mesma instalaêÂ§êÂ£o. Uma configuraêÂ§êÂ£o aplicada na conta errada êÂ© invisêÂ­vel atêÂ© dar problema.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Identificador visêÂ­vel, comparaêÂ§êÂ£o literal, parar se divergir.</p></div>
               </div>
             </div>
           </div>
           <div class="topic-item pt-3 ">
             <button onclick="toggleTopic(this)" class="w-full flex items-center justify-start gap-3 text-left group" aria-expanded="false" aria-controls="t2m2-5-exp4">
               <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
-              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ðŸ“‹ A tabela antes/depois e a prova de persistÃªncia</span><p class="text-xs text-neutral-500 mt-0.5">RÃ³tulo, valor antigo, valor novo, verificado</p></div>
+              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ê°Å¸ââ¹ A tabela antes/depois e a prova de persistêÂªncia</span><p class="text-xs text-neutral-500 mt-0.5">RêÂ³tulo, valor antigo, valor novo, verificado</p></div>
             </button>
             <div class="topic-explanation mt-4 pl-9" id="t2m2-5-exp4">
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que Ã©</p><p class="text-sm text-neutral-300">O formato de saÃ­da: uma linha por configuraÃ§Ã£o, com o rÃ³tulo exato como aparece no app, o valor que estava, o valor que ficou e o resultado da verificaÃ§Ã£o depois de reabrir a tela.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">Ã‰ a prova de conclusÃ£o do fluxo. Sem a coluna "verificado", a tabela sÃ³ diz o que o agente tentou.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">RÃ³tulo exato, valor antigo, valor novo, verificado ao reabrir, trÃªs status.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que êÂ©</p><p class="text-sm text-neutral-300">O formato de saêÂ­da: uma linha por configuraêÂ§êÂ£o, com o rêÂ³tulo exato como aparece no app, o valor que estava, o valor que ficou e o resultado da verificaêÂ§êÂ£o depois de reabrir a tela.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">êâ° a prova de conclusêÂ£o do fluxo. Sem a coluna "verificado", a tabela sêÂ³ diz o que o agente tentou.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">RêÂ³tulo exato, valor antigo, valor novo, verificado ao reabrir, trêÂªs status.</p></div>
               </div>
             </div>
           </div>
           <div class="topic-item pt-3 ">
             <button onclick="toggleTopic(this)" class="w-full flex items-center justify-start gap-3 text-left group" aria-expanded="false" aria-controls="t2m2-5-exp5">
               <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
-              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ðŸ“£ Qualidade de envio nÃ£o Ã© alcance</span><p class="text-xs text-neutral-500 mt-0.5">O que o agente pode afirmar e o que precisa de fonte</p></div>
+              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ê°Å¸âÂ£ Qualidade de envio nêÂ£o êÂ© alcance</span><p class="text-xs text-neutral-500 mt-0.5">O que o agente pode afirmar e o que precisa de fonte</p></div>
             </button>
             <div class="topic-explanation mt-4 pl-9" id="t2m2-5-exp5">
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que Ã©</p><p class="text-sm text-neutral-300">A separaÃ§Ã£o que o prompt exige: uma configuraÃ§Ã£o de qualidade de upload Ã© um fato verificÃ¡vel; "isso melhora o alcance" Ã© uma afirmaÃ§Ã£o sobre distribuiÃ§Ã£o que precisa de documentaÃ§Ã£o oficial atual.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">O vÃ­deo parte de "vi em vÃ­deos que existem configuraÃ§Ãµes escondidas que ajudam". O kit corta o hype: verifique na fonte antes de recomendar.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Fato verificÃ¡vel, afirmaÃ§Ã£o de desempenho, documentaÃ§Ã£o oficial, sugestÃ£o separada.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que êÂ©</p><p class="text-sm text-neutral-300">A separaêÂ§êÂ£o que o prompt exige: uma configuraêÂ§êÂ£o de qualidade de upload êÂ© um fato verificêÂ¡vel; "isso melhora o alcance" êÂ© uma afirmaêÂ§êÂ£o sobre distribuiêÂ§êÂ£o que precisa de documentaêÂ§êÂ£o oficial atual.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">O vêÂ­deo parte de "vi em vêÂ­deos que existem configuraêÂ§êÂµes escondidas que ajudam". O kit corta o hype: verifique na fonte antes de recomendar.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Fato verificêÂ¡vel, afirmaêÂ§êÂ£o de desempenho, documentaêÂ§êÂ£o oficial, sugestêÂ£o separada.</p></div>
               </div>
             </div>
           </div>
           <div class="topic-item pt-3 ">
             <button onclick="toggleTopic(this)" class="w-full flex items-center justify-start gap-3 text-left group" aria-expanded="false" aria-controls="t2m2-5-exp6">
               <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
-              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ðŸ§­ Generalizar: pesquisar, depois aplicar em qualquer app mÃ³vel</span><p class="text-xs text-neutral-500 mt-0.5">O padrÃ£o do vÃ­deo e o "make it yours" do guia</p></div>
+              <div><span class="font-semibold text-neutral-100 group-hover:text-blue-400 transition-colors">ê°Å¸Â§Â­ Generalizar: pesquisar, depois aplicar em qualquer app mêÂ³vel</span><p class="text-xs text-neutral-500 mt-0.5">O padrêÂ£o do vêÂ­deo e o "make it yours" do guia</p></div>
             </button>
             <div class="topic-explanation mt-4 pl-9" id="t2m2-5-exp6">
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que Ã©</p><p class="text-sm text-neutral-300">A extensÃ£o sugerida no vÃ­deo: usar sub-agentes para pesquisar como otimizar um perfil (Facebook, X, outro app) e depois aplicar as mudanÃ§as pelo espelhamento. E a regra do guia para adaptar: nomear conta, configuraÃ§Ã£o e valor alvo exatos, manter antes/depois e persistÃªncia.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">O fluxo separa pesquisa (o que mudar) de execuÃ§Ã£o (mudar e provar). Misturar as duas Ã© como o folclore entra.</p></div>
-                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Pesquisa separada, lista aprovada por vocÃª, execuÃ§Ã£o com prova, qualquer app mÃ³vel.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">O que êÂ©</p><p class="text-sm text-neutral-300">A extensêÂ£o sugerida no vêÂ­deo: usar sub-agentes para pesquisar como otimizar um perfil (Facebook, X, outro app) e depois aplicar as mudanêÂ§as pelo espelhamento. E a regra do guia para adaptar: nomear conta, configuraêÂ§êÂ£o e valor alvo exatos, manter antes/depois e persistêÂªncia.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Por que aprender</p><p class="text-sm text-neutral-300">O fluxo separa pesquisa (o que mudar) de execuêÂ§êÂ£o (mudar e provar). Misturar as duas êÂ© como o folclore entra.</p></div>
+                <div class="bg-dark-700 rounded-xl p-4 border border-dark-600"><p class="text-xs font-semibold text-blue-400 mb-2">Conceitos-chave</p><p class="text-sm text-neutral-300">Pesquisa separada, lista aprovada por vocêÂª, execuêÂ§êÂ£o com prova, qualquer app mêÂ³vel.</p></div>
               </div>
             </div>
           </div>
         </div>
         <div class="mt-6 flex justify-start">
-          <a href="modulo-2-5.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 font-semibold rounded-xl border border-blue-500/30 transition-colors text-sm">Ver Completo â†’</a>
+          <a href="modulo-2-5.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 font-semibold rounded-xl border border-blue-500/30 transition-colors text-sm">Ver Completo ê¢â â</a>
         </div>
       </div>
     </div>
     <div class="flex justify-between items-center mt-10 pt-8 border-t border-dark-600 flex-wrap gap-3">
-      <a href="../trilha1/index.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-dark-700 hover:bg-dark-600 text-neutral-300 font-semibold rounded-xl border border-dark-600 transition-colors text-sm">â† Trilha 1: Fundamentos</a>
-      <a href="../../index.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/10 hover:bg-primary/20 text-primary font-semibold rounded-xl border border-primary/30 transition-colors text-sm">InÃ­cio do curso â†’</a>
+      <a href="../trilha1/index.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-dark-700 hover:bg-dark-600 text-neutral-300 font-semibold rounded-xl border border-dark-600 transition-colors text-sm">ê¢â Â Trilha 1: Fundamentos</a>
+      <a href="../../index.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/10 hover:bg-primary/20 text-primary font-semibold rounded-xl border border-primary/30 transition-colors text-sm">InêÂ­cio do curso ê¢â â</a>
     </div>
   </main>
 
   <!-- FOOTER -->
   <footer class="border-t border-dark-600 mt-16 py-8">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm space-y-2">
-      <p>Computer Use com o GPT-6 Astra Â· Trilha 2 â€” Os cinco fluxos Â· 2026 Â·
-        <a href="https://ARCKHÉ AI" target="_blank" class="text-sky-400 hover:text-sky-300">ARCKHÉ AI</a> -
-        <a href="https://ARCKHÉ.pro" target="_blank" class="text-amber-700 dark:text-slate-300">PRO</a></p>
-      <p class="text-xs">Fontes: <a href="https://www.youtube.com/watch?v=tU-fO6cADvQ" target="_blank" class="text-sky-400 hover:text-sky-300">vÃ­deo "O uso do computador pelo GPT-6 Astra Ã© absurdamente bom"</a> Â· Computer Use Field Guide e kit de prompts (Prompt Advisers, 05/09/2026) Â· <a href="https://github.com/promptadvisers/google-flights-cli" target="_blank" class="text-sky-400 hover:text-sky-300">google-flights-cli</a> (MIT). Prompts traduzidos e adaptados.</p>
+      <p>Computer Use com o GPT-6 Astra êÂ· Trilha 2 ê¢â¬â Os cinco fluxos êÂ· 2026 êÂ·
+        <a href="https://ARCKHê AI" target="_blank" class="text-sky-400 hover:text-sky-300">ARCKHê AI</a> -
+        <a href="https://ARCKHê.pro" target="_blank" class="text-amber-700 dark:text-slate-300">PRO</a></p>
+      <p class="text-xs">Fontes: <a href="https://www.youtube.com/watch?v=tU-fO6cADvQ" target="_blank" class="text-sky-400 hover:text-sky-300">vêÂ­deo "O uso do computador pelo GPT-6 Astra êÂ© absurdamente bom"</a> êÂ· Computer Use Field Guide e kit de prompts (Prompt Advisers, 05/09/2026) êÂ· <a href="https://github.com/promptadvisers/google-flights-cli" target="_blank" class="text-sky-400 hover:text-sky-300">google-flights-cli</a> (MIT). Prompts traduzidos e adaptados.</p>
     </div>
   </footer>
 
-  <!-- SCRIPTS nÃºcleo v1 -->
+  <!-- SCRIPTS nêÂºcleo v1 -->
   <script>
     function toggleTopic(button) {
       const topicItem = button.closest('.topic-item');
@@ -922,32 +922,32 @@
       html.classList.toggle('dark');
       const dark = html.classList.contains('dark');
       localStorage.setItem('theme', dark ? 'dark' : 'light');
-      if (window.ARCKHÉ && ARCKHÉ.setPref) { try { ARCKHÉ.setPref('theme', dark ? 'ARCKHÉ-dark' : 'claro'); } catch (e) {} }
+      if (window.ARCKHê && ARCKHê.setPref) { try { ARCKHê.setPref('theme', dark ? 'ARCKHê-dark' : 'claro'); } catch (e) {} }
     });
     function openModal(modalId) { const m = document.getElementById(modalId); if (m) { m.classList.remove('hidden'); document.body.style.overflow = 'hidden'; } }
     function closeModal() { document.querySelectorAll('.modal').forEach(m => m.classList.add('hidden')); document.body.style.overflow = 'auto'; }
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
-    // Quiz inline (3 perguntas por mÃ³dulo)
+    // Quiz inline (3 perguntas por mêÂ³dulo)
     document.addEventListener('click', (e) => {
       const opt = e.target.closest('.qz-opt'); if (!opt) return;
       const qz = opt.closest('.qz'); if (!qz || qz.hasAttribute('data-answered')) return;
       const ok = opt.getAttribute('data-ok') === '1';
       qz.querySelectorAll('.qz-opt').forEach(o => { o.setAttribute('data-state', o.getAttribute('data-ok') === '1' ? 'ok' : (o === opt ? 'no' : '')); o.disabled = true; });
       qz.setAttribute('data-answered', ok ? 'ok' : 'no');
-      const fb = qz.querySelector('.qz-fb'); if (fb) fb.textContent = (ok ? 'âœ“ Certo. ' : 'âœ— NÃ£o Ã© essa. ') + (fb.getAttribute('data-text') || '');
+      const fb = qz.querySelector('.qz-fb'); if (fb) fb.textContent = (ok ? 'ê¢Åâ Certo. ' : 'ê¢Åâ NêÂ£o êÂ© essa. ') + (fb.getAttribute('data-text') || '');
     });
-    // Copiar cÃ³digo
+    // Copiar cêÂ³digo
     document.addEventListener('click', (e) => {
       const b = e.target.closest('[data-copy]'); if (!b) return;
       const pre = b.closest('.codebox').querySelector('pre');
-      navigator.clipboard && navigator.clipboard.writeText(pre.innerText).then(() => { const t = b.textContent; b.textContent = 'Copiado âœ“'; setTimeout(() => b.textContent = t, 1600); });
+      navigator.clipboard && navigator.clipboard.writeText(pre.innerText).then(() => { const t = b.textContent; b.textContent = 'Copiado ê¢Åâ'; setTimeout(() => b.textContent = t, 1600); });
     });
   </script>
 
   <script src="../../assets/learn.js"></script>
   <script>
-    if (window.ARCKHÉ && typeof window.ARCKHÉ.init === 'function') { window.ARCKHÉ.init(); }
+    if (window.ARCKHê && typeof window.ARCKHê.init === 'function') { window.ARCKHê.init(); }
   </script>
 </body>
 </html>

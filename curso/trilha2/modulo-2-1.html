@@ -3,31 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="ARCKHÉ-course" content="astracu">
+  <meta name="ARCKHê-course" content="astracu">
   <title>Busca vira ferramenta | Computer Use com o GPT-6 Astra</title>
-  <meta name="description" content="Google Flights nÃ£o tem API. Com computer use vocÃª faz a busca uma vez, o agente entende como chegou lÃ¡ e gera uma ferramenta de linha de comando que qualquer agente, com qualquer modelo, roda depois. Ã‰ o fluxo que mais rende porque transforma um custo repetido em custo Ãºnico.">
+  <meta name="description" content="Google Flights nêÂ£o tem API. Com computer use vocêÂª faz a busca uma vez, o agente entende como chegou lêÂ¡ e gera uma ferramenta de linha de comando que qualquer agente, com qualquer modelo, roda depois. êâ° o fluxo que mais rende porque transforma um custo repetido em custo êÂºnico.">
 
   <!-- ANTI-FOUC: bloqueante, antes de tudo -->
   <script>
 (function () {
   try {
     var html = document.documentElement;
-    var DEF = { theme: 'ARCKHÉ-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
+    var DEF = { theme: 'ARCKHê-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
     function clone(o) { var r = {}; for (var x in o) r[x] = o[x]; return r; }
     var p = clone(DEF);
     try {
-      var raw = localStorage.getItem('ARCKHÉ.prefs');
+      var raw = localStorage.getItem('ARCKHê.prefs');
       if (raw) { var parsed = JSON.parse(raw); if (parsed && typeof parsed === 'object') { for (var k in DEF) if (parsed[k] != null) p[k] = parsed[k]; } }
-      else { var legacy = localStorage.getItem('theme'); if (legacy === 'light') p.theme = 'claro'; else if (legacy === 'dark') p.theme = 'ARCKHÉ-dark'; }
+      else { var legacy = localStorage.getItem('theme'); if (legacy === 'light') p.theme = 'claro'; else if (legacy === 'dark') p.theme = 'ARCKHê-dark'; }
     } catch (e) { p = clone(DEF); }
-    var THEMES = { 'ARCKHÉ-dark': { dark: true, attr: null, cs: 'dark' }, 'claro': { dark: false, attr: null, cs: 'light' }, 'sepia': { dark: false, attr: 'sepia', cs: 'light' }, 'foco': { dark: null, attr: 'foco', cs: null }, 'contraste': { dark: true, attr: 'contraste', cs: 'dark' } };
-    var t = THEMES[p.theme] || THEMES['ARCKHÉ-dark'];
+    var THEMES = { 'ARCKHê-dark': { dark: true, attr: null, cs: 'dark' }, 'claro': { dark: false, attr: null, cs: 'light' }, 'sepia': { dark: false, attr: 'sepia', cs: 'light' }, 'foco': { dark: null, attr: 'foco', cs: null }, 'contraste': { dark: true, attr: 'contraste', cs: 'dark' } };
+    var t = THEMES[p.theme] || THEMES['ARCKHê-dark'];
     if (t.dark === true) html.classList.add('dark'); else if (t.dark === false) html.classList.remove('dark');
     if (t.attr) html.setAttribute('data-theme', t.attr); else html.removeAttribute('data-theme');
     html.style.colorScheme = (t.cs ? t.cs : (html.classList.contains('dark') ? 'dark' : 'light'));
     html.setAttribute('data-font', p.font || 'inter'); html.setAttribute('data-accent', p.accent || 'emerald');
     var s = html.style; var scale = (+p.fontScale || 100);
-    s.setProperty('--ARCKHÉ-font-scale', (scale / 100).toString()); s.setProperty('font-size', scale + '%');
+    s.setProperty('--ARCKHê-font-scale', (scale / 100).toString()); s.setProperty('font-size', scale + '%');
     s.setProperty('--measure', (+p.lineWidth || 68) + 'ch'); s.setProperty('--lh-body', (+p.leading || 1.7).toString());
     var fam = p.font === 'system' ? 'system-ui, -apple-system, "Segoe UI", Roboto, sans-serif' : (p.font === 'leitura' ? '"Atkinson Hyperlegible", "Inter", system-ui, sans-serif' : '"Inter", system-ui, sans-serif');
     s.setProperty('--font-body', fam);
@@ -46,8 +46,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/learn.css">
 
-  <!-- Manifesto do curso (obrigatÃ³rio em toda pÃ¡gina) -->
-  <script type="application/json" data-ARCKHÉ-manifest>
+  <!-- Manifesto do curso (obrigatêÂ³rio em toda pêÂ¡gina) -->
+  <script type="application/json" data-ARCKHê-manifest>
 {
  "course": "astracu",
  "tracks": [
@@ -57,7 +57,7 @@
    "modules": [
     {
      "id": "1-1",
-     "title": "O que Ã© computer use e por que agora",
+     "title": "O que êÂ© computer use e por que agora",
      "topics": 6,
      "href": "curso/trilha1/modulo-1-1.html"
     },
@@ -93,7 +93,7 @@
     },
     {
      "id": "2-4",
-     "title": "A entrega da ediÃ§Ã£o",
+     "title": "A entrega da ediêÂ§êÂ£o",
      "topics": 6,
      "href": "curso/trilha2/modulo-2-4.html"
     },
@@ -212,17 +212,17 @@
     .qz-opt[data-state="no"] { border-color: #ef4444; background: rgba(239,68,68,.12); }
     .qz-fb { display:none; } .qz[data-answered] .qz-fb { display:block; }
 
-    /* TOC do mÃ³dulo Ã© um bloco inline, nÃ£o uma barra lateral sticky */
-    [data-ARCKHÉ-toc] { position: static !important; top: auto !important; max-height: none !important; }
-    /* Painel de aparÃªncia (classes internas) */
-    .ARCKHÉ-appearance-sec { margin-bottom: .75rem; }
-    .ARCKHÉ-appearance-label { font-size: .7rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #9ca3af; margin-bottom: .35rem; }
-    .ARCKHÉ-appearance-row { display: flex; flex-wrap: wrap; gap: .35rem; }
-    .ARCKHÉ-chip { font-size: .8rem; padding: .3rem .65rem; border-radius: .5rem; border: 1px solid #374151; background: rgba(31,41,55,.6); color: #e5e7eb; cursor: pointer; }
-    .ARCKHÉ-chip:hover { border-color: #FACC15; }
-    .ARCKHÉ-chip[aria-pressed="true"], .ARCKHÉ-chip.is-active { background: rgba(250,204,21,.15); border-color: #FACC15; color: #FACC15; }
-    html:not(.dark) .ARCKHÉ-chip { background: #f3f4f6; color: #111827; border-color: #d1d5db; }
-    html:not(.dark) .ARCKHÉ-chip[aria-pressed="true"], html:not(.dark) .ARCKHÉ-chip.is-active { background: rgba(161,98,7,.1); border-color: #a16207; color: #a16207; }
+    /* TOC do mêÂ³dulo êÂ© um bloco inline, nêÂ£o uma barra lateral sticky */
+    [data-ARCKHê-toc] { position: static !important; top: auto !important; max-height: none !important; }
+    /* Painel de aparêÂªncia (classes internas) */
+    .ARCKHê-appearance-sec { margin-bottom: .75rem; }
+    .ARCKHê-appearance-label { font-size: .7rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #9ca3af; margin-bottom: .35rem; }
+    .ARCKHê-appearance-row { display: flex; flex-wrap: wrap; gap: .35rem; }
+    .ARCKHê-chip { font-size: .8rem; padding: .3rem .65rem; border-radius: .5rem; border: 1px solid #374151; background: rgba(31,41,55,.6); color: #e5e7eb; cursor: pointer; }
+    .ARCKHê-chip:hover { border-color: #FACC15; }
+    .ARCKHê-chip[aria-pressed="true"], .ARCKHê-chip.is-active { background: rgba(250,204,21,.15); border-color: #FACC15; color: #FACC15; }
+    html:not(.dark) .ARCKHê-chip { background: #f3f4f6; color: #111827; border-color: #d1d5db; }
+    html:not(.dark) .ARCKHê-chip[aria-pressed="true"], html:not(.dark) .ARCKHê-chip.is-active { background: rgba(161,98,7,.1); border-color: #a16207; color: #a16207; }
     /* Code box */
     .codebox pre { white-space: pre-wrap; word-break: break-word; }
     
@@ -236,13 +236,13 @@
       <div class="flex justify-between items-center h-14">
         <div class="flex items-center space-x-3">
           <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">ðŸ–±ï¸</span>
+            <span class="text-2xl">ê°Å¸âÂ±ê¯Â¸Â</span>
             <span class="font-bold text-lg hidden md:inline">Computer Use</span>
           </a>
           <span class="text-neutral-600">|</span>
-          <a href="https://ARCKHÉ AI" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">ARCKHÉ AI</a>
+          <a href="https://ARCKHê AI" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">ARCKHê AI</a>
           <span class="text-neutral-600 hidden sm:inline">-</span>
-          <a href="https://ARCKHÉ.pro" target="_blank" class="text-amber-700 dark:text-slate-300 hover:opacity-80 text-sm font-medium hidden sm:inline">PRO</a>
+          <a href="https://ARCKHê.pro" target="_blank" class="text-amber-700 dark:text-slate-300 hover:opacity-80 text-sm font-medium hidden sm:inline">PRO</a>
         </div>
         <div class="flex items-center space-x-1 sm:space-x-2">
           <a href="../../curso/trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors">
@@ -253,11 +253,11 @@
             <span class="sm:hidden">T2</span>
             <span class="hidden sm:inline">Cinco fluxos</span>
           </a>
-          <button type="button" data-ARCKHÉ-journey-open class="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-semibold text-primary bg-primary/10 hover:bg-primary/20 transition-colors">
-            <span>ðŸ§­</span><span>Minha jornada</span>
-            <span data-ARCKHÉ-journey-badge class="text-xs px-1.5 py-0.5 rounded-full bg-primary/20"></span>
+          <button type="button" data-ARCKHê-journey-open class="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-semibold text-primary bg-primary/10 hover:bg-primary/20 transition-colors">
+            <span>ê°Å¸Â§Â­</span><span>Minha jornada</span>
+            <span data-ARCKHê-journey-badge class="text-xs px-1.5 py-0.5 rounded-full bg-primary/20"></span>
           </button>
-          <button type="button" data-ARCKHÉ-appearance-toggle="[data-ARCKHÉ-appearance]" aria-expanded="false" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" title="AparÃªncia e leitura">
+          <button type="button" data-ARCKHê-appearance-toggle="[data-ARCKHê-appearance]" aria-expanded="false" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" title="AparêÂªncia e leitura">
             <span aria-hidden="true">Aa</span>
           </button>
           <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" title="Tema claro/escuro">
@@ -269,40 +269,40 @@
     </div>
   </nav>
   
-  <div data-ARCKHÉ-appearance class="ARCKHÉ-appearance-pop" role="region" aria-label="AparÃªncia e leitura">
-    <div class="ARCKHÉ-appearance-sec">
-      <p class="ARCKHÉ-appearance-label">Tema</p>
-      <div class="ARCKHÉ-appearance-row">
-        <button type="button" data-ARCKHÉ-set-theme="ARCKHÉ-dark" class="ARCKHÉ-chip">Escuro</button>
-        <button type="button" data-ARCKHÉ-set-theme="claro" class="ARCKHÉ-chip">Claro</button>
-        <button type="button" data-ARCKHÉ-set-theme="sepia" class="ARCKHÉ-chip">SÃ©pia</button>
-        <button type="button" data-ARCKHÉ-set-theme="foco" class="ARCKHÉ-chip">Foco</button>
-        <button type="button" data-ARCKHÉ-set-theme="contraste" class="ARCKHÉ-chip">Contraste</button>
+  <div data-ARCKHê-appearance class="ARCKHê-appearance-pop" role="region" aria-label="AparêÂªncia e leitura">
+    <div class="ARCKHê-appearance-sec">
+      <p class="ARCKHê-appearance-label">Tema</p>
+      <div class="ARCKHê-appearance-row">
+        <button type="button" data-ARCKHê-set-theme="ARCKHê-dark" class="ARCKHê-chip">Escuro</button>
+        <button type="button" data-ARCKHê-set-theme="claro" class="ARCKHê-chip">Claro</button>
+        <button type="button" data-ARCKHê-set-theme="sepia" class="ARCKHê-chip">SêÂ©pia</button>
+        <button type="button" data-ARCKHê-set-theme="foco" class="ARCKHê-chip">Foco</button>
+        <button type="button" data-ARCKHê-set-theme="contraste" class="ARCKHê-chip">Contraste</button>
       </div>
     </div>
-    <div class="ARCKHÉ-appearance-sec">
-      <p class="ARCKHÉ-appearance-label">Tamanho do texto</p>
-      <div class="ARCKHÉ-appearance-row">
-        <button type="button" data-ARCKHÉ-set-fontscale="90" class="ARCKHÉ-chip">A-</button>
-        <button type="button" data-ARCKHÉ-set-fontscale="100" class="ARCKHÉ-chip">A</button>
-        <button type="button" data-ARCKHÉ-set-fontscale="115" class="ARCKHÉ-chip">A+</button>
-        <button type="button" data-ARCKHÉ-set-fontscale="130" class="ARCKHÉ-chip">A++</button>
+    <div class="ARCKHê-appearance-sec">
+      <p class="ARCKHê-appearance-label">Tamanho do texto</p>
+      <div class="ARCKHê-appearance-row">
+        <button type="button" data-ARCKHê-set-fontscale="90" class="ARCKHê-chip">A-</button>
+        <button type="button" data-ARCKHê-set-fontscale="100" class="ARCKHê-chip">A</button>
+        <button type="button" data-ARCKHê-set-fontscale="115" class="ARCKHê-chip">A+</button>
+        <button type="button" data-ARCKHê-set-fontscale="130" class="ARCKHê-chip">A++</button>
       </div>
     </div>
-    <div class="ARCKHÉ-appearance-sec">
-      <p class="ARCKHÉ-appearance-label">Fonte</p>
-      <div class="ARCKHÉ-appearance-row">
-        <button type="button" data-ARCKHÉ-set-font="inter" class="ARCKHÉ-chip">Inter</button>
-        <button type="button" data-ARCKHÉ-set-font="system" class="ARCKHÉ-chip">Sistema</button>
-        <button type="button" data-ARCKHÉ-set-font="leitura" class="ARCKHÉ-chip">Leitura</button>
+    <div class="ARCKHê-appearance-sec">
+      <p class="ARCKHê-appearance-label">Fonte</p>
+      <div class="ARCKHê-appearance-row">
+        <button type="button" data-ARCKHê-set-font="inter" class="ARCKHê-chip">Inter</button>
+        <button type="button" data-ARCKHê-set-font="system" class="ARCKHê-chip">Sistema</button>
+        <button type="button" data-ARCKHê-set-font="leitura" class="ARCKHê-chip">Leitura</button>
       </div>
     </div>
-    <div class="ARCKHÉ-appearance-sec">
-      <p class="ARCKHÉ-appearance-label">Entrelinha</p>
-      <div class="ARCKHÉ-appearance-row">
-        <button type="button" data-ARCKHÉ-set-leading="1.5" class="ARCKHÉ-chip">Compacta</button>
-        <button type="button" data-ARCKHÉ-set-leading="1.7" class="ARCKHÉ-chip">Normal</button>
-        <button type="button" data-ARCKHÉ-set-leading="1.9" class="ARCKHÉ-chip">Ampla</button>
+    <div class="ARCKHê-appearance-sec">
+      <p class="ARCKHê-appearance-label">Entrelinha</p>
+      <div class="ARCKHê-appearance-row">
+        <button type="button" data-ARCKHê-set-leading="1.5" class="ARCKHê-chip">Compacta</button>
+        <button type="button" data-ARCKHê-set-leading="1.7" class="ARCKHê-chip">Normal</button>
+        <button type="button" data-ARCKHê-set-leading="1.9" class="ARCKHê-chip">Ampla</button>
       </div>
     </div>
   </div>
@@ -310,49 +310,49 @@
   <!-- BREADCRUMB -->
   <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
     <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-blue-400">InÃ­cio</a><span>/</span>
+      <a href="../../index.html" class="hover:text-blue-400">InêÂ­cio</a><span>/</span>
       <a href="index.html" class="hover:text-blue-400">Trilha 2</a><span>/</span>
-      <span class="text-blue-400">MÃ³dulo 2.1</span>
+      <span class="text-blue-400">MêÂ³dulo 2.1</span>
     </div>
   </nav>
 
   <!-- HEADER -->
   <header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MÃ“DULO 2.1</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">ðŸ”§ Busca vira ferramenta</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">Google Flights nÃ£o tem API. Com computer use vocÃª faz a busca uma vez, o agente entende como chegou lÃ¡ e gera uma ferramenta de linha de comando que qualquer agente, com qualquer modelo, roda depois. Ã‰ o fluxo que mais rende porque transforma um custo repetido em custo Ãºnico.</p>
+      <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MêâDULO 2.1</span>
+      <h1 class="text-3xl sm:text-4xl font-bold mb-4">ê°Å¸âÂ§ Busca vira ferramenta</h1>
+      <p class="text-lg text-neutral-400 max-w-3xl">Google Flights nêÂ£o tem API. Com computer use vocêÂª faz a busca uma vez, o agente entende como chegou lêÂ¡ e gera uma ferramenta de linha de comando que qualquer agente, com qualquer modelo, roda depois. êâ° o fluxo que mais rende porque transforma um custo repetido em custo êÂºnico.</p>
       
       <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">6</div><div class="text-xs text-neutral-400">TÃ³picos</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">50</div><div class="text-xs text-neutral-400">Minutos</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">IntermediÃ¡rio</div><div class="text-xs text-neutral-400">NÃ­vel</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">PrÃ¡tica</div><div class="text-xs text-neutral-400">Tipo</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">6</div><div class="text-xs text-neutral-400">TêÂ³picos</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">50</div><div class="text-xs text-neutral-400">Minutos</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">IntermediêÂ¡rio</div><div class="text-xs text-neutral-400">NêÂ­vel</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">PrêÂ¡tica</div><div class="text-xs text-neutral-400">Tipo</div></div>
       </div>
-      <div data-ARCKHÉ-meter="modulo:2-1" class="ARCKHÉ-meter max-w-md mt-6" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mÃ³dulo">
-        <div class="flex justify-between text-sm text-neutral-400 mb-1"><span data-ARCKHÉ-meter-frac>0 de 6</span><span data-ARCKHÉ-meter-pct>0%</span></div>
-        <div class="ARCKHÉ-bar h-2 bg-dark-700 rounded-full overflow-hidden"><div class="ARCKHÉ-bar__fill h-full bg-blue-500 rounded-full transition-all" data-ARCKHÉ-meter-fill style="width:0%"></div></div>
+      <div data-ARCKHê-meter="modulo:2-1" class="ARCKHê-meter max-w-md mt-6" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mêÂ³dulo">
+        <div class="flex justify-between text-sm text-neutral-400 mb-1"><span data-ARCKHê-meter-frac>0 de 6</span><span data-ARCKHê-meter-pct>0%</span></div>
+        <div class="ARCKHê-bar h-2 bg-dark-700 rounded-full overflow-hidden"><div class="ARCKHê-bar__fill h-full bg-blue-500 rounded-full transition-all" data-ARCKHê-meter-fill style="width:0%"></div></div>
       </div>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 ARCKHÉ-prose" data-ARCKHÉ-module="2-1" data-ARCKHÉ-track="2">
-    <nav aria-label="TÃ³picos deste mÃ³dulo" class="mb-12 bg-dark-800 rounded-xl border border-dark-600 p-5" data-ARCKHÉ-toc>
-      <p class="text-xs font-semibold uppercase tracking-wider text-neutral-500 mb-3">Neste mÃ³dulo</p>
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 ARCKHê-prose" data-ARCKHê-module="2-1" data-ARCKHê-track="2">
+    <nav aria-label="TêÂ³picos deste mêÂ³dulo" class="mb-12 bg-dark-800 rounded-xl border border-dark-600 p-5" data-ARCKHê-toc>
+      <p class="text-xs font-semibold uppercase tracking-wider text-neutral-500 mb-3">Neste mêÂ³dulo</p>
       <ol class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
-        <li><a href="#topico-1" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">1</span><span>O problema: um site que vocÃª consulta toda semana e nÃ£o tem API</span></a></li><li><a href="#topico-2" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">2</span><span>O prompt 01, traduzido</span></a></li><li><a href="#topico-3" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">3</span><span>Planejador local e adaptador de navegador sÃ£o coisas separadas</span></a></li><li><a href="#topico-4" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">4</span><span>A prova: dois pares de datas, uma tarifa que confere</span></a></li><li><a href="#topico-5" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">5</span><span>Explorar rotas com orÃ§amento: multi-city e alternativas</span></a></li><li><a href="#topico-6" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">6</span><span>Medir se o reuso ajuda de verdade</span></a></li>
+        <li><a href="#topico-1" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">1</span><span>O problema: um site que vocêÂª consulta toda semana e nêÂ£o tem API</span></a></li><li><a href="#topico-2" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">2</span><span>O prompt 01, traduzido</span></a></li><li><a href="#topico-3" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">3</span><span>Planejador local e adaptador de navegador sêÂ£o coisas separadas</span></a></li><li><a href="#topico-4" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">4</span><span>A prova: dois pares de datas, uma tarifa que confere</span></a></li><li><a href="#topico-5" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">5</span><span>Explorar rotas com orêÂ§amento: multi-city e alternativas</span></a></li><li><a href="#topico-6" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">6</span><span>Medir se o reuso ajuda de verdade</span></a></li>
       </ol>
     </nav>
 
-    <!-- TÃ“PICO 1 -->
-    <section id="topico-1" data-ARCKHÉ-topic="modulo-2-1#topico-1" class="mb-16">
+    <!-- TêâPICO 1 -->
+    <section id="topico-1" data-ARCKHê-topic="modulo-2-1#topico-1" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">ðŸŽ¯ O problema: um site que vocÃª consulta toda semana e nÃ£o tem API</h2>
+        <h2 class="text-2xl font-bold">ê°Å¸Å½Â¯ O problema: um site que vocêÂª consulta toda semana e nêÂ£o tem API</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m2-1-p1">No vÃ­deo-fonte, o autor lembra que no ensino mÃ©dio vendia acesso a scripts em Python que caÃ§avam promoÃ§Ãµes de passagem. "Naquela Ã©poca isso era ciÃªncia de foguete; hoje vocÃª faz com um prompt." A ideia nÃ£o Ã© fazer a busca com computer use. Ã‰ usar computer use <strong class="text-blue-400">uma vez</strong> para que o agente aprenda a interface e escreva uma ferramenta que faÃ§a o resto.</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHê-block="m2-1-p1">No vêÂ­deo-fonte, o autor lembra que no ensino mêÂ©dio vendia acesso a scripts em Python que caêÂ§avam promoêÂ§êÂµes de passagem. "Naquela êÂ©poca isso era ciêÂªncia de foguete; hoje vocêÂª faz com um prompt." A ideia nêÂ£o êÂ© fazer a busca com computer use. êâ° usar computer use <strong class="text-blue-400">uma vez</strong> para que o agente aprenda a interface e escreva uma ferramenta que faêÂ§a o resto.</p>
 
       <aside class="bg-dark-800/60 rounded-xl border border-dashed border-blue-500/30 p-5 mb-6">
-        <p class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-3">Novo aqui? Termos deste tÃ³pico</p>
+        <p class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-3">Novo aqui? Termos deste têÂ³pico</p>
         <dl class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-sm">
-          <div><dt class="font-semibold text-neutral-100">CLI</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m2-1-p2">Ferramenta de linha de comando: um programa que vocÃª chama no terminal com parÃ¢metros (origem, destino, datas) e que devolve um resultado em arquivo.</dd></div><div><dt class="font-semibold text-neutral-100">JSON e CSV</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m2-1-p3">Dois formatos de arquivo para dados estruturados. JSON para outros programas lerem; CSV para abrir em planilha.</dd></div><div><dt class="font-semibold text-neutral-100">Planejador (planner)</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m2-1-p4">A parte da ferramenta que roda no seu terminal: monta a busca, valida datas, organiza pastas de saÃ­da, lÃª capturas antigas.</dd></div><div><dt class="font-semibold text-neutral-100">Adaptador de navegador</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m2-1-p5">A parte que precisa de um navegador de verdade para buscar tarifa nova. No kit, sÃ³ existe dentro do Codex desktop.</dd></div><div><dt class="font-semibold text-neutral-100">Captura (capture)</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m2-1-p6">O registro do que a pÃ¡gina mostrou num dado momento, com carimbo de tempo. Ã‰ a evidÃªncia da busca.</dd></div>
+          <div><dt class="font-semibold text-neutral-100">CLI</dt><dd class="text-neutral-400" data-ARCKHê-block="m2-1-p2">Ferramenta de linha de comando: um programa que vocêÂª chama no terminal com parêÂ¢metros (origem, destino, datas) e que devolve um resultado em arquivo.</dd></div><div><dt class="font-semibold text-neutral-100">JSON e CSV</dt><dd class="text-neutral-400" data-ARCKHê-block="m2-1-p3">Dois formatos de arquivo para dados estruturados. JSON para outros programas lerem; CSV para abrir em planilha.</dd></div><div><dt class="font-semibold text-neutral-100">Planejador (planner)</dt><dd class="text-neutral-400" data-ARCKHê-block="m2-1-p4">A parte da ferramenta que roda no seu terminal: monta a busca, valida datas, organiza pastas de saêÂ­da, lêÂª capturas antigas.</dd></div><div><dt class="font-semibold text-neutral-100">Adaptador de navegador</dt><dd class="text-neutral-400" data-ARCKHê-block="m2-1-p5">A parte que precisa de um navegador de verdade para buscar tarifa nova. No kit, sêÂ³ existe dentro do Codex desktop.</dd></div><div><dt class="font-semibold text-neutral-100">Captura (capture)</dt><dd class="text-neutral-400" data-ARCKHê-block="m2-1-p6">O registro do que a pêÂ¡gina mostrou num dado momento, com carimbo de tempo. êâ° a evidêÂªncia da busca.</dd></div>
         </dl>
       </aside>
 
@@ -364,134 +364,134 @@
   </defs><rect width="800" height="266" fill="url(#s10-grid)"/>
       <rect x="40" y="30" width="330" height="206" rx="16" fill="#1e3a8a" stroke="#3b82f6" stroke-width="2" opacity="0.95"/>
       <text x="205" y="62" text-anchor="middle" fill="#60a5fa" font-family="Inter,sans-serif" font-size="15" font-weight="800">A CADA VEZ</text>
-      <g class="wf-a"><circle cx="66" cy="96" r="4" fill="#60a5fa"/><text x="80" y="100" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">SessÃ£o de computer use</text></g><g class="wf-a"><circle cx="66" cy="130" r="4" fill="#60a5fa"/><text x="80" y="134" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">50 a 80 segundos por busca</text></g><g class="wf-a"><circle cx="66" cy="164" r="4" fill="#60a5fa"/><text x="80" y="168" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Modelo caro em cada execuÃ§Ã£o</text></g><g class="wf-a"><circle cx="66" cy="198" r="4" fill="#60a5fa"/><text x="80" y="202" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">FrÃ¡gil a cada mudanÃ§a de tela</text></g><rect x="430" y="30" width="330" height="206" rx="16" fill="#0e1b26" stroke="#38bdf8" stroke-width="2" opacity="0.95"/>
+      <g class="wf-a"><circle cx="66" cy="96" r="4" fill="#60a5fa"/><text x="80" y="100" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">SessêÂ£o de computer use</text></g><g class="wf-a"><circle cx="66" cy="130" r="4" fill="#60a5fa"/><text x="80" y="134" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">50 a 80 segundos por busca</text></g><g class="wf-a"><circle cx="66" cy="164" r="4" fill="#60a5fa"/><text x="80" y="168" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Modelo caro em cada execuêÂ§êÂ£o</text></g><g class="wf-a"><circle cx="66" cy="198" r="4" fill="#60a5fa"/><text x="80" y="202" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">FrêÂ¡gil a cada mudanêÂ§a de tela</text></g><rect x="430" y="30" width="330" height="206" rx="16" fill="#0e1b26" stroke="#38bdf8" stroke-width="2" opacity="0.95"/>
       <text x="595" y="62" text-anchor="middle" fill="#38bdf8" font-family="Inter,sans-serif" font-size="15" font-weight="800">UMA VEZ + FERRAMENTA</text>
-      <g class="wf-a"><circle cx="456" cy="96" r="4" fill="#38bdf8"/><text x="470" y="100" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Mapeia a interface uma vez</text></g><g class="wf-a"><circle cx="456" cy="130" r="4" fill="#38bdf8"/><text x="470" y="134" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Gera CLI com entradas explÃ­citas</text></g><g class="wf-a"><circle cx="456" cy="164" r="4" fill="#38bdf8"/><text x="470" y="168" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Roda com modelo menor ou sem modelo</text></g><g class="wf-a"><circle cx="456" cy="198" r="4" fill="#38bdf8"/><text x="470" y="202" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">23 a 25 segundos por busca no vÃ­deo</text></g>
+      <g class="wf-a"><circle cx="456" cy="96" r="4" fill="#38bdf8"/><text x="470" y="100" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Mapeia a interface uma vez</text></g><g class="wf-a"><circle cx="456" cy="130" r="4" fill="#38bdf8"/><text x="470" y="134" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Gera CLI com entradas explêÂ­citas</text></g><g class="wf-a"><circle cx="456" cy="164" r="4" fill="#38bdf8"/><text x="470" y="168" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Roda com modelo menor ou sem modelo</text></g><g class="wf-a"><circle cx="456" cy="198" r="4" fill="#38bdf8"/><text x="470" y="202" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">23 a 25 segundos por busca no vêÂ­deo</text></g>
       <line x1="385" y1="121" x2="415" y2="121" stroke="#9ca3af" stroke-width="1.5"/><line x1="385" y1="129" x2="415" y2="129" stroke="#9ca3af" stroke-width="1.5"/>
       <text x="400" y="256" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="11">mesma tarifa</text></svg>
-        <figcaption class="text-xs text-neutral-400 mt-3 px-1"><strong class="text-blue-400">O que olhar:</strong> A coluna da direita tem um custo inicial maior e um custo por execuÃ§Ã£o menor. O ponto de equilÃ­brio chega na segunda ou terceira busca.</figcaption>
+        <figcaption class="text-xs text-neutral-400 mt-3 px-1"><strong class="text-blue-400">O que olhar:</strong> A coluna da direita tem um custo inicial maior e um custo por execuêÂ§êÂ£o menor. O ponto de equilêÂ­brio chega na segunda ou terceira busca.</figcaption>
       </figure>
 
       <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">ðŸ’¡</span> A vantagem que o vÃ­deo destaca</h3>
-        <p class="text-neutral-300 mb-4" data-ARCKHÉ-block="m2-1-p7">"VocÃª faz o Astra fazer o trabalho pesado na primeira vez, e depois executa o fluxo com um modelo de nÃ­vel mais baixo." A ferramenta gerada Ã© cÃ³digo comum: nÃ£o depende do modelo que a escreveu. Um agente local, um Codex de plano menor ou vocÃª mesmo no terminal rodam a mesma coisa.</p>
+        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">ê°Å¸âÂ¡</span> A vantagem que o vêÂ­deo destaca</h3>
+        <p class="text-neutral-300 mb-4" data-ARCKHê-block="m2-1-p7">"VocêÂª faz o Astra fazer o trabalho pesado na primeira vez, e depois executa o fluxo com um modelo de nêÂ­vel mais baixo." A ferramenta gerada êÂ© cêÂ³digo comum: nêÂ£o depende do modelo que a escreveu. Um agente local, um Codex de plano menor ou vocêÂª mesmo no terminal rodam a mesma coisa.</p>
         
       </div>
       
-      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
-        <span class="ARCKHÉ-label-done">Lido</span>
+      <button type="button" data-ARCKHê-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHê-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHê-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHê-label-todo">Marcar como lido</span>
+        <span class="ARCKHê-label-done">Lido</span>
       </button>
     </section>
 
-    <!-- TÃ“PICO 2 -->
-    <section id="topico-2" data-ARCKHÉ-topic="modulo-2-1#topico-2" class="mb-16">
+    <!-- TêâPICO 2 -->
+    <section id="topico-2" data-ARCKHê-topic="modulo-2-1#topico-2" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">ðŸ“ O prompt 01, traduzido</h2>
+        <h2 class="text-2xl font-bold">ê°Å¸âÂ O prompt 01, traduzido</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m2-1-p8">Antes de colar, prepare: uma sessÃ£o do Codex desktop com o navegador interno habilitado, duas datas futuras (com ano) e uma pasta de saÃ­da vazia. O vÃ­deo insiste em nomear o navegador interno no prompt, senÃ£o "de vez em quando ele usa o Chrome e aproveita as suas sessÃµes".</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHê-block="m2-1-p8">Antes de colar, prepare: uma sessêÂ£o do Codex desktop com o navegador interno habilitado, duas datas futuras (com ano) e uma pasta de saêÂ­da vazia. O vêÂ­deo insiste em nomear o navegador interno no prompt, senêÂ£o "de vez em quando ele usa o Chrome e aproveita as suas sessêÂµes".</p>
 
       <div class="codebox bg-dark-800 rounded-xl border border-blue-500/30 overflow-hidden mb-6">
         <div class="px-5 py-3 border-b border-dark-600 flex items-start justify-between gap-3 flex-wrap">
-          <div><p class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-1">Copie e rode</p><p class="text-sm text-neutral-300">Gerar a ferramenta de busca de voos a partir de uma inspeÃ§Ã£o real do Google Flights (Codex desktop com navegador interno)</p></div>
+          <div><p class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-1">Copie e rode</p><p class="text-sm text-neutral-300">Gerar a ferramenta de busca de voos a partir de uma inspeêÂ§êÂ£o real do Google Flights (Codex desktop com navegador interno)</p></div>
           <button type="button" data-copy class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors">Copiar</button>
         </div>
-        <pre class="p-5 text-sm text-neutral-100 bg-dark-900/60 font-mono leading-relaxed"><code class="language-text">Construa uma CLI reutilizÃ¡vel de busca de voos, apoiada no navegador, para este pedido:
+        <pre class="p-5 text-sm text-neutral-100 bg-dark-900/60 font-mono leading-relaxed"><code class="language-text">Construa uma CLI reutilizêÂ¡vel de busca de voos, apoiada no navegador, para este pedido:
 
 Origem: &lt;AEROPORTO_ORIGEM&gt;
 Destino: &lt;AEROPORTO_DESTINO&gt;
 Ida / volta: &lt;AAAA-MM-DD&gt; / &lt;AAAA-MM-DD&gt;
 Adultos: &lt;QUANTIDADE&gt;
-Cabine / moeda: &lt;executiva ou econÃ´mica&gt; / &lt;BRL, CAD, USD&gt;
-Pasta de saÃ­da: &lt;PASTA_DO_PROJETO&gt;
+Cabine / moeda: &lt;executiva ou econêÂ´mica&gt; / &lt;BRL, CAD, USD&gt;
+Pasta de saêÂ­da: &lt;PASTA_DO_PROJETO&gt;
 
-Primeiro inspecione o Google Flights usando o navegador interno do Codex. Leia a documentaÃ§Ã£o da ferramenta ativa e observe os controles reais da pÃ¡gina. Separe o planejador/parser local do adaptador de navegador e diga exatamente quais partes exigem o Codex. NÃ£o afirme que um comando de terminal busca tarifa ao vivo se ele nÃ£o busca.
+Primeiro inspecione o Google Flights usando o navegador interno do Codex. Leia a documentaêÂ§êÂ£o da ferramenta ativa e observe os controles reais da pêÂ¡gina. Separe o planejador/parser local do adaptador de navegador e diga exatamente quais partes exigem o Codex. NêÂ£o afirme que um comando de terminal busca tarifa ao vivo se ele nêÂ£o busca.
 
-Crie entradas explÃ­citas para rota e datas. Exporte companhia, total exibido para todo o grupo, paradas e duraÃ§Ã£o da ida, avisos, link de origem, escopo do preÃ§o e hora da coleta, em JSON e CSV. Mantenha detalhes de volta nÃ£o verificados e checagens de cabine por trecho marcados como desconhecidos. Dado ausente nunca vira zero.
+Crie entradas explêÂ­citas para rota e datas. Exporte companhia, total exibido para todo o grupo, paradas e duraêÂ§êÂ£o da ida, avisos, link de origem, escopo do preêÂ§o e hora da coleta, em JSON e CSV. Mantenha detalhes de volta nêÂ£o verificados e checagens de cabine por trecho marcados como desconhecidos. Dado ausente nunca vira zero.
 
-Rode dois pares de datas futuras em pastas de saÃ­da novas. Verifique aeroportos visÃ­veis, datas completas com ano, adultos, cabine e moeda. Espere os cartÃµes de tarifa estabilizarem e compare um resultado exportado com a pÃ¡gina. Preserve a captura e o carimbo de tempo original.
+Rode dois pares de datas futuras em pastas de saêÂ­da novas. Verifique aeroportos visêÂ­veis, datas completas com ano, adultos, cabine e moeda. Espere os cartêÂµes de tarifa estabilizarem e compare um resultado exportado com a pêÂ¡gina. Preserve a captura e o carimbo de tempo original.
 
-Entregue um guia de inÃ­cio rÃ¡pido, notas de dependÃªncia do navegador, testes sintÃ©ticos do parser e os dois relatÃ³rios de verificaÃ§Ã£o. SÃ³ busca: nÃ£o reserve nem digite dados de passageiro ou pagamento.</code></pre>
-        <div class="px-5 py-3 border-t border-dark-600 text-sm text-neutral-400"><strong class="text-neutral-300">Como verificar:</strong> Dois pares de datas distintos geraram duas execuÃ§Ãµes em pastas separadas. Ao menos uma tarifa exportada bate com o que estava visÃ­vel na pÃ¡gina. O relatÃ³rio distingue "preÃ§o a partir de" (exibido) de itinerÃ¡rio completo selecionado.</div>
+Entregue um guia de inêÂ­cio rêÂ¡pido, notas de dependêÂªncia do navegador, testes sintêÂ©ticos do parser e os dois relatêÂ³rios de verificaêÂ§êÂ£o. SêÂ³ busca: nêÂ£o reserve nem digite dados de passageiro ou pagamento.</code></pre>
+        <div class="px-5 py-3 border-t border-dark-600 text-sm text-neutral-400"><strong class="text-neutral-300">Como verificar:</strong> Dois pares de datas distintos geraram duas execuêÂ§êÂµes em pastas separadas. Ao menos uma tarifa exportada bate com o que estava visêÂ­vel na pêÂ¡gina. O relatêÂ³rio distingue "preêÂ§o a partir de" (exibido) de itinerêÂ¡rio completo selecionado.</div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-          <h4 class="font-bold text-blue-400 mb-4">&#10003; O que este prompt forÃ§a</h4>
-          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>Inspecionar a interface real antes de escrever cÃ³digo (o agente nÃ£o codifica de memÃ³ria).</span></li><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>Declarar a fronteira: o que roda no terminal e o que exige o Codex.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>Exportar com escopo de preÃ§o e hora: uma tarifa sem carimbo Ã© inÃºtil no dia seguinte.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>Duas execuÃ§Ãµes, nÃ£o uma: a segunda revela o que a primeira acertou por sorte.</span></li></ul>
+          <h4 class="font-bold text-blue-400 mb-4">&#10003; O que este prompt forêÂ§a</h4>
+          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>Inspecionar a interface real antes de escrever cêÂ³digo (o agente nêÂ£o codifica de memêÂ³ria).</span></li><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>Declarar a fronteira: o que roda no terminal e o que exige o Codex.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>Exportar com escopo de preêÂ§o e hora: uma tarifa sem carimbo êÂ© inêÂºtil no dia seguinte.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>Duas execuêÂ§êÂµes, nêÂ£o uma: a segunda revela o que a primeira acertou por sorte.</span></li></ul>
         </div>
         <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-          <h4 class="font-bold text-red-400 mb-4">&#10007; O que ele proÃ­be</h4>
-          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Prometer busca ao vivo por um comando que sÃ³ planeja.</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Transformar dado ausente em zero (um voo "de R$ 0" quebra qualquer comparaÃ§Ã£o).</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Reservar, ou preencher passageiro e pagamento.</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Entregar sem os relatÃ³rios de verificaÃ§Ã£o.</span></li></ul>
+          <h4 class="font-bold text-red-400 mb-4">&#10007; O que ele proêÂ­be</h4>
+          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Prometer busca ao vivo por um comando que sêÂ³ planeja.</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Transformar dado ausente em zero (um voo "de R$ 0" quebra qualquer comparaêÂ§êÂ£o).</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Reservar, ou preencher passageiro e pagamento.</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Entregar sem os relatêÂ³rios de verificaêÂ§êÂ£o.</span></li></ul>
         </div>
       </div>
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">ðŸ’¡</span> Uma linha que economiza uma tarde</h3>
-        <p class="text-neutral-300" data-ARCKHÉ-block="m2-1-p9">A frase "compare um resultado exportado com a pÃ¡gina" Ã© o que impede a ferramenta de exportar o preÃ§o do cartÃ£o errado. Sem ela, vocÃª recebe JSON bonito e tarifa de outro voo.</p>
+        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">ê°Å¸âÂ¡</span> Uma linha que economiza uma tarde</h3>
+        <p class="text-neutral-300" data-ARCKHê-block="m2-1-p9">A frase "compare um resultado exportado com a pêÂ¡gina" êÂ© o que impede a ferramenta de exportar o preêÂ§o do cartêÂ£o errado. Sem ela, vocêÂª recebe JSON bonito e tarifa de outro voo.</p>
       </div>
       
-      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
-        <span class="ARCKHÉ-label-done">Lido</span>
+      <button type="button" data-ARCKHê-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHê-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHê-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHê-label-todo">Marcar como lido</span>
+        <span class="ARCKHê-label-done">Lido</span>
       </button>
     </section>
 
-    <!-- TÃ“PICO 3 -->
-    <section id="topico-3" data-ARCKHÉ-topic="modulo-2-1#topico-3" class="mb-16">
+    <!-- TêâPICO 3 -->
+    <section id="topico-3" data-ARCKHê-topic="modulo-2-1#topico-3" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">ðŸ§© Planejador local e adaptador de navegador sÃ£o coisas separadas</h2>
+        <h2 class="text-2xl font-bold">ê°Å¸Â§Â© Planejador local e adaptador de navegador sêÂ£o coisas separadas</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m2-1-p10">O <a href="https://github.com/promptadvisers/google-flights-cli" target="_blank" class="text-sky-400 hover:text-sky-300 underline decoration-dotted">google-flights-cli</a> que acompanha o kit deixa a fronteira explÃ­cita no prÃ³prio README: "um terminal sozinho pode planejar buscas, reproduzir capturas, exportar dados e comparar histÃ³rico. NÃ£o pode buscar tarifa nova com este adaptador." O comando <code>run</code> devolvendo <code>requires_codex</code> Ã© o comportamento esperado, nÃ£o um erro.</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHê-block="m2-1-p10">O <a href="https://github.com/promptadvisers/google-flights-cli" target="_blank" class="text-sky-400 hover:text-sky-300 underline decoration-dotted">google-flights-cli</a> que acompanha o kit deixa a fronteira explêÂ­cita no prêÂ³prio README: "um terminal sozinho pode planejar buscas, reproduzir capturas, exportar dados e comparar histêÂ³rico. NêÂ£o pode buscar tarifa nova com este adaptador." O comando <code>run</code> devolvendo <code>requires_codex</code> êÂ© o comportamento esperado, nêÂ£o um erro.</p>
 
       <figure class="rounded-2xl border border-blue-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-        <svg viewBox="0 0 800 300" class="w-full h-auto" role="img" aria-label="A fronteira da ferramenta: Ã  esquerda o que roda em qualquer terminal, Ã  direita o que sÃ³ existe dentro de uma tarefa do Codex com o navegador interno"><defs>
+        <svg viewBox="0 0 800 300" class="w-full h-auto" role="img" aria-label="A fronteira da ferramenta: êÂ  esquerda o que roda em qualquer terminal, êÂ  direita o que sêÂ³ existe dentro de uma tarefa do Codex com o navegador interno"><defs>
     <linearGradient id="s11-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#60a5fa"/><stop offset="1" stop-color="#3b82f6"/></linearGradient>
     <filter id="s11-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     <pattern id="s11-grid" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="1.3" fill="#3b82f6" opacity="0.14"/></pattern>
   </defs><rect width="800" height="300" fill="url(#s11-grid)"/>
       <rect x="40" y="30" width="330" height="240" rx="16" fill="#1e3a8a" stroke="#3b82f6" stroke-width="2" opacity="0.95"/>
-      <text x="205" y="62" text-anchor="middle" fill="#60a5fa" font-family="Inter,sans-serif" font-size="15" font-weight="800">TERMINAL (qualquer mÃ¡quina)</text>
-      <g class="wf-a"><circle cx="66" cy="96" r="4" fill="#60a5fa"/><text x="80" y="100" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Montar e validar o pedido</text></g><g class="wf-a"><circle cx="66" cy="130" r="4" fill="#60a5fa"/><text x="80" y="134" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Gerar o plano de busca</text></g><g class="wf-a"><circle cx="66" cy="164" r="4" fill="#60a5fa"/><text x="80" y="168" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Reproduzir capturas antigas</text></g><g class="wf-a"><circle cx="66" cy="198" r="4" fill="#60a5fa"/><text x="80" y="202" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Exportar JSON / CSV</text></g><g class="wf-a"><circle cx="66" cy="232" r="4" fill="#60a5fa"/><text x="80" y="236" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Comparar histÃ³rico de preÃ§os</text></g><rect x="430" y="30" width="330" height="240" rx="16" fill="#0e1b26" stroke="#38bdf8" stroke-width="2" opacity="0.95"/>
+      <text x="205" y="62" text-anchor="middle" fill="#60a5fa" font-family="Inter,sans-serif" font-size="15" font-weight="800">TERMINAL (qualquer mêÂ¡quina)</text>
+      <g class="wf-a"><circle cx="66" cy="96" r="4" fill="#60a5fa"/><text x="80" y="100" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Montar e validar o pedido</text></g><g class="wf-a"><circle cx="66" cy="130" r="4" fill="#60a5fa"/><text x="80" y="134" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Gerar o plano de busca</text></g><g class="wf-a"><circle cx="66" cy="164" r="4" fill="#60a5fa"/><text x="80" y="168" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Reproduzir capturas antigas</text></g><g class="wf-a"><circle cx="66" cy="198" r="4" fill="#60a5fa"/><text x="80" y="202" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Exportar JSON / CSV</text></g><g class="wf-a"><circle cx="66" cy="232" r="4" fill="#60a5fa"/><text x="80" y="236" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Comparar histêÂ³rico de preêÂ§os</text></g><rect x="430" y="30" width="330" height="240" rx="16" fill="#0e1b26" stroke="#38bdf8" stroke-width="2" opacity="0.95"/>
       <text x="595" y="62" text-anchor="middle" fill="#38bdf8" font-family="Inter,sans-serif" font-size="15" font-weight="800">CODEX + NAVEGADOR INTERNO</text>
-      <g class="wf-a"><circle cx="456" cy="96" r="4" fill="#38bdf8"/><text x="470" y="100" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Abrir o Google Flights</text></g><g class="wf-a"><circle cx="456" cy="130" r="4" fill="#38bdf8"/><text x="470" y="134" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Aplicar rota, datas, cabine</text></g><g class="wf-a"><circle cx="456" cy="164" r="4" fill="#38bdf8"/><text x="470" y="168" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Esperar os cartÃµes estabilizarem</text></g><g class="wf-a"><circle cx="456" cy="198" r="4" fill="#38bdf8"/><text x="470" y="202" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Capturar a tarifa nova</text></g><g class="wf-a"><circle cx="456" cy="232" r="4" fill="#38bdf8"/><text x="470" y="236" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Carimbar hora e link</text></g>
+      <g class="wf-a"><circle cx="456" cy="96" r="4" fill="#38bdf8"/><text x="470" y="100" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Abrir o Google Flights</text></g><g class="wf-a"><circle cx="456" cy="130" r="4" fill="#38bdf8"/><text x="470" y="134" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Aplicar rota, datas, cabine</text></g><g class="wf-a"><circle cx="456" cy="164" r="4" fill="#38bdf8"/><text x="470" y="168" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Esperar os cartêÂµes estabilizarem</text></g><g class="wf-a"><circle cx="456" cy="198" r="4" fill="#38bdf8"/><text x="470" y="202" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Capturar a tarifa nova</text></g><g class="wf-a"><circle cx="456" cy="232" r="4" fill="#38bdf8"/><text x="470" y="236" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Carimbar hora e link</text></g>
       <line x1="385" y1="138" x2="415" y2="138" stroke="#9ca3af" stroke-width="1.5"/><line x1="385" y1="146" x2="415" y2="146" stroke="#9ca3af" stroke-width="1.5"/>
-      <text x="400" y="290" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="11">plano salvo â†’ captura â†’ JSON/CSV</text></svg>
-        <figcaption class="text-xs text-neutral-400 mt-3 px-1"><strong class="text-blue-400">O que olhar:</strong> O plano sai da esquerda, a captura nasce na direita e volta para a esquerda para virar arquivo. Se a direita nÃ£o existe na sua sessÃ£o, a esquerda ainda faz metade do trabalho.</figcaption>
+      <text x="400" y="290" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="11">plano salvo ê¢â â captura ê¢â â JSON/CSV</text></svg>
+        <figcaption class="text-xs text-neutral-400 mt-3 px-1"><strong class="text-blue-400">O que olhar:</strong> O plano sai da esquerda, a captura nasce na direita e volta para a esquerda para virar arquivo. Se a direita nêÂ£o existe na sua sessêÂ£o, a esquerda ainda faz metade do trabalho.</figcaption>
       </figure>
 
       <div class="overflow-x-auto rounded-xl border border-dark-600 mb-6">
         <table class="w-full text-sm text-left">
-          <caption class="text-left text-xs text-neutral-500 px-4 pt-3">O adaptador nÃ£o abre um navegador prÃ³prio, nÃ£o lÃª o perfil do seu Chrome nem chama endpoints privados. Ele recebe uma aba do Codex.</caption>
+          <caption class="text-left text-xs text-neutral-500 px-4 pt-3">O adaptador nêÂ£o abre um navegador prêÂ³prio, nêÂ£o lêÂª o perfil do seu Chrome nem chama endpoints privados. Ele recebe uma aba do Codex.</caption>
           <thead class="bg-dark-800 text-blue-400"><tr><th class="px-4 py-3 font-semibold">Comando ou etapa</th><th class="px-4 py-3 font-semibold">Onde roda</th><th class="px-4 py-3 font-semibold">O que produz</th></tr></thead>
-          <tbody class="divide-y divide-dark-600"><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100"><code>npm run demo</code></td><td class="px-4 py-3 text-neutral-300">Terminal (Node 22+)</td><td class="px-4 py-3 text-neutral-300">Uma execuÃ§Ã£o de demonstraÃ§Ã£o com dados sintÃ©ticos: prova que o parser e a exportaÃ§Ã£o funcionam.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100"><code>flight-search.mjs run --request pedido.json</code></td><td class="px-4 py-3 text-neutral-300">Terminal</td><td class="px-4 py-3 text-neutral-300">O plano da busca e as instruÃ§Ãµes para o navegador. Sem Codex, termina em <code>requires_codex</code>.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Passos de navegador impressos pela CLI</td><td class="px-4 py-3 text-neutral-300">Codex, navegador interno</td><td class="px-4 py-3 text-neutral-300">A captura com tarifa, link e hora.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">ExportaÃ§Ã£o e comparaÃ§Ã£o</td><td class="px-4 py-3 text-neutral-300">Terminal</td><td class="px-4 py-3 text-neutral-300">JSON e CSV com campos preenchidos ou marcados como desconhecidos; diferenÃ§a contra capturas anteriores.</td></tr></tbody>
+          <tbody class="divide-y divide-dark-600"><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100"><code>npm run demo</code></td><td class="px-4 py-3 text-neutral-300">Terminal (Node 22+)</td><td class="px-4 py-3 text-neutral-300">Uma execuêÂ§êÂ£o de demonstraêÂ§êÂ£o com dados sintêÂ©ticos: prova que o parser e a exportaêÂ§êÂ£o funcionam.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100"><code>flight-search.mjs run --request pedido.json</code></td><td class="px-4 py-3 text-neutral-300">Terminal</td><td class="px-4 py-3 text-neutral-300">O plano da busca e as instruêÂ§êÂµes para o navegador. Sem Codex, termina em <code>requires_codex</code>.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Passos de navegador impressos pela CLI</td><td class="px-4 py-3 text-neutral-300">Codex, navegador interno</td><td class="px-4 py-3 text-neutral-300">A captura com tarifa, link e hora.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">ExportaêÂ§êÂ£o e comparaêÂ§êÂ£o</td><td class="px-4 py-3 text-neutral-300">Terminal</td><td class="px-4 py-3 text-neutral-300">JSON e CSV com campos preenchidos ou marcados como desconhecidos; diferenêÂ§a contra capturas anteriores.</td></tr></tbody>
         </table>
       </div>
 
       <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">âš ï¸</span> A honestidade que o prompt exige</h3>
-        <p class="text-neutral-300" data-ARCKHÉ-block="m2-1-p11">"NÃ£o afirme que um comando de terminal busca tarifa ao vivo se ele nÃ£o busca." Essa linha existe porque a primeira versÃ£o de qualquer ferramenta dessas tende a prometer o que sÃ³ o navegador entrega. Se a sua CLI gerada diz que busca sem Codex, teste sem Codex antes de acreditar.</p>
+        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">ê¢Å¡Â ê¯Â¸Â</span> A honestidade que o prompt exige</h3>
+        <p class="text-neutral-300" data-ARCKHê-block="m2-1-p11">"NêÂ£o afirme que um comando de terminal busca tarifa ao vivo se ele nêÂ£o busca." Essa linha existe porque a primeira versêÂ£o de qualquer ferramenta dessas tende a prometer o que sêÂ³ o navegador entrega. Se a sua CLI gerada diz que busca sem Codex, teste sem Codex antes de acreditar.</p>
       </div>
       
-      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
-        <span class="ARCKHÉ-label-done">Lido</span>
+      <button type="button" data-ARCKHê-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHê-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHê-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHê-label-todo">Marcar como lido</span>
+        <span class="ARCKHê-label-done">Lido</span>
       </button>
     </section>
 
-    <!-- TÃ“PICO 4 -->
-    <section id="topico-4" data-ARCKHÉ-topic="modulo-2-1#topico-4" class="mb-16">
+    <!-- TêâPICO 4 -->
+    <section id="topico-4" data-ARCKHê-topic="modulo-2-1#topico-4" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">âœ… A prova: dois pares de datas, uma tarifa que confere</h2>
+        <h2 class="text-2xl font-bold">ê¢Åâ¦ A prova: dois pares de datas, uma tarifa que confere</h2>
       </div>
       
       <div class="space-y-5 mb-6">
@@ -500,33 +500,33 @@ Entregue um guia de inÃ­cio rÃ¡pido, notas de dependÃªncia do navegador, t
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">1</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
-            <h4 class="font-semibold text-white mb-2">Duas pastas, duas execuÃ§Ãµes</h4>
+            <h4 class="font-semibold text-white mb-2">Duas pastas, duas execuêÂ§êÂµes</h4>
             
-            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m2-1-p12">Cada par de datas gerou a prÃ³pria pasta com plano, captura e exportaÃ§Ã£o. Se as duas execuÃ§Ãµes escreveram na mesma pasta, a segunda apagou a evidÃªncia da primeira.</p>
+            <p class="text-neutral-300 text-sm" data-ARCKHê-block="m2-1-p12">Cada par de datas gerou a prêÂ³pria pasta com plano, captura e exportaêÂ§êÂ£o. Se as duas execuêÂ§êÂµes escreveram na mesma pasta, a segunda apagou a evidêÂªncia da primeira.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">2</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
-            <h4 class="font-semibold text-white mb-2">Uma tarifa exportada bate com a pÃ¡gina</h4>
+            <h4 class="font-semibold text-white mb-2">Uma tarifa exportada bate com a pêÂ¡gina</h4>
             
-            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m2-1-p13">Abra o JSON e a captura lado a lado. Companhia, total para o grupo e paradas da ida tÃªm que ser os mesmos. Uma divergÃªncia aqui Ã© falha do parser, nÃ£o do site.</p>
+            <p class="text-neutral-300 text-sm" data-ARCKHê-block="m2-1-p13">Abra o JSON e a captura lado a lado. Companhia, total para o grupo e paradas da ida têÂªm que ser os mesmos. Uma divergêÂªncia aqui êÂ© falha do parser, nêÂ£o do site.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">3</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
-            <h4 class="font-semibold text-white mb-2">O que nÃ£o foi verificado estÃ¡ marcado</h4>
+            <h4 class="font-semibold text-white mb-2">O que nêÂ£o foi verificado estêÂ¡ marcado</h4>
             
-            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m2-1-p14">Detalhes da volta e cabine em todos os trechos aparecem como "unknown" se o agente nÃ£o os viu. Um zero ou um valor inventado no lugar reprova.</p>
+            <p class="text-neutral-300 text-sm" data-ARCKHê-block="m2-1-p14">Detalhes da volta e cabine em todos os trechos aparecem como "unknown" se o agente nêÂ£o os viu. Um zero ou um valor inventado no lugar reprova.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">4</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
-            <h4 class="font-semibold text-white mb-2">Escopo do preÃ§o declarado</h4>
+            <h4 class="font-semibold text-white mb-2">Escopo do preêÂ§o declarado</h4>
             
-            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m2-1-p15">O relatÃ³rio diz se o nÃºmero Ã© um "a partir de" exibido na lista ou o preÃ§o de um itinerÃ¡rio completo selecionado. SÃ£o coisas diferentes e o Google mostra as duas.</p>
+            <p class="text-neutral-300 text-sm" data-ARCKHê-block="m2-1-p15">O relatêÂ³rio diz se o nêÂºmero êÂ© um "a partir de" exibido na lista ou o preêÂ§o de um itinerêÂ¡rio completo selecionado. SêÂ£o coisas diferentes e o Google mostra as duas.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
@@ -534,173 +534,173 @@ Entregue um guia de inÃ­cio rÃ¡pido, notas de dependÃªncia do navegador, t
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Carimbo de tempo e link</h4>
             
-            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m2-1-p16">Cada tarifa tem hora de coleta e link de origem. Sem isso, vocÃª nÃ£o sabe se estÃ¡ comparando preÃ§os de hoje com os de semana passada.</p>
+            <p class="text-neutral-300 text-sm" data-ARCKHê-block="m2-1-p16">Cada tarifa tem hora de coleta e link de origem. Sem isso, vocêÂª nêÂ£o sabe se estêÂ¡ comparando preêÂ§os de hoje com os de semana passada.</p>
           </div>
         </div>
       </div>
 
       <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">ðŸ“Š</span> Campos que a exportaÃ§Ã£o precisa ter</h3>
-        <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>Companhia Â· total exibido para todo o grupo Â· paradas e duraÃ§Ã£o da ida.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>Avisos da pÃ¡gina (bagagem, tarifa nÃ£o reembolsÃ¡vel, horÃ¡rio noturno).</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>Link de origem Â· escopo do preÃ§o Â· hora da coleta.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>Volta e cabine por trecho: preenchidos sÃ³ se verificados; senÃ£o, <code>unknown</code>.</span></li></ul>
+        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">ê°Å¸âÅ </span> Campos que a exportaêÂ§êÂ£o precisa ter</h3>
+        <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>Companhia êÂ· total exibido para todo o grupo êÂ· paradas e duraêÂ§êÂ£o da ida.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>Avisos da pêÂ¡gina (bagagem, tarifa nêÂ£o reembolsêÂ¡vel, horêÂ¡rio noturno).</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>Link de origem êÂ· escopo do preêÂ§o êÂ· hora da coleta.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>Volta e cabine por trecho: preenchidos sêÂ³ se verificados; senêÂ£o, <code>unknown</code>.</span></li></ul>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-          <h4 class="font-bold text-blue-400 mb-4">&#10003; ExportaÃ§Ã£o aceitÃ¡vel</h4>
-          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span><code>"total_party": 4380, "currency": "BRL", "price_scope": "displayed_from_price"</code></span></li><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span><code>"return_details": "unknown"</code> quando a volta nÃ£o foi aberta.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span><code>"captured_at": "2026-10-03T14:22:10-03:00"</code> em toda linha.</span></li></ul>
+          <h4 class="font-bold text-blue-400 mb-4">&#10003; ExportaêÂ§êÂ£o aceitêÂ¡vel</h4>
+          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span><code>"total_party": 4380, "currency": "BRL", "price_scope": "displayed_from_price"</code></span></li><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span><code>"return_details": "unknown"</code> quando a volta nêÂ£o foi aberta.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span><code>"captured_at": "2026-10-03T14:22:10-03:00"</code> em toda linha.</span></li></ul>
         </div>
         <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-          <h4 class="font-bold text-red-400 mb-4">&#10007; ExportaÃ§Ã£o que reprova</h4>
-          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span><code>"total_party": 0</code> para um voo sem preÃ§o visÃ­vel.</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Volta "confirmada" sem nenhuma captura da tela de volta.</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Uma Ãºnica pasta com as duas execuÃ§Ãµes misturadas.</span></li></ul>
+          <h4 class="font-bold text-red-400 mb-4">&#10007; ExportaêÂ§êÂ£o que reprova</h4>
+          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span><code>"total_party": 0</code> para um voo sem preêÂ§o visêÂ­vel.</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Volta "confirmada" sem nenhuma captura da tela de volta.</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Uma êÂºnica pasta com as duas execuêÂ§êÂµes misturadas.</span></li></ul>
         </div>
       </div>
       
-      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
-        <span class="ARCKHÉ-label-done">Lido</span>
+      <button type="button" data-ARCKHê-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHê-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHê-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHê-label-todo">Marcar como lido</span>
+        <span class="ARCKHê-label-done">Lido</span>
       </button>
     </section>
 
-    <!-- TÃ“PICO 5 -->
-    <section id="topico-5" data-ARCKHÉ-topic="modulo-2-1#topico-5" class="mb-16">
+    <!-- TêâPICO 5 -->
+    <section id="topico-5" data-ARCKHê-topic="modulo-2-1#topico-5" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">ðŸ—ºï¸ Explorar rotas com orÃ§amento: multi-city e alternativas</h2>
+        <h2 class="text-2xl font-bold">ê°Å¸âÂºê¯Â¸Â Explorar rotas com orêÂ§amento: multi-city e alternativas</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m2-1-p17">No vÃ­deo, a primeira versÃ£o da CLI ficou "viciada" na rota Montreal â†’ Sydney. A segunda rodada pediu que ela funcionasse com qualquer combinaÃ§Ã£o e testasse viagens multi-cidade, usando o que o modelo sabe de blogs sobre milhas e aeroportos alternativos. O kit transformou essa rodada num prompt com <strong class="text-blue-400">orÃ§amento</strong>: um nÃºmero mÃ¡ximo de buscas no navegador, para o agente nÃ£o passar a noite testando.</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHê-block="m2-1-p17">No vêÂ­deo, a primeira versêÂ£o da CLI ficou "viciada" na rota Montreal ê¢â â Sydney. A segunda rodada pediu que ela funcionasse com qualquer combinaêÂ§êÂ£o e testasse viagens multi-cidade, usando o que o modelo sabe de blogs sobre milhas e aeroportos alternativos. O kit transformou essa rodada num prompt com <strong class="text-blue-400">orêÂ§amento</strong>: um nêÂºmero mêÂ¡ximo de buscas no navegador, para o agente nêÂ£o passar a noite testando.</p>
 
       <div class="codebox bg-dark-800 rounded-xl border border-blue-500/30 overflow-hidden mb-6">
         <div class="px-5 py-3 border-b border-dark-600 flex items-start justify-between gap-3 flex-wrap">
-          <div><p class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-1">Copie e rode</p><p class="text-sm text-neutral-300">Estender uma busca jÃ¡ mapeada com alternativas explÃ­citas e um teto de buscas (Codex desktop com navegador interno, sobre a CLI jÃ¡ gerada)</p></div>
+          <div><p class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-1">Copie e rode</p><p class="text-sm text-neutral-300">Estender uma busca jêÂ¡ mapeada com alternativas explêÂ­citas e um teto de buscas (Codex desktop com navegador interno, sobre a CLI jêÂ¡ gerada)</p></div>
           <button type="button" data-copy class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors">Copiar</button>
         </div>
-        <pre class="p-5 text-sm text-neutral-100 bg-dark-900/60 font-mono leading-relaxed"><code class="language-text">Estenda a busca de voos usando &lt;PEDIDO_BASE&gt; e estas alternativas explÃ­citas: &lt;JANELA_DE_DATAS&gt;, &lt;AEROPORTOS_ALTERNATIVOS&gt;, &lt;OPCOES_DE_TRAJETO_ABERTO_OU_ESCALA&gt;. Use o planejador de campanha incluÃ­do com no mÃ¡ximo &lt;ORCAMENTO_DE_BUSCAS&gt; buscas no navegador. Explique quais combinaÃ§Ãµes ficaram de fora.
+        <pre class="p-5 text-sm text-neutral-100 bg-dark-900/60 font-mono leading-relaxed"><code class="language-text">Estenda a busca de voos usando &lt;PEDIDO_BASE&gt; e estas alternativas explêÂ­citas: &lt;JANELA_DE_DATAS&gt;, &lt;AEROPORTOS_ALTERNATIVOS&gt;, &lt;OPCOES_DE_TRAJETO_ABERTO_OU_ESCALA&gt;. Use o planejador de campanha incluêÂ­do com no mêÂ¡ximo &lt;ORCAMENTO_DE_BUSCAS&gt; buscas no navegador. Explique quais combinaêÂ§êÂµes ficaram de fora.
 
-Comece pela rota original. Use a grade de datas e os controles de aeroporto visÃ­veis para afunilar as opÃ§Ãµes promissoras, depois capture os pedidos exatos. Inclua transporte terrestre, voos de posicionamento, bagagem e noites extras de hotel nas comparaÃ§Ãµes; deixe custos desconhecidos como desconhecidos. Trate viagens com bilhetes separados como algo que exige revisÃ£o de conexÃ£o e de proteÃ§Ã£o de bilhete. NÃ£o afirme que uma conexÃ£o longa Ã© viÃ¡vel sÃ³ porque as datas sÃ£o cronolÃ³gicas.
+Comece pela rota original. Use a grade de datas e os controles de aeroporto visêÂ­veis para afunilar as opêÂ§êÂµes promissoras, depois capture os pedidos exatos. Inclua transporte terrestre, voos de posicionamento, bagagem e noites extras de hotel nas comparaêÂ§êÂµes; deixe custos desconhecidos como desconhecidos. Trate viagens com bilhetes separados como algo que exige revisêÂ£o de conexêÂ£o e de proteêÂ§êÂ£o de bilhete. NêÂ£o afirme que uma conexêÂ£o longa êÂ© viêÂ¡vel sêÂ³ porque as datas sêÂ£o cronolêÂ³gicas.
 
-Classifique apenas observaÃ§Ãµes completas e recentes com o mesmo escopo de preÃ§o. Mantenha estratÃ©gias sÃ³ planejadas e pares incompletos separados. NÃ£o afirme a tarifa global mais barata nem invente disponibilidade de assento por milhas. Devolva uma lista curta com links de evidÃªncia, horas de coleta, custos ausentes e o que ainda precisa ser checado.</code></pre>
-        <div class="px-5 py-3 border-t border-dark-600 text-sm text-neutral-400"><strong class="text-neutral-300">Como verificar:</strong> A lista final tem menos itens do que o orÃ§amento de buscas, cada item tem link e hora, os custos desconhecidos aparecem como desconhecidos e hÃ¡ uma seÃ§Ã£o separada para "o que ficou de fora e por quÃª".</div>
+Classifique apenas observaêÂ§êÂµes completas e recentes com o mesmo escopo de preêÂ§o. Mantenha estratêÂ©gias sêÂ³ planejadas e pares incompletos separados. NêÂ£o afirme a tarifa global mais barata nem invente disponibilidade de assento por milhas. Devolva uma lista curta com links de evidêÂªncia, horas de coleta, custos ausentes e o que ainda precisa ser checado.</code></pre>
+        <div class="px-5 py-3 border-t border-dark-600 text-sm text-neutral-400"><strong class="text-neutral-300">Como verificar:</strong> A lista final tem menos itens do que o orêÂ§amento de buscas, cada item tem link e hora, os custos desconhecidos aparecem como desconhecidos e hêÂ¡ uma seêÂ§êÂ£o separada para "o que ficou de fora e por quêÂª".</div>
       </div>
 
       <div class="overflow-x-auto rounded-xl border border-dark-600 mb-6">
         <table class="w-full text-sm text-left">
           
-          <thead class="bg-dark-800 text-blue-400"><tr><th class="px-4 py-3 font-semibold">EstratÃ©gia</th><th class="px-4 py-3 font-semibold">O que Ã©</th><th class="px-4 py-3 font-semibold">O que o prompt exige junto</th></tr></thead>
-          <tbody class="divide-y divide-dark-600"><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Janela de datas</td><td class="px-4 py-3 text-neutral-300">Testar dias ao redor da data ideal</td><td class="px-4 py-3 text-neutral-300">Usar a grade de datas do prÃ³prio site antes de disparar buscas</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Aeroporto alternativo</td><td class="px-4 py-3 text-neutral-300">Sair ou chegar por um aeroporto vizinho</td><td class="px-4 py-3 text-neutral-300">Somar transporte terrestre e voo de posicionamento</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Trajeto aberto (open-jaw)</td><td class="px-4 py-3 text-neutral-300">Ir para uma cidade e voltar de outra</td><td class="px-4 py-3 text-neutral-300">Mesmo escopo de preÃ§o nas duas pontas</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Escala planejada</td><td class="px-4 py-3 text-neutral-300">Parar numa cidade no meio e seguir</td><td class="px-4 py-3 text-neutral-300">Se forem bilhetes separados: revisÃ£o de conexÃ£o e de proteÃ§Ã£o</td></tr></tbody>
+          <thead class="bg-dark-800 text-blue-400"><tr><th class="px-4 py-3 font-semibold">EstratêÂ©gia</th><th class="px-4 py-3 font-semibold">O que êÂ©</th><th class="px-4 py-3 font-semibold">O que o prompt exige junto</th></tr></thead>
+          <tbody class="divide-y divide-dark-600"><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Janela de datas</td><td class="px-4 py-3 text-neutral-300">Testar dias ao redor da data ideal</td><td class="px-4 py-3 text-neutral-300">Usar a grade de datas do prêÂ³prio site antes de disparar buscas</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Aeroporto alternativo</td><td class="px-4 py-3 text-neutral-300">Sair ou chegar por um aeroporto vizinho</td><td class="px-4 py-3 text-neutral-300">Somar transporte terrestre e voo de posicionamento</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Trajeto aberto (open-jaw)</td><td class="px-4 py-3 text-neutral-300">Ir para uma cidade e voltar de outra</td><td class="px-4 py-3 text-neutral-300">Mesmo escopo de preêÂ§o nas duas pontas</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Escala planejada</td><td class="px-4 py-3 text-neutral-300">Parar numa cidade no meio e seguir</td><td class="px-4 py-3 text-neutral-300">Se forem bilhetes separados: revisêÂ£o de conexêÂ£o e de proteêÂ§êÂ£o</td></tr></tbody>
         </table>
       </div>
 
       <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">âš ï¸</span> Duas frases que o agente nunca pode dizer</h3>
-        <p class="text-neutral-300" data-ARCKHÉ-block="m2-1-p18">"Esta Ã© a tarifa mais barata que existe" e "hÃ¡ assento de milhas disponÃ­vel nesta data". A primeira exige uma busca exaustiva que o orÃ§amento nÃ£o permite; a segunda exige acesso ao programa de milhas, que a ferramenta nÃ£o tem. O prompt proÃ­be as duas por escrito.</p>
+        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">ê¢Å¡Â ê¯Â¸Â</span> Duas frases que o agente nunca pode dizer</h3>
+        <p class="text-neutral-300" data-ARCKHê-block="m2-1-p18">"Esta êÂ© a tarifa mais barata que existe" e "hêÂ¡ assento de milhas disponêÂ­vel nesta data". A primeira exige uma busca exaustiva que o orêÂ§amento nêÂ£o permite; a segunda exige acesso ao programa de milhas, que a ferramenta nêÂ£o tem. O prompt proêÂ­be as duas por escrito.</p>
       </div>
       
-      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
-        <span class="ARCKHÉ-label-done">Lido</span>
+      <button type="button" data-ARCKHê-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHê-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHê-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHê-label-todo">Marcar como lido</span>
+        <span class="ARCKHê-label-done">Lido</span>
       </button>
     </section>
 
-    <!-- TÃ“PICO 6 -->
-    <section id="topico-6" data-ARCKHÉ-topic="modulo-2-1#topico-6" class="mb-16">
+    <!-- TêâPICO 6 -->
+    <section id="topico-6" data-ARCKHê-topic="modulo-2-1#topico-6" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">â±ï¸ Medir se o reuso ajuda de verdade</h2>
+        <h2 class="text-2xl font-bold">ê¢ÂÂ±ê¯Â¸Â Medir se o reuso ajuda de verdade</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m2-1-p19">O vÃ­deo fez o teste que a maioria pula: uma rota nova (Toronto â†’ Lisboa, depois Toronto â†’ Seul) em duas sessÃµes novas, uma usando a CLI e outra usando computer use do zero. Os resultados foram <strong class="text-blue-400">77 segundos contra 23</strong> e <strong class="text-blue-400">50 contra 25</strong>. O kit transformou esse teste num prompt, e acrescentou o aviso que o vÃ­deo nÃ£o faz: sÃ£o duas mediÃ§Ãµes.</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHê-block="m2-1-p19">O vêÂ­deo fez o teste que a maioria pula: uma rota nova (Toronto ê¢â â Lisboa, depois Toronto ê¢â â Seul) em duas sessêÂµes novas, uma usando a CLI e outra usando computer use do zero. Os resultados foram <strong class="text-blue-400">77 segundos contra 23</strong> e <strong class="text-blue-400">50 contra 25</strong>. O kit transformou esse teste num prompt, e acrescentou o aviso que o vêÂ­deo nêÂ£o faz: sêÂ£o duas mediêÂ§êÂµes.</p>
 
       <figure class="rounded-2xl border border-blue-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-        <svg viewBox="0 0 800 226" class="w-full h-auto" role="img" aria-label="Tempo por busca nas duas rotas testadas no vÃ­deo: computer use puro contra a ferramenta gerada"><defs>
+        <svg viewBox="0 0 800 226" class="w-full h-auto" role="img" aria-label="Tempo por busca nas duas rotas testadas no vêÂ­deo: computer use puro contra a ferramenta gerada"><defs>
     <linearGradient id="s12-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#60a5fa"/><stop offset="1" stop-color="#3b82f6"/></linearGradient>
     <filter id="s12-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     <pattern id="s12-grid" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="1.3" fill="#3b82f6" opacity="0.14"/></pattern>
   </defs><rect width="800" height="226" fill="url(#s12-grid)"/>
       <rect x="220" y="22" width="14" height="10" rx="3" fill="#9ca3af" opacity="0.55"/><text x="240" y="31" fill="#9ca3af" font-family="Inter,sans-serif" font-size="11">Computer use puro</text>
-      <rect x="350" y="22" width="14" height="10" rx="3" fill="#3b82f6"/><text x="370" y="31" fill="#60a5fa" font-family="Inter,sans-serif" font-size="11" font-weight="600">CLI gerada</text><g><text x="206" y="86" text-anchor="end" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="13" font-weight="600">Toronto â†’ Lisboa</text>
+      <rect x="350" y="22" width="14" height="10" rx="3" fill="#3b82f6"/><text x="370" y="31" fill="#60a5fa" font-family="Inter,sans-serif" font-size="11" font-weight="600">CLI gerada</text><g><text x="206" y="86" text-anchor="end" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="13" font-weight="600">Toronto ê¢â â Lisboa</text>
         <rect x="220" y="60" width="444.88888888888886" height="20" rx="6" fill="#9ca3af" opacity="0.55"/>
         <text x="672.8888888888889" y="75" fill="#9ca3af" font-family="Inter,sans-serif" font-size="12">77 s</text>
         <g class="wf-a"><rect x="220" y="86" width="132.88888888888889" height="20" rx="6" fill="url(#s12-g)" filter="url(#s12-glow)"/></g>
-        <text x="360.8888888888889" y="101" fill="#60a5fa" font-family="Inter,sans-serif" font-size="12" font-weight="700">23 s</text></g><g><text x="206" y="164" text-anchor="end" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="13" font-weight="600">Toronto â†’ Seul</text>
+        <text x="360.8888888888889" y="101" fill="#60a5fa" font-family="Inter,sans-serif" font-size="12" font-weight="700">23 s</text></g><g><text x="206" y="164" text-anchor="end" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="13" font-weight="600">Toronto ê¢â â Seul</text>
         <rect x="220" y="138" width="288.8888888888889" height="20" rx="6" fill="#9ca3af" opacity="0.55"/>
         <text x="516.8888888888889" y="153" fill="#9ca3af" font-family="Inter,sans-serif" font-size="12">50 s</text>
         <g class="wf-a"><rect x="220" y="164" width="144.44444444444446" height="20" rx="6" fill="url(#s12-g)" filter="url(#s12-glow)"/></g>
         <text x="372.44444444444446" y="179" fill="#60a5fa" font-family="Inter,sans-serif" font-size="12" font-weight="700">25 s</text></g></svg>
-        <figcaption class="text-xs text-neutral-400 mt-3 px-1"><strong class="text-blue-400">O que olhar:</strong> A diferenÃ§a Ã© grande nas duas rotas, mas a base Ã© de duas buscas. O prompt 08 existe para vocÃª repetir a mediÃ§Ã£o com as suas rotas antes de decidir.</figcaption>
+        <figcaption class="text-xs text-neutral-400 mt-3 px-1"><strong class="text-blue-400">O que olhar:</strong> A diferenêÂ§a êÂ© grande nas duas rotas, mas a base êÂ© de duas buscas. O prompt 08 existe para vocêÂª repetir a mediêÂ§êÂ£o com as suas rotas antes de decidir.</figcaption>
       </figure>
 
       <div class="codebox bg-dark-800 rounded-xl border border-blue-500/30 overflow-hidden mb-6">
         <div class="px-5 py-3 border-b border-dark-600 flex items-start justify-between gap-3 flex-wrap">
-          <div><p class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-1">Copie e rode</p><p class="text-sm text-neutral-300">Comparar a ferramenta gerada com computer use direto em condiÃ§Ãµes iguais (duas sessÃµes novas do Codex com o mesmo navegador)</p></div>
+          <div><p class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-1">Copie e rode</p><p class="text-sm text-neutral-300">Comparar a ferramenta gerada com computer use direto em condiêÂ§êÂµes iguais (duas sessêÂµes novas do Codex com o mesmo navegador)</p></div>
           <button type="button" data-copy class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors">Copiar</button>
         </div>
-        <pre class="p-5 text-sm text-neutral-100 bg-dark-900/60 font-mono leading-relaxed"><code class="language-text">Compare o executor reutilizÃ¡vel de busca de voos com computer use direto em &lt;DOIS_PEDIDOS_NOVOS_DE_ROTA_E_DATA&gt;. Use contextos de tarefa novos e separados, com a mesma capacidade de navegador, mesmas configuraÃ§Ãµes de modelo, rota, datas, adultos, cabine, moeda e cobertura de resultado. Alterne qual mÃ©todo roda primeiro.
+        <pre class="p-5 text-sm text-neutral-100 bg-dark-900/60 font-mono leading-relaxed"><code class="language-text">Compare o executor reutilizêÂ¡vel de busca de voos com computer use direto em &lt;DOIS_PEDIDOS_NOVOS_DE_ROTA_E_DATA&gt;. Use contextos de tarefa novos e separados, com a mesma capacidade de navegador, mesmas configuraêÂ§êÂµes de modelo, rota, datas, adultos, cabine, moeda e cobertura de resultado. Alterne qual mêÂ©todo roda primeiro.
 
-Defina o inÃ­cio e o fim do cronÃ´metro antes de testar. Registre tempo decorrido, chamadas de ferramenta, tentativas falhas e a evidÃªncia final. Compare todas as tarifas e avisos exportados com os resultados visÃ­veis equivalentes. Se os preÃ§os mudarem entre as execuÃ§Ãµes, registre a divergÃªncia em vez de tratÃ¡-la como erro do mÃ©todo.
+Defina o inêÂ­cio e o fim do cronêÂ´metro antes de testar. Registre tempo decorrido, chamadas de ferramenta, tentativas falhas e a evidêÂªncia final. Compare todas as tarifas e avisos exportados com os resultados visêÂ­veis equivalentes. Se os preêÂ§os mudarem entre as execuêÂ§êÂµes, registre a divergêÂªncia em vez de tratêÂ¡-la como erro do mêÂ©todo.
 
-Reporte cada execuÃ§Ã£o e os limites de amostra pequena. Distinga tempo de navegaÃ§Ã£o-atÃ©-exportaÃ§Ã£o de tempo total da tarefa. NÃ£o afirme uma aceleraÃ§Ã£o universal a partir de duas buscas nem chame de sucesso um resultado mais rÃ¡pido porÃ©m incompleto.</code></pre>
-        <div class="px-5 py-3 border-t border-dark-600 text-sm text-neutral-400"><strong class="text-neutral-300">Como verificar:</strong> O relatÃ³rio tem quatro execuÃ§Ãµes (duas rotas Ã— dois mÃ©todos), com inÃ­cio e fim do cronÃ´metro declarados antes, tempos separados (navegaÃ§Ã£o-atÃ©-exportaÃ§Ã£o e total), e uma frase explÃ­cita sobre o tamanho da amostra.</div>
+Reporte cada execuêÂ§êÂ£o e os limites de amostra pequena. Distinga tempo de navegaêÂ§êÂ£o-atêÂ©-exportaêÂ§êÂ£o de tempo total da tarefa. NêÂ£o afirme uma aceleraêÂ§êÂ£o universal a partir de duas buscas nem chame de sucesso um resultado mais rêÂ¡pido porêÂ©m incompleto.</code></pre>
+        <div class="px-5 py-3 border-t border-dark-600 text-sm text-neutral-400"><strong class="text-neutral-300">Como verificar:</strong> O relatêÂ³rio tem quatro execuêÂ§êÂµes (duas rotas êâ dois mêÂ©todos), com inêÂ­cio e fim do cronêÂ´metro declarados antes, tempos separados (navegaêÂ§êÂ£o-atêÂ©-exportaêÂ§êÂ£o e total), e uma frase explêÂ­cita sobre o tamanho da amostra.</div>
       </div>
 
       <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">âš–ï¸</span> O que este teste decide</h3>
+        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">ê¢Å¡âê¯Â¸Â</span> O que este teste decide</h3>
         
-        <ul class="space-y-2 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>Se a ferramenta Ã© mais rÃ¡pida <strong>com a mesma cobertura</strong>. Mais rÃ¡pida entregando menos campos nÃ£o conta.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>Se ela Ã© mais <strong>confiÃ¡vel</strong>: menos tentativas falhas, menos chamadas de ferramenta.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>Se vale <strong>manter</strong>: uma ferramenta que quebra a cada mudanÃ§a de tela do site pode custar mais do que a navegaÃ§Ã£o direta.</span></li></ul>
+        <ul class="space-y-2 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>Se a ferramenta êÂ© mais rêÂ¡pida <strong>com a mesma cobertura</strong>. Mais rêÂ¡pida entregando menos campos nêÂ£o conta.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>Se ela êÂ© mais <strong>confiêÂ¡vel</strong>: menos tentativas falhas, menos chamadas de ferramenta.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>Se vale <strong>manter</strong>: uma ferramenta que quebra a cada mudanêÂ§a de tela do site pode custar mais do que a navegaêÂ§êÂ£o direta.</span></li></ul>
       </div>
       
-      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
-        <span class="ARCKHÉ-label-done">Lido</span>
+      <button type="button" data-ARCKHê-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHê-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHê-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHê-label-todo">Marcar como lido</span>
+        <span class="ARCKHê-label-done">Lido</span>
       </button>
     </section>
 
     <!-- QUIZ -->
     
       <div class="bg-dark-800 rounded-2xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-1 flex items-center"><span class="mr-2">ðŸ§ª</span> Teste rÃ¡pido do mÃ³dulo</h3>
-        <p class="text-sm text-neutral-400 mb-5">TrÃªs perguntas. Clique numa opÃ§Ã£o para ver a resposta.</p>
+        <h3 class="text-lg font-semibold text-blue-400 mb-1 flex items-center"><span class="mr-2">ê°Å¸Â§Âª</span> Teste rêÂ¡pido do mêÂ³dulo</h3>
+        <p class="text-sm text-neutral-400 mb-5">TrêÂªs perguntas. Clique numa opêÂ§êÂ£o para ver a resposta.</p>
         <div class="space-y-5">
         
           <div class="qz" data-q="1">
             <p class="font-semibold text-neutral-100 mb-3">1. A CLI gerada devolveu "requires_codex" ao rodar no seu terminal. O que isso significa?</p>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              <button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">A ferramenta estÃ¡ quebrada.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="1">Ela gerou o plano de busca; a tarifa nova sÃ³ pode ser capturada dentro de uma tarefa do Codex com navegador interno.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">VocÃª precisa reinstalar o Node.</button>
+              <button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">A ferramenta estêÂ¡ quebrada.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="1">Ela gerou o plano de busca; a tarifa nova sêÂ³ pode ser capturada dentro de uma tarefa do Codex com navegador interno.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">VocêÂª precisa reinstalar o Node.</button>
             </div>
-            <p class="qz-fb mt-3 text-sm text-neutral-300" data-text="A fronteira Ã© declarada: o terminal planeja, reproduz capturas, exporta e compara; buscar tarifa nova exige o adaptador de navegador, que sÃ³ existe no Codex desktop."></p>
+            <p class="qz-fb mt-3 text-sm text-neutral-300" data-text="A fronteira êÂ© declarada: o terminal planeja, reproduz capturas, exporta e compara; buscar tarifa nova exige o adaptador de navegador, que sêÂ³ existe no Codex desktop."></p>
           </div>
           <div class="qz" data-q="2">
-            <p class="font-semibold text-neutral-100 mb-3">2. A exportaÃ§Ã£o trouxe um voo com total "0" porque o preÃ§o nÃ£o estava visÃ­vel. Isso passa na prova?</p>
+            <p class="font-semibold text-neutral-100 mb-3">2. A exportaêÂ§êÂ£o trouxe um voo com total "0" porque o preêÂ§o nêÂ£o estava visêÂ­vel. Isso passa na prova?</p>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              <button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">Sim, zero indica que nÃ£o havia preÃ§o.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="1">NÃ£o: dado ausente nunca vira zero; o campo deveria estar marcado como desconhecido.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">Sim, desde que a captura exista.</button>
+              <button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">Sim, zero indica que nêÂ£o havia preêÂ§o.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="1">NêÂ£o: dado ausente nunca vira zero; o campo deveria estar marcado como desconhecido.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">Sim, desde que a captura exista.</button>
             </div>
-            <p class="qz-fb mt-3 text-sm text-neutral-300" data-text="O prompt Ã© explÃ­cito: &quot;missing data must not become zero&quot;. Zero entra em comparaÃ§Ãµes e quebra qualquer ranking."></p>
+            <p class="qz-fb mt-3 text-sm text-neutral-300" data-text="O prompt êÂ© explêÂ­cito: &quot;missing data must not become zero&quot;. Zero entra em comparaêÂ§êÂµes e quebra qualquer ranking."></p>
           </div>
           <div class="qz" data-q="3">
-            <p class="font-semibold text-neutral-100 mb-3">3. Com base nas duas mediÃ§Ãµes do vÃ­deo (77â†’23s e 50â†’25s), o que vocÃª pode afirmar?</p>
+            <p class="font-semibold text-neutral-100 mb-3">3. Com base nas duas mediêÂ§êÂµes do vêÂ­deo (77ê¢â â23s e 50ê¢â â25s), o que vocêÂª pode afirmar?</p>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              <button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">A CLI Ã© 50 a 70% mais rÃ¡pida em qualquer busca.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="1">Nessas duas rotas, com a mesma cobertura, a CLI foi mais rÃ¡pida; para afirmar mais, repita o teste do prompt 08 com as suas rotas.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">Computer use direto nunca compensa.</button>
+              <button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">A CLI êÂ© 50 a 70% mais rêÂ¡pida em qualquer busca.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="1">Nessas duas rotas, com a mesma cobertura, a CLI foi mais rêÂ¡pida; para afirmar mais, repita o teste do prompt 08 com as suas rotas.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">Computer use direto nunca compensa.</button>
             </div>
-            <p class="qz-fb mt-3 text-sm text-neutral-300" data-text="O prÃ³prio kit exige reportar os limites de amostra pequena e proÃ­be afirmar aceleraÃ§Ã£o universal a partir de duas buscas."></p>
+            <p class="qz-fb mt-3 text-sm text-neutral-300" data-text="O prêÂ³prio kit exige reportar os limites de amostra pequena e proêÂ­be afirmar aceleraêÂ§êÂ£o universal a partir de duas buscas."></p>
           </div>
         </div>
       </div>
 
-    <!-- RESUMO DO MÃ“DULO -->
+    <!-- RESUMO DO MêâDULO -->
     <section class="mb-12">
       <div class="bg-gradient-to-br from-blue-900/40 via-dark-800 to-dark-800 rounded-xl border border-blue-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">ðŸ“‹</span> Resumo do mÃ³dulo</h2>
+        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">ê°Å¸ââ¹</span> Resumo do mêÂ³dulo</h2>
         <div class="space-y-4 mb-8">
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">Mapear uma vez, rodar sempre</strong><span class="text-neutral-400"> - computer use serve para o agente aprender a interface e gerar a ferramenta; a ferramenta roda com modelo menor ou sem modelo.</span></div></div><div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">Fronteira declarada</strong><span class="text-neutral-400"> - planejador e exportaÃ§Ã£o rodam no terminal; tarifa nova exige o navegador interno do Codex. requires_codex Ã© esperado.</span></div></div><div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">Prova em duas datas</strong><span class="text-neutral-400"> - pastas separadas, uma tarifa conferida com a pÃ¡gina, unknown em vez de zero, escopo de preÃ§o e hora em toda linha.</span></div></div><div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">ExtensÃ£o com orÃ§amento</strong><span class="text-neutral-400"> - janela de datas, aeroportos alternativos, trajeto aberto e escalas, com teto de buscas e sem prometer "a mais barata" nem milhas.</span></div></div><div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">Medir antes de acreditar</strong><span class="text-neutral-400"> - 77â†’23s e 50â†’25s no vÃ­deo sÃ£o duas mediÃ§Ãµes; o prompt 08 repete o teste em condiÃ§Ãµes iguais e reporta a amostra.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">Mapear uma vez, rodar sempre</strong><span class="text-neutral-400"> - computer use serve para o agente aprender a interface e gerar a ferramenta; a ferramenta roda com modelo menor ou sem modelo.</span></div></div><div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">Fronteira declarada</strong><span class="text-neutral-400"> - planejador e exportaêÂ§êÂ£o rodam no terminal; tarifa nova exige o navegador interno do Codex. requires_codex êÂ© esperado.</span></div></div><div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">Prova em duas datas</strong><span class="text-neutral-400"> - pastas separadas, uma tarifa conferida com a pêÂ¡gina, unknown em vez de zero, escopo de preêÂ§o e hora em toda linha.</span></div></div><div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">ExtensêÂ£o com orêÂ§amento</strong><span class="text-neutral-400"> - janela de datas, aeroportos alternativos, trajeto aberto e escalas, com teto de buscas e sem prometer "a mais barata" nem milhas.</span></div></div><div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">Medir antes de acreditar</strong><span class="text-neutral-400"> - 77ê¢â â23s e 50ê¢â â25s no vêÂ­deo sêÂ£o duas mediêÂ§êÂµes; o prompt 08 repete o teste em condiêÂ§êÂµes iguais e reporta a amostra.</span></div></div>
         </div>
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-blue-400 mb-2">PrÃ³ximo mÃ³dulo:</h3><p class="text-neutral-300">2.2 - Testar ferramentas dentro do app</p></div>
+        <div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-blue-400 mb-2">PrêÂ³ximo mêÂ³dulo:</h3><p class="text-neutral-300">2.2 - Testar ferramentas dentro do app</p></div>
         <div class="flex flex-col sm:flex-row gap-4">
           <a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">&#8592; Voltar para a trilha</a>
-          <a href="modulo-2-2.html" class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors">PrÃ³ximo mÃ³dulo &#8594;</a>
+          <a href="modulo-2-2.html" class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors">PrêÂ³ximo mêÂ³dulo &#8594;</a>
         </div>
       </div>
     </section>
@@ -709,14 +709,14 @@ Reporte cada execuÃ§Ã£o e os limites de amostra pequena. Distinga tempo de n
   <!-- FOOTER -->
   <footer class="border-t border-dark-600 mt-16 py-8">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm space-y-2">
-      <p>Computer Use com o GPT-6 Astra Â· Trilha 2 â€” Os cinco fluxos Â· 2026 Â·
-        <a href="https://ARCKHÉ AI" target="_blank" class="text-sky-400 hover:text-sky-300">ARCKHÉ AI</a> -
-        <a href="https://ARCKHÉ.pro" target="_blank" class="text-amber-700 dark:text-slate-300">PRO</a></p>
-      <p class="text-xs">Fontes: <a href="https://www.youtube.com/watch?v=tU-fO6cADvQ" target="_blank" class="text-sky-400 hover:text-sky-300">vÃ­deo "O uso do computador pelo GPT-6 Astra Ã© absurdamente bom"</a> Â· Computer Use Field Guide e kit de prompts (Prompt Advisers, 05/09/2026) Â· <a href="https://github.com/promptadvisers/google-flights-cli" target="_blank" class="text-sky-400 hover:text-sky-300">google-flights-cli</a> (MIT). Prompts traduzidos e adaptados.</p>
+      <p>Computer Use com o GPT-6 Astra êÂ· Trilha 2 ê¢â¬â Os cinco fluxos êÂ· 2026 êÂ·
+        <a href="https://ARCKHê AI" target="_blank" class="text-sky-400 hover:text-sky-300">ARCKHê AI</a> -
+        <a href="https://ARCKHê.pro" target="_blank" class="text-amber-700 dark:text-slate-300">PRO</a></p>
+      <p class="text-xs">Fontes: <a href="https://www.youtube.com/watch?v=tU-fO6cADvQ" target="_blank" class="text-sky-400 hover:text-sky-300">vêÂ­deo "O uso do computador pelo GPT-6 Astra êÂ© absurdamente bom"</a> êÂ· Computer Use Field Guide e kit de prompts (Prompt Advisers, 05/09/2026) êÂ· <a href="https://github.com/promptadvisers/google-flights-cli" target="_blank" class="text-sky-400 hover:text-sky-300">google-flights-cli</a> (MIT). Prompts traduzidos e adaptados.</p>
     </div>
   </footer>
 
-  <!-- SCRIPTS nÃºcleo v1 -->
+  <!-- SCRIPTS nêÂºcleo v1 -->
   <script>
     function toggleTopic(button) {
       const topicItem = button.closest('.topic-item');
@@ -741,32 +741,32 @@ Reporte cada execuÃ§Ã£o e os limites de amostra pequena. Distinga tempo de n
       html.classList.toggle('dark');
       const dark = html.classList.contains('dark');
       localStorage.setItem('theme', dark ? 'dark' : 'light');
-      if (window.ARCKHÉ && ARCKHÉ.setPref) { try { ARCKHÉ.setPref('theme', dark ? 'ARCKHÉ-dark' : 'claro'); } catch (e) {} }
+      if (window.ARCKHê && ARCKHê.setPref) { try { ARCKHê.setPref('theme', dark ? 'ARCKHê-dark' : 'claro'); } catch (e) {} }
     });
     function openModal(modalId) { const m = document.getElementById(modalId); if (m) { m.classList.remove('hidden'); document.body.style.overflow = 'hidden'; } }
     function closeModal() { document.querySelectorAll('.modal').forEach(m => m.classList.add('hidden')); document.body.style.overflow = 'auto'; }
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
-    // Quiz inline (3 perguntas por mÃ³dulo)
+    // Quiz inline (3 perguntas por mêÂ³dulo)
     document.addEventListener('click', (e) => {
       const opt = e.target.closest('.qz-opt'); if (!opt) return;
       const qz = opt.closest('.qz'); if (!qz || qz.hasAttribute('data-answered')) return;
       const ok = opt.getAttribute('data-ok') === '1';
       qz.querySelectorAll('.qz-opt').forEach(o => { o.setAttribute('data-state', o.getAttribute('data-ok') === '1' ? 'ok' : (o === opt ? 'no' : '')); o.disabled = true; });
       qz.setAttribute('data-answered', ok ? 'ok' : 'no');
-      const fb = qz.querySelector('.qz-fb'); if (fb) fb.textContent = (ok ? 'âœ“ Certo. ' : 'âœ— NÃ£o Ã© essa. ') + (fb.getAttribute('data-text') || '');
+      const fb = qz.querySelector('.qz-fb'); if (fb) fb.textContent = (ok ? 'ê¢Åâ Certo. ' : 'ê¢Åâ NêÂ£o êÂ© essa. ') + (fb.getAttribute('data-text') || '');
     });
-    // Copiar cÃ³digo
+    // Copiar cêÂ³digo
     document.addEventListener('click', (e) => {
       const b = e.target.closest('[data-copy]'); if (!b) return;
       const pre = b.closest('.codebox').querySelector('pre');
-      navigator.clipboard && navigator.clipboard.writeText(pre.innerText).then(() => { const t = b.textContent; b.textContent = 'Copiado âœ“'; setTimeout(() => b.textContent = t, 1600); });
+      navigator.clipboard && navigator.clipboard.writeText(pre.innerText).then(() => { const t = b.textContent; b.textContent = 'Copiado ê¢Åâ'; setTimeout(() => b.textContent = t, 1600); });
     });
   </script>
 
   <script src="../../assets/learn.js"></script>
   <script>
-    if (window.ARCKHÉ && typeof window.ARCKHÉ.init === 'function') { window.ARCKHÉ.init(); }
+    if (window.ARCKHê && typeof window.ARCKHê.init === 'function') { window.ARCKHê.init(); }
   </script>
 </body>
 </html>

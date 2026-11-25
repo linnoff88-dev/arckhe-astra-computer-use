@@ -3,31 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="ARCKHÉ-course" content="astracu">
-  <title>A entrega da ediÃ§Ã£o | Computer Use com o GPT-6 Astra</title>
-  <meta name="description" content="Renderizar em 4K leva de 40 minutos a 4 horas. Depois vem subir no editor, aplicar a limpeza, revisar cada corte, exportar, mandar para a equipe. O agente espera o render, faz a parte de interface que nenhuma linha de comando alcanÃ§a, e sÃ³ entrega quando o arquivo exportado abre, tem imagem e som e o conteÃºdo Ãºnico sobreviveu.">
+  <meta name="ARCKHê-course" content="astracu">
+  <title>A entrega da ediêÂ§êÂ£o | Computer Use com o GPT-6 Astra</title>
+  <meta name="description" content="Renderizar em 4K leva de 40 minutos a 4 horas. Depois vem subir no editor, aplicar a limpeza, revisar cada corte, exportar, mandar para a equipe. O agente espera o render, faz a parte de interface que nenhuma linha de comando alcanêÂ§a, e sêÂ³ entrega quando o arquivo exportado abre, tem imagem e som e o conteêÂºdo êÂºnico sobreviveu.">
 
   <!-- ANTI-FOUC: bloqueante, antes de tudo -->
   <script>
 (function () {
   try {
     var html = document.documentElement;
-    var DEF = { theme: 'ARCKHÉ-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
+    var DEF = { theme: 'ARCKHê-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
     function clone(o) { var r = {}; for (var x in o) r[x] = o[x]; return r; }
     var p = clone(DEF);
     try {
-      var raw = localStorage.getItem('ARCKHÉ.prefs');
+      var raw = localStorage.getItem('ARCKHê.prefs');
       if (raw) { var parsed = JSON.parse(raw); if (parsed && typeof parsed === 'object') { for (var k in DEF) if (parsed[k] != null) p[k] = parsed[k]; } }
-      else { var legacy = localStorage.getItem('theme'); if (legacy === 'light') p.theme = 'claro'; else if (legacy === 'dark') p.theme = 'ARCKHÉ-dark'; }
+      else { var legacy = localStorage.getItem('theme'); if (legacy === 'light') p.theme = 'claro'; else if (legacy === 'dark') p.theme = 'ARCKHê-dark'; }
     } catch (e) { p = clone(DEF); }
-    var THEMES = { 'ARCKHÉ-dark': { dark: true, attr: null, cs: 'dark' }, 'claro': { dark: false, attr: null, cs: 'light' }, 'sepia': { dark: false, attr: 'sepia', cs: 'light' }, 'foco': { dark: null, attr: 'foco', cs: null }, 'contraste': { dark: true, attr: 'contraste', cs: 'dark' } };
-    var t = THEMES[p.theme] || THEMES['ARCKHÉ-dark'];
+    var THEMES = { 'ARCKHê-dark': { dark: true, attr: null, cs: 'dark' }, 'claro': { dark: false, attr: null, cs: 'light' }, 'sepia': { dark: false, attr: 'sepia', cs: 'light' }, 'foco': { dark: null, attr: 'foco', cs: null }, 'contraste': { dark: true, attr: 'contraste', cs: 'dark' } };
+    var t = THEMES[p.theme] || THEMES['ARCKHê-dark'];
     if (t.dark === true) html.classList.add('dark'); else if (t.dark === false) html.classList.remove('dark');
     if (t.attr) html.setAttribute('data-theme', t.attr); else html.removeAttribute('data-theme');
     html.style.colorScheme = (t.cs ? t.cs : (html.classList.contains('dark') ? 'dark' : 'light'));
     html.setAttribute('data-font', p.font || 'inter'); html.setAttribute('data-accent', p.accent || 'emerald');
     var s = html.style; var scale = (+p.fontScale || 100);
-    s.setProperty('--ARCKHÉ-font-scale', (scale / 100).toString()); s.setProperty('font-size', scale + '%');
+    s.setProperty('--ARCKHê-font-scale', (scale / 100).toString()); s.setProperty('font-size', scale + '%');
     s.setProperty('--measure', (+p.lineWidth || 68) + 'ch'); s.setProperty('--lh-body', (+p.leading || 1.7).toString());
     var fam = p.font === 'system' ? 'system-ui, -apple-system, "Segoe UI", Roboto, sans-serif' : (p.font === 'leitura' ? '"Atkinson Hyperlegible", "Inter", system-ui, sans-serif' : '"Inter", system-ui, sans-serif');
     s.setProperty('--font-body', fam);
@@ -46,8 +46,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/learn.css">
 
-  <!-- Manifesto do curso (obrigatÃ³rio em toda pÃ¡gina) -->
-  <script type="application/json" data-ARCKHÉ-manifest>
+  <!-- Manifesto do curso (obrigatêÂ³rio em toda pêÂ¡gina) -->
+  <script type="application/json" data-ARCKHê-manifest>
 {
  "course": "astracu",
  "tracks": [
@@ -57,7 +57,7 @@
    "modules": [
     {
      "id": "1-1",
-     "title": "O que Ã© computer use e por que agora",
+     "title": "O que êÂ© computer use e por que agora",
      "topics": 6,
      "href": "curso/trilha1/modulo-1-1.html"
     },
@@ -93,7 +93,7 @@
     },
     {
      "id": "2-4",
-     "title": "A entrega da ediÃ§Ã£o",
+     "title": "A entrega da ediêÂ§êÂ£o",
      "topics": 6,
      "href": "curso/trilha2/modulo-2-4.html"
     },
@@ -212,17 +212,17 @@
     .qz-opt[data-state="no"] { border-color: #ef4444; background: rgba(239,68,68,.12); }
     .qz-fb { display:none; } .qz[data-answered] .qz-fb { display:block; }
 
-    /* TOC do mÃ³dulo Ã© um bloco inline, nÃ£o uma barra lateral sticky */
-    [data-ARCKHÉ-toc] { position: static !important; top: auto !important; max-height: none !important; }
-    /* Painel de aparÃªncia (classes internas) */
-    .ARCKHÉ-appearance-sec { margin-bottom: .75rem; }
-    .ARCKHÉ-appearance-label { font-size: .7rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #9ca3af; margin-bottom: .35rem; }
-    .ARCKHÉ-appearance-row { display: flex; flex-wrap: wrap; gap: .35rem; }
-    .ARCKHÉ-chip { font-size: .8rem; padding: .3rem .65rem; border-radius: .5rem; border: 1px solid #374151; background: rgba(31,41,55,.6); color: #e5e7eb; cursor: pointer; }
-    .ARCKHÉ-chip:hover { border-color: #FACC15; }
-    .ARCKHÉ-chip[aria-pressed="true"], .ARCKHÉ-chip.is-active { background: rgba(250,204,21,.15); border-color: #FACC15; color: #FACC15; }
-    html:not(.dark) .ARCKHÉ-chip { background: #f3f4f6; color: #111827; border-color: #d1d5db; }
-    html:not(.dark) .ARCKHÉ-chip[aria-pressed="true"], html:not(.dark) .ARCKHÉ-chip.is-active { background: rgba(161,98,7,.1); border-color: #a16207; color: #a16207; }
+    /* TOC do mêÂ³dulo êÂ© um bloco inline, nêÂ£o uma barra lateral sticky */
+    [data-ARCKHê-toc] { position: static !important; top: auto !important; max-height: none !important; }
+    /* Painel de aparêÂªncia (classes internas) */
+    .ARCKHê-appearance-sec { margin-bottom: .75rem; }
+    .ARCKHê-appearance-label { font-size: .7rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #9ca3af; margin-bottom: .35rem; }
+    .ARCKHê-appearance-row { display: flex; flex-wrap: wrap; gap: .35rem; }
+    .ARCKHê-chip { font-size: .8rem; padding: .3rem .65rem; border-radius: .5rem; border: 1px solid #374151; background: rgba(31,41,55,.6); color: #e5e7eb; cursor: pointer; }
+    .ARCKHê-chip:hover { border-color: #FACC15; }
+    .ARCKHê-chip[aria-pressed="true"], .ARCKHê-chip.is-active { background: rgba(250,204,21,.15); border-color: #FACC15; color: #FACC15; }
+    html:not(.dark) .ARCKHê-chip { background: #f3f4f6; color: #111827; border-color: #d1d5db; }
+    html:not(.dark) .ARCKHê-chip[aria-pressed="true"], html:not(.dark) .ARCKHê-chip.is-active { background: rgba(161,98,7,.1); border-color: #a16207; color: #a16207; }
     /* Code box */
     .codebox pre { white-space: pre-wrap; word-break: break-word; }
     
@@ -236,13 +236,13 @@
       <div class="flex justify-between items-center h-14">
         <div class="flex items-center space-x-3">
           <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">ðŸ–±ï¸</span>
+            <span class="text-2xl">ê°Å¸âÂ±ê¯Â¸Â</span>
             <span class="font-bold text-lg hidden md:inline">Computer Use</span>
           </a>
           <span class="text-neutral-600">|</span>
-          <a href="https://ARCKHÉ AI" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">ARCKHÉ AI</a>
+          <a href="https://ARCKHê AI" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">ARCKHê AI</a>
           <span class="text-neutral-600 hidden sm:inline">-</span>
-          <a href="https://ARCKHÉ.pro" target="_blank" class="text-amber-700 dark:text-slate-300 hover:opacity-80 text-sm font-medium hidden sm:inline">PRO</a>
+          <a href="https://ARCKHê.pro" target="_blank" class="text-amber-700 dark:text-slate-300 hover:opacity-80 text-sm font-medium hidden sm:inline">PRO</a>
         </div>
         <div class="flex items-center space-x-1 sm:space-x-2">
           <a href="../../curso/trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors">
@@ -253,11 +253,11 @@
             <span class="sm:hidden">T2</span>
             <span class="hidden sm:inline">Cinco fluxos</span>
           </a>
-          <button type="button" data-ARCKHÉ-journey-open class="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-semibold text-primary bg-primary/10 hover:bg-primary/20 transition-colors">
-            <span>ðŸ§­</span><span>Minha jornada</span>
-            <span data-ARCKHÉ-journey-badge class="text-xs px-1.5 py-0.5 rounded-full bg-primary/20"></span>
+          <button type="button" data-ARCKHê-journey-open class="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-semibold text-primary bg-primary/10 hover:bg-primary/20 transition-colors">
+            <span>ê°Å¸Â§Â­</span><span>Minha jornada</span>
+            <span data-ARCKHê-journey-badge class="text-xs px-1.5 py-0.5 rounded-full bg-primary/20"></span>
           </button>
-          <button type="button" data-ARCKHÉ-appearance-toggle="[data-ARCKHÉ-appearance]" aria-expanded="false" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" title="AparÃªncia e leitura">
+          <button type="button" data-ARCKHê-appearance-toggle="[data-ARCKHê-appearance]" aria-expanded="false" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" title="AparêÂªncia e leitura">
             <span aria-hidden="true">Aa</span>
           </button>
           <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" title="Tema claro/escuro">
@@ -269,40 +269,40 @@
     </div>
   </nav>
   
-  <div data-ARCKHÉ-appearance class="ARCKHÉ-appearance-pop" role="region" aria-label="AparÃªncia e leitura">
-    <div class="ARCKHÉ-appearance-sec">
-      <p class="ARCKHÉ-appearance-label">Tema</p>
-      <div class="ARCKHÉ-appearance-row">
-        <button type="button" data-ARCKHÉ-set-theme="ARCKHÉ-dark" class="ARCKHÉ-chip">Escuro</button>
-        <button type="button" data-ARCKHÉ-set-theme="claro" class="ARCKHÉ-chip">Claro</button>
-        <button type="button" data-ARCKHÉ-set-theme="sepia" class="ARCKHÉ-chip">SÃ©pia</button>
-        <button type="button" data-ARCKHÉ-set-theme="foco" class="ARCKHÉ-chip">Foco</button>
-        <button type="button" data-ARCKHÉ-set-theme="contraste" class="ARCKHÉ-chip">Contraste</button>
+  <div data-ARCKHê-appearance class="ARCKHê-appearance-pop" role="region" aria-label="AparêÂªncia e leitura">
+    <div class="ARCKHê-appearance-sec">
+      <p class="ARCKHê-appearance-label">Tema</p>
+      <div class="ARCKHê-appearance-row">
+        <button type="button" data-ARCKHê-set-theme="ARCKHê-dark" class="ARCKHê-chip">Escuro</button>
+        <button type="button" data-ARCKHê-set-theme="claro" class="ARCKHê-chip">Claro</button>
+        <button type="button" data-ARCKHê-set-theme="sepia" class="ARCKHê-chip">SêÂ©pia</button>
+        <button type="button" data-ARCKHê-set-theme="foco" class="ARCKHê-chip">Foco</button>
+        <button type="button" data-ARCKHê-set-theme="contraste" class="ARCKHê-chip">Contraste</button>
       </div>
     </div>
-    <div class="ARCKHÉ-appearance-sec">
-      <p class="ARCKHÉ-appearance-label">Tamanho do texto</p>
-      <div class="ARCKHÉ-appearance-row">
-        <button type="button" data-ARCKHÉ-set-fontscale="90" class="ARCKHÉ-chip">A-</button>
-        <button type="button" data-ARCKHÉ-set-fontscale="100" class="ARCKHÉ-chip">A</button>
-        <button type="button" data-ARCKHÉ-set-fontscale="115" class="ARCKHÉ-chip">A+</button>
-        <button type="button" data-ARCKHÉ-set-fontscale="130" class="ARCKHÉ-chip">A++</button>
+    <div class="ARCKHê-appearance-sec">
+      <p class="ARCKHê-appearance-label">Tamanho do texto</p>
+      <div class="ARCKHê-appearance-row">
+        <button type="button" data-ARCKHê-set-fontscale="90" class="ARCKHê-chip">A-</button>
+        <button type="button" data-ARCKHê-set-fontscale="100" class="ARCKHê-chip">A</button>
+        <button type="button" data-ARCKHê-set-fontscale="115" class="ARCKHê-chip">A+</button>
+        <button type="button" data-ARCKHê-set-fontscale="130" class="ARCKHê-chip">A++</button>
       </div>
     </div>
-    <div class="ARCKHÉ-appearance-sec">
-      <p class="ARCKHÉ-appearance-label">Fonte</p>
-      <div class="ARCKHÉ-appearance-row">
-        <button type="button" data-ARCKHÉ-set-font="inter" class="ARCKHÉ-chip">Inter</button>
-        <button type="button" data-ARCKHÉ-set-font="system" class="ARCKHÉ-chip">Sistema</button>
-        <button type="button" data-ARCKHÉ-set-font="leitura" class="ARCKHÉ-chip">Leitura</button>
+    <div class="ARCKHê-appearance-sec">
+      <p class="ARCKHê-appearance-label">Fonte</p>
+      <div class="ARCKHê-appearance-row">
+        <button type="button" data-ARCKHê-set-font="inter" class="ARCKHê-chip">Inter</button>
+        <button type="button" data-ARCKHê-set-font="system" class="ARCKHê-chip">Sistema</button>
+        <button type="button" data-ARCKHê-set-font="leitura" class="ARCKHê-chip">Leitura</button>
       </div>
     </div>
-    <div class="ARCKHÉ-appearance-sec">
-      <p class="ARCKHÉ-appearance-label">Entrelinha</p>
-      <div class="ARCKHÉ-appearance-row">
-        <button type="button" data-ARCKHÉ-set-leading="1.5" class="ARCKHÉ-chip">Compacta</button>
-        <button type="button" data-ARCKHÉ-set-leading="1.7" class="ARCKHÉ-chip">Normal</button>
-        <button type="button" data-ARCKHÉ-set-leading="1.9" class="ARCKHÉ-chip">Ampla</button>
+    <div class="ARCKHê-appearance-sec">
+      <p class="ARCKHê-appearance-label">Entrelinha</p>
+      <div class="ARCKHê-appearance-row">
+        <button type="button" data-ARCKHê-set-leading="1.5" class="ARCKHê-chip">Compacta</button>
+        <button type="button" data-ARCKHê-set-leading="1.7" class="ARCKHê-chip">Normal</button>
+        <button type="button" data-ARCKHê-set-leading="1.9" class="ARCKHê-chip">Ampla</button>
       </div>
     </div>
   </div>
@@ -310,61 +310,61 @@
   <!-- BREADCRUMB -->
   <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
     <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-blue-400">InÃ­cio</a><span>/</span>
+      <a href="../../index.html" class="hover:text-blue-400">InêÂ­cio</a><span>/</span>
       <a href="index.html" class="hover:text-blue-400">Trilha 2</a><span>/</span>
-      <span class="text-blue-400">MÃ³dulo 2.4</span>
+      <span class="text-blue-400">MêÂ³dulo 2.4</span>
     </div>
   </nav>
 
   <!-- HEADER -->
   <header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MÃ“DULO 2.4</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">ðŸŽ¬ A entrega da ediÃ§Ã£o</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">Renderizar em 4K leva de 40 minutos a 4 horas. Depois vem subir no editor, aplicar a limpeza, revisar cada corte, exportar, mandar para a equipe. O agente espera o render, faz a parte de interface que nenhuma linha de comando alcanÃ§a, e sÃ³ entrega quando o arquivo exportado abre, tem imagem e som e o conteÃºdo Ãºnico sobreviveu.</p>
+      <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MêâDULO 2.4</span>
+      <h1 class="text-3xl sm:text-4xl font-bold mb-4">ê°Å¸Å½Â¬ A entrega da ediêÂ§êÂ£o</h1>
+      <p class="text-lg text-neutral-400 max-w-3xl">Renderizar em 4K leva de 40 minutos a 4 horas. Depois vem subir no editor, aplicar a limpeza, revisar cada corte, exportar, mandar para a equipe. O agente espera o render, faz a parte de interface que nenhuma linha de comando alcanêÂ§a, e sêÂ³ entrega quando o arquivo exportado abre, tem imagem e som e o conteêÂºdo êÂºnico sobreviveu.</p>
       
       <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">6</div><div class="text-xs text-neutral-400">TÃ³picos</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">45</div><div class="text-xs text-neutral-400">Minutos</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">IntermediÃ¡rio</div><div class="text-xs text-neutral-400">NÃ­vel</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">PrÃ¡tica</div><div class="text-xs text-neutral-400">Tipo</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">6</div><div class="text-xs text-neutral-400">TêÂ³picos</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">45</div><div class="text-xs text-neutral-400">Minutos</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">IntermediêÂ¡rio</div><div class="text-xs text-neutral-400">NêÂ­vel</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">PrêÂ¡tica</div><div class="text-xs text-neutral-400">Tipo</div></div>
       </div>
-      <div data-ARCKHÉ-meter="modulo:2-4" class="ARCKHÉ-meter max-w-md mt-6" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mÃ³dulo">
-        <div class="flex justify-between text-sm text-neutral-400 mb-1"><span data-ARCKHÉ-meter-frac>0 de 6</span><span data-ARCKHÉ-meter-pct>0%</span></div>
-        <div class="ARCKHÉ-bar h-2 bg-dark-700 rounded-full overflow-hidden"><div class="ARCKHÉ-bar__fill h-full bg-blue-500 rounded-full transition-all" data-ARCKHÉ-meter-fill style="width:0%"></div></div>
+      <div data-ARCKHê-meter="modulo:2-4" class="ARCKHê-meter max-w-md mt-6" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mêÂ³dulo">
+        <div class="flex justify-between text-sm text-neutral-400 mb-1"><span data-ARCKHê-meter-frac>0 de 6</span><span data-ARCKHê-meter-pct>0%</span></div>
+        <div class="ARCKHê-bar h-2 bg-dark-700 rounded-full overflow-hidden"><div class="ARCKHê-bar__fill h-full bg-blue-500 rounded-full transition-all" data-ARCKHê-meter-fill style="width:0%"></div></div>
       </div>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 ARCKHÉ-prose" data-ARCKHÉ-module="2-4" data-ARCKHÉ-track="2">
-    <nav aria-label="TÃ³picos deste mÃ³dulo" class="mb-12 bg-dark-800 rounded-xl border border-dark-600 p-5" data-ARCKHÉ-toc>
-      <p class="text-xs font-semibold uppercase tracking-wider text-neutral-500 mb-3">Neste mÃ³dulo</p>
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 ARCKHê-prose" data-ARCKHê-module="2-4" data-ARCKHê-track="2">
+    <nav aria-label="TêÂ³picos deste mêÂ³dulo" class="mb-12 bg-dark-800 rounded-xl border border-dark-600 p-5" data-ARCKHê-toc>
+      <p class="text-xs font-semibold uppercase tracking-wider text-neutral-500 mb-3">Neste mêÂ³dulo</p>
       <ol class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
-        <li><a href="#topico-1" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">1</span><span>O gargalo: render longo e um editor que sÃ³ existe na interface</span></a></li><li><a href="#topico-2" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">2</span><span>O prompt 04, traduzido</span></a></li><li><a href="#topico-3" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">3</span><span>Esperar o render: verificar a cada 30 minutos e testar estabilidade</span></a></li><li><a href="#topico-4" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">4</span><span>A limpeza conservadora: as regras que protegem o conteÃºdo</span></a></li><li><a href="#topico-5" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">5</span><span>Verificar o export de verdade</span></a></li><li><a href="#topico-6" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">6</span><span>Entrega: Drive, link e a mensagem que vocÃª envia</span></a></li>
+        <li><a href="#topico-1" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">1</span><span>O gargalo: render longo e um editor que sêÂ³ existe na interface</span></a></li><li><a href="#topico-2" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">2</span><span>O prompt 04, traduzido</span></a></li><li><a href="#topico-3" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">3</span><span>Esperar o render: verificar a cada 30 minutos e testar estabilidade</span></a></li><li><a href="#topico-4" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">4</span><span>A limpeza conservadora: as regras que protegem o conteêÂºdo</span></a></li><li><a href="#topico-5" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">5</span><span>Verificar o export de verdade</span></a></li><li><a href="#topico-6" class="flex items-start gap-2 text-neutral-300 hover:text-blue-400"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">6</span><span>Entrega: Drive, link e a mensagem que vocêÂª envia</span></a></li>
       </ol>
     </nav>
 
-    <!-- TÃ“PICO 1 -->
-    <section id="topico-1" data-ARCKHÉ-topic="modulo-2-4#topico-1" class="mb-16">
+    <!-- TêâPICO 1 -->
+    <section id="topico-1" data-ARCKHê-topic="modulo-2-4#topico-1" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">â³ O gargalo: render longo e um editor que sÃ³ existe na interface</h2>
+        <h2 class="text-2xl font-bold">ê¢ÂÂ³ O gargalo: render longo e um editor que sêÂ³ existe na interface</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m2-4-p1">O autor grava de madrugada e nÃ£o quer esperar atÃ© as trÃªs ou quatro da manhÃ£ pelo render para fazer ajustes antes de mandar para a equipe de ediÃ§Ã£o. Com computer use, o fluxo vira: <strong class="text-blue-400">clicar em renderizar e ir dormir</strong>. O agente verifica a cada 30 minutos, e quando o arquivo estÃ¡ pronto, faz o resto.</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHê-block="m2-4-p1">O autor grava de madrugada e nêÂ£o quer esperar atêÂ© as trêÂªs ou quatro da manhêÂ£ pelo render para fazer ajustes antes de mandar para a equipe de ediêÂ§êÂ£o. Com computer use, o fluxo vira: <strong class="text-blue-400">clicar em renderizar e ir dormir</strong>. O agente verifica a cada 30 minutos, e quando o arquivo estêÂ¡ pronto, faz o resto.</p>
 
       <aside class="bg-dark-800/60 rounded-xl border border-dashed border-blue-500/30 p-5 mb-6">
-        <p class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-3">Novo aqui? Termos deste tÃ³pico</p>
+        <p class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-3">Novo aqui? Termos deste têÂ³pico</p>
         <dl class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-sm">
-          <div><dt class="font-semibold text-neutral-100">Render</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m2-4-p2">O processo de gerar o arquivo de vÃ­deo final a partir do projeto de ediÃ§Ã£o. Em 4K, dura de dezenas de minutos a horas.</dd></div><div><dt class="font-semibold text-neutral-100">Polling</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m2-4-p3">Verificar periodicamente se algo terminou. Aqui: olhar a barra de progresso ou o arquivo a cada 30 minutos.</dd></div><div><dt class="font-semibold text-neutral-100">TranscriÃ§Ã£o</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m2-4-p4">O texto do que foi falado, gerado pelo editor. Ã‰ sobre ela que a limpeza de retakes e vÃ­cios de fala Ã© feita.</dd></div><div><dt class="font-semibold text-neutral-100">Decodificar</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m2-4-p5">Abrir e ler o arquivo de vÃ­deo sem erro. Um arquivo que existe mas nÃ£o decodifica Ã© um arquivo quebrado.</dd></div><div><dt class="font-semibold text-neutral-100">Retake</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m2-4-p6">Uma repetiÃ§Ã£o de fala: a pessoa erra, para e diz de novo. A limpeza corta as tentativas falhas e mantÃ©m a Ãºltima.</dd></div>
+          <div><dt class="font-semibold text-neutral-100">Render</dt><dd class="text-neutral-400" data-ARCKHê-block="m2-4-p2">O processo de gerar o arquivo de vêÂ­deo final a partir do projeto de ediêÂ§êÂ£o. Em 4K, dura de dezenas de minutos a horas.</dd></div><div><dt class="font-semibold text-neutral-100">Polling</dt><dd class="text-neutral-400" data-ARCKHê-block="m2-4-p3">Verificar periodicamente se algo terminou. Aqui: olhar a barra de progresso ou o arquivo a cada 30 minutos.</dd></div><div><dt class="font-semibold text-neutral-100">TranscriêÂ§êÂ£o</dt><dd class="text-neutral-400" data-ARCKHê-block="m2-4-p4">O texto do que foi falado, gerado pelo editor. êâ° sobre ela que a limpeza de retakes e vêÂ­cios de fala êÂ© feita.</dd></div><div><dt class="font-semibold text-neutral-100">Decodificar</dt><dd class="text-neutral-400" data-ARCKHê-block="m2-4-p5">Abrir e ler o arquivo de vêÂ­deo sem erro. Um arquivo que existe mas nêÂ£o decodifica êÂ© um arquivo quebrado.</dd></div><div><dt class="font-semibold text-neutral-100">Retake</dt><dd class="text-neutral-400" data-ARCKHê-block="m2-4-p6">Uma repetiêÂ§êÂ£o de fala: a pessoa erra, para e diz de novo. A limpeza corta as tentativas falhas e mantêÂ©m a êÂºltima.</dd></div>
         </dl>
       </aside>
 
       <figure class="rounded-2xl border border-blue-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-        <svg viewBox="0 0 800 200" class="w-full h-auto" role="img" aria-label="O fluxo de entrega: render, espera com verificaÃ§Ã£o a cada 30 minutos, importaÃ§Ã£o no editor, prompt de limpeza, revisÃ£o dos cortes, export verificado, upload e link"><defs>
+        <svg viewBox="0 0 800 200" class="w-full h-auto" role="img" aria-label="O fluxo de entrega: render, espera com verificaêÂ§êÂ£o a cada 30 minutos, importaêÂ§êÂ£o no editor, prompt de limpeza, revisêÂ£o dos cortes, export verificado, upload e link"><defs>
     <linearGradient id="s18-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#60a5fa"/><stop offset="1" stop-color="#3b82f6"/></linearGradient>
     <filter id="s18-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     <pattern id="s18-grid" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="1.3" fill="#3b82f6" opacity="0.14"/></pattern>
   </defs><rect width="800" height="200" fill="url(#s18-grid)"/><g class="wf-a"><rect x="40" y="60" width="100" height="84" rx="12" fill="#1e3a8a" stroke="#3b82f6" stroke-width="1.8"/>
         <circle cx="58" cy="78" r="10" fill="#3b82f6"/><text x="58" y="82" text-anchor="middle" fill="#0b1220" font-family="Inter,sans-serif" font-size="11" font-weight="700">1</text>
         <text x="90" y="104" text-anchor="middle" fill="#bfdbfe" font-family="Inter,sans-serif" font-size="10.5" font-weight="700">Render</text>
-        <text x="90" y="122" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="9.5" font-weight="400">vocÃª clica e sai</text></g>
+        <text x="90" y="122" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="9.5" font-weight="400">vocêÂª clica e sai</text></g>
         <path class="wf-flow" d="M142 102 L162 102" stroke="#38bdf8" stroke-width="2" fill="none"/><polygon points="158,97 158,107 164,102" fill="#38bdf8"/><g class="wf-a"><rect x="164" y="60" width="100" height="84" rx="12" fill="#0e1b26" stroke="#38bdf8" stroke-width="1.8"/>
         <circle cx="182" cy="78" r="10" fill="#38bdf8"/><text x="182" y="82" text-anchor="middle" fill="#0b1220" font-family="Inter,sans-serif" font-size="11" font-weight="700">2</text>
         <text x="214" y="104" text-anchor="middle" fill="#9ad6ff" font-family="Inter,sans-serif" font-size="10.5" font-weight="700">Esperar</text>
@@ -380,86 +380,86 @@
         <path class="wf-flow" d="M514 102 L534 102" stroke="#38bdf8" stroke-width="2" fill="none"/><polygon points="530,97 530,107 536,102" fill="#38bdf8"/><g class="wf-a"><rect x="536" y="60" width="100" height="84" rx="12" fill="#1e3a8a" stroke="#3b82f6" stroke-width="1.8"/>
         <circle cx="554" cy="78" r="10" fill="#3b82f6"/><text x="554" y="82" text-anchor="middle" fill="#0b1220" font-family="Inter,sans-serif" font-size="11" font-weight="700">5</text>
         <text x="586" y="104" text-anchor="middle" fill="#bfdbfe" font-family="Inter,sans-serif" font-size="10.5" font-weight="700">Revisar</text>
-        <text x="586" y="122" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="9.5" font-weight="400">cortes, inÃ­cio e fim</text></g>
+        <text x="586" y="122" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="9.5" font-weight="400">cortes, inêÂ­cio e fim</text></g>
         <path class="wf-flow" d="M638 102 L658 102" stroke="#38bdf8" stroke-width="2" fill="none"/><polygon points="654,97 654,107 660,102" fill="#38bdf8"/><g class="wf-a"><rect x="660" y="60" width="100" height="84" rx="12" fill="#0e1b26" stroke="#38bdf8" stroke-width="1.8"/>
         <circle cx="678" cy="78" r="10" fill="#38bdf8"/><text x="678" y="82" text-anchor="middle" fill="#0b1220" font-family="Inter,sans-serif" font-size="11" font-weight="700">6</text>
         <text x="710" y="104" text-anchor="middle" fill="#9ad6ff" font-family="Inter,sans-serif" font-size="10.5" font-weight="700">Exportar</text>
-        <text x="710" y="122" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="9.5" font-weight="400">e verificar a mÃ­dia</text></g>
+        <text x="710" y="122" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="9.5" font-weight="400">e verificar a mêÂ­dia</text></g>
         
-      <text x="400" y="178" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="11" font-style="italic">O fluxo de entrega: render, espera com verificaÃ§Ã£o a cada 30 minutos, importaÃ§Ã£o no editor, prompt de limpeza, revisÃ£o dos cortes, export verificado, upload e link</text></svg>
-        <figcaption class="text-xs text-neutral-400 mt-3 px-1"><strong class="text-blue-400">O que olhar:</strong> As trÃªs primeiras caixas a linha de comando faz. As trÃªs Ãºltimas exigem a interface do editor. Computer use cobre as seis com a mesma sessÃ£o.</figcaption>
+      <text x="400" y="178" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="11" font-style="italic">O fluxo de entrega: render, espera com verificaêÂ§êÂ£o a cada 30 minutos, importaêÂ§êÂ£o no editor, prompt de limpeza, revisêÂ£o dos cortes, export verificado, upload e link</text></svg>
+        <figcaption class="text-xs text-neutral-400 mt-3 px-1"><strong class="text-blue-400">O que olhar:</strong> As trêÂªs primeiras caixas a linha de comando faz. As trêÂªs êÂºltimas exigem a interface do editor. Computer use cobre as seis com a mesma sessêÂ£o.</figcaption>
       </figure>
 
       <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">ðŸ“ˆ</span> De 80% a 100%</h3>
-        <p class="text-neutral-300 mb-4" data-ARCKHÉ-block="m2-4-p7">"Ferramentas como o Descript tÃªm linha de comando prÃ³pria e atÃ© agora ela me levava a 80%. Com computer use, vocÃª pega processos que eram 80% possÃ­veis e leva a 100%, com as poucas partes que precisavam de um humano." A frase resume o critÃ©rio de uso: computer use entra onde a automaÃ§Ã£o convencional para.</p>
+        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">ê°Å¸âË</span> De 80% a 100%</h3>
+        <p class="text-neutral-300 mb-4" data-ARCKHê-block="m2-4-p7">"Ferramentas como o Descript têÂªm linha de comando prêÂ³pria e atêÂ© agora ela me levava a 80%. Com computer use, vocêÂª pega processos que eram 80% possêÂ­veis e leva a 100%, com as poucas partes que precisavam de um humano." A frase resume o critêÂ©rio de uso: computer use entra onde a automaêÂ§êÂ£o convencional para.</p>
         
       </div>
       
-      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
-        <span class="ARCKHÉ-label-done">Lido</span>
+      <button type="button" data-ARCKHê-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHê-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHê-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHê-label-todo">Marcar como lido</span>
+        <span class="ARCKHê-label-done">Lido</span>
       </button>
     </section>
 
-    <!-- TÃ“PICO 2 -->
-    <section id="topico-2" data-ARCKHÉ-topic="modulo-2-4#topico-2" class="mb-16">
+    <!-- TêâPICO 2 -->
+    <section id="topico-2" data-ARCKHê-topic="modulo-2-4#topico-2" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">ðŸ“ O prompt 04, traduzido</h2>
+        <h2 class="text-2xl font-bold">ê°Å¸âÂ O prompt 04, traduzido</h2>
       </div>
       
       <div class="codebox bg-dark-800 rounded-xl border border-blue-500/30 overflow-hidden mb-6">
         <div class="px-5 py-3 border-b border-dark-600 flex items-start justify-between gap-3 flex-wrap">
-          <div><p class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-1">Copie e rode</p><p class="text-sm text-neutral-300">Levar um vÃ­deo jÃ¡ renderizado atÃ© o export limpo e verificado, e opcionalmente ao Drive (Codex com computer use; Descript instalado e logado; comece com um vÃ­deo curto de teste)</p></div>
+          <div><p class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-1">Copie e rode</p><p class="text-sm text-neutral-300">Levar um vêÂ­deo jêÂ¡ renderizado atêÂ© o export limpo e verificado, e opcionalmente ao Drive (Codex com computer use; Descript instalado e logado; comece com um vêÂ­deo curto de teste)</p></div>
           <button type="button" data-copy class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors">Copiar</button>
         </div>
-        <pre class="p-5 text-sm text-neutral-100 bg-dark-900/60 font-mono leading-relaxed"><code class="language-text">Rode meu fluxo de ediÃ§Ã£o pÃ³s-render usando a amostra concluÃ­da abaixo.
+        <pre class="p-5 text-sm text-neutral-100 bg-dark-900/60 font-mono leading-relaxed"><code class="language-text">Rode meu fluxo de ediêÂ§êÂ£o pêÂ³s-render usando a amostra concluêÂ­da abaixo.
 
-VÃ­deo de origem: &lt;CAMINHO_DO_VIDEO&gt;
-Pasta de saÃ­da: &lt;PASTA_DE_SAIDA&gt;
-Nome do arquivo de saÃ­da: &lt;NOVO_NOME&gt;
+VêÂ­deo de origem: &lt;CAMINHO_DO_VIDEO&gt;
+Pasta de saêÂ­da: &lt;PASTA_DE_SAIDA&gt;
+Nome do arquivo de saêÂ­da: &lt;NOVO_NOME&gt;
 Pasta do Drive (opcional): &lt;URL_DA_PASTA_OU_NONE&gt;
 Arquivo do prompt de limpeza: &lt;CAMINHO_DO_07_DESCRIPT_CLEANUP_TXT&gt;
 
-Verifique que o arquivo de origem estÃ¡ estÃ¡vel e decodifica; registre duraÃ§Ã£o, resoluÃ§Ã£o e propriedades de Ã¡udio. Preserve o original. Crie um projeto novo no Descript e importe o vÃ­deo. Use a linha de comando ou API do app para as etapas suportadas e computer use para as etapas de interface que exigirem. Espere a importaÃ§Ã£o e a transcriÃ§Ã£o terminarem.
+Verifique que o arquivo de origem estêÂ¡ estêÂ¡vel e decodifica; registre duraêÂ§êÂ£o, resoluêÂ§êÂ£o e propriedades de êÂ¡udio. Preserve o original. Crie um projeto novo no Descript e importe o vêÂ­deo. Use a linha de comando ou API do app para as etapas suportadas e computer use para as etapas de interface que exigirem. Espere a importaêÂ§êÂ£o e a transcriêÂ§êÂ£o terminarem.
 
-Envie o prompt completo de limpeza conservadora fornecido. Espere a ediÃ§Ã£o terminar e compare as transcriÃ§Ãµes original e editada. Mantenha o Ãºltimo take e todo ponto Ãºnico. Assista e ouÃ§a ao redor dos cortes alterados, do inÃ­cio e do fim. Repare palavras cortadas, conteÃºdo Ãºnico ausente ou junÃ§Ãµes estranhas antes de exportar.
+Envie o prompt completo de limpeza conservadora fornecido. Espere a ediêÂ§êÂ£o terminar e compare as transcriêÂ§êÂµes original e editada. Mantenha o êÂºltimo take e todo ponto êÂºnico. Assista e ouêÂ§a ao redor dos cortes alterados, do inêÂ­cio e do fim. Repare palavras cortadas, conteêÂºdo êÂºnico ausente ou junêÂ§êÂµes estranhas antes de exportar.
 
-Exporte com o novo nome, na resoluÃ§Ã£o da origem. Verifique que o arquivo exportado decodifica, contÃ©m imagem e som, e corresponde Ã  ediÃ§Ã£o e Ã  resoluÃ§Ã£o pretendidas. Reporte duraÃ§Ã£o da origem e do export sem tratar uma ediÃ§Ã£o mais curta como prova de qualidade.
+Exporte com o novo nome, na resoluêÂ§êÂ£o da origem. Verifique que o arquivo exportado decodifica, contêÂ©m imagem e som, e corresponde êÂ  ediêÂ§êÂ£o e êÂ  resoluêÂ§êÂ£o pretendidas. Reporte duraêÂ§êÂ£o da origem e do export sem tratar uma ediêÂ§êÂ£o mais curta como prova de qualidade.
 
-Se eu forneci uma pasta do Drive, envie o export verificado e confira nome, tamanho e destino. SenÃ£o, salve localmente. Devolva o caminho local, o link opcional do Drive e o resumo de verificaÃ§Ã£o. NÃ£o envie a ninguÃ©m nem publique. Pare com o bloqueio exato se autenticaÃ§Ã£o ou um controle necessÃ¡rio nÃ£o estiver disponÃ­vel.</code></pre>
-        <div class="px-5 py-3 border-t border-dark-600 text-sm text-neutral-400"><strong class="text-neutral-300">Como verificar:</strong> O original estÃ¡ intocado (mesmo tamanho e data). O prompt de limpeza completo foi enviado (nÃ£o um resumo dele). A transcriÃ§Ã£o editada mantÃ©m todos os pontos Ãºnicos. Os cortes soam naturais no inÃ­cio, no fim e nas junÃ§Ãµes. O arquivo exportado decodifica, tem imagem e som e estÃ¡ na resoluÃ§Ã£o da origem.</div>
+Se eu forneci uma pasta do Drive, envie o export verificado e confira nome, tamanho e destino. SenêÂ£o, salve localmente. Devolva o caminho local, o link opcional do Drive e o resumo de verificaêÂ§êÂ£o. NêÂ£o envie a ninguêÂ©m nem publique. Pare com o bloqueio exato se autenticaêÂ§êÂ£o ou um controle necessêÂ¡rio nêÂ£o estiver disponêÂ­vel.</code></pre>
+        <div class="px-5 py-3 border-t border-dark-600 text-sm text-neutral-400"><strong class="text-neutral-300">Como verificar:</strong> O original estêÂ¡ intocado (mesmo tamanho e data). O prompt de limpeza completo foi enviado (nêÂ£o um resumo dele). A transcriêÂ§êÂ£o editada mantêÂ©m todos os pontos êÂºnicos. Os cortes soam naturais no inêÂ­cio, no fim e nas junêÂ§êÂµes. O arquivo exportado decodifica, tem imagem e som e estêÂ¡ na resoluêÂ§êÂ£o da origem.</div>
       </div>
 
       <div class="overflow-x-auto rounded-xl border border-dark-600 mb-6">
         <table class="w-full text-sm text-left">
           
-          <thead class="bg-dark-800 text-blue-400"><tr><th class="px-4 py-3 font-semibold">Etapa</th><th class="px-4 py-3 font-semibold">Quem faz</th><th class="px-4 py-3 font-semibold">Por quÃª</th></tr></thead>
-          <tbody class="divide-y divide-dark-600"><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Verificar origem, registrar propriedades</td><td class="px-4 py-3 text-neutral-300">Linha de comando (ffprobe ou equivalente)</td><td class="px-4 py-3 text-neutral-300">Mais confiÃ¡vel que olhar a tela; produz nÃºmeros.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Criar projeto, importar</td><td class="px-4 py-3 text-neutral-300">API/CLI do app se existir; senÃ£o, interface</td><td class="px-4 py-3 text-neutral-300">O prompt manda usar o caminho suportado primeiro.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Enviar o prompt de limpeza no chat do editor</td><td class="px-4 py-3 text-neutral-300">Interface (computer use)</td><td class="px-4 py-3 text-neutral-300">NÃ£o existe caminho programÃ¡tico "fÃ¡cil" para o chat, segundo o vÃ­deo.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Revisar cortes frame a frame</td><td class="px-4 py-3 text-neutral-300">Interface</td><td class="px-4 py-3 text-neutral-300">Exige olhos e ouvidos: tosse, palavra cortada, junÃ§Ã£o estranha.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Exportar e verificar a mÃ­dia</td><td class="px-4 py-3 text-neutral-300">Interface para exportar; linha de comando para verificar</td><td class="px-4 py-3 text-neutral-300">A verificaÃ§Ã£o por nÃºmero (decodifica, duraÃ§Ã£o, resoluÃ§Ã£o) nÃ£o depende da tela.</td></tr></tbody>
+          <thead class="bg-dark-800 text-blue-400"><tr><th class="px-4 py-3 font-semibold">Etapa</th><th class="px-4 py-3 font-semibold">Quem faz</th><th class="px-4 py-3 font-semibold">Por quêÂª</th></tr></thead>
+          <tbody class="divide-y divide-dark-600"><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Verificar origem, registrar propriedades</td><td class="px-4 py-3 text-neutral-300">Linha de comando (ffprobe ou equivalente)</td><td class="px-4 py-3 text-neutral-300">Mais confiêÂ¡vel que olhar a tela; produz nêÂºmeros.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Criar projeto, importar</td><td class="px-4 py-3 text-neutral-300">API/CLI do app se existir; senêÂ£o, interface</td><td class="px-4 py-3 text-neutral-300">O prompt manda usar o caminho suportado primeiro.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Enviar o prompt de limpeza no chat do editor</td><td class="px-4 py-3 text-neutral-300">Interface (computer use)</td><td class="px-4 py-3 text-neutral-300">NêÂ£o existe caminho programêÂ¡tico "fêÂ¡cil" para o chat, segundo o vêÂ­deo.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Revisar cortes frame a frame</td><td class="px-4 py-3 text-neutral-300">Interface</td><td class="px-4 py-3 text-neutral-300">Exige olhos e ouvidos: tosse, palavra cortada, junêÂ§êÂ£o estranha.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Exportar e verificar a mêÂ­dia</td><td class="px-4 py-3 text-neutral-300">Interface para exportar; linha de comando para verificar</td><td class="px-4 py-3 text-neutral-300">A verificaêÂ§êÂ£o por nêÂºmero (decodifica, duraêÂ§êÂ£o, resoluêÂ§êÂ£o) nêÂ£o depende da tela.</td></tr></tbody>
         </table>
       </div>
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">ðŸ’¡</span> Comece com um vÃ­deo curto</h3>
-        <p class="text-neutral-300" data-ARCKHÉ-block="m2-4-p8">O guia diz: forneÃ§a um vÃ­deo curto de teste primeiro. O fluxo tem muitas etapas de interface; descobrir que o botÃ£o de exportar mudou de lugar num vÃ­deo de 3 minutos custa menos do que num de 40.</p>
+        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">ê°Å¸âÂ¡</span> Comece com um vêÂ­deo curto</h3>
+        <p class="text-neutral-300" data-ARCKHê-block="m2-4-p8">O guia diz: forneêÂ§a um vêÂ­deo curto de teste primeiro. O fluxo tem muitas etapas de interface; descobrir que o botêÂ£o de exportar mudou de lugar num vêÂ­deo de 3 minutos custa menos do que num de 40.</p>
       </div>
       
-      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
-        <span class="ARCKHÉ-label-done">Lido</span>
+      <button type="button" data-ARCKHê-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHê-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHê-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHê-label-todo">Marcar como lido</span>
+        <span class="ARCKHê-label-done">Lido</span>
       </button>
     </section>
 
-    <!-- TÃ“PICO 3 -->
-    <section id="topico-3" data-ARCKHÉ-topic="modulo-2-4#topico-3" class="mb-16">
+    <!-- TêâPICO 3 -->
+    <section id="topico-3" data-ARCKHê-topic="modulo-2-4#topico-3" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">ðŸ•’ Esperar o render: verificar a cada 30 minutos e testar estabilidade</h2>
+        <h2 class="text-2xl font-bold">ê°Å¸â¢â Esperar o render: verificar a cada 30 minutos e testar estabilidade</h2>
       </div>
       
       <div class="space-y-5 mb-6">
@@ -470,7 +470,7 @@ Se eu forneci uma pasta do Drive, envie o export verificado e confira nome, tama
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Verificar em intervalo</h4>
             
-            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m2-4-p9">A cada 30 minutos no vÃ­deo. Para renders curtos, 5 a 10. O intervalo Ã© seu; o prompt pede um acompanhamento agendado que o seu ambiente suporte.</p>
+            <p class="text-neutral-300 text-sm" data-ARCKHê-block="m2-4-p9">A cada 30 minutos no vêÂ­deo. Para renders curtos, 5 a 10. O intervalo êÂ© seu; o prompt pede um acompanhamento agendado que o seu ambiente suporte.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
@@ -478,7 +478,7 @@ Se eu forneci uma pasta do Drive, envie o export verificado e confira nome, tama
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Tamanho parou de crescer</h4>
             
-            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m2-4-p10">Duas verificaÃ§Ãµes seguidas com o mesmo tamanho de arquivo. Um render em curso cresce entre elas.</p>
+            <p class="text-neutral-300 text-sm" data-ARCKHê-block="m2-4-p10">Duas verificaêÂ§êÂµes seguidas com o mesmo tamanho de arquivo. Um render em curso cresce entre elas.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
@@ -486,235 +486,235 @@ Se eu forneci uma pasta do Drive, envie o export verificado e confira nome, tama
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">O arquivo decodifica</h4>
             
-            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m2-4-p11">Abrir com a ferramenta de linha de comando e ler duraÃ§Ã£o, resoluÃ§Ã£o e Ã¡udio sem erro. Arquivo incompleto costuma falhar aqui.</p>
+            <p class="text-neutral-300 text-sm" data-ARCKHê-block="m2-4-p11">Abrir com a ferramenta de linha de comando e ler duraêÂ§êÂ£o, resoluêÂ§êÂ£o e êÂ¡udio sem erro. Arquivo incompleto costuma falhar aqui.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">4</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
-            <h4 class="font-semibold text-white mb-2">SÃ³ entÃ£o importar</h4>
+            <h4 class="font-semibold text-white mb-2">SêÂ³ entêÂ£o importar</h4>
             
-            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m2-4-p12">E preservar o original: o Descript trabalha numa cÃ³pia importada; a origem nÃ£o muda.</p>
+            <p class="text-neutral-300 text-sm" data-ARCKHê-block="m2-4-p12">E preservar o original: o Descript trabalha numa cêÂ³pia importada; a origem nêÂ£o muda.</p>
           </div>
         </div>
       </div>
 
       <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">âš ï¸</span> A frase do guia sobre prova</h3>
-        <p class="text-neutral-300" data-ARCKHÉ-block="m2-4-p13">"Observe estabilidade e decodificaÃ§Ã£o do arquivo; uma captura de tela ou um nome de arquivo sozinho nÃ£o prova conclusÃ£o." Vale para o render e vale para o export no fim. Nas duas pontas, o nÃºmero (tamanho, duraÃ§Ã£o, resoluÃ§Ã£o) Ã© a prova; a tela Ã© o indÃ­cio.</p>
+        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">ê¢Å¡Â ê¯Â¸Â</span> A frase do guia sobre prova</h3>
+        <p class="text-neutral-300" data-ARCKHê-block="m2-4-p13">"Observe estabilidade e decodificaêÂ§êÂ£o do arquivo; uma captura de tela ou um nome de arquivo sozinho nêÂ£o prova conclusêÂ£o." Vale para o render e vale para o export no fim. Nas duas pontas, o nêÂºmero (tamanho, duraêÂ§êÂ£o, resoluêÂ§êÂ£o) êÂ© a prova; a tela êÂ© o indêÂ­cio.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-          <h4 class="font-bold text-blue-400 mb-4">&#10003; Sinais de render concluÃ­do</h4>
-          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>Tamanho igual em duas verificaÃ§Ãµes consecutivas.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>ffprobe (ou equivalente) devolve duraÃ§Ã£o e resoluÃ§Ã£o sem erro.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>O programa de render mostra 100% e liberou o arquivo.</span></li></ul>
+          <h4 class="font-bold text-blue-400 mb-4">&#10003; Sinais de render concluêÂ­do</h4>
+          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>Tamanho igual em duas verificaêÂ§êÂµes consecutivas.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>ffprobe (ou equivalente) devolve duraêÂ§êÂ£o e resoluêÂ§êÂ£o sem erro.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>O programa de render mostra 100% e liberou o arquivo.</span></li></ul>
         </div>
         <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
           <h4 class="font-bold text-red-400 mb-4">&#10007; Falsos positivos</h4>
-          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>O arquivo apareceu na pasta.</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>A barra de progresso sumiu.</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>O nome estÃ¡ certo e a extensÃ£o Ã© .mp4.</span></li></ul>
+          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>O arquivo apareceu na pasta.</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>A barra de progresso sumiu.</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>O nome estêÂ¡ certo e a extensêÂ£o êÂ© .mp4.</span></li></ul>
         </div>
       </div>
       
-      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
-        <span class="ARCKHÉ-label-done">Lido</span>
+      <button type="button" data-ARCKHê-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHê-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHê-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHê-label-todo">Marcar como lido</span>
+        <span class="ARCKHê-label-done">Lido</span>
       </button>
     </section>
 
-    <!-- TÃ“PICO 4 -->
-    <section id="topico-4" data-ARCKHÉ-topic="modulo-2-4#topico-4" class="mb-16">
+    <!-- TêâPICO 4 -->
+    <section id="topico-4" data-ARCKHê-topic="modulo-2-4#topico-4" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">âœ‚ï¸ A limpeza conservadora: as regras que protegem o conteÃºdo</h2>
+        <h2 class="text-2xl font-bold">ê¢Åâê¯Â¸Â A limpeza conservadora: as regras que protegem o conteêÂºdo</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m2-4-p14">O prompt de limpeza Ã© o mais longo do kit e vem em arquivo separado porque deve ser enviado <strong class="text-blue-400">completo</strong> ao chat do editor. Ele define o que Ã© retake, o que Ã© conteÃºdo Ãºnico, e como cortar. Abaixo, uma versÃ£o em portuguÃªs das regras, para vocÃª adaptar ao seu jeito de falar.</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHê-block="m2-4-p14">O prompt de limpeza êÂ© o mais longo do kit e vem em arquivo separado porque deve ser enviado <strong class="text-blue-400">completo</strong> ao chat do editor. Ele define o que êÂ© retake, o que êÂ© conteêÂºdo êÂºnico, e como cortar. Abaixo, uma versêÂ£o em portuguêÂªs das regras, para vocêÂª adaptar ao seu jeito de falar.</p>
 
       <div class="codebox bg-dark-800 rounded-xl border border-blue-500/30 overflow-hidden mb-6">
         <div class="px-5 py-3 border-b border-dark-600 flex items-start justify-between gap-3 flex-wrap">
-          <div><p class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-1">Copie e rode</p><p class="text-sm text-neutral-300">Prompt de limpeza conservadora para colar no chat do editor de vÃ­deo (Descript ou equivalente com ediÃ§Ã£o por transcriÃ§Ã£o)</p></div>
+          <div><p class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-1">Copie e rode</p><p class="text-sm text-neutral-300">Prompt de limpeza conservadora para colar no chat do editor de vêÂ­deo (Descript ou equivalente com ediêÂ§êÂ£o por transcriêÂ§êÂ£o)</p></div>
           <button type="button" data-copy class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors">Copiar</button>
         </div>
-        <pre class="p-5 text-sm text-neutral-100 bg-dark-900/60 font-mono leading-relaxed"><code class="language-text">Limpe este trecho de vÃ­deo. Trate-o como um segmento independente e aplique as regras abaixo.
+        <pre class="p-5 text-sm text-neutral-100 bg-dark-900/60 font-mono leading-relaxed"><code class="language-text">Limpe este trecho de vêÂ­deo. Trate-o como um segmento independente e aplique as regras abaixo.
 
 OBJETIVO
-Remover retakes e vÃ­cios de fala e encurtar pausas longas, mantendo a fala natural. EdiÃ§Ã£o conservadora: na dÃºvida, deixe.
+Remover retakes e vêÂ­cios de fala e encurtar pausas longas, mantendo a fala natural. EdiêÂ§êÂ£o conservadora: na dêÂºvida, deixe.
 
-REGRAS INEGOCIÃVEIS (aplique primeiro)
-1. Sempre mantenha a ÃšLTIMA versÃ£o de qualquer retake. Corte as tentativas anteriores, nunca a final.
-2. Nunca corte conteÃºdo Ãºnico. SÃ³ corte retakes claros e tentativas abandonadas. Se uma frase diz algo novo, ela fica.
-3. Deixe respiro ao redor de todo corte. NÃ£o emende tÃ£o junto que a Ãºltima palavra do trecho mantido seja cortada ou o prÃ³ximo trecho comece antes da palavra anterior terminar.
+REGRAS INEGOCIêÂVEIS (aplique primeiro)
+1. Sempre mantenha a êÅ¡LTIMA versêÂ£o de qualquer retake. Corte as tentativas anteriores, nunca a final.
+2. Nunca corte conteêÂºdo êÂºnico. SêÂ³ corte retakes claros e tentativas abandonadas. Se uma frase diz algo novo, ela fica.
+3. Deixe respiro ao redor de todo corte. NêÂ£o emende têÂ£o junto que a êÂºltima palavra do trecho mantido seja cortada ou o prêÂ³ximo trecho comece antes da palavra anterior terminar.
 
 O QUE CONTA COMO RETAKE
-Aberturas repetidas (a mesma frase comeÃ§ada duas ou mais vezes); reinÃ­cios e autocorreÃ§Ãµes no meio da frase; gagueiras de preenchimento; frase que morre e Ã© seguida por uma versÃ£o reformulada da mesma ideia. Em todos os casos: corte as tentativas falhas, mantenha a versÃ£o limpa final.
+Aberturas repetidas (a mesma frase comeêÂ§ada duas ou mais vezes); reinêÂ­cios e autocorreêÂ§êÂµes no meio da frase; gagueiras de preenchimento; frase que morre e êÂ© seguida por uma versêÂ£o reformulada da mesma ideia. Em todos os casos: corte as tentativas falhas, mantenha a versêÂ£o limpa final.
 
-SEPARE RETAKE DE CONTEÃšDO ÃšNICO
-Um bloco bagunÃ§ado mistura tentativas falhas e frases Ãºnicas. NÃ£o apague o bloco inteiro. Se hÃ¡ trÃªs comeÃ§os falhos e depois uma frase Ãºnica limpa, corte sÃ³ os trÃªs comeÃ§os.
+SEPARE RETAKE DE CONTEêÅ¡DO êÅ¡NICO
+Um bloco bagunêÂ§ado mistura tentativas falhas e frases êÂºnicas. NêÂ£o apague o bloco inteiro. Se hêÂ¡ trêÂªs comeêÂ§os falhos e depois uma frase êÂºnica limpa, corte sêÂ³ os trêÂªs comeêÂ§os.
 
-CHECAGEM DE COERÃŠNCIA (depois de cortar)
-O resultado tem que fluir: sem palavra de transiÃ§Ã£o Ã³rfÃ£, sem salto brusco, sem palavra pela metade invadindo o prÃ³ximo trecho. ReouÃ§a cada ponto de corte; se soar abrupto, devolva um pouco de respiro.
+CHECAGEM DE COERêÅ NCIA (depois de cortar)
+O resultado tem que fluir: sem palavra de transiêÂ§êÂ£o êÂ³rfêÂ£, sem salto brusco, sem palavra pela metade invadindo o prêÂ³ximo trecho. ReouêÂ§a cada ponto de corte; se soar abrupto, devolva um pouco de respiro.
 
 RITMO
-Se este trecho Ã© a abertura do vÃ­deo, mantenha apertado. Nos demais, ritmo natural, sem comprimir demais. Encurte pausas longas em todo lugar, mas deixe respiro suficiente para soar humano.</code></pre>
-        <div class="px-5 py-3 border-t border-dark-600 text-sm text-neutral-400"><strong class="text-neutral-300">Como verificar:</strong> Compare as duas transcriÃ§Ãµes: nenhuma frase que dizia algo novo sumiu; em cada bloco de retakes, a versÃ£o mantida Ã© a Ãºltima; ao ouvir os cortes, nenhuma palavra estÃ¡ cortada pela metade.</div>
+Se este trecho êÂ© a abertura do vêÂ­deo, mantenha apertado. Nos demais, ritmo natural, sem comprimir demais. Encurte pausas longas em todo lugar, mas deixe respiro suficiente para soar humano.</code></pre>
+        <div class="px-5 py-3 border-t border-dark-600 text-sm text-neutral-400"><strong class="text-neutral-300">Como verificar:</strong> Compare as duas transcriêÂ§êÂµes: nenhuma frase que dizia algo novo sumiu; em cada bloco de retakes, a versêÂ£o mantida êÂ© a êÂºltima; ao ouvir os cortes, nenhuma palavra estêÂ¡ cortada pela metade.</div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-          <h4 class="font-bold text-blue-400 mb-4">&#10003; Ã‰ retake: pode cortar</h4>
-          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>"EntÃ£o o que a gente... entÃ£o o que a gente faz aqui Ã©..." (abertura repetida)</span></li><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>"Isso Ã©, tipo, Ã© como se..." seguido de "Ã‰ como se fosse um molde." (gagueira + versÃ£o limpa)</span></li><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>Uma frase que para no meio e Ã© dita de novo com outras palavras</span></li></ul>
+          <h4 class="font-bold text-blue-400 mb-4">&#10003; êâ° retake: pode cortar</h4>
+          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>"EntêÂ£o o que a gente... entêÂ£o o que a gente faz aqui êÂ©..." (abertura repetida)</span></li><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>"Isso êÂ©, tipo, êÂ© como se..." seguido de "êâ° como se fosse um molde." (gagueira + versêÂ£o limpa)</span></li><li class="flex items-start space-x-2"><span class="text-blue-400">&#10003;</span><span>Uma frase que para no meio e êÂ© dita de novo com outras palavras</span></li></ul>
         </div>
         <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-          <h4 class="font-bold text-red-400 mb-4">&#10007; Ã‰ conteÃºdo Ãºnico: fica</h4>
-          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Uma frase no meio de retakes que traz uma informaÃ§Ã£o nova</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Um exemplo dito uma vez sÃ³, mesmo com hesitaÃ§Ã£o</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Uma pausa expressiva antes de um ponto importante</span></li></ul>
+          <h4 class="font-bold text-red-400 mb-4">&#10007; êâ° conteêÂºdo êÂºnico: fica</h4>
+          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Uma frase no meio de retakes que traz uma informaêÂ§êÂ£o nova</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Um exemplo dito uma vez sêÂ³, mesmo com hesitaêÂ§êÂ£o</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Uma pausa expressiva antes de um ponto importante</span></li></ul>
         </div>
       </div>
 
       <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">âš ï¸</span> Por que "na dÃºvida, deixe"</h3>
-        <p class="text-neutral-300" data-ARCKHÉ-block="m2-4-p15">O custo de deixar um retake a mais Ã© um vÃ­deo trÃªs segundos mais longo. O custo de cortar uma frase Ãºnica Ã© perder a informaÃ§Ã£o para sempre, ou ter que regravar. A assimetria Ã© o motivo de todo o prompt pender para o conservador.</p>
+        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">ê¢Å¡Â ê¯Â¸Â</span> Por que "na dêÂºvida, deixe"</h3>
+        <p class="text-neutral-300" data-ARCKHê-block="m2-4-p15">O custo de deixar um retake a mais êÂ© um vêÂ­deo trêÂªs segundos mais longo. O custo de cortar uma frase êÂºnica êÂ© perder a informaêÂ§êÂ£o para sempre, ou ter que regravar. A assimetria êÂ© o motivo de todo o prompt pender para o conservador.</p>
       </div>
       
-      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
-        <span class="ARCKHÉ-label-done">Lido</span>
+      <button type="button" data-ARCKHê-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHê-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHê-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHê-label-todo">Marcar como lido</span>
+        <span class="ARCKHê-label-done">Lido</span>
       </button>
     </section>
 
-    <!-- TÃ“PICO 5 -->
-    <section id="topico-5" data-ARCKHÉ-topic="modulo-2-4#topico-5" class="mb-16">
+    <!-- TêâPICO 5 -->
+    <section id="topico-5" data-ARCKHê-topic="modulo-2-4#topico-5" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">ðŸ”Ž Verificar o export de verdade</h2>
+        <h2 class="text-2xl font-bold">ê°Å¸âÅ½ Verificar o export de verdade</h2>
       </div>
       
       <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">ðŸ“Š</span> A lista de verificaÃ§Ã£o do export</h3>
-        <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>O arquivo <strong>decodifica</strong> do inÃ­cio ao fim (leitura completa sem erro, nÃ£o sÃ³ o cabeÃ§alho).</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>Tem <strong>faixa de vÃ­deo e faixa de Ã¡udio</strong>. Export sem Ã¡udio Ã© a falha silenciosa mais comum.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>A <strong>resoluÃ§Ã£o</strong> Ã© a da origem. Muitos editores exportam em 1080p por padrÃ£o mesmo com origem 4K.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>A <strong>duraÃ§Ã£o</strong> Ã© reportada ao lado da original, sem a frase "ficou mais curto, logo melhor".</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>O <strong>original</strong> continua com o mesmo tamanho e a mesma data de modificaÃ§Ã£o.</span></li></ul>
+        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">ê°Å¸âÅ </span> A lista de verificaêÂ§êÂ£o do export</h3>
+        <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>O arquivo <strong>decodifica</strong> do inêÂ­cio ao fim (leitura completa sem erro, nêÂ£o sêÂ³ o cabeêÂ§alho).</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>Tem <strong>faixa de vêÂ­deo e faixa de êÂ¡udio</strong>. Export sem êÂ¡udio êÂ© a falha silenciosa mais comum.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>A <strong>resoluêÂ§êÂ£o</strong> êÂ© a da origem. Muitos editores exportam em 1080p por padrêÂ£o mesmo com origem 4K.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>A <strong>duraêÂ§êÂ£o</strong> êÂ© reportada ao lado da original, sem a frase "ficou mais curto, logo melhor".</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>O <strong>original</strong> continua com o mesmo tamanho e a mesma data de modificaêÂ§êÂ£o.</span></li></ul>
       </div>
 
       <div class="overflow-x-auto rounded-xl border border-dark-600 mb-6">
         <table class="w-full text-sm text-left">
           
-          <thead class="bg-dark-800 text-blue-400"><tr><th class="px-4 py-3 font-semibold">VerificaÃ§Ã£o</th><th class="px-4 py-3 font-semibold">Como fazer por nÃºmero</th><th class="px-4 py-3 font-semibold">O que reprova</th></tr></thead>
-          <tbody class="divide-y divide-dark-600"><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Decodifica</td><td class="px-4 py-3 text-neutral-300">Ler o arquivo inteiro com a ferramenta de linha de comando de vÃ­deo</td><td class="px-4 py-3 text-neutral-300">Erro em qualquer ponto; arquivo truncado</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Imagem e som</td><td class="px-4 py-3 text-neutral-300">Listar as faixas do arquivo</td><td class="px-4 py-3 text-neutral-300">SÃ³ uma faixa; Ã¡udio mudo (nÃ­vel zero) por todo o arquivo</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">ResoluÃ§Ã£o</td><td class="px-4 py-3 text-neutral-300">Comparar largura Ã— altura com a origem</td><td class="px-4 py-3 text-neutral-300">Qualquer diferenÃ§a, a menos que vocÃª tenha pedido</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">DuraÃ§Ã£o</td><td class="px-4 py-3 text-neutral-300">Origem Ã— export, em segundos</td><td class="px-4 py-3 text-neutral-300">Nada reprova por si; diferenÃ§a grande pede escuta dos cortes</td></tr></tbody>
+          <thead class="bg-dark-800 text-blue-400"><tr><th class="px-4 py-3 font-semibold">VerificaêÂ§êÂ£o</th><th class="px-4 py-3 font-semibold">Como fazer por nêÂºmero</th><th class="px-4 py-3 font-semibold">O que reprova</th></tr></thead>
+          <tbody class="divide-y divide-dark-600"><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Decodifica</td><td class="px-4 py-3 text-neutral-300">Ler o arquivo inteiro com a ferramenta de linha de comando de vêÂ­deo</td><td class="px-4 py-3 text-neutral-300">Erro em qualquer ponto; arquivo truncado</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Imagem e som</td><td class="px-4 py-3 text-neutral-300">Listar as faixas do arquivo</td><td class="px-4 py-3 text-neutral-300">SêÂ³ uma faixa; êÂ¡udio mudo (nêÂ­vel zero) por todo o arquivo</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">ResoluêÂ§êÂ£o</td><td class="px-4 py-3 text-neutral-300">Comparar largura êâ altura com a origem</td><td class="px-4 py-3 text-neutral-300">Qualquer diferenêÂ§a, a menos que vocêÂª tenha pedido</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">DuraêÂ§êÂ£o</td><td class="px-4 py-3 text-neutral-300">Origem êâ export, em segundos</td><td class="px-4 py-3 text-neutral-300">Nada reprova por si; diferenêÂ§a grande pede escuta dos cortes</td></tr></tbody>
         </table>
       </div>
 
       <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">âš ï¸</span> Mais curto nÃ£o Ã© melhor</h3>
-        <p class="text-neutral-300" data-ARCKHÉ-block="m2-4-p16">O prompt manda reportar a duraÃ§Ã£o "sem tratar uma ediÃ§Ã£o mais curta como prova de qualidade". Uma limpeza que cortou dois minutos pode ter cortado um minuto de retakes e um minuto de conteÃºdo. A prova Ã© a comparaÃ§Ã£o de transcriÃ§Ãµes e a escuta dos cortes, nÃ£o a diferenÃ§a de tempo.</p>
+        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">ê¢Å¡Â ê¯Â¸Â</span> Mais curto nêÂ£o êÂ© melhor</h3>
+        <p class="text-neutral-300" data-ARCKHê-block="m2-4-p16">O prompt manda reportar a duraêÂ§êÂ£o "sem tratar uma ediêÂ§êÂ£o mais curta como prova de qualidade". Uma limpeza que cortou dois minutos pode ter cortado um minuto de retakes e um minuto de conteêÂºdo. A prova êÂ© a comparaêÂ§êÂ£o de transcriêÂ§êÂµes e a escuta dos cortes, nêÂ£o a diferenêÂ§a de tempo.</p>
       </div>
       
-      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
-        <span class="ARCKHÉ-label-done">Lido</span>
+      <button type="button" data-ARCKHê-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHê-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHê-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHê-label-todo">Marcar como lido</span>
+        <span class="ARCKHê-label-done">Lido</span>
       </button>
     </section>
 
-    <!-- TÃ“PICO 6 -->
-    <section id="topico-6" data-ARCKHÉ-topic="modulo-2-4#topico-6" class="mb-16">
+    <!-- TêâPICO 6 -->
+    <section id="topico-6" data-ARCKHê-topic="modulo-2-4#topico-6" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">â˜ï¸ Entrega: Drive, link e a mensagem que vocÃª envia</h2>
+        <h2 class="text-2xl font-bold">ê¢ËÂê¯Â¸Â Entrega: Drive, link e a mensagem que vocêÂª envia</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m2-4-p17">No vÃ­deo, depois do export, o agente cria o link no Drive pelo conector e "abre o WhatsApp no computador e manda uma mensagem com o link". O prompt do kit Ã© mais conservador: envia ao Drive se vocÃª deu a pasta, confere nome, tamanho e destino, devolve o link e <strong class="text-blue-400">nÃ£o envia a ninguÃ©m nem publica</strong>. Se vocÃª quer a mensagem, adiciona explicitamente e assume o risco.</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHê-block="m2-4-p17">No vêÂ­deo, depois do export, o agente cria o link no Drive pelo conector e "abre o WhatsApp no computador e manda uma mensagem com o link". O prompt do kit êÂ© mais conservador: envia ao Drive se vocêÂª deu a pasta, confere nome, tamanho e destino, devolve o link e <strong class="text-blue-400">nêÂ£o envia a ninguêÂ©m nem publica</strong>. Se vocêÂª quer a mensagem, adiciona explicitamente e assume o risco.</p>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
         
         <div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
-          <div class="text-2xl mb-2">ðŸ“</div>
+          <div class="text-2xl mb-2">ê°Å¸âÂ</div>
           <h4 class="font-semibold text-blue-400 mb-2">Upload conferido</h4>
-          <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m2-4-p18">Depois de enviar, o agente confere no destino: o arquivo estÃ¡ lÃ¡, com o nome pedido e o tamanho igual ao local. Um upload interrompido produz um arquivo menor.</p>
+          <p class="text-neutral-300 text-sm" data-ARCKHê-block="m2-4-p18">Depois de enviar, o agente confere no destino: o arquivo estêÂ¡ lêÂ¡, com o nome pedido e o tamanho igual ao local. Um upload interrompido produz um arquivo menor.</p>
         </div>
         <div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
-          <div class="text-2xl mb-2">ðŸ”—</div>
-          <h4 class="font-semibold text-blue-400 mb-2">O que volta para vocÃª</h4>
-          <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m2-4-p19">Caminho local, link do Drive (se houver) e o resumo de verificaÃ§Ã£o: duraÃ§Ãµes, resoluÃ§Ã£o, faixas, o que foi cortado em linhas gerais.</p>
+          <div class="text-2xl mb-2">ê°Å¸ââ</div>
+          <h4 class="font-semibold text-blue-400 mb-2">O que volta para vocêÂª</h4>
+          <p class="text-neutral-300 text-sm" data-ARCKHê-block="m2-4-p19">Caminho local, link do Drive (se houver) e o resumo de verificaêÂ§êÂ£o: duraêÂ§êÂµes, resoluêÂ§êÂ£o, faixas, o que foi cortado em linhas gerais.</p>
         </div>
         <div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
-          <div class="text-2xl mb-2">ðŸ›‘</div>
+          <div class="text-2xl mb-2">ê°Å¸âºâ</div>
           <h4 class="font-semibold text-blue-400 mb-2">Onde o agente para</h4>
-          <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m2-4-p20">Antes de mandar mensagem, publicar ou compartilhar com alguÃ©m. Se vocÃª quiser que ele avise a equipe, escreva isso e nomeie o destinatÃ¡rio e o canal.</p>
+          <p class="text-neutral-300 text-sm" data-ARCKHê-block="m2-4-p20">Antes de mandar mensagem, publicar ou compartilhar com alguêÂ©m. Se vocêÂª quiser que ele avise a equipe, escreva isso e nomeie o destinatêÂ¡rio e o canal.</p>
         </div>
       </div>
 
       <figure class="rounded-2xl border border-blue-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-        <svg viewBox="0 0 800 300" class="w-full h-auto" role="img" aria-label="O fluxo dividido entre o que a automaÃ§Ã£o por linha de comando cobre e o que sÃ³ computer use alcanÃ§a: o editor, a revisÃ£o visual e a confirmaÃ§Ã£o do export"><defs>
+        <svg viewBox="0 0 800 300" class="w-full h-auto" role="img" aria-label="O fluxo dividido entre o que a automaêÂ§êÂ£o por linha de comando cobre e o que sêÂ³ computer use alcanêÂ§a: o editor, a revisêÂ£o visual e a confirmaêÂ§êÂ£o do export"><defs>
     <linearGradient id="s19-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#60a5fa"/><stop offset="1" stop-color="#3b82f6"/></linearGradient>
     <filter id="s19-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     <pattern id="s19-grid" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="1.3" fill="#3b82f6" opacity="0.14"/></pattern>
   </defs><rect width="800" height="300" fill="url(#s19-grid)"/>
       <rect x="40" y="30" width="330" height="240" rx="16" fill="#1e3a8a" stroke="#3b82f6" stroke-width="2" opacity="0.95"/>
       <text x="205" y="62" text-anchor="middle" fill="#60a5fa" font-family="Inter,sans-serif" font-size="15" font-weight="800">LINHA DE COMANDO (80%)</text>
-      <g class="wf-a"><circle cx="66" cy="96" r="4" fill="#60a5fa"/><text x="80" y="100" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Verificar o arquivo de origem</text></g><g class="wf-a"><circle cx="66" cy="130" r="4" fill="#60a5fa"/><text x="80" y="134" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Esperar o render por tamanho</text></g><g class="wf-a"><circle cx="66" cy="164" r="4" fill="#60a5fa"/><text x="80" y="168" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Criar projeto e importar (se a API existe)</text></g><g class="wf-a"><circle cx="66" cy="198" r="4" fill="#60a5fa"/><text x="80" y="202" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Verificar o export por nÃºmero</text></g><g class="wf-a"><circle cx="66" cy="232" r="4" fill="#60a5fa"/><text x="80" y="236" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Subir no Drive</text></g><rect x="430" y="30" width="330" height="240" rx="16" fill="#0e1b26" stroke="#38bdf8" stroke-width="2" opacity="0.95"/>
+      <g class="wf-a"><circle cx="66" cy="96" r="4" fill="#60a5fa"/><text x="80" y="100" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Verificar o arquivo de origem</text></g><g class="wf-a"><circle cx="66" cy="130" r="4" fill="#60a5fa"/><text x="80" y="134" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Esperar o render por tamanho</text></g><g class="wf-a"><circle cx="66" cy="164" r="4" fill="#60a5fa"/><text x="80" y="168" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Criar projeto e importar (se a API existe)</text></g><g class="wf-a"><circle cx="66" cy="198" r="4" fill="#60a5fa"/><text x="80" y="202" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Verificar o export por nêÂºmero</text></g><g class="wf-a"><circle cx="66" cy="232" r="4" fill="#60a5fa"/><text x="80" y="236" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Subir no Drive</text></g><rect x="430" y="30" width="330" height="240" rx="16" fill="#0e1b26" stroke="#38bdf8" stroke-width="2" opacity="0.95"/>
       <text x="595" y="62" text-anchor="middle" fill="#38bdf8" font-family="Inter,sans-serif" font-size="15" font-weight="800">COMPUTER USE (20%)</text>
-      <g class="wf-a"><circle cx="456" cy="96" r="4" fill="#38bdf8"/><text x="470" y="100" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Enviar o prompt no chat do editor</text></g><g class="wf-a"><circle cx="456" cy="130" r="4" fill="#38bdf8"/><text x="470" y="134" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Esperar a ediÃ§Ã£o na interface</text></g><g class="wf-a"><circle cx="456" cy="164" r="4" fill="#38bdf8"/><text x="470" y="168" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Revisar cortes frame a frame</text></g><g class="wf-a"><circle cx="456" cy="198" r="4" fill="#38bdf8"/><text x="470" y="202" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Clicar em exportar e acompanhar</text></g><g class="wf-a"><circle cx="456" cy="232" r="4" fill="#38bdf8"/><text x="470" y="236" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Confirmar visualmente o resultado</text></g>
+      <g class="wf-a"><circle cx="456" cy="96" r="4" fill="#38bdf8"/><text x="470" y="100" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Enviar o prompt no chat do editor</text></g><g class="wf-a"><circle cx="456" cy="130" r="4" fill="#38bdf8"/><text x="470" y="134" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Esperar a ediêÂ§êÂ£o na interface</text></g><g class="wf-a"><circle cx="456" cy="164" r="4" fill="#38bdf8"/><text x="470" y="168" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Revisar cortes frame a frame</text></g><g class="wf-a"><circle cx="456" cy="198" r="4" fill="#38bdf8"/><text x="470" y="202" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Clicar em exportar e acompanhar</text></g><g class="wf-a"><circle cx="456" cy="232" r="4" fill="#38bdf8"/><text x="470" y="236" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Confirmar visualmente o resultado</text></g>
       <line x1="385" y1="138" x2="415" y2="138" stroke="#9ca3af" stroke-width="1.5"/><line x1="385" y1="146" x2="415" y2="146" stroke="#9ca3af" stroke-width="1.5"/>
       <text x="400" y="290" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="11">80% + 20% = entrega</text></svg>
-        <figcaption class="text-xs text-neutral-400 mt-3 px-1"><strong class="text-blue-400">O que olhar:</strong> A coluna da direita Ã© pequena e Ã© a que impedia o fluxo de rodar sozinho. Computer use nÃ£o substitui a esquerda; completa.</figcaption>
+        <figcaption class="text-xs text-neutral-400 mt-3 px-1"><strong class="text-blue-400">O que olhar:</strong> A coluna da direita êÂ© pequena e êÂ© a que impedia o fluxo de rodar sozinho. Computer use nêÂ£o substitui a esquerda; completa.</figcaption>
       </figure>
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">ðŸ’¡</span> Render que ainda nÃ£o terminou</h3>
-        <p class="text-neutral-300" data-ARCKHÉ-block="m2-4-p21">O guia prevÃª: "para um render inacabado, peÃ§a explicitamente um acompanhamento agendado que o seu ambiente suporte". Ou seja, diga ao agente para verificar de tanto em tanto e sÃ³ comeÃ§ar quando o arquivo estiver estÃ¡vel e decodificÃ¡vel. Sem isso, ele tenta importar um arquivo pela metade.</p>
+        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">ê°Å¸âÂ¡</span> Render que ainda nêÂ£o terminou</h3>
+        <p class="text-neutral-300" data-ARCKHê-block="m2-4-p21">O guia prevêÂª: "para um render inacabado, peêÂ§a explicitamente um acompanhamento agendado que o seu ambiente suporte". Ou seja, diga ao agente para verificar de tanto em tanto e sêÂ³ comeêÂ§ar quando o arquivo estiver estêÂ¡vel e decodificêÂ¡vel. Sem isso, ele tenta importar um arquivo pela metade.</p>
       </div>
       
-      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
-        <span class="ARCKHÉ-label-done">Lido</span>
+      <button type="button" data-ARCKHê-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHê-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHê-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHê-label-todo">Marcar como lido</span>
+        <span class="ARCKHê-label-done">Lido</span>
       </button>
     </section>
 
     <!-- QUIZ -->
     
       <div class="bg-dark-800 rounded-2xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-1 flex items-center"><span class="mr-2">ðŸ§ª</span> Teste rÃ¡pido do mÃ³dulo</h3>
-        <p class="text-sm text-neutral-400 mb-5">TrÃªs perguntas. Clique numa opÃ§Ã£o para ver a resposta.</p>
+        <h3 class="text-lg font-semibold text-blue-400 mb-1 flex items-center"><span class="mr-2">ê°Å¸Â§Âª</span> Teste rêÂ¡pido do mêÂ³dulo</h3>
+        <p class="text-sm text-neutral-400 mb-5">TrêÂªs perguntas. Clique numa opêÂ§êÂ£o para ver a resposta.</p>
         <div class="space-y-5">
         
           <div class="qz" data-q="1">
-            <p class="font-semibold text-neutral-100 mb-3">1. O agente reportou: "export concluÃ­do, 3 minutos mais curto que a origem, arquivo na pasta". O que falta para aceitar?</p>
+            <p class="font-semibold text-neutral-100 mb-3">1. O agente reportou: "export concluêÂ­do, 3 minutos mais curto que a origem, arquivo na pasta". O que falta para aceitar?</p>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              <button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">Nada, o objetivo era encurtar.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="1">A verificaÃ§Ã£o por nÃºmero (decodifica, imagem e som, resoluÃ§Ã£o) e a comparaÃ§Ã£o de transcriÃ§Ãµes; duraÃ§Ã£o menor nÃ£o prova qualidade.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">Uma captura de tela do Descript.</button>
+              <button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">Nada, o objetivo era encurtar.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="1">A verificaêÂ§êÂ£o por nêÂºmero (decodifica, imagem e som, resoluêÂ§êÂ£o) e a comparaêÂ§êÂ£o de transcriêÂ§êÂµes; duraêÂ§êÂ£o menor nêÂ£o prova qualidade.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">Uma captura de tela do Descript.</button>
             </div>
-            <p class="qz-fb mt-3 text-sm text-neutral-300" data-text="O prompt exige verificar a mÃ­dia e comparar transcriÃ§Ãµes, e proÃ­be tratar ediÃ§Ã£o mais curta como prova."></p>
+            <p class="qz-fb mt-3 text-sm text-neutral-300" data-text="O prompt exige verificar a mêÂ­dia e comparar transcriêÂ§êÂµes, e proêÂ­be tratar ediêÂ§êÂ£o mais curta como prova."></p>
           </div>
           <div class="qz" data-q="2">
             <p class="font-semibold text-neutral-100 mb-3">2. O arquivo de render apareceu na pasta com o nome certo. O agente pode importar?</p>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              <button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">Sim, o nome estÃ¡ certo.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="1">SÃ³ quando o tamanho parar de crescer entre duas verificaÃ§Ãµes e o arquivo decodificar.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">Sim, se a barra de progresso sumiu.</button>
+              <button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">Sim, o nome estêÂ¡ certo.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="1">SêÂ³ quando o tamanho parar de crescer entre duas verificaêÂ§êÂµes e o arquivo decodificar.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">Sim, se a barra de progresso sumiu.</button>
             </div>
-            <p class="qz-fb mt-3 text-sm text-neutral-300" data-text="Estabilidade e decodificaÃ§Ã£o sÃ£o a prova de render concluÃ­do. Nome e presenÃ§a na pasta nÃ£o sÃ£o."></p>
+            <p class="qz-fb mt-3 text-sm text-neutral-300" data-text="Estabilidade e decodificaêÂ§êÂ£o sêÂ£o a prova de render concluêÂ­do. Nome e presenêÂ§a na pasta nêÂ£o sêÂ£o."></p>
           </div>
           <div class="qz" data-q="3">
-            <p class="font-semibold text-neutral-100 mb-3">3. Na transcriÃ§Ã£o, um bloco tem trÃªs comeÃ§os falhos e depois uma frase Ãºnica. O que a limpeza conservadora faz?</p>
+            <p class="font-semibold text-neutral-100 mb-3">3. Na transcriêÂ§êÂ£o, um bloco tem trêÂªs comeêÂ§os falhos e depois uma frase êÂºnica. O que a limpeza conservadora faz?</p>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              <button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">Corta o bloco inteiro, estÃ¡ bagunÃ§ado.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="1">Corta sÃ³ os trÃªs comeÃ§os falhos e mantÃ©m a frase Ãºnica.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">MantÃ©m tudo, na dÃºvida deixa.</button>
+              <button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">Corta o bloco inteiro, estêÂ¡ bagunêÂ§ado.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="1">Corta sêÂ³ os trêÂªs comeêÂ§os falhos e mantêÂ©m a frase êÂºnica.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-blue-500/40 transition-colors" data-ok="0">MantêÂ©m tudo, na dêÂºvida deixa.</button>
             </div>
-            <p class="qz-fb mt-3 text-sm text-neutral-300" data-text="A regra &quot;separe retake de conteÃºdo Ãºnico&quot;: as tentativas falhas saem, a frase que diz algo novo fica."></p>
+            <p class="qz-fb mt-3 text-sm text-neutral-300" data-text="A regra &quot;separe retake de conteêÂºdo êÂºnico&quot;: as tentativas falhas saem, a frase que diz algo novo fica."></p>
           </div>
         </div>
       </div>
 
-    <!-- RESUMO DO MÃ“DULO -->
+    <!-- RESUMO DO MêâDULO -->
     <section class="mb-12">
       <div class="bg-gradient-to-br from-blue-900/40 via-dark-800 to-dark-800 rounded-xl border border-blue-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">ðŸ“‹</span> Resumo do mÃ³dulo</h2>
+        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">ê°Å¸ââ¹</span> Resumo do mêÂ³dulo</h2>
         <div class="space-y-4 mb-8">
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">O gargalo</strong><span class="text-neutral-400"> - render longo mais um editor que sÃ³ existe na interface; a linha de comando chega a 80%, computer use completa.</span></div></div><div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">Esperar direito</strong><span class="text-neutral-400"> - verificar em intervalo, tamanho estÃ¡vel em duas checagens, arquivo decodifica; sÃ³ entÃ£o importar, preservando o original.</span></div></div><div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">Limpeza conservadora</strong><span class="text-neutral-400"> - Ãºltimo take fica, conteÃºdo Ãºnico nunca sai, respiro em todo corte, coerÃªncia checada, ritmo por trecho.</span></div></div><div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">Export verificado por nÃºmero</strong><span class="text-neutral-400"> - decodifica inteiro, tem imagem e som, resoluÃ§Ã£o da origem, duraÃ§Ã£o reportada sem julgamento.</span></div></div><div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">Entrega</strong><span class="text-neutral-400"> - upload conferido por nome e tamanho, link devolvido; publicar e avisar pessoas fica fora do escopo atÃ© vocÃª pedir.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">O gargalo</strong><span class="text-neutral-400"> - render longo mais um editor que sêÂ³ existe na interface; a linha de comando chega a 80%, computer use completa.</span></div></div><div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">Esperar direito</strong><span class="text-neutral-400"> - verificar em intervalo, tamanho estêÂ¡vel em duas checagens, arquivo decodifica; sêÂ³ entêÂ£o importar, preservando o original.</span></div></div><div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">Limpeza conservadora</strong><span class="text-neutral-400"> - êÂºltimo take fica, conteêÂºdo êÂºnico nunca sai, respiro em todo corte, coerêÂªncia checada, ritmo por trecho.</span></div></div><div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">Export verificado por nêÂºmero</strong><span class="text-neutral-400"> - decodifica inteiro, tem imagem e som, resoluêÂ§êÂ£o da origem, duraêÂ§êÂ£o reportada sem julgamento.</span></div></div><div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">Entrega</strong><span class="text-neutral-400"> - upload conferido por nome e tamanho, link devolvido; publicar e avisar pessoas fica fora do escopo atêÂ© vocêÂª pedir.</span></div></div>
         </div>
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-blue-400 mb-2">PrÃ³ximo mÃ³dulo:</h3><p class="text-neutral-300">2.5 - O celular pelo computador</p></div>
+        <div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-blue-400 mb-2">PrêÂ³ximo mêÂ³dulo:</h3><p class="text-neutral-300">2.5 - O celular pelo computador</p></div>
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="modulo-2-3.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">&#8592; MÃ³dulo 2.3</a>
-          <a href="modulo-2-5.html" class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors">PrÃ³ximo mÃ³dulo &#8594;</a>
+          <a href="modulo-2-3.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">&#8592; MêÂ³dulo 2.3</a>
+          <a href="modulo-2-5.html" class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors">PrêÂ³ximo mêÂ³dulo &#8594;</a>
         </div>
       </div>
     </section>
@@ -723,14 +723,14 @@ Se este trecho Ã© a abertura do vÃ­deo, mantenha apertado. Nos demais, ritmo
   <!-- FOOTER -->
   <footer class="border-t border-dark-600 mt-16 py-8">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm space-y-2">
-      <p>Computer Use com o GPT-6 Astra Â· Trilha 2 â€” Os cinco fluxos Â· 2026 Â·
-        <a href="https://ARCKHÉ AI" target="_blank" class="text-sky-400 hover:text-sky-300">ARCKHÉ AI</a> -
-        <a href="https://ARCKHÉ.pro" target="_blank" class="text-amber-700 dark:text-slate-300">PRO</a></p>
-      <p class="text-xs">Fontes: <a href="https://www.youtube.com/watch?v=tU-fO6cADvQ" target="_blank" class="text-sky-400 hover:text-sky-300">vÃ­deo "O uso do computador pelo GPT-6 Astra Ã© absurdamente bom"</a> Â· Computer Use Field Guide e kit de prompts (Prompt Advisers, 05/09/2026) Â· <a href="https://github.com/promptadvisers/google-flights-cli" target="_blank" class="text-sky-400 hover:text-sky-300">google-flights-cli</a> (MIT). Prompts traduzidos e adaptados.</p>
+      <p>Computer Use com o GPT-6 Astra êÂ· Trilha 2 ê¢â¬â Os cinco fluxos êÂ· 2026 êÂ·
+        <a href="https://ARCKHê AI" target="_blank" class="text-sky-400 hover:text-sky-300">ARCKHê AI</a> -
+        <a href="https://ARCKHê.pro" target="_blank" class="text-amber-700 dark:text-slate-300">PRO</a></p>
+      <p class="text-xs">Fontes: <a href="https://www.youtube.com/watch?v=tU-fO6cADvQ" target="_blank" class="text-sky-400 hover:text-sky-300">vêÂ­deo "O uso do computador pelo GPT-6 Astra êÂ© absurdamente bom"</a> êÂ· Computer Use Field Guide e kit de prompts (Prompt Advisers, 05/09/2026) êÂ· <a href="https://github.com/promptadvisers/google-flights-cli" target="_blank" class="text-sky-400 hover:text-sky-300">google-flights-cli</a> (MIT). Prompts traduzidos e adaptados.</p>
     </div>
   </footer>
 
-  <!-- SCRIPTS nÃºcleo v1 -->
+  <!-- SCRIPTS nêÂºcleo v1 -->
   <script>
     function toggleTopic(button) {
       const topicItem = button.closest('.topic-item');
@@ -755,32 +755,32 @@ Se este trecho Ã© a abertura do vÃ­deo, mantenha apertado. Nos demais, ritmo
       html.classList.toggle('dark');
       const dark = html.classList.contains('dark');
       localStorage.setItem('theme', dark ? 'dark' : 'light');
-      if (window.ARCKHÉ && ARCKHÉ.setPref) { try { ARCKHÉ.setPref('theme', dark ? 'ARCKHÉ-dark' : 'claro'); } catch (e) {} }
+      if (window.ARCKHê && ARCKHê.setPref) { try { ARCKHê.setPref('theme', dark ? 'ARCKHê-dark' : 'claro'); } catch (e) {} }
     });
     function openModal(modalId) { const m = document.getElementById(modalId); if (m) { m.classList.remove('hidden'); document.body.style.overflow = 'hidden'; } }
     function closeModal() { document.querySelectorAll('.modal').forEach(m => m.classList.add('hidden')); document.body.style.overflow = 'auto'; }
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
-    // Quiz inline (3 perguntas por mÃ³dulo)
+    // Quiz inline (3 perguntas por mêÂ³dulo)
     document.addEventListener('click', (e) => {
       const opt = e.target.closest('.qz-opt'); if (!opt) return;
       const qz = opt.closest('.qz'); if (!qz || qz.hasAttribute('data-answered')) return;
       const ok = opt.getAttribute('data-ok') === '1';
       qz.querySelectorAll('.qz-opt').forEach(o => { o.setAttribute('data-state', o.getAttribute('data-ok') === '1' ? 'ok' : (o === opt ? 'no' : '')); o.disabled = true; });
       qz.setAttribute('data-answered', ok ? 'ok' : 'no');
-      const fb = qz.querySelector('.qz-fb'); if (fb) fb.textContent = (ok ? 'âœ“ Certo. ' : 'âœ— NÃ£o Ã© essa. ') + (fb.getAttribute('data-text') || '');
+      const fb = qz.querySelector('.qz-fb'); if (fb) fb.textContent = (ok ? 'ê¢Åâ Certo. ' : 'ê¢Åâ NêÂ£o êÂ© essa. ') + (fb.getAttribute('data-text') || '');
     });
-    // Copiar cÃ³digo
+    // Copiar cêÂ³digo
     document.addEventListener('click', (e) => {
       const b = e.target.closest('[data-copy]'); if (!b) return;
       const pre = b.closest('.codebox').querySelector('pre');
-      navigator.clipboard && navigator.clipboard.writeText(pre.innerText).then(() => { const t = b.textContent; b.textContent = 'Copiado âœ“'; setTimeout(() => b.textContent = t, 1600); });
+      navigator.clipboard && navigator.clipboard.writeText(pre.innerText).then(() => { const t = b.textContent; b.textContent = 'Copiado ê¢Åâ'; setTimeout(() => b.textContent = t, 1600); });
     });
   </script>
 
   <script src="../../assets/learn.js"></script>
   <script>
-    if (window.ARCKHÉ && typeof window.ARCKHÉ.init === 'function') { window.ARCKHÉ.init(); }
+    if (window.ARCKHê && typeof window.ARCKHê.init === 'function') { window.ARCKHê.init(); }
   </script>
 </body>
 </html>
