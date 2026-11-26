@@ -252,7 +252,7 @@ Depois do trabalho, verifique o resultado na interface ou no artefato exportado.
             c.figure(t, svg.flow(t, { label: 'O ciclo que o modelo reutilizável impõe: inspecionar, agir dentro do escopo, verificar no artefato, e reportar ou reproduzir a falha', steps: [
               { title: 'Inspecionar', sub: 'estado atual + docs da ferramenta' }, { title: 'Agir', sub: 'só dentro do escopo' }, { title: 'Verificar', sub: 'na interface ou no artefato' }, { title: 'Reproduzir', sub: 'se falhou, com evidência' }, { title: 'Reportar', sub: 'feito · sem verificar · próximo passo' },
             ] }), 'A caixa "inspecionar" vem antes de qualquer clique. É o que evita o agente agir com base num menu que lembrava de outra versão do app.'),
-            c.tip({ title: 'Exemplo preenchido', text: 'App: o navegador interno do Codex. Resultado: a lista de todos os cursos publicados em inema.club com título e link, exportada em CSV. Entradas: a URL da home. Escopo: nada muda no site, só leitura. Sucesso: o CSV tem ao menos 200 linhas e 3 títulos escolhidos por mim aparecem nele. Entregáveis: o CSV e uma captura da última página visitada. Orçamento: 15 minutos.' }),
+            c.tip({ title: 'Exemplo preenchido', text: 'App: o navegador interno do Codex. Resultado: a lista de todos os cursos publicados em ARCKHÉ AI com título e link, exportada em CSV. Entradas: a URL da home. Escopo: nada muda no site, só leitura. Sucesso: o CSV tem ao menos 200 linhas e 3 títulos escolhidos por mim aparecem nele. Entregáveis: o CSV e uma captura da última página visitada. Orçamento: 15 minutos.' }),
           ],
         },
         {
